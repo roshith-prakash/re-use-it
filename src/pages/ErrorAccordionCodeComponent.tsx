@@ -20,9 +20,9 @@ const ErrorAccordionCode = `const ErrorAccordion = ({
 
 export default ErrorAccordion;`;
 
-const CodeDisplay = () => {
+const ErrorAccordionCodeComponent = () => {
   return (
-    <div style={{ padding: "20px" }}>
+    <div className="dark:bg-darkbg min-h-screen p-10 dark:text-white">
       <h1 className="py-2 pl-1 italic">ErrorAccordion.tsx</h1>
       <CopyBlock
         text={ErrorAccordionCode}
@@ -35,4 +35,4 @@ const CodeDisplay = () => {
   );
 };
 
-export default CodeDisplay;
+export default ErrorAccordionCodeComponent;
