@@ -8,6 +8,7 @@ import {
   LoaderCodeComponent,
   InputCodeComponent,
   PasswordInputCodeComponent,
+  NotFound,
 } from "./pages";
 
 function App() {
@@ -38,6 +39,8 @@ function App() {
             path="/password-input"
             element={<PasswordInputCodeComponent />}
           />
+
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </div>

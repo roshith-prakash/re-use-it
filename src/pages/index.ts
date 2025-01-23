@@ -1,4 +1,5 @@
 import Components from "./Components";
+import NotFound from "./NotFound";
 import ErrorAccordionCodeComponent from "./ErrorAccordionCodeComponent";
 import PrimaryButtonCodeComponent from "./PrimaryButtonCodeComponent";
 import SecondaryButtonCodeComponent from "./SecondaryButtonCodeComponent";
@@ -8,8 +9,9 @@ import InputCodeComponent from "./InputCodeComponent";
 import PasswordInputCodeComponent from "./PasswordInputCodeComponent";
 
 export {
-  ErrorAccordionCodeComponent,
   Components,
+  NotFound,
+  ErrorAccordionCodeComponent,
   PrimaryButtonCodeComponent,
   SecondaryButtonCodeComponent,
   SecurityHeadersCodeComponent,
