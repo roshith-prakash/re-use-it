@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-cta: #9b0ced;
+  --color-darkbg: #181818;
+  --color-secondarydarkbg: #1e1e1e;
+  --color-darkmodetext: #e4e4e4;
+  --color-cta: #9b0ced;
+  --color-hovercta: #7123b0;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-grey: #f5f5f5;
+  --color-error: #f23f3f;
+  --color-darkmodeCTA: #b458ff;
+}
