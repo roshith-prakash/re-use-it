@@ -9,6 +9,7 @@ import {
   InputCodeComponent,
   PasswordInputCodeComponent,
   NotFound,
+  TimelineCodeComponent,
 } from "./pages";
 
 function App() {
@@ -39,6 +40,8 @@ function App() {
             path="/password-input"
             element={<PasswordInputCodeComponent />}
           />
+
+          <Route path="/timeline" element={<TimelineCodeComponent />} />
 
           <Route path="*" element={<NotFound />} />
         </Routes>

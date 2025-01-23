@@ -7,6 +7,7 @@ import SecurityHeadersCodeComponent from "./SecurityHeadersComponent";
 import LoaderCodeComponent from "./LoaderComponentCode";
 import InputCodeComponent from "./InputCodeComponent";
 import PasswordInputCodeComponent from "./PasswordInputCodeComponent";
+import TimelineCodeComponent from "./TimelineCodeComponent";
 
 export {
   Components,
@@ -18,4 +19,5 @@ export {
   LoaderCodeComponent,
   InputCodeComponent,
   PasswordInputCodeComponent,
+  TimelineCodeComponent,
 };

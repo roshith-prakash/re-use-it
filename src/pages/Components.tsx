@@ -6,6 +6,7 @@ import {
   Input,
   PasswordInput,
   Loader,
+  Timeline,
 } from "../components";
 import { ContextValue, useDarkMode } from "../context/DarkModeContext";
 import { Link } from "react-router-dom";
@@ -21,9 +22,12 @@ const ComponentCard = ({
   children?: ReactNode;
 }) => {
   return (
-    <div className="dark:bg-secondarydarkbg grid w-80 grid-cols-1 gap-y-8 rounded-xl border-[1px] border-white bg-white p-8 shadow-2xl transition-all duration-200 hover:scale-110 dark:shadow-white/32">
+    <div className="dark:bg-secondarydarkbg flex w-80 flex-col gap-y-8 rounded-xl border-[1px] border-white bg-white p-8 shadow-2xl transition-all duration-200 hover:scale-110 dark:shadow-white/32">
       <p className="text-center text-xl font-medium">{title}</p>
-      {children}
+
+      <div className="flex flex-1 flex-col justify-center gap-y-5">
+        {children}
+      </div>
       <Link to={path} className="pt-2">
         <SecondaryButton
           text="View Code"
@@ -131,6 +135,25 @@ const Components = () => {
           {/* Loading Placeholder */}
           <ComponentCard path="/loader" title="Loading Placeholder">
             <Loader />
+            <Loader />
+            <Loader />
+          </ComponentCard>
+
+          {/* Timeline */}
+          <ComponentCard path="/timeline" title="Timeline">
+            <div>
+              {["Event A", "Event B", "Event C"].map((item, index) => {
+                return (
+                  <Timeline
+                    isFilled={index != 2}
+                    isLast={index == 2}
+                    key={item}
+                  >
+                    <p>{item}</p>
+                  </Timeline>
+                );
+              })}
+            </div>
           </ComponentCard>
 
           {/* Security Headers */}

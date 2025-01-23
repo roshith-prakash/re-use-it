@@ -4,6 +4,7 @@ import ErrorAccordion from "./ErrorAccordion";
 import Input from "./Input";
 import PasswordInput from "./PasswordInput";
 import Loader from "./Loader";
+import Timeline from "./Timeline";
 
 export {
   PrimaryButton,
@@ -12,4 +13,5 @@ export {
   Input,
   PasswordInput,
   Loader,
+  Timeline,
 };
