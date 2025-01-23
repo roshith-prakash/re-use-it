@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { CopyBlock, dracula } from "react-code-blocks";
+import { CopyBlock, xt256 } from "react-code-blocks";
 
 const PrimaryButtonCode = `import { MouseEventHandler, ReactNode } from "react";
 
@@ -41,7 +41,7 @@ const PrimaryButtonCodeComponent = () => {
         text={PrimaryButtonCode}
         language="typescript"
         showLineNumbers={true}
-        theme={dracula}
+        theme={xt256}
         codeBlock
       />
     </div>

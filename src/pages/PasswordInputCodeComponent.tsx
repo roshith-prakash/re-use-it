@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { CopyBlock, dracula } from "react-code-blocks";
+import { CopyBlock, xt256 } from "react-code-blocks";
 
 const PasswordInputCode = `import { ChangeEventHandler, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
@@ -57,7 +57,7 @@ const PasswordInputCodeComponent = () => {
         text={PasswordInputCode}
         language="typescript"
         showLineNumbers={true}
-        theme={dracula}
+        theme={xt256}
         codeBlock
       />
     </div>

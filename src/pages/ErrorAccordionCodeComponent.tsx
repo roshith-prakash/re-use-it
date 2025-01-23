@@ -1,4 +1,4 @@
-import { CopyBlock, dracula } from "react-code-blocks";
+import { CopyBlock, xt256 } from "react-code-blocks";
 import { useEffect } from "react";
 
 const ErrorAccordionCode = `const ErrorAccordion = ({
@@ -33,7 +33,7 @@ const ErrorAccordionCodeComponent = () => {
         text={ErrorAccordionCode}
         language="typescript"
         showLineNumbers={true}
-        theme={dracula}
+        theme={xt256}
         codeBlock
       />
     </div>

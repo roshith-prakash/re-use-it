@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { CopyBlock, dracula } from "react-code-blocks";
+import { CopyBlock, xt256 } from "react-code-blocks";
 
 const SecurityHeaderCode = `import { Helmet } from "react-helmet-async";
 
@@ -53,7 +53,7 @@ const SecurityHeadersCodeComponent = () => {
         text={SecurityHeaderCode}
         language="typescript"
         showLineNumbers={true}
-        theme={dracula}
+        theme={xt256}
         codeBlock
       />
     </div>
