@@ -31,7 +31,6 @@ function Components() {
 
           <Link to="/primary-button" className="mt-5">
             <button
-              onClick={toggleDarkMode}
               className="e w-full cursor-pointer rounded border-2 p-2 dark:text-white"
             >
               View Code
@@ -46,7 +45,6 @@ function Components() {
 
           <Link to="/secondary-button" className="mt-5">
             <button
-              onClick={toggleDarkMode}
               className="e w-full cursor-pointer rounded border-2 p-2 dark:text-white"
             >
               View Code
@@ -67,7 +65,6 @@ function Components() {
 
           <Link to="/error-accordion" className="mt-5">
             <button
-              onClick={toggleDarkMode}
               className="e w-full cursor-pointer rounded border-2 p-2 dark:text-white"
             >
               View Code
