@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { CopyBlock, dracula } from "react-code-blocks";
 
 const SecondaryButtonCode = `import { MouseEventHandler, ReactNode } from "react";
@@ -29,6 +30,10 @@ const SecondaryButton = ({
 export default SecondaryButton;`;
 
 const SecondaryButtonCodeComponent = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   return (
     <div className="dark:bg-darkbg min-h-screen p-10 dark:text-white">
       <h1 className="py-2 pl-1 italic">SecondaryButton.tsx</h1>

@@ -9,9 +9,11 @@
   --color-darkmodetext: #e4e4e4;
   --color-cta: #9b0ced;
   --color-hovercta: #7123b0;
-  --color-black: #000000;
-  --color-white: #ffffff;
   --color-grey: #f5f5f5;
   --color-error: #f23f3f;
   --color-darkmodeCTA: #b458ff;
+}
+
+input::placeholder {
+  transition: color 0.2s;
 }

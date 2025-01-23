@@ -1,4 +1,5 @@
 import { CopyBlock, dracula } from "react-code-blocks";
+import { useEffect } from "react";
 
 const ErrorAccordionCode = `const ErrorAccordion = ({
   text,
@@ -21,6 +22,10 @@ const ErrorAccordionCode = `const ErrorAccordion = ({
 export default ErrorAccordion;`;
 
 const ErrorAccordionCodeComponent = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   return (
     <div className="dark:bg-darkbg min-h-screen p-10 dark:text-white">
       <h1 className="py-2 pl-1 italic">ErrorAccordion.tsx</h1>

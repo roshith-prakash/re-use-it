@@ -4,27 +4,43 @@ import {
   Components,
   PrimaryButtonCodeComponent,
   SecondaryButtonCodeComponent,
+  SecurityHeadersCodeComponent,
+  LoaderCodeComponent,
+  InputCodeComponent,
+  PasswordInputCodeComponent,
 } from "./pages";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Components />} />
-        <Route
-          path="/error-accordion"
-          element={<ErrorAccordionCodeComponent />}
-        />
-        <Route
-          path="/primary-button"
-          element={<PrimaryButtonCodeComponent />}
-        />
-        <Route
-          path="/secondary-button"
-          element={<SecondaryButtonCodeComponent />}
-        />
-      </Routes>
-    </BrowserRouter>
+    <div className="dark:bg-darkbg">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Components />} />
+          <Route
+            path="/error-accordion"
+            element={<ErrorAccordionCodeComponent />}
+          />
+          <Route
+            path="/primary-button"
+            element={<PrimaryButtonCodeComponent />}
+          />
+          <Route
+            path="/secondary-button"
+            element={<SecondaryButtonCodeComponent />}
+          />
+          <Route
+            path="/security-headers"
+            element={<SecurityHeadersCodeComponent />}
+          />
+          <Route path="/loader" element={<LoaderCodeComponent />} />
+          <Route path="/input" element={<InputCodeComponent />} />
+          <Route
+            path="/password-input"
+            element={<PasswordInputCodeComponent />}
+          />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 

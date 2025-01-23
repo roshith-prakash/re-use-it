@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { CopyBlock, dracula } from "react-code-blocks";
 
 const PrimaryButtonCode = `import { MouseEventHandler, ReactNode } from "react";
@@ -26,10 +27,13 @@ const PrimaryButton = ({
   );
 };
 
-export default PrimaryButton;
-`;
+export default PrimaryButton;`;
 
 const PrimaryButtonCodeComponent = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   return (
     <div className="dark:bg-darkbg min-h-screen p-10 dark:text-white">
       <h1 className="py-2 pl-1 italic">PrimaryButton.tsx</h1>
