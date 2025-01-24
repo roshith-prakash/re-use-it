@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`font-inter dark:bg-darkbg relative z-2 flex items-center justify-between bg-white px-10 py-3 shadow-xl dark:text-white dark:shadow-md dark:shadow-white/30`}
+        className={`dark:bg-darkbg relative z-2 flex items-center justify-between bg-white px-10 py-3 font-sans shadow-xl dark:text-white dark:shadow-md dark:shadow-white/30`}
       >
         <Link to="/" aria-label="Home">
           {isDarkMode ? (

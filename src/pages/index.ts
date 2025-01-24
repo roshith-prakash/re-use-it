@@ -11,6 +11,7 @@ import TimelineCodeComponent from "./TimelineCodeComponent";
 import TailwindCSSComponent from "./TailwindCSSFile";
 import TailwindConfigComponent from "./TailwindConfigComponent";
 import DarkModeFile from "./DarkModeFile";
+import CardComponent from "./CardComponent";
 
 export {
   Components,
@@ -26,4 +27,5 @@ export {
   TailwindCSSComponent,
   TailwindConfigComponent,
   DarkModeFile,
+  CardComponent,
 };

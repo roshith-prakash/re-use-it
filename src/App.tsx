@@ -13,12 +13,21 @@ import {
   TailwindCSSComponent,
   TailwindConfigComponent,
   DarkModeFile,
+  CardComponent,
 } from "./pages";
 import { Navbar } from "./components";
+import SecurityHeaders from "./components/SecurityHeaders";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
     <div className="dark:bg-darkbg font-sans">
+      <SecurityHeaders />
       <BrowserRouter>
         <Navbar />
         <Routes>
@@ -47,6 +56,8 @@ function App() {
           />
 
           <Route path="/timeline" element={<TimelineCodeComponent />} />
+
+          <Route path="/card" element={<CardComponent />} />
 
           <Route path="/tailwindcss" element={<TailwindCSSComponent />} />
           <Route path="/tailwindconfig" element={<TailwindConfigComponent />} />

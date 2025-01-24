@@ -7,10 +7,12 @@ import {
   PasswordInput,
   Loader,
   Timeline,
+  Card,
 } from "../components";
 import { ContextValue, useDarkMode } from "../context/DarkModeContext";
 import { Link } from "react-router-dom";
 import { toast, Toaster } from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 const ComponentCard = ({
   path,
@@ -22,8 +24,11 @@ const ComponentCard = ({
   children?: ReactNode;
 }) => {
   return (
-    <div className="dark:bg-secondarydarkbg flex w-80 flex-col gap-y-8 rounded-xl border-[1px] border-white bg-white p-8 shadow-2xl transition-all duration-200 hover:scale-110 dark:shadow-white/32">
-      <p className="text-center text-xl font-medium">{title}</p>
+    <div
+      data-aos="fade-up"
+      className="dark:bg-secondarydarkbg flex w-80 flex-col gap-y-8 rounded-xl border-[1px] border-white bg-white p-8 shadow-2xl transition-all duration-200 hover:scale-110 dark:shadow-white/32"
+    >
+      <p className="text-center text-xl font-semibold">{title}</p>
 
       <div className="flex flex-1 flex-col justify-center gap-y-5">
         {children}
@@ -39,6 +44,7 @@ const ComponentCard = ({
 };
 
 const Components = () => {
+  const navigate = useNavigate();
   const { isDarkMode, toggleDarkMode } = useDarkMode() as ContextValue;
   const [isOpen, setIsOpen] = useState(false);
   const [inputValue, setInputValue] = useState<string>("");
@@ -162,6 +168,17 @@ const Components = () => {
               Common Security Headers added using React Helmet.
             </p>
           </ComponentCard>
+
+          <Card
+            primaryButtonText="View Code"
+            secondaryButtonText="View Code"
+            imageSrc="https://res.cloudinary.com/do8rpl9l4/image/upload/v1737443227/vuvep3cx4pgk0k5kgvql.jpg"
+            imageAlt="Lewis Hamilton"
+            title="Card Component"
+            subtitle="(Yes this card is a component.)"
+            primaryButtonClickHandler={() => navigate("/card")}
+            secondaryButtonClickHandler={() => navigate("/card")}
+          />
         </div>
       </div>
     </>
