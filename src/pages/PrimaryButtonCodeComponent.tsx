@@ -82,7 +82,7 @@ const PrimaryButtonCodeComponent = () => {
       <h3 className="py-2 pl-1 italic">PrimaryButton.tsx</h3>
       <CopyBlock
         text={PrimaryButtonCode}
-        language="typescript"
+        language="tsx"
         showLineNumbers={true}
         theme={xt256}
         codeBlock

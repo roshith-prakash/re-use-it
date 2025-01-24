@@ -5,6 +5,7 @@ import Input from "./Input";
 import PasswordInput from "./PasswordInput";
 import Loader from "./Loader";
 import Timeline from "./Timeline";
+import Navbar from "./Navbar";
 
 export {
   PrimaryButton,
@@ -14,4 +15,5 @@ export {
   PasswordInput,
   Loader,
   Timeline,
+  Navbar,
 };

@@ -105,3 +105,13 @@ A component for displaying error messages in a consistent style.
 ```
 
 ---
+
+### 8. **Security Headers**
+
+A component which adds basic security measures using React Helmet.
+
+```jsx
+<SecurityHeaders />
+```
+
+---

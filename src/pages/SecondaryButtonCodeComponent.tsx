@@ -82,7 +82,7 @@ const SecondaryButtonCodeComponent = () => {
       <h3>SecondaryButton.tsx</h3>
       <CopyBlock
         text={SecondaryButtonCode}
-        language="typescript"
+        language="tsx"
         showLineNumbers={true}
         theme={xt256}
         codeBlock

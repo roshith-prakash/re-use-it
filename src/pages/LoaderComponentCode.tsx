@@ -41,7 +41,7 @@ const LoaderCodeComponent = () => {
       <h1 className="py-2 pl-1 italic">Loader.tsx</h1>
       <CopyBlock
         text={LoaderCode}
-        language="typescript"
+        language="tsx"
         showLineNumbers={true}
         theme={xt256}
         codeBlock

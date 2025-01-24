@@ -10,12 +10,17 @@ import {
   PasswordInputCodeComponent,
   NotFound,
   TimelineCodeComponent,
+  TailwindCSSComponent,
+  TailwindConfigComponent,
+  DarkModeFile,
 } from "./pages";
+import { Navbar } from "./components";
 
 function App() {
   return (
     <div className="dark:bg-darkbg font-sans">
       <BrowserRouter>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Components />} />
           <Route
@@ -42,6 +47,10 @@ function App() {
           />
 
           <Route path="/timeline" element={<TimelineCodeComponent />} />
+
+          <Route path="/tailwindcss" element={<TailwindCSSComponent />} />
+          <Route path="/tailwindconfig" element={<TailwindConfigComponent />} />
+          <Route path="/darkmode" element={<DarkModeFile />} />
 
           <Route path="*" element={<NotFound />} />
         </Routes>

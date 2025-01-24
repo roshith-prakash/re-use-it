@@ -15,7 +15,7 @@ const Input = ({
   return (
     <input
       type="text"
-      className={`placeholder:text-greyText mt-3 min-h-8 w-full border-b-2 bg-transparent py-1.5 focus:outline-none dark:placeholder:text-white/40 ${className}`}
+      className={`dark:placeholder:text-grey mt-3 min-h-8 w-full border-b-2 bg-transparent py-1.5 focus:outline-none ${className}`}
       value={value}
       placeholder={placeholder}
       onChange={onChange}

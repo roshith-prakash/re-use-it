@@ -85,7 +85,7 @@ const TimelineCodeComponent = () => {
       <h3 className="py-2 pl-1 italic">Timeline.tsx</h3>
       <CopyBlock
         text={TimelineCode}
-        language="typescript"
+        language="tsx"
         showLineNumbers={true}
         theme={xt256}
         codeBlock

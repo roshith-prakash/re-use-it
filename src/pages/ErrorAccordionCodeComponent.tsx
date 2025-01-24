@@ -63,7 +63,7 @@ const ErrorAccordionCodeComponent = () => {
       <h3 className="py-2 pl-1 italic">ErrorAccordion.tsx</h3>
       <CopyBlock
         text={ErrorAccordionCode}
-        language="typescript"
+        language="tsx"
         showLineNumbers={true}
         theme={xt256}
         codeBlock

@@ -59,7 +59,7 @@ const SecurityHeadersCodeComponent = () => {
       <h3 className="py-10 pl-1 italic">SecurityHeaders.tsx</h3>
       <CopyBlock
         text={SecurityHeaderCode}
-        language="typescript"
+        language="tsx"
         showLineNumbers={true}
         theme={xt256}
         codeBlock

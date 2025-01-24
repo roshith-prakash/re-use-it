@@ -8,6 +8,9 @@ import LoaderCodeComponent from "./LoaderComponentCode";
 import InputCodeComponent from "./InputCodeComponent";
 import PasswordInputCodeComponent from "./PasswordInputCodeComponent";
 import TimelineCodeComponent from "./TimelineCodeComponent";
+import TailwindCSSComponent from "./TailwindCSSFile";
+import TailwindConfigComponent from "./TailwindConfigComponent";
+import DarkModeFile from "./DarkModeFile";
 
 export {
   Components,
@@ -20,4 +23,7 @@ export {
   InputCodeComponent,
   PasswordInputCodeComponent,
   TimelineCodeComponent,
+  TailwindCSSComponent,
+  TailwindConfigComponent,
+  DarkModeFile,
 };
