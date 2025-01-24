@@ -177,6 +177,11 @@ const Components = () => {
             primaryButtonClickHandler={() => navigate("/card")}
             secondaryButtonClickHandler={() => navigate("/card")}
           />
+
+          {/* Security Headers */}
+          <ComponentCard path="/navbar" title="Navbar">
+            <p className="text-center">Navigation Bar with Drawer Menu.</p>
+          </ComponentCard>
         </div>
       </div>
     </>

@@ -15,6 +15,7 @@ import {
   TailwindConfigComponent,
   DarkModeFile,
   CardComponent,
+  NavbarCodeComponent,
 } from "./pages";
 import { Navbar } from "./components";
 import SecurityHeaders from "./components/SecurityHeaders";
@@ -56,6 +57,7 @@ function App() {
           />
 
           <Route path="/timeline" element={<TimelineCodeComponent />} />
+          <Route path="/navbar" element={<NavbarCodeComponent />} />
 
           <Route path="/card" element={<CardComponent />} />
 

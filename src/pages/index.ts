@@ -12,6 +12,7 @@ import TailwindCSSComponent from "./TailwindCSSFile";
 import TailwindConfigComponent from "./TailwindConfigComponent";
 import DarkModeFile from "./DarkModeFile";
 import CardComponent from "./CardComponent";
+import NavbarCodeComponent from "./NavbarComponent";
 
 export {
   Components,
@@ -28,4 +29,5 @@ export {
   TailwindConfigComponent,
   DarkModeFile,
   CardComponent,
+  NavbarCodeComponent,
 };
