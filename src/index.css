@@ -11,6 +11,9 @@
   --color-grey: #f5f5f5;
   --color-error: #f23f3f;
   --color-darkmodeCTA: #b458ff;
+
+  --font-title: "Playwrite IN", sans-serif;
+  --font-sans: "Open Sans", serif;
 }
 
 input::placeholder {

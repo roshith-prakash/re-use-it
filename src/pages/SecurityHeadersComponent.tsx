@@ -48,7 +48,15 @@ const SecurityHeadersCodeComponent = () => {
 
   return (
     <div className="dark:bg-darkbg min-h-screen p-10 dark:text-white">
-      <h1 className="py-2 pl-1 italic">SecurityHeaders.tsx</h1>
+      <h1 className="text-center text-2xl font-medium">Security Headers</h1>
+      <h2 className="py-5 text-center">
+        Adds basic security measures using React Helmet.
+      </h2>
+      <h3 className="mt-2 text-center">
+        Note : Must wrap App with HelmetProvider Component of React Helmet.
+      </h3>
+
+      <h3 className="py-10 pl-1 italic">SecurityHeaders.tsx</h3>
       <CopyBlock
         text={SecurityHeaderCode}
         language="typescript"

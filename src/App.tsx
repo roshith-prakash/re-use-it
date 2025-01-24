@@ -14,7 +14,7 @@ import {
 
 function App() {
   return (
-    <div className="dark:bg-darkbg">
+    <div className="dark:bg-darkbg font-sans">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Components />} />

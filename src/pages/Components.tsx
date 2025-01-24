@@ -51,7 +51,7 @@ const Components = () => {
         className={`min-h-screen ${isDarkMode ? "bg-[url('/src/assets/animatedWaveDark.svg')]" : "bg-[url('/src/assets/animatedWave.svg')]"} bg-cover dark:text-white`}
       >
         {/* Title */}
-        <h1 className="py-10 text-center text-3xl font-semibold text-white">
+        <h1 className="font-title py-10 text-center text-3xl font-light italic">
           Roshith's Styled Components
         </h1>
 
@@ -125,7 +125,7 @@ const Components = () => {
           <ComponentCard path="/password-input" title="Password Input">
             <PasswordInput
               value={password}
-              placeholder="Enter your text"
+              placeholder="Enter your password"
               onChange={(e) => {
                 setPassword(e.target.value);
               }}

@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { CopyBlock, xt256 } from "react-code-blocks";
+import { SecondaryButton } from "../components";
 
 const SecondaryButtonCode = `import { MouseEventHandler, ReactNode } from "react";
 
@@ -36,7 +37,49 @@ const SecondaryButtonCodeComponent = () => {
 
   return (
     <div className="dark:bg-darkbg min-h-screen p-10 dark:text-white">
-      <h1 className="py-2 pl-1 italic">SecondaryButton.tsx</h1>
+      <h1 className="text-center text-2xl font-medium">Secondary Button</h1>
+      <h2 className="mt-8 py-5 text-center">
+        A button styled for secondary actions or less prominent use cases.
+      </h2>
+      <div className="flex flex-wrap justify-center gap-8 py-10">
+        <SecondaryButton text="Secondary Button" />
+        <SecondaryButton
+          text="Secondary Button"
+          disabled
+          disabledText="Disabled Secondary Button"
+        />
+      </div>
+
+      <div className="py-8">
+        <p className="text-lg font-medium underline">Props</p>
+        <ul className="list-disc pt-4 pl-8 leading-8">
+          <li>
+            {" "}
+            <b>text (string or element, required):</b> The text displayed on the
+            button.
+          </li>
+          <li>
+            {" "}
+            <b>onClick (function, optional):</b> The function to execute on
+            click.{" "}
+          </li>
+          <li>
+            {" "}
+            <b>className (string, optional):</b> To override default styles.
+          </li>
+          <li>
+            {" "}
+            <b>disabled (boolean, optional):</b> Disables the button when true.{" "}
+          </li>
+          <li>
+            {" "}
+            <b>disabledText (string, optional):</b> The text to be displayed
+            when button is disabled.{" "}
+          </li>
+        </ul>
+      </div>
+
+      <h3>SecondaryButton.tsx</h3>
       <CopyBlock
         text={SecondaryButtonCode}
         language="typescript"
