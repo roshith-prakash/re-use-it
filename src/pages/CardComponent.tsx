@@ -60,6 +60,21 @@ const Card = ({
 
 export default Card;`;
 
+const usingCode = `import Card from './Card';
+
+const App = () => {
+  return (
+      <Card
+        primaryButtonText="Read Article"
+        secondaryButtonText="Share"
+        title="Lewis Hamilton Joins Ferrari."
+        subtitle="The seven-time world champion has signed a 3-year contract with Ferrari."
+      />
+  )
+}
+
+`;
+
 const CardComponent = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -139,6 +154,15 @@ const CardComponent = () => {
       <h3>Card.tsx</h3>
       <CopyBlock
         text={CardCode}
+        language="tsx"
+        showLineNumbers={true}
+        theme={xt256}
+        codeBlock
+      />
+
+      <h3 className="mt-8 py-2 pl-1 italic">App.tsx</h3>
+      <CopyBlock
+        text={usingCode}
         language="tsx"
         showLineNumbers={true}
         theme={xt256}

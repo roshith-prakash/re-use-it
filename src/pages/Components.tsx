@@ -24,10 +24,7 @@ const ComponentCard = ({
   children?: ReactNode;
 }) => {
   return (
-    <div
-      data-aos="fade-up"
-      className="dark:bg-secondarydarkbg flex w-80 flex-col gap-y-8 rounded-xl border-[1px] border-white bg-white p-8 shadow-2xl transition-all duration-200 hover:scale-110 dark:shadow-white/32"
-    >
+    <div className="dark:bg-secondarydarkbg flex w-80 flex-col gap-y-8 rounded-xl border-[1px] border-white bg-white p-8 shadow-2xl transition-all duration-200 hover:scale-110 dark:shadow-white/32">
       <p className="text-center text-xl font-semibold">{title}</p>
 
       <div className="flex flex-1 flex-col justify-center gap-y-5">
@@ -169,6 +166,7 @@ const Components = () => {
             </p>
           </ComponentCard>
 
+          {/* Article Card */}
           <Card
             primaryButtonText="View Code"
             secondaryButtonText="View Code"

@@ -22,8 +22,22 @@ const ErrorAccordionCode = `const ErrorAccordion = ({
 
 export default ErrorAccordion;`;
 
+const usingCode = `import  ErrorAccordion  from "./ErrorAccordion";
+import { useState } from "react"
+
+const App = () => {
+const [isError,setIsError] = useState(false)
+
+  return (
+  <>
+    <button onClick={()=>{setIsError((prev)=>!prev)}}>Toggle Error</button>
+    <ErrorAccordion text="This is an error." isOpen={isError}/>
+  </> );
+}`;
+
 const ErrorAccordionCodeComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
+
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
@@ -63,6 +77,15 @@ const ErrorAccordionCodeComponent = () => {
       <h3 className="py-2 pl-1 italic">ErrorAccordion.tsx</h3>
       <CopyBlock
         text={ErrorAccordionCode}
+        language="tsx"
+        showLineNumbers={true}
+        theme={xt256}
+        codeBlock
+      />
+
+      <h3 className="mt-8 py-2 pl-1 italic">App.tsx</h3>
+      <CopyBlock
+        text={usingCode}
         language="tsx"
         showLineNumbers={true}
         theme={xt256}

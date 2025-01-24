@@ -30,6 +30,15 @@ const PrimaryButton = ({
 
 export default PrimaryButton;`;
 
+const usingCode = `
+import PrimaryButton  from "./PrimaryButton";
+
+const App = () => {
+  return(
+    <PrimaryButton text="Primary Button" onClick={()=>{console.log("Button Clicked")}}/>
+    )
+}`;
+
 const PrimaryButtonCodeComponent = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -82,6 +91,15 @@ const PrimaryButtonCodeComponent = () => {
       <h3 className="py-2 pl-1 italic">PrimaryButton.tsx</h3>
       <CopyBlock
         text={PrimaryButtonCode}
+        language="tsx"
+        showLineNumbers={true}
+        theme={xt256}
+        codeBlock
+      />
+
+      <h3 className="mt-8 py-2 pl-1 italic">App.tsx</h3>
+      <CopyBlock
+        text={usingCode}
         language="tsx"
         showLineNumbers={true}
         theme={xt256}

@@ -37,6 +37,23 @@ const Timeline = ({
 export default Timeline;
 `;
 
+const usingCode = `import Timeline  from "./Timeline";
+
+const App = () => {
+  return (
+        <div>
+          {["Event A", "Event B", "Event C"].map((item, index) => {
+            return (
+              <Timeline isFilled={index != 2} isLast={index == 2} key={item}>
+                <p className="pt-1.5">{item}</p>
+              </Timeline>
+            );
+          })}
+        </div>
+  )
+
+}`;
+
 const TimelineCodeComponent = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -85,6 +102,15 @@ const TimelineCodeComponent = () => {
       <h3 className="py-2 pl-1 italic">Timeline.tsx</h3>
       <CopyBlock
         text={TimelineCode}
+        language="tsx"
+        showLineNumbers={true}
+        theme={xt256}
+        codeBlock
+      />
+
+      <h3 className="mt-8 py-2 pl-1 italic">App.tsx</h3>
+      <CopyBlock
+        text={usingCode}
         language="tsx"
         showLineNumbers={true}
         theme={xt256}

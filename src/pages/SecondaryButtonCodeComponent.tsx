@@ -30,6 +30,15 @@ const SecondaryButton = ({
 
 export default SecondaryButton;`;
 
+const usingCode = `
+import  SecondaryButton  from "./SecondaryButton";
+
+const App = () => {
+  return(
+    <SecondaryButton text="Secondary Button" onClick={()=>{console.log("Button Clicked")}}/>
+    )
+}`;
+
 const SecondaryButtonCodeComponent = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -82,6 +91,15 @@ const SecondaryButtonCodeComponent = () => {
       <h3>SecondaryButton.tsx</h3>
       <CopyBlock
         text={SecondaryButtonCode}
+        language="tsx"
+        showLineNumbers={true}
+        theme={xt256}
+        codeBlock
+      />
+
+      <h3 className="mt-8 py-2 pl-1 italic">App.tsx</h3>
+      <CopyBlock
+        text={usingCode}
         language="tsx"
         showLineNumbers={true}
         theme={xt256}

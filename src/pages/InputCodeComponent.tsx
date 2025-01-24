@@ -29,6 +29,18 @@ const Input = ({
 
 export default Input;`;
 
+const usingCode = `import  Input  from "./Input";
+import { useState } from "react"
+
+const App = () => {
+const [textInput,setTextInput] = useState<string>("")
+
+  return (
+  <>
+    <Input value={textInput} placeholder="Enter your text" onChange={(e)=>setTextInput(e.target.value)}/>
+  </> );
+}`;
+
 const InputCodeComponent = () => {
   const [inputValue, setInputValue] = useState<string>("");
   useEffect(() => {
@@ -77,6 +89,15 @@ const InputCodeComponent = () => {
       <h3 className="py-2 pl-1 italic">Input.tsx</h3>
       <CopyBlock
         text={InputCode}
+        language="tsx"
+        showLineNumbers={true}
+        theme={xt256}
+        codeBlock
+      />
+
+      <h3 className="mt-8 py-2 pl-1 italic">App.tsx</h3>
+      <CopyBlock
+        text={usingCode}
         language="tsx"
         showLineNumbers={true}
         theme={xt256}

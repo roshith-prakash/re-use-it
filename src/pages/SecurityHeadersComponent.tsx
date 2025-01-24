@@ -41,6 +41,19 @@ const SecurityHeaders = () => {
 
 export default SecurityHeaders;`;
 
+const usingCode = `import SecurityHeaders  from "./SecurityHeaders";
+import { HelmetProvider } from "react-helmet-async";
+
+const App = () => {
+  return (
+        <HelmetProvider>
+          <SecurityHeaders />
+          <div></div>
+        </HelmetProvider>
+  )
+
+}`;
+
 const SecurityHeadersCodeComponent = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -59,6 +72,15 @@ const SecurityHeadersCodeComponent = () => {
       <h3 className="py-10 pl-1 italic">SecurityHeaders.tsx</h3>
       <CopyBlock
         text={SecurityHeaderCode}
+        language="tsx"
+        showLineNumbers={true}
+        theme={xt256}
+        codeBlock
+      />
+
+      <h3 className="mt-8 pl-1 italic">App.tsx</h3>
+      <CopyBlock
+        text={usingCode}
         language="tsx"
         showLineNumbers={true}
         theme={xt256}

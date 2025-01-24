@@ -13,6 +13,16 @@ const LoaderCode = `const Loader = ({ className }: { className?: string }) => {
 export default Loader;
 `;
 
+const usingCode = `import  Loader  from "./Loader";
+
+const App = () => {
+
+  return (
+  <>
+    <Loader />
+  </> );
+}`;
+
 const LoaderCodeComponent = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -41,6 +51,15 @@ const LoaderCodeComponent = () => {
       <h1 className="py-2 pl-1 italic">Loader.tsx</h1>
       <CopyBlock
         text={LoaderCode}
+        language="tsx"
+        showLineNumbers={true}
+        theme={xt256}
+        codeBlock
+      />
+
+      <h3 className="mt-8 py-2 pl-1 italic">App.tsx</h3>
+      <CopyBlock
+        text={usingCode}
         language="tsx"
         showLineNumbers={true}
         theme={xt256}

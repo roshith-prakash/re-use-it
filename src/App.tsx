@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {
   ErrorAccordionCodeComponent,
@@ -19,7 +20,6 @@ import { Navbar } from "./components";
 import SecurityHeaders from "./components/SecurityHeaders";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
 
 function App() {
   useEffect(() => {
