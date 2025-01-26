@@ -21,14 +21,9 @@ import {
 } from "./pages";
 import { Navbar } from "./components";
 import SecurityHeaders from "./components/SecurityHeaders";
-import Aos from "aos";
-import "aos/dist/aos.css";
 import Footer from "./components/Footer";
 
 function App() {
-  useEffect(() => {
-    Aos.init();
-  }, []);
   return (
     <div className="dark:bg-darkbg font-sans">
       <SecurityHeaders />
