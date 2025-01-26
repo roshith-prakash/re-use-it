@@ -17,6 +17,7 @@ import {
   CardComponent,
   NavbarCodeComponent,
   SelectComponent,
+  FooterComponent,
 } from "./pages";
 import { Navbar } from "./components";
 import SecurityHeaders from "./components/SecurityHeaders";
@@ -59,6 +60,7 @@ function App() {
 
           <Route path="/timeline" element={<TimelineCodeComponent />} />
           <Route path="/navbar" element={<NavbarCodeComponent />} />
+          <Route path="/footer" element={<FooterComponent />} />
 
           <Route path="/card" element={<CardComponent />} />
           <Route path="/select" element={<SelectComponent />} />

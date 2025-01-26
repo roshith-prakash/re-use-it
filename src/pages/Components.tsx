@@ -185,6 +185,11 @@ const Components = () => {
             <p className="text-center">Navigation Bar with Drawer Menu.</p>
           </ComponentCard>
 
+          {/* Footer */}
+          <ComponentCard path="/footer" title="Footer">
+            <p className="text-center">Footer Component with Floating Div.</p>
+          </ComponentCard>
+
           <ComponentCard path="/select" title="Select">
             <Select
               onChange={(e) => console.log("Select Value : ", e.target.value)}

@@ -95,6 +95,10 @@ const CardComponent = () => {
         />
       </div>
 
+      <p className="py-8">
+        Note : Card uses Primary & Secondary Button Components.
+      </p>
+
       <div className="py-8">
         <p className="text-lg font-medium underline">Props</p>
         <ul className="list-disc pt-4 pl-8 leading-8">

@@ -14,6 +14,7 @@ import DarkModeFile from "./DarkModeFile";
 import CardComponent from "./CardComponent";
 import NavbarCodeComponent from "./NavbarComponent";
 import SelectComponent from "./SelectComponent";
+import FooterComponent from "./FooterComponent";
 
 export {
   Components,
@@ -32,4 +33,5 @@ export {
   CardComponent,
   NavbarCodeComponent,
   SelectComponent,
+  FooterComponent,
 };
