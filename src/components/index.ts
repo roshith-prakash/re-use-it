@@ -7,6 +7,8 @@ import Loader from "./Loader";
 import Timeline from "./Timeline";
 import Navbar from "./Navbar";
 import Card from "./Card";
+import Select from "./Select";
+import { Option } from "./Select";
 
 export {
   PrimaryButton,
@@ -18,4 +20,6 @@ export {
   Timeline,
   Navbar,
   Card,
+  Select,
+  Option,
 };

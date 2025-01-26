@@ -63,7 +63,7 @@ const Navbar = () => {
             to="/darkmode"
             className="hover:text-cta dark:hover:text-darkmodeCTA transition-all"
           >
-            DarkModeEnabler
+            Dark Mode Context
           </Link>
         </div>
 
@@ -169,7 +169,7 @@ const Navbar = () => {
               tabIndex={0}
               aria-label="View Dark mode Context"
             >
-              DarkModeEnabler
+              Dark Mode Context
             </p>
           </div>
 
