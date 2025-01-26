@@ -88,7 +88,7 @@ const SelectComponent = () => {
         </ul>
       </div>
 
-      <h3 className="py-2 pl-1 italic">PasswordInput.tsx</h3>
+      <h3 className="py-2 pl-1 italic">Select.tsx</h3>
       <CopyBlock
         text={SelectCode}
         language="tsx"

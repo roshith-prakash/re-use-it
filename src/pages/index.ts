@@ -15,6 +15,8 @@ import CardComponent from "./CardComponent";
 import NavbarCodeComponent from "./NavbarComponent";
 import SelectComponent from "./SelectComponent";
 import FooterComponent from "./FooterComponent";
+import Home from "./Home";
+import TableComponent from "./TableComponent";
 
 export {
   Components,
@@ -34,4 +36,6 @@ export {
   NavbarCodeComponent,
   SelectComponent,
   FooterComponent,
+  Home,
+  TableComponent,
 };

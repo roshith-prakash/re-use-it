@@ -16,11 +16,12 @@ import {
   CardComponent,
   NavbarCodeComponent,
   FooterComponent,
+  Home,
+  TableComponent,
   // SelectComponent,
 } from "./pages";
-import { Navbar } from "./components";
+import { Footer, Navbar } from "./components";
 import SecurityHeaders from "./components/SecurityHeaders";
-import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -29,44 +30,51 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Components />} />
+          <Route path="/" element={<Home />} />
+
+          <Route path="/components" element={<Components />} />
 
           <Route
-            path="/error-accordion"
+            path="/components/error-accordion"
             element={<ErrorAccordionCodeComponent />}
           />
 
           <Route
-            path="/primary-button"
+            path="/components/primary-button"
             element={<PrimaryButtonCodeComponent />}
           />
 
           <Route
-            path="/secondary-button"
+            path="/components/secondary-button"
             element={<SecondaryButtonCodeComponent />}
           />
 
           <Route
-            path="/security-headers"
+            path="/components/security-headers"
             element={<SecurityHeadersCodeComponent />}
           />
 
-          <Route path="/loader" element={<LoaderCodeComponent />} />
+          <Route path="/components/loader" element={<LoaderCodeComponent />} />
 
-          <Route path="/input" element={<InputCodeComponent />} />
+          <Route path="/components/input" element={<InputCodeComponent />} />
 
           <Route
-            path="/password-input"
+            path="/components/password-input"
             element={<PasswordInputCodeComponent />}
           />
 
-          <Route path="/timeline" element={<TimelineCodeComponent />} />
+          <Route
+            path="/components/timeline"
+            element={<TimelineCodeComponent />}
+          />
 
-          <Route path="/navbar" element={<NavbarCodeComponent />} />
+          <Route path="/components/navbar" element={<NavbarCodeComponent />} />
 
-          <Route path="/footer" element={<FooterComponent />} />
+          <Route path="/components/footer" element={<FooterComponent />} />
 
-          <Route path="/card" element={<CardComponent />} />
+          <Route path="/components/card" element={<CardComponent />} />
+
+          <Route path="/components/table" element={<TableComponent />} />
 
           {/* <Route path="/select" element={<SelectComponent />} /> */}
 

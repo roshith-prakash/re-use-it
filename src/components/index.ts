@@ -9,6 +9,7 @@ import Navbar from "./Navbar";
 import Card from "./Card";
 import Select from "./Select";
 import { Option } from "./Select";
+import Footer from "./Footer";
 
 export {
   PrimaryButton,
@@ -22,4 +23,5 @@ export {
   Card,
   Select,
   Option,
+  Footer,
 };

@@ -15,6 +15,13 @@ import { ContextValue, useDarkMode } from "../context/DarkModeContext";
 import { Link } from "react-router-dom";
 import { toast, Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import Table, {
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "../components/Table";
 
 const ComponentCard = ({
   path,
@@ -73,7 +80,10 @@ const Components = () => {
         {/* Components */}
         <div className="flex flex-wrap justify-center gap-x-8 gap-y-12 p-10">
           {/* Primary Button */}
-          <ComponentCard path="/primary-button" title=" Primary Button">
+          <ComponentCard
+            path="/components/primary-button"
+            title=" Primary Button"
+          >
             <div className="flex justify-center">
               <PrimaryButton
                 onClick={() => {
@@ -88,7 +98,10 @@ const Components = () => {
           </ComponentCard>
 
           {/* Secondary Button */}
-          <ComponentCard path="/secondary-button" title="Secondary Button">
+          <ComponentCard
+            path="/components/secondary-button"
+            title="Secondary Button"
+          >
             <div className="flex justify-center">
               <SecondaryButton
                 onClick={() => {
@@ -103,7 +116,7 @@ const Components = () => {
           </ComponentCard>
 
           {/* Error Accordion */}
-          <ComponentCard path="/error-accordion" title="Error">
+          <ComponentCard path="/components/error-accordion" title="Error">
             <button
               onClick={() => {
                 setIsOpen((prev) => !prev);
@@ -116,7 +129,7 @@ const Components = () => {
           </ComponentCard>
 
           {/* Input */}
-          <ComponentCard path="/input" title="Text Input">
+          <ComponentCard path="/components/input" title="Text Input">
             <Input
               value={inputValue}
               placeholder="Enter your text"
@@ -127,7 +140,10 @@ const Components = () => {
           </ComponentCard>
 
           {/* Password Input */}
-          <ComponentCard path="/password-input" title="Password Input">
+          <ComponentCard
+            path="/components/password-input"
+            title="Password Input"
+          >
             <PasswordInput
               value={password}
               placeholder="Enter your password"
@@ -138,14 +154,14 @@ const Components = () => {
           </ComponentCard>
 
           {/* Loading Placeholder */}
-          <ComponentCard path="/loader" title="Loading Placeholder">
+          <ComponentCard path="/components/loader" title="Loading Placeholder">
             <Loader />
             <Loader />
             <Loader />
           </ComponentCard>
 
           {/* Timeline */}
-          <ComponentCard path="/timeline" title="Timeline">
+          <ComponentCard path="/components/timeline" title="Timeline">
             <div>
               {["Event A", "Event B", "Event C"].map((item, index) => {
                 return (
@@ -162,7 +178,10 @@ const Components = () => {
           </ComponentCard>
 
           {/* Security Headers */}
-          <ComponentCard path="/security-headers" title="Security Headers">
+          <ComponentCard
+            path="/components/security-headers"
+            title="Security Headers"
+          >
             <p className="text-center">
               Common Security Headers added using React Helmet.
             </p>
@@ -176,30 +195,43 @@ const Components = () => {
             imageAlt="Lewis Hamilton"
             title="Card Component"
             subtitle="(Yes this card is a component.)"
-            primaryButtonClickHandler={() => navigate("/card")}
-            secondaryButtonClickHandler={() => navigate("/card")}
+            primaryButtonClickHandler={() => navigate("/components/card")}
+            secondaryButtonClickHandler={() => navigate("/components/card")}
           />
 
           {/* Navbar */}
-          <ComponentCard path="/navbar" title="Navbar">
+          <ComponentCard path="/components/navbar" title="Navbar">
             <p className="text-center">Navigation Bar with Drawer Menu.</p>
           </ComponentCard>
 
           {/* Footer */}
-          <ComponentCard path="/footer" title="Footer">
+          <ComponentCard path="/components/footer" title="Footer">
             <p className="text-center">Footer Component with Floating Div.</p>
           </ComponentCard>
 
-          {/* Select */}
-          {/* <ComponentCard path="/select" title="Select">
-            <Select
-              onChange={(e) => console.log("Select Value : ", e.target.value)}
-            >
-              <Option value={"A"} text="Option A" />
-              <Option value={"B"} text="Option B" />
-              <Option value={"C"} text="Option C" />
-            </Select>
-          </ComponentCard> */}
+          {/* Table */}
+          <ComponentCard path="/components/table" title="Table">
+            <Table className="max-w-lg">
+              <TableHead>
+                <TableHeader>Sr No</TableHeader>
+                <TableHeader>Name</TableHeader>
+              </TableHead>
+              <TableBody>
+                <TableRow>
+                  <TableCell>1</TableCell>
+                  <TableCell>Alonso</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>2</TableCell>
+                  <TableCell>Vettel</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>3</TableCell>
+                  <TableCell>Hamilton</TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
+          </ComponentCard>
         </div>
       </div>
     </>

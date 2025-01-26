@@ -48,6 +48,12 @@ const Navbar = () => {
             Home
           </Link>
           <Link
+            to="/components"
+            className="hover:text-cta dark:hover:text-darkmodeCTA transition-all"
+          >
+            Components
+          </Link>
+          <Link
             to="/tailwindcss"
             className="hover:text-cta dark:hover:text-darkmodeCTA transition-all"
           >
@@ -143,6 +149,15 @@ const Navbar = () => {
               aria-label="Go to Home"
             >
               Home
+            </p>
+            <p
+              onClick={() => handleSearch("/components")}
+              className="hover:text-cta w-fit cursor-pointer transition-all"
+              role="button"
+              tabIndex={0}
+              aria-label="Go to Components"
+            >
+              Components
             </p>
             <p
               onClick={() => handleSearch("/tailwindcss")}
