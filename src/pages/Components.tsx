@@ -8,8 +8,8 @@ import {
   Loader,
   Timeline,
   Card,
-  Select,
-  Option,
+  // Select,
+  // Option,
 } from "../components";
 import { ContextValue, useDarkMode } from "../context/DarkModeContext";
 import { Link } from "react-router-dom";
@@ -190,7 +190,8 @@ const Components = () => {
             <p className="text-center">Footer Component with Floating Div.</p>
           </ComponentCard>
 
-          <ComponentCard path="/select" title="Select">
+          {/* Select */}
+          {/* <ComponentCard path="/select" title="Select">
             <Select
               onChange={(e) => console.log("Select Value : ", e.target.value)}
             >
@@ -198,7 +199,7 @@ const Components = () => {
               <Option value={"B"} text="Option B" />
               <Option value={"C"} text="Option C" />
             </Select>
-          </ComponentCard>
+          </ComponentCard> */}
         </div>
       </div>
     </>
