@@ -24,8 +24,16 @@ export const isValidUsername = (username:string) => {
 };
 `;
 
-const usingCode = ``;
+const usingCode = `import { isValidUsername } from "./isValidUsername";
+import { isValidEmail } from "./isValidEmail";
+import { isValidPassword } from "./isValidPassword";
 
+const testString = "abcdefg@134"
+
+console.log(isValidEmail(testString));
+console.log(isValidPassword(testString));
+console.log(isValidUsername(testString));
+`;
 const Regex = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -79,7 +87,7 @@ const Regex = () => {
         codeBlock
       />
 
-      <h3 className="py-10 pl-1 italic">App.tsx</h3>
+      <h3 className="py-10 pl-1 italic">test.js</h3>
       <CopyBlock
         text={usingCode}
         language="tsx"

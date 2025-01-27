@@ -14,7 +14,13 @@ export function shuffleArray(array: any[]) {
 }
 `;
 
-const usingCode = ``;
+const usingCode = `import { shuffleArray } from "./shuffleArray";
+
+let arr = ["A","B","C","D"];
+
+shuffleArray(arr);
+
+console.log(arr);`;
 
 const ShuffleArray = () => {
   useEffect(() => {
@@ -41,7 +47,7 @@ const ShuffleArray = () => {
         codeBlock
       />
 
-      <h3 className="mt-8 pl-1 italic">App.tsx</h3>
+      <h3 className="mt-8 pl-1 italic">route.ts</h3>
       <CopyBlock
         text={usingCode}
         language="tsx"

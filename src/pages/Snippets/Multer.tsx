@@ -15,7 +15,10 @@ const upload = multer({ storage: storage })
 
 export default upload`;
 
-const usingCode = ``;
+const usingCode = `import upload from "./multer"
+
+// Create a new post.
+router.post("/create-post", upload.single("file"), createPost);`;
 
 const Multer = () => {
   useEffect(() => {
@@ -42,7 +45,7 @@ const Multer = () => {
         codeBlock
       />
 
-      <h3 className="mt-8 pl-1 italic">App.tsx</h3>
+      <h3 className="mt-8 pl-1 italic">route.ts</h3>
       <CopyBlock
         text={usingCode}
         language="tsx"

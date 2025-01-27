@@ -5,7 +5,12 @@ const formatNumberCode = `export const numberFormat = (num: number) => {
   return Intl.NumberFormat("en-us", { notation: "compact" }).format(num);
 };`;
 
-const usingCode = ``;
+const usingCode = `import { formatNumber } from "./formatNumber
+
+const App = () => {
+  return <p>{formatNumber(1000000)} minute read.</p>
+}
+`;
 
 const FormatNumber = () => {
   useEffect(() => {

@@ -25,7 +25,27 @@ const useDebounce = (value: string, delay: number = 1000) => {
 export default useDebounce;
 `;
 
-const usingCode = ``;
+const usingCode = `import { useState } from "react"
+import useDebounce from "./useDebounce"
+
+const App = () => {
+  const [search, setSearch] = useState("");
+
+  // Debouncing the input of the user
+  const debouncedSearch = useDebounce(search);
+
+  console.log(debouncedSearch)
+
+  return (
+      <Input
+        value={search}
+        className="pl-10"
+        placeholder={"Enter your text"}
+        onChange={(e) => setSearch(e.target.value)}
+      />
+  )
+}
+`;
 
 const UseDebounceHook = () => {
   useEffect(() => {
@@ -52,7 +72,7 @@ const UseDebounceHook = () => {
         codeBlock
       />
 
-      <h3 className="mt-8 pl-1 italic">App.tsx</h3>
+      <h3 className="py-10 pl-1 italic">App.tsx</h3>
       <CopyBlock
         text={usingCode}
         language="tsx"

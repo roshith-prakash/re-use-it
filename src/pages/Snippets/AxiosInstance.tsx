@@ -12,7 +12,19 @@ export const axiosInstance = axios.create({
 });
 `;
 
-const usingCode = ``;
+const usingCode = `import {useEffect} from "react"
+import { axiosInstance } from "./axiosInstance"
+
+const App = () =>{
+
+  useEffect(()=>{
+    axios.get("/test" , (res) => { console.log(res) });
+  },[])
+
+  return(
+    <div>Axios Test</div>
+  )
+}`;
 
 const AxiosInstance = () => {
   useEffect(() => {
@@ -42,7 +54,7 @@ const AxiosInstance = () => {
         codeBlock
       />
 
-      <h3 className="mt-8 pl-1 italic">App.tsx</h3>
+      <h3 className="py-10 pl-1 italic">App.tsx</h3>
       <CopyBlock
         text={usingCode}
         language="tsx"

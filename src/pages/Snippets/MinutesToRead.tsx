@@ -12,8 +12,14 @@ export const getMinsToRead = (value: string | undefined) => {
 };
 `;
 
-const usingCode = ``;
+const usingCode = `import { getMinsToRead } from "./getMinsToRead
 
+const App = () =>{
+  const testString = "Some Long String"
+
+  return <p>{getMinsToRead(testString)} minute read.</p>
+}
+`;
 const MinutesToRead = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -30,7 +36,7 @@ const MinutesToRead = () => {
         Gets the number of minutes required to read something.
       </h2>
 
-      <h3 className="py-10 pl-1 italic">useDebounce.tsx</h3>
+      <h3 className="py-10 pl-1 italic">getMinsToRead.tsx</h3>
       <CopyBlock
         text={minutesToReadCode}
         language="typescript"

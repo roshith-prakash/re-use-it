@@ -15,7 +15,21 @@ cloudinary.config({
 export default cloudinary;
 `;
 
-const usingCode = ``;
+const usingCode = ` import cloudinary from "./cloudinary"
+
+if (req?.file) {
+      // Uploading image to cloudinary
+      cloudinary.uploader.upload(req.file.path, async function (err, result) {
+        // If error during image upload
+        if (err) {
+          console.log(err);
+        }
+        // If image upload was successful
+        else {
+          // Do Something
+        }
+      });
+}`;
 
 const Cloudinary = () => {
   useEffect(() => {
@@ -42,7 +56,7 @@ const Cloudinary = () => {
         codeBlock
       />
 
-      <h3 className="mt-8 pl-1 italic">App.tsx</h3>
+      <h3 className="mt-8 pl-1 italic">test.ts</h3>
       <CopyBlock
         text={usingCode}
         language="tsx"
