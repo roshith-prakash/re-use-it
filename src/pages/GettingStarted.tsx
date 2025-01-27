@@ -54,6 +54,15 @@ const GettingStarted = () => {
             </Link>{" "}
             for guidance.
           </li>
+          <li>
+            Copy the DarkModeContext file and wrap your root (App) component
+            with the DarkModeProvider. For detailed instructions, check{" "}
+            <Link to="/darkmode" className="text-blue-600 dark:text-blue-400">
+              Dark Mode Context
+            </Link>
+            .
+          </li>
+
           <li>Choose the component you need and copy its code.</li>
           <li>
             Create a new file and paste the code to include the component.
