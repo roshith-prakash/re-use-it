@@ -1,5 +1,6 @@
 import { ContextValue, useDarkMode } from "../context/DarkModeContext";
 import ComponentCard from "../components/ComponentCard";
+import { Typewriter } from "react-simple-typewriter";
 
 const CodeSnippets = () => {
   const { isDarkMode } = useDarkMode() as ContextValue;
@@ -8,11 +9,18 @@ const CodeSnippets = () => {
       className={`min-h-screen ${isDarkMode ? "bg-[url('/src/assets/animatedWaveDark.svg')]" : "bg-[url('/src/assets/animatedWave.svg')]"} bg-cover dark:text-white`}
     >
       {/* Title */}
-      <h1 className="font-pacifico pt-10 text-center text-5xl italic">
-        Re-Use-it!
+      <h1 className="font-pacifico px-4 pt-20 text-center text-3xl leading-16 italic md:text-5xl">
+        Re-Use-it! Functions & Code Snippets
       </h1>
-      <h2 className="font-title px-4 pt-10 text-center text-lg font-medium italic">
-        Functions
+
+      <h2 className="font-title px-4 py-10 text-center text-lg font-medium italic">
+        Functions -{" "}
+        <Typewriter
+          typeSpeed={75}
+          deleteSpeed={75}
+          loop
+          words={["Reusable.", "Adaptable.", "Yours."]}
+        />
       </h2>
 
       <div className="flex flex-wrap justify-center gap-x-8 gap-y-12 p-10">
@@ -31,6 +39,14 @@ const CodeSnippets = () => {
           <p className="text-center">
             Useful Regex functions - username, password, email.
           </p>
+        </ComponentCard>
+
+        {/* Axios */}
+        <ComponentCard
+          path="/code-snippets/shuffle-array"
+          title="Shuffle Array"
+        >
+          <p className="text-center">Shuffle elements inside an array.</p>
         </ComponentCard>
 
         {/* Minutes to Read */}
@@ -64,7 +80,7 @@ const CodeSnippets = () => {
           <p className="text-center">Configures Multer for file upload.</p>
         </ComponentCard>
 
-        {/* Multer */}
+        {/* Cloudinary */}
         <ComponentCard path="/code-snippets/cloudinary" title="Cloudinary">
           <p className="text-center">Configures Cloudinary SDK.</p>
         </ComponentCard>

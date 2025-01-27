@@ -20,6 +20,7 @@ import Table, {
   TableRow,
 } from "../components/Table";
 import ComponentCard from "../components/ComponentCard";
+import { Typewriter } from "react-simple-typewriter";
 
 const Components = () => {
   const navigate = useNavigate();
@@ -41,11 +42,17 @@ const Components = () => {
         className={`min-h-screen ${isDarkMode ? "bg-[url('/src/assets/animatedWaveDark.svg')]" : "bg-[url('/src/assets/animatedWave.svg')]"} bg-cover dark:text-white`}
       >
         {/* Title */}
-        <h1 className="font-pacifico pt-10 text-center text-5xl italic">
-          Re-Use-it!
+        <h1 className="font-pacifico px-4 pt-10 text-center text-3xl italic md:text-5xl">
+          Re-Use-it! Components
         </h1>
         <h2 className="font-title px-4 pt-10 text-center text-lg font-medium italic">
-          Components - Reusable. Customizable. Yours.
+          Components -{" "}
+          <Typewriter
+            typeSpeed={75}
+            deleteSpeed={75}
+            loop
+            words={["Reusable.", "Customizable.", "Yours."]}
+          />
         </h2>
 
         {/* Getting started */}

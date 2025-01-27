@@ -15,7 +15,7 @@ const Home = () => {
       <div className="flex flex-1 flex-col items-center justify-center gap-10">
         <h1 className="font-pacifico text-6xl">Re-Use-it!</h1>
         <h2 className="font-title text-2xl">
-          Components that are{" "}
+          React Components that are{" "}
           <Typewriter
             typeSpeed={75}
             deleteSpeed={75}

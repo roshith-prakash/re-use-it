@@ -27,6 +27,7 @@ import {
   AxiosInstance,
   Multer,
   Cloudinary,
+  ShuffleArray,
   // SelectComponent,
 } from "./pages";
 import { Footer, Navbar } from "./components";
@@ -127,6 +128,11 @@ function App() {
           <Route path="/code-snippets/multer" element={<Multer />} />
 
           <Route path="/code-snippets/cloudinary" element={<Cloudinary />} />
+
+          <Route
+            path="/code-snippets/shuffle-array"
+            element={<ShuffleArray />}
+          />
 
           {/* ----------------------------------------------------------------------------------------------------------------------------- */}
 

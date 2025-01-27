@@ -24,7 +24,7 @@ const Footer = () => {
               window.scrollTo({ top: 0, behavior: "smooth" });
             }, 100);
           }}
-          className="flex cursor-pointer items-center gap-x-2 rounded-full border-2 border-white px-5 py-2 text-xl font-medium text-white transition-all hover:bg-white hover:text-black"
+          className="font-pacifico flex cursor-pointer items-center gap-x-2 rounded-full border-2 border-white px-5 py-2 text-xl font-medium text-white transition-all hover:bg-white hover:text-black"
         >
           Re-Use-it!
         </button>

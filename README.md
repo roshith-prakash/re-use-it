@@ -1,4 +1,4 @@
-# Styled Components Library
+# Re-Use-it! Components Library
 
 This repository contains a collection of reusable and customizable React components styled with Tailwind CSS. These components are designed to provide a consistent look and feel across your applications while being flexible enough to adapt to different use cases.
 
