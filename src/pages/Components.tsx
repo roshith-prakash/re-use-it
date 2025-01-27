@@ -57,14 +57,13 @@ const Components = () => {
 
         {/* Getting started */}
         <div className="my-10 flex justify-center">
-          <button
+          <SecondaryButton
             onClick={() => {
               navigate("/getting-started");
             }}
-            className="dark:text-darkbg cursor-pointer rounded-lg bg-white p-2 px-4 shadow-xl transition-all active:shadow"
-          >
-            Need a hand? Get started here.
-          </button>
+            className="origin-bottom rounded-lg bg-white dark:bg-transparent"
+            text="Need a hand? Get started here."
+          ></SecondaryButton>
         </div>
 
         {/* Components */}

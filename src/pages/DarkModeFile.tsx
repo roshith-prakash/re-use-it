@@ -50,6 +50,32 @@ export const useDarkMode = () => {
   return useContext(DarkModeContext);
 };`;
 
+const usingCode = `import { DarkModeProvider } from "./DarkModeContext";
+
+const App = () =>{
+  return (
+    <DarkModeProvider>
+        // Wrap all components with DarkModeProvider.
+    </DarkModeProvider>
+  )
+}
+`;
+
+const usingDarkMode = `import { useDarkMode, ContextValue } from "./DarkModeContext";
+
+const Home = () =>{
+  const { isDarkMode, toggleDarkMode } = useDarkMode() as ContextValue;
+  return (
+  <>
+    <p>
+        {isDarkMode ? "Dark Mode" : "Light Mode"}
+    </p>
+    <button onClick={toggleDarkMode}>Toggle Theme</button>
+  </>
+  )
+}
+`;
+
 const DarkModeFile = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -69,6 +95,24 @@ const DarkModeFile = () => {
       <h3 className="py-10 pl-1 italic">DarkModeContext.tsx</h3>
       <CopyBlock
         text={DarkModeContextCode}
+        language="tsx"
+        showLineNumbers={true}
+        theme={xt256}
+        codeBlock
+      />
+
+      <h3 className="py-10 pl-1 italic">App.tsx</h3>
+      <CopyBlock
+        text={usingCode}
+        language="tsx"
+        showLineNumbers={true}
+        theme={xt256}
+        codeBlock
+      />
+
+      <h3 className="py-10 pl-1 italic">Home.tsx</h3>
+      <CopyBlock
+        text={usingDarkMode}
         language="tsx"
         showLineNumbers={true}
         theme={xt256}
