@@ -18,6 +18,8 @@ import {
   FooterComponent,
   Home,
   TableComponent,
+  PackageFile,
+  GettingStarted,
   // SelectComponent,
 } from "./pages";
 import { Footer, Navbar } from "./components";
@@ -25,7 +27,7 @@ import SecurityHeaders from "./components/SecurityHeaders";
 
 function App() {
   return (
-    <div className="dark:bg-darkbg font-sans">
+    <div className="dark:bg-darkbg dark:text-darkmodetext font-sans">
       <SecurityHeaders />
       <BrowserRouter>
         <Navbar />
@@ -77,6 +79,10 @@ function App() {
           <Route path="/components/table" element={<TableComponent />} />
 
           {/* <Route path="/select" element={<SelectComponent />} /> */}
+
+          <Route path="/getting-started" element={<GettingStarted />} />
+
+          <Route path="/package-json" element={<PackageFile />} />
 
           <Route path="/tailwindcss" element={<TailwindCSSComponent />} />
 

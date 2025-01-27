@@ -16,6 +16,7 @@
   /* Custom Fonts */
   --font-title: "Playwrite IN", sans-serif;
   --font-sans: "Open Sans", serif;
+  --font-pacifico: "Pacifico", serif;
 }
 
 input::placeholder {

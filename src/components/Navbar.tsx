@@ -18,40 +18,28 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`dark:bg-darkbg relative z-2 flex items-center justify-between bg-white px-10 py-3 font-sans shadow-xl dark:text-white dark:shadow-md dark:shadow-white/30`}
+        className={`dark:bg-darkbg relative z-2 flex items-center justify-between bg-white px-10 py-4 font-sans shadow-xl dark:text-white dark:shadow-md dark:shadow-white/30`}
       >
-        <Link to="/" aria-label="Home">
-          {isDarkMode ? (
-            <img
-              src={
-                "https://res.cloudinary.com/do8rpl9l4/image/upload/v1736843158/logodark_gs3pnp.png"
-              }
-              alt="Logo"
-              className="h-12 cursor-pointer"
-            />
-          ) : (
-            <img
-              src={
-                "https://res.cloudinary.com/do8rpl9l4/image/upload/v1736843158/logo_iem9wr.jpg"
-              }
-              alt="Logo"
-              className="h-12 cursor-pointer"
-            />
-          )}
+        <Link
+          to="/"
+          aria-label="Home"
+          className="font-pacifico hover:text-cta dark:hover:text-darkmodeCTA text-2xl transition-all"
+        >
+          Re-Use-it!
         </Link>
 
         <div className="hidden items-center gap-x-8 font-medium lg:flex">
-          <Link
-            to="/"
-            className="hover:text-cta dark:hover:text-darkmodeCTA transition-all"
-          >
-            Home
-          </Link>
           <Link
             to="/components"
             className="hover:text-cta dark:hover:text-darkmodeCTA transition-all"
           >
             Components
+          </Link>
+          <Link
+            to="/package-json"
+            className="hover:text-cta dark:hover:text-darkmodeCTA transition-all"
+          >
+            Package.json
           </Link>
           <Link
             to="/tailwindcss"
@@ -113,83 +101,68 @@ const Navbar = () => {
           aria-modal="true"
           aria-label="Drawer Menu"
         >
-          <div className="mb-14 flex items-center justify-between px-10 pt-3.5 lg:px-10">
-            <button onClick={() => handleSearch("/")} aria-label="Home">
-              {isDarkMode ? (
-                <img
-                  src={
-                    "https://res.cloudinary.com/do8rpl9l4/image/upload/v1736843158/logodark_gs3pnp.png"
-                  }
-                  alt="Logo"
-                  className="h-12 cursor-pointer"
-                />
-              ) : (
-                <img
-                  src={
-                    "https://res.cloudinary.com/do8rpl9l4/image/upload/v1736843158/logo_iem9wr.jpg"
-                  }
-                  alt="Logo"
-                  className="h-12 cursor-pointer"
-                />
-              )}
+          <div className="mb-14 flex items-center justify-between px-10 pt-4 lg:px-10">
+            <button
+              onClick={() => handleSearch("/")}
+              className="font-pacifico hover:text-cta dark:hover:text-darkmodeCTA cursor-pointer text-2xl transition-all"
+              aria-label="Home"
+            >
+              Re-Use-it!
             </button>
             <RxCross2
               onClick={() => setOpen(false)}
-              className="hover:text-cta cursor-pointer text-2xl transition-all"
+              className="hover:text-cta dark:hover:text-darkmodeCTA cursor-pointer text-2xl transition-all"
               aria-label="Close menu"
             />
           </div>
 
-          <div className="mt-20 flex flex-col items-center justify-between gap-y-12 px-8 text-xl font-medium">
-            <p
+          <div className="mt-14 flex flex-col items-center justify-between gap-y-10 px-8 text-lg font-medium">
+            <button
               onClick={() => handleSearch("/")}
-              className="hover:text-cta w-fit cursor-pointer transition-all"
-              role="button"
-              tabIndex={0}
+              className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
               aria-label="Go to Home"
             >
               Home
-            </p>
-            <p
+            </button>
+            <button
               onClick={() => handleSearch("/components")}
-              className="hover:text-cta w-fit cursor-pointer transition-all"
-              role="button"
-              tabIndex={0}
+              className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
               aria-label="Go to Components"
             >
               Components
-            </p>
-            <p
+            </button>
+            <button
+              onClick={() => handleSearch("/package-json")}
+              className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+              aria-label="Go to Home"
+            >
+              Package JSON
+            </button>
+            <button
               onClick={() => handleSearch("/tailwindcss")}
-              className="hover:text-cta w-fit cursor-pointer transition-all"
-              role="button"
-              tabIndex={0}
+              className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
               aria-label="View Tailwind CSS file"
             >
               Tailwind CSS file (v4)
-            </p>
-            <p
+            </button>
+            <button
               onClick={() => handleSearch("/tailwindconfig")}
-              className="hover:text-cta w-fit cursor-pointer transition-all"
-              role="button"
-              tabIndex={0}
+              className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
               aria-label="View Tailwind Config"
             >
               Tailwind config (v3)
-            </p>
-            <p
+            </button>
+            <button
               onClick={() => handleSearch("/darkmode")}
-              className="hover:text-cta w-fit cursor-pointer transition-all"
-              role="button"
-              tabIndex={0}
+              className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
               aria-label="View Dark mode Context"
             >
               Dark Mode Context
-            </p>
-          </div>
+            </button>
 
-          <div className="absolute bottom-24 left-1/2 w-full -translate-x-1/2 pl-1 text-sm lg:bottom-10">
-            Developed by Roshith Prakash.
+            <p className="absolute bottom-10 text-xs">
+              Developed by Roshith Prakash.
+            </p>
           </div>
         </div>
       </nav>

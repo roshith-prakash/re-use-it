@@ -1,4 +1,4 @@
-import { ReactNode, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import {
   ErrorAccordion,
   PrimaryButton,
@@ -49,10 +49,16 @@ const ComponentCard = ({
 
 const Components = () => {
   const navigate = useNavigate();
-  const { isDarkMode, toggleDarkMode } = useDarkMode() as ContextValue;
+  const { isDarkMode } = useDarkMode() as ContextValue;
+
+  // For interactivity
   const [isOpen, setIsOpen] = useState(false);
   const [inputValue, setInputValue] = useState<string>("");
   const [password, setPassword] = useState<string>("");
+
+  useEffect(() => {
+    document.title = "Components | Re-Use-it!";
+  }, []);
 
   return (
     <>
@@ -61,17 +67,22 @@ const Components = () => {
         className={`min-h-screen ${isDarkMode ? "bg-[url('/src/assets/animatedWaveDark.svg')]" : "bg-[url('/src/assets/animatedWave.svg')]"} bg-cover dark:text-white`}
       >
         {/* Title */}
-        <h1 className="font-title py-10 text-center text-3xl font-light italic">
-          Roshith's Styled Components
+        <h1 className="font-pacifico pt-10 text-center text-5xl italic">
+          Re-Use-it!
         </h1>
+        <h2 className="font-title px-4 pt-10 text-center text-lg font-medium italic">
+          Components - Reusable. Customizable. Yours.
+        </h2>
 
-        {/* Toggle Dark Mode button */}
-        <div className="flex justify-center">
+        {/* Getting started */}
+        <div className="my-10 flex justify-center">
           <button
-            onClick={toggleDarkMode}
-            className="dark:text-darkbg cursor-pointer rounded-lg bg-white p-2 px-4 transition-all hover:scale-105"
+            onClick={() => {
+              navigate("/getting-started");
+            }}
+            className="dark:text-darkbg cursor-pointer rounded-lg bg-white p-2 px-4 shadow-xl transition-all active:shadow"
           >
-            Toggle {isDarkMode ? "Light" : "Dark"} Mode
+            Need a hand? Get started here.
           </button>
         </div>
 

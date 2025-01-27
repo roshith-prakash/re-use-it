@@ -24,23 +24,23 @@ const Footer = () => {
               window.scrollTo({ top: 0, behavior: "smooth" });
             }, 100);
           }}
-          className="flex cursor-pointer items-center gap-x-2 rounded-full border-2 border-white px-5 py-2 font-medium text-white transition-all hover:bg-white hover:text-black"
+          className="flex cursor-pointer items-center gap-x-2 rounded-full border-2 border-white px-5 py-2 text-xl font-medium text-white transition-all hover:bg-white hover:text-black"
         >
-          View Components
+          Re-Use-it!
         </button>
       </div>
 
       <div className="flex flex-col pt-3 lg:flex-row">
         <div className="flex flex-1 flex-col items-center justify-center gap-y-10">
-          <p className="font-title text-center text-2xl font-medium">
-            Roshith's Styled Components
+          <p className="font-pacifico text-center text-6xl font-medium">
+            Re-Use-it!
           </p>
 
-          <p className="text-center">
+          <p className="font-title px-4 text-center">
             Build once, customize infinitely—reusable components made for you.
           </p>
 
-          <div className="flex justify-center gap-x-8">
+          <div className="flex flex-wrap justify-center gap-8">
             <a
               href="https://github.com/roshith-prakash"
               target="_blank"
@@ -84,8 +84,8 @@ const Footer = () => {
             src={
               "https://res.cloudinary.com/do8rpl9l4/image/upload/v1736843158/logodark_gs3pnp.png"
             }
-            alt="Roshith's Styled Components"
-            className="pointer-events-none h-60"
+            alt="Re-use-it! Components"
+            className="pointer-events-none h-72"
           />
         </div>
       </div>

@@ -42,6 +42,10 @@ const ErrorAccordionCodeComponent = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
+  useEffect(() => {
+    document.title = "Error | Re-Use-it!";
+  }, []);
+
   return (
     <div className="dark:bg-darkbg min-h-screen p-10 dark:text-white">
       <h1 className="text-center text-2xl font-medium">Error</h1>

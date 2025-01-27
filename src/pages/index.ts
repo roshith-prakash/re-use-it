@@ -1,3 +1,4 @@
+import Home from "./Home";
 import Components from "./Components";
 import NotFound from "./NotFound";
 import ErrorAccordionCodeComponent from "./ErrorAccordionCodeComponent";
@@ -15,27 +16,30 @@ import CardComponent from "./CardComponent";
 import NavbarCodeComponent from "./NavbarComponent";
 import SelectComponent from "./SelectComponent";
 import FooterComponent from "./FooterComponent";
-import Home from "./Home";
 import TableComponent from "./TableComponent";
+import PackageFile from "./PackageFile";
+import GettingStarted from "./GettingStarted";
 
 export {
+  Home,
   Components,
   NotFound,
-  ErrorAccordionCodeComponent,
-  PrimaryButtonCodeComponent,
-  SecondaryButtonCodeComponent,
-  SecurityHeadersCodeComponent,
-  LoaderCodeComponent,
-  InputCodeComponent,
-  PasswordInputCodeComponent,
-  TimelineCodeComponent,
   TailwindCSSComponent,
   TailwindConfigComponent,
   DarkModeFile,
+  PrimaryButtonCodeComponent,
+  SecondaryButtonCodeComponent,
+  ErrorAccordionCodeComponent,
+  InputCodeComponent,
+  PasswordInputCodeComponent,
+  LoaderCodeComponent,
+  TimelineCodeComponent,
+  SecurityHeadersCodeComponent,
   CardComponent,
   NavbarCodeComponent,
   SelectComponent,
   FooterComponent,
-  Home,
   TableComponent,
+  PackageFile,
+  GettingStarted,
 };

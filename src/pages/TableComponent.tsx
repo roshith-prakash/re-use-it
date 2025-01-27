@@ -126,6 +126,10 @@ const TableComponent = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
+  useEffect(() => {
+    document.title = "Table | Re-Use-it!";
+  }, []);
+
   return (
     <div className="dark:bg-darkbg min-h-screen p-10 dark:text-white">
       <h1 className="text-center text-2xl font-medium">Table</h1>
@@ -153,6 +157,41 @@ const TableComponent = () => {
             </TableRow>
           </TableBody>
         </Table>
+      </div>
+
+      <div className="py-8">
+        <p className="text-lg font-medium underline">Components</p>
+        <ul className="list-disc pt-4 pl-8 leading-8">
+          <li>
+            {" "}
+            <b>Table :</b> Stylized {String("<table>")} component.
+          </li>
+
+          <li>
+            {" "}
+            <b>TableHead :</b> Stylized {String("<thead>")} component.
+          </li>
+
+          <li>
+            {" "}
+            <b>TableHeader :</b> Stylized {String("<th>")} component.
+          </li>
+
+          <li>
+            {" "}
+            <b>TableBody :</b> Stylized {String("<tbody>")} component.
+          </li>
+
+          <li>
+            {" "}
+            <b>TableRow :</b> Stylized {String("<tr>")} component.
+          </li>
+
+          <li>
+            {" "}
+            <b>TableCell :</b> Stylized {String("<td>")} component.
+          </li>
+        </ul>
       </div>
 
       <div className="py-8">
