@@ -43,7 +43,7 @@ export const TableHeader = ({
 }) => {
   return (
     <th
-      className={\`bg-secondarydarkbg/10 px-4 py-4 text-center text-lg font-bold dark:bg-white/10 \${className}\`}
+      className={\`bg-secondarydarkbg/10 px-4 py-4 text-center text-lg font-bold transition-all dark:bg-white/10 \${className}\`}
     >
       {children}
     </th>
@@ -69,7 +69,7 @@ export const TableRow = ({
 }) => {
   return (
     <tr
-      className={\`text-md hover:[&>*]:bg-secondarydarkbg/5 border-b-[1px] border-black/10 text-center transition-all last:border-none dark:border-white/20 dark:hover:[&>*]:bg-white/5 \${className}\`}
+      className={\`text-md hover:[&>*]:bg-secondarydarkbg/5 border-b-[1px] border-black/10 text-center last:border-none dark:border-white/20 dark:hover:[&>*]:bg-white/5 \${className}\`}
     >
       {children}
     </tr>
@@ -83,7 +83,9 @@ export const TableCell = ({
   children: ReactNode;
   className?: string;
 }) => {
-  return <td className={\`px-3 py-2 \${className}\`}>{children}</td>;
+  return (
+    <td className={\`px-3 py-2 transition-all \${className}\`}>{children}</td>
+  );
 };
 
 export default Table;`;
@@ -96,8 +98,10 @@ const App = () => {
   <>
         <Table className="max-w-lg">
           <TableHead>
-            <TableHeader>Sr No</TableHeader>
-            <TableHeader>Name</TableHeader>
+            <TableRow>
+              <TableHeader>Sr No</TableHeader>
+              <TableHeader>Name</TableHeader>
+            </TableRow>
           </TableHead>
           <TableBody>
             <TableRow>
@@ -129,8 +133,10 @@ const TableComponent = () => {
       <div className="flex flex-col items-center gap-8 py-10">
         <Table className="max-w-lg">
           <TableHead>
-            <TableHeader>Sr No</TableHeader>
-            <TableHeader>Name</TableHeader>
+            <TableRow>
+              <TableHeader>Sr No</TableHeader>
+              <TableHeader>Name</TableHeader>
+            </TableRow>
           </TableHead>
           <TableBody>
             <TableRow>

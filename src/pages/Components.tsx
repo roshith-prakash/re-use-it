@@ -8,8 +8,6 @@ import {
   Loader,
   Timeline,
   Card,
-  // Select,
-  // Option,
 } from "../components";
 import { ContextValue, useDarkMode } from "../context/DarkModeContext";
 import { Link } from "react-router-dom";
@@ -213,8 +211,10 @@ const Components = () => {
           <ComponentCard path="/components/table" title="Table">
             <Table className="max-w-lg">
               <TableHead>
-                <TableHeader>Sr No</TableHeader>
-                <TableHeader>Name</TableHeader>
+                <TableRow>
+                  <TableHeader>Sr No</TableHeader>
+                  <TableHeader>Name</TableHeader>
+                </TableRow>
               </TableHead>
               <TableBody>
                 <TableRow>
