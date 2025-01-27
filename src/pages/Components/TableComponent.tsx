@@ -6,7 +6,7 @@ import Table, {
   TableHead,
   TableHeader,
   TableRow,
-} from "../components/Table";
+} from "../../components/Table";
 
 const TableCode = `import { ReactNode } from "react";
 

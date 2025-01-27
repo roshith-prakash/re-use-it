@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { RxCross2, RxHamburgerMenu } from "react-icons/rx";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { ContextValue, useDarkMode } from "../context/DarkModeContext";
 import { IoMoon } from "react-icons/io5";
 import { IoSunnySharp } from "react-icons/io5";
@@ -20,47 +20,68 @@ const Navbar = () => {
       <nav
         className={`dark:bg-darkbg relative z-2 flex items-center justify-between bg-white px-10 py-4 font-sans shadow-xl dark:text-white dark:shadow-md dark:shadow-white/30`}
       >
+        {/* Home */}
         <Link
           to="/"
-          aria-label="Home"
-          className="font-pacifico hover:text-cta dark:hover:text-darkmodeCTA text-2xl transition-all"
+          className={`font-pacifico hover:text-cta dark:hover:text-darkmodeCTA text-2xl transition-all`}
         >
           Re-Use-it!
         </Link>
 
-        <div className="hidden items-center gap-x-8 font-medium lg:flex">
-          <Link
+        {/* LG screen Links */}
+        <div className="hidden items-center gap-x-8 text-sm font-medium lg:flex">
+          {/* Components */}
+          <NavLink
             to="/components"
-            className="hover:text-cta dark:hover:text-darkmodeCTA transition-all"
+            className={({ isActive }) =>
+              `hover:text-cta dark:hover:text-darkmodeCTA transition-all ${isActive && "text-cta dark:text-darkmodeCTA"}`
+            }
           >
             Components
-          </Link>
-          <Link
+          </NavLink>
+
+          {/* Code Snippets */}
+          <NavLink
+            to="/code-snippets"
+            className={({ isActive }) =>
+              `hover:text-cta dark:hover:text-darkmodeCTA transition-all ${isActive && "text-cta dark:text-darkmodeCTA"}`
+            }
+          >
+            Code Snippets
+          </NavLink>
+
+          {/* Package JSON */}
+          <NavLink
             to="/package-json"
-            className="hover:text-cta dark:hover:text-darkmodeCTA transition-all"
+            className={({ isActive }) =>
+              `hover:text-cta dark:hover:text-darkmodeCTA transition-all ${isActive && "text-cta dark:text-darkmodeCTA"}`
+            }
           >
             Package.json
-          </Link>
-          <Link
-            to="/tailwindcss"
-            className="hover:text-cta dark:hover:text-darkmodeCTA transition-all"
-          >
-            Tailwind CSS file (v4)
-          </Link>
-          <Link
+          </NavLink>
+
+          {/* Tailwind Config */}
+          <NavLink
             to="/tailwindconfig"
-            className="hover:text-cta dark:hover:text-darkmodeCTA transition-all"
+            className={({ isActive }) =>
+              `hover:text-cta dark:hover:text-darkmodeCTA transition-all ${isActive && "text-cta dark:text-darkmodeCTA"}`
+            }
           >
-            Tailwind config (v3)
-          </Link>
-          <Link
+            Tailwind Configuration (v3 & v4)
+          </NavLink>
+
+          {/* Dark Mode Context */}
+          <NavLink
             to="/darkmode"
-            className="hover:text-cta dark:hover:text-darkmodeCTA transition-all"
+            className={({ isActive }) =>
+              `hover:text-cta dark:hover:text-darkmodeCTA transition-all ${isActive && "text-cta dark:text-darkmodeCTA"}`
+            }
           >
             Dark Mode Context
-          </Link>
+          </NavLink>
         </div>
 
+        {/* Dark Mode Toggle */}
         <button
           aria-label="Change Theme"
           className="hidden cursor-pointer lg:flex"
@@ -73,7 +94,7 @@ const Navbar = () => {
           )}
         </button>
 
-        {/* Hamburger Button to open the drawer */}
+        {/* Dark Mode Toggle +  Hamburger Button to open the drawer */}
         <div className="flex items-center gap-x-10 font-medium lg:hidden">
           <button
             className="cursor-pointer"
@@ -92,7 +113,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Drawer Menu */}
+        {/* Drawer Menu - XS - MD screen */}
         <div
           className={`dark:bg-darkbg fixed top-0 right-0 z-50 h-screen w-full bg-white pb-6 text-center text-xl shadow-md md:text-lg ${
             open ? "translate-x-0" : "translate-x-[100%]"
@@ -101,6 +122,7 @@ const Navbar = () => {
           aria-modal="true"
           aria-label="Drawer Menu"
         >
+          {/* Top Section - Title + X button */}
           <div className="mb-14 flex items-center justify-between px-10 pt-4 lg:px-10">
             <button
               onClick={() => handleSearch("/")}
@@ -117,6 +139,7 @@ const Navbar = () => {
           </div>
 
           <div className="mt-14 flex flex-col items-center justify-between gap-y-10 px-8 text-lg font-medium">
+            {/* Home */}
             <button
               onClick={() => handleSearch("/")}
               className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
@@ -124,6 +147,8 @@ const Navbar = () => {
             >
               Home
             </button>
+
+            {/* Components */}
             <button
               onClick={() => handleSearch("/components")}
               className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
@@ -131,6 +156,17 @@ const Navbar = () => {
             >
               Components
             </button>
+
+            {/* Code Snippets */}
+            <button
+              onClick={() => handleSearch("/code-snippets")}
+              className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+              aria-label="Go to Code Snippets"
+            >
+              Code Snippets
+            </button>
+
+            {/* Package JSON */}
             <button
               onClick={() => handleSearch("/package-json")}
               className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
@@ -138,20 +174,17 @@ const Navbar = () => {
             >
               Package JSON
             </button>
-            <button
-              onClick={() => handleSearch("/tailwindcss")}
-              className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
-              aria-label="View Tailwind CSS file"
-            >
-              Tailwind CSS file (v4)
-            </button>
+
+            {/* Tailwind Config */}
             <button
               onClick={() => handleSearch("/tailwindconfig")}
               className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
-              aria-label="View Tailwind Config"
+              aria-label="View Tailwind CSS file"
             >
-              Tailwind config (v3)
+              Tailwind Configuration (v3 & v4)
             </button>
+
+            {/* Dark Mode */}
             <button
               onClick={() => handleSearch("/darkmode")}
               className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
@@ -160,6 +193,7 @@ const Navbar = () => {
               Dark Mode Context
             </button>
 
+            {/* Narcissism */}
             <p className="absolute bottom-10 text-xs">
               Developed by Roshith Prakash.
             </p>

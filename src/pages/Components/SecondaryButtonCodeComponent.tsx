@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { CopyBlock, xt256 } from "react-code-blocks";
-import { SecondaryButton } from "../components";
+import { SecondaryButton } from "../../components";
 
 const SecondaryButtonCode = `import { MouseEventHandler, ReactNode } from "react";
 

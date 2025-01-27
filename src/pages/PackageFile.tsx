@@ -8,7 +8,7 @@ const packageJSONv4 = `{
   "type": "module",
   "scripts": {
     "dev": "vite --host --port 3000",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && Tailwind v3 build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -71,7 +71,11 @@ const packageJSONv3 = `
 }
 `;
 
-const installCommands = `npm install tailwindcss @tailwindcss/vite react-icons react-helmet-async`;
+const installCommandsv4 = `npm install tailwindcss @tailwindcss/vite react-icons react-helmet-async`;
+
+const installCommandsv3 = `npm install react-icons react-helmet-async
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init`;
 
 const PackageFile = () => {
   useEffect(() => {
@@ -124,11 +128,17 @@ const PackageFile = () => {
         </ul>
       </div>
 
+      {/* Divider */}
+      {/* --------------------------------------------------------------------------------------------- */}
+      <hr className="mt-20 mb-10 border-t-2" />
+      {/* --------------------------------------------------------------------------------------------- */}
+
+      <h2 className="text-center text-2xl font-medium">Tailwind V4 + Vite</h2>
       <h3 className="py-10 pl-1 italic">
         Package installation Command for Vite.
       </h3>
       <CopyBlock
-        text={installCommands}
+        text={installCommandsv4}
         language=""
         showLineNumbers={true}
         theme={xt256}
@@ -144,6 +154,22 @@ const PackageFile = () => {
         codeBlock
       />
 
+      {/* Divider */}
+      {/* --------------------------------------------------------------------------------------------- */}
+      <hr className="border-b-2 pt-20" />
+      {/* --------------------------------------------------------------------------------------------- */}
+
+      <h2 className="pt-20 text-center text-2xl font-medium">Tailwind V3</h2>
+      <h3 className="py-10 pl-1 italic">
+        Package installation Command for Tailwind v3.
+      </h3>
+      <CopyBlock
+        text={installCommandsv3}
+        language=""
+        showLineNumbers={true}
+        theme={xt256}
+        codeBlock
+      />
       <h3 className="py-10 pl-1 italic">
         package.json (Tailwind V3) - Can be used with other React
         Libraries/Frameworks{" "}

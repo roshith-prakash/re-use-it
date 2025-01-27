@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { CopyBlock, xt256 } from "react-code-blocks";
-import { Option, Select } from "../components";
+import { Option, Select } from "../../components";
 
 const SelectCode = `import { ChangeEventHandler, ReactNode } from "react";
 

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { CopyBlock, xt256 } from "react-code-blocks";
-import { Card } from "../components";
+import { Card } from "../../components";
 
 const CardCode = `import { MouseEventHandler, ReactNode } from "react";
 import PrimaryButton from "./PrimaryButton";

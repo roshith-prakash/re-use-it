@@ -10,7 +10,6 @@ import {
   PasswordInputCodeComponent,
   NotFound,
   TimelineCodeComponent,
-  TailwindCSSComponent,
   TailwindConfigComponent,
   DarkModeFile,
   CardComponent,
@@ -20,6 +19,14 @@ import {
   TableComponent,
   PackageFile,
   GettingStarted,
+  CodeSnippets,
+  MinutesToRead,
+  UseDebounceHook,
+  FormatNumber,
+  Regex,
+  AxiosInstance,
+  Multer,
+  Cloudinary,
   // SelectComponent,
 } from "./pages";
 import { Footer, Navbar } from "./components";
@@ -33,6 +40,18 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+
+          <Route path="/getting-started" element={<GettingStarted />} />
+
+          <Route path="/package-json" element={<PackageFile />} />
+
+          <Route path="/tailwindconfig" element={<TailwindConfigComponent />} />
+
+          <Route path="/darkmode" element={<DarkModeFile />} />
+
+          {/* ----------------------------------------------------------------------------------------------------------------------------- */}
+
+          {/* COMPONENTS */}
 
           <Route path="/components" element={<Components />} />
 
@@ -78,17 +97,38 @@ function App() {
 
           <Route path="/components/table" element={<TableComponent />} />
 
-          {/* <Route path="/select" element={<SelectComponent />} /> */}
+          {/* <Route path="/components/select" element={<SelectComponent />} /> */}
 
-          <Route path="/getting-started" element={<GettingStarted />} />
+          {/* ----------------------------------------------------------------------------------------------------------------------------- */}
 
-          <Route path="/package-json" element={<PackageFile />} />
+          {/* CODE SNIPPETS */}
 
-          <Route path="/tailwindcss" element={<TailwindCSSComponent />} />
+          <Route path="/code-snippets" element={<CodeSnippets />} />
 
-          <Route path="/tailwindconfig" element={<TailwindConfigComponent />} />
+          <Route
+            path="/code-snippets/minutes-to-read"
+            element={<MinutesToRead />}
+          />
 
-          <Route path="/darkmode" element={<DarkModeFile />} />
+          <Route
+            path="/code-snippets/use-debounce"
+            element={<UseDebounceHook />}
+          />
+
+          <Route
+            path="/code-snippets/format-number"
+            element={<FormatNumber />}
+          />
+
+          <Route path="/code-snippets/regex" element={<Regex />} />
+
+          <Route path="/code-snippets/axios" element={<AxiosInstance />} />
+
+          <Route path="/code-snippets/multer" element={<Multer />} />
+
+          <Route path="/code-snippets/cloudinary" element={<Cloudinary />} />
+
+          {/* ----------------------------------------------------------------------------------------------------------------------------- */}
 
           <Route path="*" element={<NotFound />} />
         </Routes>

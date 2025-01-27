@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { CopyBlock, xt256 } from "react-code-blocks";
-import { Loader } from "../components";
+import { Loader } from "../../components";
 
 const LoaderCode = `const Loader = ({ className }: { className?: string }) => {
   return (

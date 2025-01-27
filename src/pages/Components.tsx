@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   ErrorAccordion,
   PrimaryButton,
@@ -10,7 +10,6 @@ import {
   Card,
 } from "../components";
 import { ContextValue, useDarkMode } from "../context/DarkModeContext";
-import { Link } from "react-router-dom";
 import { toast, Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import Table, {
@@ -20,32 +19,7 @@ import Table, {
   TableHeader,
   TableRow,
 } from "../components/Table";
-
-const ComponentCard = ({
-  path,
-  title,
-  children,
-}: {
-  path: string;
-  title: string;
-  children?: ReactNode;
-}) => {
-  return (
-    <div className="dark:bg-secondarydarkbg flex w-80 flex-col gap-y-8 rounded-xl border-[1px] border-white bg-white p-8 shadow-2xl transition-all duration-200 hover:scale-110 dark:shadow-white/32">
-      <p className="text-center text-xl font-semibold">{title}</p>
-
-      <div className="flex flex-1 flex-col justify-center gap-y-5">
-        {children}
-      </div>
-      <Link to={path} className="pt-2">
-        <SecondaryButton
-          text="View Code"
-          className="w-full rounded-lg hover:font-medium"
-        />
-      </Link>
-    </div>
-  );
-};
+import ComponentCard from "../components/ComponentCard";
 
 const Components = () => {
   const navigate = useNavigate();

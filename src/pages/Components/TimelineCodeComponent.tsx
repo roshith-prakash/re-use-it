@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { CopyBlock, xt256 } from "react-code-blocks";
-import { Timeline } from "../components";
+import { Timeline } from "../../components";
 
 const TimelineCode = `import { ReactNode } from "react";
 import { FaCaretDown } from "react-icons/fa6";

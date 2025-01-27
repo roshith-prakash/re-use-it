@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { CopyBlock, xt256 } from "react-code-blocks";
-import { PasswordInput } from "../components";
+import { PasswordInput } from "../../components";
 
 const PasswordInputCode = `import { ChangeEventHandler, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";

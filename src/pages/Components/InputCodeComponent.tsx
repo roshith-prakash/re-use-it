@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { CopyBlock, xt256 } from "react-code-blocks";
-import { Input } from "../components";
+import { Input } from "../../components";
 
 const InputCode = `import { ChangeEventHandler } from "react";
 

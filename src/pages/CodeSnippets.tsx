@@ -1,0 +1,76 @@
+import { ContextValue, useDarkMode } from "../context/DarkModeContext";
+import ComponentCard from "../components/ComponentCard";
+
+const CodeSnippets = () => {
+  const { isDarkMode } = useDarkMode() as ContextValue;
+  return (
+    <div
+      className={`min-h-screen ${isDarkMode ? "bg-[url('/src/assets/animatedWaveDark.svg')]" : "bg-[url('/src/assets/animatedWave.svg')]"} bg-cover dark:text-white`}
+    >
+      {/* Title */}
+      <h1 className="font-pacifico pt-10 text-center text-5xl italic">
+        Re-Use-it!
+      </h1>
+      <h2 className="font-title px-4 pt-10 text-center text-lg font-medium italic">
+        Functions
+      </h2>
+
+      <div className="flex flex-wrap justify-center gap-x-8 gap-y-12 p-10">
+        {/* Use Debounce */}
+        <ComponentCard
+          path="/code-snippets/use-debounce"
+          title="useDebounce Hook"
+        >
+          <p className="text-center">
+            To debounce a user's input by a specified delay.
+          </p>
+        </ComponentCard>
+
+        {/* Regex */}
+        <ComponentCard path="/code-snippets/regex" title="Regex Functions">
+          <p className="text-center">
+            Useful Regex functions - username, password, email.
+          </p>
+        </ComponentCard>
+
+        {/* Minutes to Read */}
+        <ComponentCard
+          path="/code-snippets/minutes-to-read"
+          title="Minutes to read"
+        >
+          <p className="text-center">
+            To calculate the time required to read something based on content
+            length.
+          </p>
+        </ComponentCard>
+
+        {/* Format Number */}
+        <ComponentCard
+          path="/code-snippets/format-number"
+          title="Format Number"
+        >
+          <p className="text-center">
+            Format numbers into a human readable format.
+          </p>
+        </ComponentCard>
+
+        {/* Axios */}
+        <ComponentCard path="/code-snippets/axios" title="Axios Instance">
+          <p className="text-center">Creates a custom Axios Instance.</p>
+        </ComponentCard>
+
+        {/* Multer */}
+        <ComponentCard path="/code-snippets/multer" title="Multer">
+          <p className="text-center">Configures Multer for file upload.</p>
+        </ComponentCard>
+
+        {/* Multer */}
+        <ComponentCard path="/code-snippets/cloudinary" title="Cloudinary">
+          <p className="text-center">Configures Cloudinary SDK.</p>
+        </ComponentCard>
+      </div>
+    </div>
+  );
+};
+
+export default CodeSnippets;

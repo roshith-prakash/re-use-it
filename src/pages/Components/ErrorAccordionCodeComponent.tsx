@@ -1,6 +1,6 @@
 import { CopyBlock, xt256 } from "react-code-blocks";
 import { useEffect, useState } from "react";
-import { ErrorAccordion } from "../components";
+import { ErrorAccordion } from "../../components";
 
 const ErrorAccordionCode = `const ErrorAccordion = ({
   text,
