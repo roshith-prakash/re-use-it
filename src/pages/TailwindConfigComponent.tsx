@@ -19,7 +19,8 @@ const TailwindConfigCode = `module.exports = {
       },
       fontFamily: {
         'title': ['Playwrite IN', 'sans-serif'],
-        'sans': ['Open Sans', 'serif']
+        'sans': ['Open Sans', 'serif'],
+        'pacifico' : ['Pacifico','serif']
       },
     },
 
@@ -30,7 +31,32 @@ const TailwindConfigCode = `module.exports = {
 // v3 index.css
 const v3Index = `@tailwind base;
 @tailwind components;
-@tailwind utilities;`;
+@tailwind utilities
+
+input::placeholder {
+  transition: color 0.2s;
+}
+
+/* Height for horizontal scrollbar */
+.scroller::-webkit-scrollbar {
+  height: 5px; /* Reduce the height for a thin horizontal scrollbar */
+}
+
+/* Track */
+.scroller::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background for the scrollbar track */
+}
+
+/* Handle */
+.scroller::-webkit-scrollbar-thumb {
+  background: #888; /* Color for the scrollbar handle */
+  border-radius: 5px; /* Optional: Add rounding for a smoother look */
+}
+
+/* Handle on hover */
+.scroller::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darker color on hover */
+};`;
 
 // PostCSS config
 const postCSS = `module.exports = {
@@ -60,10 +86,32 @@ const TailwindCssCode = `@import "tailwindcss";
   /* Custom Fonts */
   --font-title: "Playwrite IN", sans-serif;
   --font-sans: "Open Sans", serif;
+  --font-pacifico: "Pacifico", serif;
 }
 
 input::placeholder {
   transition: color 0.2s;
+}
+
+/* Height for horizontal scrollbar */
+.scroller::-webkit-scrollbar {
+  height: 5px; /* Reduce the height for a thin horizontal scrollbar */
+}
+
+/* Track */
+.scroller::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background for the scrollbar track */
+}
+
+/* Handle */
+.scroller::-webkit-scrollbar-thumb {
+  background: #888; /* Color for the scrollbar handle */
+  border-radius: 5px; /* Optional: Add rounding for a smoother look */
+}
+
+/* Handle on hover */
+.scroller::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darker color on hover */
 }
 `;
 

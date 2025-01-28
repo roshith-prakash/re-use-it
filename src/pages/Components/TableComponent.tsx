@@ -18,9 +18,11 @@ const Table = ({
   className?: string;
 }) => {
   return (
-    <table className={\`w-full overflow-hidden rounded-lg \${className}\`}>
-      {children}
-    </table>
+    <div className="scroller max-w-[99%] overflow-hidden overflow-x-auto">
+      <table className={\`overflow-hidden rounded-lg \${className}\`}>
+        {children}
+      </table>
+    </div>
   );
 };
 
@@ -31,7 +33,7 @@ export const TableHead = ({
   children: ReactNode;
   className?: string;
 }) => {
-  return <thead className={\`\${className}\`}>{children}</thead>;
+  return <thead className={\`rounded-t-lg \${className}\`}>{children}</thead>;
 };
 
 export const TableHeader = ({
@@ -43,7 +45,7 @@ export const TableHeader = ({
 }) => {
   return (
     <th
-      className={\`bg-secondarydarkbg/10 px-4 py-4 text-center text-lg font-bold transition-all dark:bg-white/10 \${className}\`}
+      className={\`bg-secondarydarkbg/10 px-4 py-3 text-center font-semibold transition-all dark:bg-white/10 \${className}\`}
     >
       {children}
     </th>
@@ -84,11 +86,12 @@ export const TableCell = ({
   className?: string;
 }) => {
   return (
-    <td className={\`px-3 py-2 transition-all \${className}\`}>{children}</td>
+    <td className={\`px-8 py-3 transition-all \${className}\`}>{children}</td>
   );
 };
 
-export default Table;`;
+export default Table;
+`;
 
 const usingCode = `import  Table, {TableHead,TableHeader,TableBody,TableRow} from "./Table";
 

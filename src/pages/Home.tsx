@@ -13,8 +13,8 @@ const Home = () => {
       className={`min-h-screen ${isDarkMode ? "bg-[url('/src/assets/animatedWaveDark.svg')]" : "bg-[url('/src/assets/animatedWave.svg')]"} flex flex-col bg-cover dark:text-white`}
     >
       <div className="flex flex-1 flex-col items-center justify-center gap-10">
-        <h1 className="font-pacifico text-6xl">Re-Use-it!</h1>
-        <h2 className="font-title text-2xl">
+        <h1 className="font-pacifico px-4 text-center text-6xl">Re-Use-it!</h1>
+        <h2 className="font-title px-6 text-center text-2xl">
           React Components that are{" "}
           <Typewriter
             typeSpeed={75}

@@ -205,20 +205,24 @@ const Components = () => {
                 <TableRow>
                   <TableHeader>Sr No</TableHeader>
                   <TableHeader>Name</TableHeader>
+                  <TableHeader>Country</TableHeader>
                 </TableRow>
               </TableHead>
               <TableBody>
                 <TableRow>
                   <TableCell>1</TableCell>
                   <TableCell>Alonso</TableCell>
+                  <TableCell>Spain</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell>2</TableCell>
                   <TableCell>Vettel</TableCell>
+                  <TableCell>Germany</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell>3</TableCell>
                   <TableCell>Hamilton</TableCell>
+                  <TableCell>England</TableCell>
                 </TableRow>
               </TableBody>
             </Table>
