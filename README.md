@@ -16,6 +16,7 @@ This repository contains a collection of reusable and customizable React compone
    - Navbar
    - Footer
    - Table
+   - Modal
 
 ## Code Snippets
 
