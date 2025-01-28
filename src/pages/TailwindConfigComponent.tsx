@@ -8,13 +8,21 @@ const TailwindConfigCode = `module.exports = {
   theme: {
     extend: {
       colors: {
-        "darkbg": "#181818",
-        "secondarydarkbg": "#1E1E1E",
-        "darkmodetext": "#E4E4E4",
+        // Primary color of your project
         "cta": "#9b0ced",
+        // Darker variation of your primary color
         "hovercta": "#7123b0",
+        // Background color for dark mode
+        "darkbg": "#181818",
+        // Lighter variation of your dark mode bg color
+        "secondarydarkbg": "#1E1E1E",
+        //Text color for dark mode
+        "darkmodetext": "#E4E4E4",
+        // Custom Light grey color
         "grey": "#f5f5f5",
+        // Red tint for errors
         "error": "#f23f3f",
+        //  Lighter variation of Primary color for viewability in Dark mode 
         "darkmodeCTA": "#b458ff"
       },
       fontFamily: {
@@ -74,13 +82,21 @@ const TailwindCssCode = `@import "tailwindcss";
 
 @theme {
   /* Custom Colors */
+  
+  /* Primary color of your project */
   --color-cta: #9b0ced;
-  --color-darkbg: #181818;
-  --color-secondarydarkbg: #1e1e1e;
-  --color-darkmodetext: #e4e4e4;
+  /* Darker variation of your primary color */
   --color-hovercta: #7123b0;
+  /* Background color for dark mode */
+  --color-darkbg: #181818;
+  /* Lighter variation of your dark mode bg color */
+  --color-secondarydarkbg: #1e1e1e;
+  /* Text color for dark mode */
+  --color-darkmodetext: #e4e4e4;
   --color-grey: #f5f5f5;
+  /* Red tint for errors */
   --color-error: #f23f3f;
+  /* Lighter variation of Primary color for viewability in Dark mode */
   --color-darkmodeCTA: #b458ff;
 
   /* Custom Fonts */

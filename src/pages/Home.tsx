@@ -18,7 +18,7 @@ const Home = () => {
           <h1 className="font-pacifico px-4 text-center text-4xl md:text-6xl">
             Re-Use-it!
           </h1>
-          <h2 className="font-title px-6 text-center text-xl leading-8 md:text-2xl">
+          <h2 className="font-title px-6 text-center text-xl leading-14 md:text-2xl">
             React Components that are{" "}
             <span className="text-cta dark:text-darkmodeCTA">
               <Typewriter

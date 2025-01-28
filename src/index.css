@@ -4,13 +4,22 @@
 
 @theme {
   /* Custom Colors */
+
+  /* Primary color of your project */
   --color-cta: #9b0ced;
-  --color-darkbg: #181818;
-  --color-secondarydarkbg: #1e1e1e;
-  --color-darkmodetext: #e4e4e4;
+  /* Darker variation of your primary color */
   --color-hovercta: #7123b0;
+  /* Background color for dark mode */
+  --color-darkbg: #181818;
+  /* Lighter variation of your dark mode bg color */
+  --color-secondarydarkbg: #1e1e1e;
+  /* Text color for dark mode */
+  --color-darkmodetext: #e4e4e4;
+  /* Custom Light grey color */
   --color-grey: #f5f5f5;
+  /* Red tint for errors */
   --color-error: #f23f3f;
+  /* Lighter variation of Primary color for viewability in Dark mode */
   --color-darkmodeCTA: #b458ff;
 
   /* Custom Fonts */
