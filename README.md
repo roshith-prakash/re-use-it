@@ -29,11 +29,11 @@ This repository contains a collection of reusable and customizable React compone
    - Cloudinary SDK Configuration
 
 
-### Contributing to Re-use-it!  
+## Contributing to Re-use-it!  
 
 We love contributions and welcome your creative ideas to enhance **Re-use-it!**. To ensure a smooth process, please follow the guidelines below when adding a new component:  
 
-#### Steps for Contribution  
+### Steps for Contribution  
 
 1. **Add the Component**  
    - Create your new component in the `components` folder.  
