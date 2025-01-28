@@ -46,7 +46,7 @@ const Components = () => {
           Re-Use-it! Components
         </h1>
         <h2 className="font-title px-4 pt-10 text-center text-lg font-medium italic">
-          Components -{" "}
+          It's{" "}
           <Typewriter
             typeSpeed={75}
             deleteSpeed={75}

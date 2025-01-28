@@ -14,7 +14,7 @@ const CodeSnippets = () => {
       </h1>
 
       <h2 className="font-title px-4 py-10 text-center text-lg font-medium italic">
-        Functions -{" "}
+        It's{" "}
         <Typewriter
           typeSpeed={75}
           deleteSpeed={75}
