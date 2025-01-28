@@ -1,13 +1,9 @@
-import { ContextValue, useDarkMode } from "../context/DarkModeContext";
 import ComponentCard from "../components/ComponentCard";
 import { Typewriter } from "react-simple-typewriter";
 
 const CodeSnippets = () => {
-  const { isDarkMode } = useDarkMode() as ContextValue;
   return (
-    <div
-      className={`min-h-screen ${isDarkMode ? "bg-[url('/src/assets/animatedWaveDark.svg')]" : "bg-[url('/src/assets/animatedWave.svg')]"} bg-cover dark:text-white`}
-    >
+    <div className={`dark:text-darkmodetext min-h-screen`}>
       {/* Title */}
       <h1 className="font-pacifico px-4 pt-20 text-center text-3xl leading-16 italic md:text-5xl">
         Re-Use-it! Functions & Code Snippets
@@ -15,12 +11,14 @@ const CodeSnippets = () => {
 
       <h2 className="font-title px-4 py-10 text-center text-lg font-medium italic">
         It's{" "}
-        <Typewriter
-          typeSpeed={75}
-          deleteSpeed={75}
-          loop
-          words={["Reusable.", "Adaptable.", "Yours."]}
-        />
+        <span className="text-cta dark:text-darkmodeCTA">
+          <Typewriter
+            typeSpeed={75}
+            deleteSpeed={75}
+            loop
+            words={["Reusable.", "Adaptable.", "Yours."]}
+          />
+        </span>
       </h2>
 
       <div className="flex flex-wrap justify-center gap-x-8 gap-y-12 p-10">

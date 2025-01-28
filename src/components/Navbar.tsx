@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`dark:bg-darkbg relative z-2 flex items-center justify-between bg-white px-10 py-4 font-sans shadow-xl dark:text-white dark:shadow-md dark:shadow-white/30`}
+        className={`bg-grey dark:bg-darkbg relative z-2 flex items-center justify-between px-10 py-4 font-sans shadow-xl dark:text-white dark:shadow-md dark:shadow-white/30`}
       >
         {/* Home */}
         <Link

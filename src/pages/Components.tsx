@@ -9,7 +9,6 @@ import {
   Timeline,
   Card,
 } from "../components";
-import { ContextValue, useDarkMode } from "../context/DarkModeContext";
 import { toast, Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import Table, {
@@ -24,7 +23,6 @@ import { Typewriter } from "react-simple-typewriter";
 
 const Components = () => {
   const navigate = useNavigate();
-  const { isDarkMode } = useDarkMode() as ContextValue;
 
   // For interactivity
   const [isOpen, setIsOpen] = useState(false);
@@ -38,21 +36,21 @@ const Components = () => {
   return (
     <>
       <Toaster />
-      <div
-        className={`min-h-screen ${isDarkMode ? "bg-[url('/src/assets/animatedWaveDark.svg')]" : "bg-[url('/src/assets/animatedWave.svg')]"} bg-cover dark:text-white`}
-      >
+      <div className={`dark:text-darkmodetext min-h-screen`}>
         {/* Title */}
         <h1 className="font-pacifico px-4 pt-10 text-center text-3xl italic md:text-5xl">
           Re-Use-it! Components
         </h1>
         <h2 className="font-title px-4 pt-10 text-center text-lg font-medium italic">
           It's{" "}
-          <Typewriter
-            typeSpeed={75}
-            deleteSpeed={75}
-            loop
-            words={["Reusable.", "Customizable.", "Yours."]}
-          />
+          <span className="text-cta dark:text-darkmodeCTA">
+            <Typewriter
+              typeSpeed={75}
+              deleteSpeed={75}
+              loop
+              words={["Reusable.", "Customizable.", "Yours."]}
+            />
+          </span>
         </h2>
 
         {/* Getting started */}
