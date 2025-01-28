@@ -17,6 +17,7 @@ import SelectComponent from "./Components/SelectComponent";
 import FooterComponent from "./Components/FooterComponent";
 import TableComponent from "./Components/TableComponent";
 import TimelineCodeComponent from "./Components/TimelineCodeComponent";
+import ModalComponent from "./Components/ModalComponent";
 // --------------------------------------------------------------------------------
 import MinutesToRead from "./Snippets/MinutesToRead";
 import UseDebounceHook from "./Snippets/UseDebounceHook";
@@ -54,6 +55,7 @@ export {
   SelectComponent,
   FooterComponent,
   TableComponent,
+  ModalComponent,
   //-----------------------------------------------
   MinutesToRead,
   UseDebounceHook,

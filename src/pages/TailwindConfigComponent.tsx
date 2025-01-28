@@ -30,8 +30,17 @@ const TailwindConfigCode = `module.exports = {
         'sans': ['Open Sans', 'serif'],
         'pacifico' : ['Pacifico','serif']
       },
+      animation: {
+        // For the modal component
+        opacity: "fadeIn 0.2s ease-in-out"
+      },
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: "0.3" },
+          "100%": { opacity: "1" },
+        },
+      },
     },
-
   },
   plugins: [],
 }`;
@@ -82,7 +91,7 @@ const TailwindCssCode = `@import "tailwindcss";
 
 @theme {
   /* Custom Colors */
-  
+
   /* Primary color of your project */
   --color-cta: #9b0ced;
   /* Darker variation of your primary color */
@@ -93,6 +102,7 @@ const TailwindCssCode = `@import "tailwindcss";
   --color-secondarydarkbg: #1e1e1e;
   /* Text color for dark mode */
   --color-darkmodetext: #e4e4e4;
+  /* Custom Light grey color */
   --color-grey: #f5f5f5;
   /* Red tint for errors */
   --color-error: #f23f3f;
@@ -103,6 +113,19 @@ const TailwindCssCode = `@import "tailwindcss";
   --font-title: "Playwrite IN", sans-serif;
   --font-sans: "Open Sans", serif;
   --font-pacifico: "Pacifico", serif;
+
+  // Animation for the modal component
+  --animate-opacity: fadeIn 0.2s ease-in-out;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0.3;
+    }
+    ,
+    100% {
+      opacity: 1;
+    }
+  }
 }
 
 input::placeholder {
@@ -112,6 +135,7 @@ input::placeholder {
 /* Height for horizontal scrollbar */
 .scroller::-webkit-scrollbar {
   height: 5px; /* Reduce the height for a thin horizontal scrollbar */
+  width: 5px;
 }
 
 /* Track */

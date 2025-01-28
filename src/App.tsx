@@ -17,6 +17,7 @@ import {
   FooterComponent,
   Home,
   TableComponent,
+  ModalComponent,
   PackageFile,
   GettingStarted,
   CodeSnippets,
@@ -111,6 +112,8 @@ function App() {
             <Route path="/components/card" element={<CardComponent />} />
 
             <Route path="/components/table" element={<TableComponent />} />
+
+            <Route path="/components/modal" element={<ModalComponent />} />
 
             {/* <Route path="/components/select" element={<SelectComponent />} /> */}
 

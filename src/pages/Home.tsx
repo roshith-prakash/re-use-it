@@ -134,12 +134,10 @@ const Home = () => {
         </h2>
         <div className="mt-20 grid grid-cols-1 gap-10 px-6 md:grid-cols-3">
           <div className="dark:bg-darkbg flex flex-col items-center gap-10 rounded-2xl border-white bg-white p-6 shadow-xl transition-all hover:scale-105 dark:border-t-[1px] dark:shadow-md dark:shadow-white">
-            <h3 className="mb-4 text-xl font-bold">Secondary Button</h3>
-            <p>
-              A button styled for secondary actions or less prominent use cases.
-            </p>
+            <h3 className="mb-4 text-xl font-bold">Modal</h3>
+            <p>A Modal component which pops up when a condition is met.</p>
 
-            <Link to="/components/secondary-button">
+            <Link to="/components/modal">
               <PrimaryButton text="View Component"></PrimaryButton>
             </Link>
           </div>

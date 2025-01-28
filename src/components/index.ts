@@ -10,6 +10,7 @@ import Card from "./Card";
 import Select from "./Select";
 import { Option } from "./Select";
 import Footer from "./Footer";
+import Modal from "./Modal";
 
 export {
   PrimaryButton,
@@ -24,4 +25,5 @@ export {
   Select,
   Option,
   Footer,
+  Modal,
 };

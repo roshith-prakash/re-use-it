@@ -26,6 +26,18 @@
   --font-title: "Playwrite IN", sans-serif;
   --font-sans: "Open Sans", serif;
   --font-pacifico: "Pacifico", serif;
+
+  --animate-opacity: fadeIn 0.2s ease-in-out;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0.3;
+    }
+    ,
+    100% {
+      opacity: 1;
+    }
+  }
 }
 
 input::placeholder {
@@ -35,6 +47,7 @@ input::placeholder {
 /* Height for horizontal scrollbar */
 .scroller::-webkit-scrollbar {
   height: 5px; /* Reduce the height for a thin horizontal scrollbar */
+  width: 5px;
 }
 
 /* Track */

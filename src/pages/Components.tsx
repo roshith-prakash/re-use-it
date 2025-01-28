@@ -8,6 +8,7 @@ import {
   Loader,
   Timeline,
   Card,
+  Modal,
 } from "../components";
 import { toast, Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
@@ -26,6 +27,7 @@ const Components = () => {
 
   // For interactivity
   const [isOpen, setIsOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [inputValue, setInputValue] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
@@ -35,7 +37,21 @@ const Components = () => {
 
   return (
     <>
+      {/* Modal */}
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        <p className="text-center">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum
+        </p>
+      </Modal>
+
       <Toaster />
+
       <div className={`dark:text-darkmodetext min-h-screen`}>
         {/* Title */}
         <h1 className="font-pacifico px-4 pt-10 text-center text-3xl italic md:text-5xl">
@@ -224,6 +240,15 @@ const Components = () => {
                 </TableRow>
               </TableBody>
             </Table>
+          </ComponentCard>
+
+          {/* Modal */}
+          <ComponentCard path="/components/modal" title="Modal">
+            <SecondaryButton
+              text="Open Modal"
+              className="mx-auto"
+              onClick={() => setIsModalOpen(true)}
+            />
           </ComponentCard>
         </div>
       </div>
