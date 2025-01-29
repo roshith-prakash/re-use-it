@@ -32,12 +32,17 @@ const TailwindConfigCode = `module.exports = {
       },
       animation: {
         // For the modal component
-        opacity: "fadeIn 0.2s ease-in-out"
+        fadeIn: "fadeIn 0.3s ease-in-out",
+        fadeOut: "fadeOut 0.3s ease-in-out"
       },
       keyframes: {
         fadeIn: {
           "0%": { opacity: "0.3" },
           "100%": { opacity: "1" },
+        },
+        fadeOut: {
+          "0%": { opacity: "1" },
+          "100%": { opacity: "0.3" },
         },
       },
     },
@@ -54,9 +59,10 @@ input::placeholder {
   transition: color 0.2s;
 }
 
-/* Height for horizontal scrollbar */
+/* Custom scrollbar */
 .scroller::-webkit-scrollbar {
-  height: 5px; /* Reduce the height for a thin horizontal scrollbar */
+  height: 5px; 
+  width : 5px;
 }
 
 /* Track */
@@ -114,8 +120,9 @@ const TailwindCssCode = `@import "tailwindcss";
   --font-sans: "Open Sans", serif;
   --font-pacifico: "Pacifico", serif;
 
-  // Animation for the modal component
-  --animate-opacity: fadeIn 0.2s ease-in-out;
+  /* Custom Animations for the Modal */
+
+  --animate-fadeIn: fadeIn 0.3s ease-in-out;
 
   @keyframes fadeIn {
     0% {
@@ -126,15 +133,26 @@ const TailwindCssCode = `@import "tailwindcss";
       opacity: 1;
     }
   }
+
+  --animate-fadeOut: fadeOut 0.3s ease-in-out;
+
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    ,
+    100% {
+      opacity: 0.3;
+    }
+  }
 }
 
 input::placeholder {
   transition: color 0.2s;
 }
 
-/* Height for horizontal scrollbar */
 .scroller::-webkit-scrollbar {
-  height: 5px; /* Reduce the height for a thin horizontal scrollbar */
+  height: 5px;
   width: 5px;
 }
 

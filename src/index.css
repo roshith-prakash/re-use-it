@@ -27,7 +27,9 @@
   --font-sans: "Open Sans", serif;
   --font-pacifico: "Pacifico", serif;
 
-  --animate-opacity: fadeIn 0.2s ease-in-out;
+  /* Custom Animations for the Modal */
+
+  --animate-fadeIn: fadeIn 0.3s ease-in-out;
 
   @keyframes fadeIn {
     0% {
@@ -36,6 +38,18 @@
     ,
     100% {
       opacity: 1;
+    }
+  }
+
+  --animate-fadeOut: fadeOut 0.3s ease-in-out;
+
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    ,
+    100% {
+      opacity: 0.3;
     }
   }
 }

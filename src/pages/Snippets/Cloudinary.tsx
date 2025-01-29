@@ -17,19 +17,20 @@ export default cloudinary;
 
 const usingCode = ` import cloudinary from "./cloudinary"
 
-if (req?.file) {
-      // Uploading image to cloudinary
-      cloudinary.uploader.upload(req.file.path, async function (err, result) {
-        // If error during image upload
-        if (err) {
-          console.log(err);
-        }
-        // If image upload was successful
-        else {
-          // Do Something
-        }
-      });
-}`;
+const file_path="//Some File Path"
+
+// Uploading image to cloudinary
+cloudinary.uploader.upload(file_path, async function (err, result) {
+  // If error during image upload
+  if (err) {
+    console.log(err);
+  }
+  // If image upload was successful
+  else {
+    // Do Something
+  }
+});
+`;
 
 const Cloudinary = () => {
   useEffect(() => {

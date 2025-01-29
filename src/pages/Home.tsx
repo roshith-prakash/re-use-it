@@ -14,13 +14,14 @@ const Home = () => {
 
       {/* Hero */}
       <section className="flex min-h-[90vh] flex-col lg:flex-row">
-        <div className="flex flex-1 flex-col items-center justify-center gap-10">
-          <h1 className="font-pacifico px-4 text-center text-4xl md:text-6xl">
+        <div className="flex flex-1 flex-col items-center justify-center gap-16 py-20 lg:gap-10 lg:py-0">
+          <h1 className="font-pacifico px-4 text-center text-5xl md:text-6xl">
             Re-Use-it!
           </h1>
-          <h2 className="font-title px-6 text-center text-xl leading-14 md:text-2xl">
-            React Components that are{" "}
+          <h2 className="font-title px-5 text-center text-[1.7rem] leading-14 md:text-2xl">
+            React Components that are
             <span className="text-cta dark:text-darkmodeCTA">
+              {" "}
               <Typewriter
                 typeSpeed={75}
                 deleteSpeed={75}
@@ -32,7 +33,7 @@ const Home = () => {
         </div>
 
         <div className="flex flex-1 items-center justify-center lg:pr-10">
-          <img src={home} className="h-auto max-w-[80%]" />
+          <img src={home} className="h-auto lg:max-w-[80%]" />
         </div>
       </section>
 
@@ -73,7 +74,7 @@ const Home = () => {
 
       {/* Why Choose Re-use-it? */}
       <section className="py-20 text-center">
-        <h2 className="text-4xl leading-12 font-semibold">
+        <h2 className="px-4 text-4xl leading-12 font-semibold">
           Why Choose{" "}
           <span className="font-pacifico text-nowrap">Re-use-it?</span>
         </h2>
@@ -129,7 +130,7 @@ const Home = () => {
 
       {/* Featured Components & Snippets */}
       <section className="py-20 text-center">
-        <h2 className="text-4xl font-semibold">
+        <h2 className="px-4 text-4xl font-semibold">
           Featured Components & Snippets
         </h2>
         <div className="mt-20 grid grid-cols-1 gap-10 px-6 md:grid-cols-3">

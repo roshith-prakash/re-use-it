@@ -37,23 +37,23 @@ We love contributions and welcome your creative ideas to enhance **Re-use-it!**.
 ### Steps for Contribution  
 
 1. **Add the Component**  
-   - Create your new component in the `components` folder.  
-   - Make sure your component is reusable, customizable, and follows the existing coding standards (TypeScript + TailwindCSS).  
+   - Create your new component in the `components` folder in the src directory. (Do not need to add code for Snippets.)
+   - Make sure your component/snippet is reusable, customizable, and follows the existing coding standards (TypeScript + TailwindCSS).  
 
 2. **Add a Component Card**  
-   - Navigate to the `Components` Page and add a new card showcasing your component.  
-   - The card should include the component’s name, a short description, and a link to the detailed page for the component.  
+   - Navigate to the `Components` Page OR `Snippets` Page and add a new card showcasing your component/snippet.  
+   - The card should include the component’s/snippets' name, a short description, and a link to the detailed page for the component.  
 
 3. **Create a Component Page**  
-   - Create a new page dedicated to your component.  
-   - The page must be on the url :  /components/(your-component-name)
+   - Create a new page dedicated to your component/snippet.  
+   - The page must be on the url :  /components/(your-component-name) OR  /code-snippets/(your-code-snippet)
    - The page should include:  
-     - A brief overview of what the component does.  
+     - A brief overview of what the component/snippet does.  
      - Instructions for usage and customization.  
-     - The full code snippet for the component.  
+     - The full code snippet for the component/function.  
 
 4. **Test Your Component**  
-   - Ensure your component is functional and works seamlessly within the project.  
+   - Ensure your component/snippet is functional and works seamlessly within the project.  
    - Check for styling consistency and responsiveness.  
 
 5. **Submit a Pull Request**  
@@ -63,11 +63,11 @@ We love contributions and welcome your creative ideas to enhance **Re-use-it!**.
 
 #### Contribution Guidelines  
 - **Code Consistency**: Follow the project’s established coding style (TypeScript and TailwindCSS).  
-- **Documentation**: Make sure to add clear instructions on how to use and customize your component.  
-- **Testing**: Test your component thoroughly before submitting a pull request.  
+- **Documentation**: Make sure to add clear instructions on how to use and customize your component/snippet.  
+- **Testing**: Test your component/snippet thoroughly before submitting a pull request.  
 
 We appreciate your efforts and can’t wait to see what you contribute! Let’s build something amazing together. 🚀  
 
 ---  
 
-For questions or suggestions, feel free to open an issue or reach out to the maintainers.
+For questions or suggestions, feel free to reach out to [roshith-prakash](https://github.com/roshith-prakash).

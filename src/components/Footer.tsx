@@ -37,7 +37,10 @@ const Footer = () => {
           </p>
 
           <p className="font-title px-4 text-center">
-            Build once, customize infinitely—reusable components made for you.
+            Build once, customize infinitely —{" "}
+            <span className="text-nowrap">
+              reusable components made for you.
+            </span>
           </p>
 
           <div className="flex flex-wrap justify-center gap-8">
