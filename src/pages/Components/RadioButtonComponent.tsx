@@ -113,7 +113,7 @@ const RadioButtonComponent = () => {
   }, []);
 
   useEffect(() => {
-    document.title = "Checkbox | Re-Use-it!";
+    document.title = "Radio Button | Re-Use-it!";
   }, []);
 
   return (
