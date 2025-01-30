@@ -19,6 +19,8 @@ import TableComponent from "./Components/TableComponent";
 import TimelineCodeComponent from "./Components/TimelineCodeComponent";
 import ModalComponent from "./Components/ModalComponent";
 import AvatarComponent from "./Components/AvatarComponent";
+import CheckboxComponent from "./Components/CheckboxComponent";
+import RadioButtonComponent from "./Components/RadioButtonComponent";
 // --------------------------------------------------------------------------------
 import MinutesToRead from "./Snippets/MinutesToRead";
 import UseDebounceHook from "./Snippets/UseDebounceHook";
@@ -58,6 +60,8 @@ export {
   TableComponent,
   ModalComponent,
   AvatarComponent,
+  CheckboxComponent,
+  RadioButtonComponent,
   //-----------------------------------------------
   MinutesToRead,
   UseDebounceHook,

@@ -1,26 +1,32 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {
-  ErrorAccordionCodeComponent,
+  Home,
+  GettingStarted,
+  NotFound,
+  TailwindConfigComponent,
+  DarkModeFile,
+  PackageFile,
+  CodeSnippets,
   Components,
+  // -----------------------------------
   PrimaryButtonCodeComponent,
   SecondaryButtonCodeComponent,
+  ErrorAccordionCodeComponent,
   SecurityHeadersCodeComponent,
   LoaderCodeComponent,
   InputCodeComponent,
   PasswordInputCodeComponent,
-  NotFound,
+  AvatarComponent,
+  CheckboxComponent,
   TimelineCodeComponent,
-  TailwindConfigComponent,
-  DarkModeFile,
   CardComponent,
   NavbarCodeComponent,
   FooterComponent,
-  Home,
   TableComponent,
   ModalComponent,
-  PackageFile,
-  GettingStarted,
-  CodeSnippets,
+  RadioButtonComponent,
+  // SelectComponent,
+  // -------------------------------------
   MinutesToRead,
   UseDebounceHook,
   FormatNumber,
@@ -29,8 +35,6 @@ import {
   Multer,
   Cloudinary,
   ShuffleArray,
-  AvatarComponent,
-  // SelectComponent,
 } from "./pages";
 import { Footer, Navbar } from "./components";
 import SecurityHeaders from "./components/SecurityHeaders";
@@ -117,6 +121,16 @@ function App() {
             <Route path="/components/modal" element={<ModalComponent />} />
 
             <Route path="/components/avatar" element={<AvatarComponent />} />
+
+            <Route
+              path="/components/checkbox"
+              element={<CheckboxComponent />}
+            />
+
+            <Route
+              path="/components/radio"
+              element={<RadioButtonComponent />}
+            />
 
             {/* Need to improve component */}
             {/* <Route path="/components/select" element={<SelectComponent />} /> */}

@@ -18,6 +18,8 @@ This repository contains a collection of reusable and customizable React compone
    - Table
    - Modal
    - Avatar
+   - Checkbox
+   - Radio Button
 
 ## Code Snippets
 

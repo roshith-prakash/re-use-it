@@ -13,6 +13,8 @@ import Footer from "./Footer";
 import Modal from "./Modal";
 import CodeBlock from "./CodeBlock";
 import Avatar from "./Avatar";
+import Checkbox from "./Checkbox";
+import RadioButton from "./RadioButton";
 
 export {
   PrimaryButton,
@@ -30,4 +32,6 @@ export {
   Modal,
   CodeBlock,
   Avatar,
+  Checkbox,
+  RadioButton,
 };
