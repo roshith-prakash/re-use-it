@@ -15,6 +15,7 @@ import CodeBlock from "./CodeBlock";
 import Avatar from "./Avatar";
 import Checkbox from "./Checkbox";
 import RadioButton from "./RadioButton";
+import Switch from "./Switch";
 
 export {
   PrimaryButton,
@@ -34,4 +35,5 @@ export {
   Avatar,
   Checkbox,
   RadioButton,
+  Switch,
 };

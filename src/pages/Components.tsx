@@ -12,6 +12,7 @@ import {
   Avatar,
   Checkbox,
   RadioButton,
+  Switch,
 } from "../components";
 import { toast, Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
@@ -34,6 +35,7 @@ const Components = () => {
   const [inputValue, setInputValue] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [selectedOption, setSelectedOption] = useState<string>("option1");
+  const [switchState, setSwitchState] = useState<boolean>(false);
 
   useEffect(() => {
     document.title = "Components | Re-Use-it!";
@@ -309,6 +311,19 @@ const Components = () => {
                 }}
               />
               <label>Option 3</label>
+            </div>
+          </ComponentCard>
+
+          {/* Switch */}
+          <ComponentCard path="/components/switch" title="Switch">
+            <div className="flex items-center justify-center">
+              <Switch
+                checked={switchState}
+                onChange={() => {
+                  setSwitchState((prev) => !prev);
+                }}
+              />
+              <label>Switch state</label>
             </div>
           </ComponentCard>
         </div>

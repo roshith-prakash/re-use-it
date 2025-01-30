@@ -25,6 +25,7 @@ import {
   TableComponent,
   ModalComponent,
   RadioButtonComponent,
+  SwitchComponent,
   // SelectComponent,
   // -------------------------------------
   MinutesToRead,
@@ -131,6 +132,8 @@ function App() {
               path="/components/radio"
               element={<RadioButtonComponent />}
             />
+
+            <Route path="/components/switch" element={<SwitchComponent />} />
 
             {/* Need to improve component */}
             {/* <Route path="/components/select" element={<SelectComponent />} /> */}

@@ -20,6 +20,7 @@ This repository contains a collection of reusable and customizable React compone
    - Avatar
    - Checkbox
    - Radio Button
+   - Switch
 
 ## Code Snippets
 
