@@ -1,6 +1,5 @@
 import { useEffect } from "react";
-import { CopyBlock, xt256 } from "react-code-blocks";
-import { Timeline } from "../../components";
+import { Timeline, CodeBlock } from "../../components";
 
 const TimelineCode = `import { ReactNode } from "react";
 import { FaCaretDown } from "react-icons/fa6";
@@ -104,22 +103,10 @@ const TimelineCodeComponent = () => {
       </div>
 
       <h3 className="py-2 pl-1 italic">Timeline.tsx</h3>
-      <CopyBlock
-        text={TimelineCode}
-        language="tsx"
-        showLineNumbers={true}
-        theme={xt256}
-        codeBlock
-      />
+      <CodeBlock code={TimelineCode} language="tsx" />
 
       <h3 className="mt-8 py-2 pl-1 italic">App.tsx</h3>
-      <CopyBlock
-        text={usingCode}
-        language="tsx"
-        showLineNumbers={true}
-        theme={xt256}
-        codeBlock
-      />
+      <CodeBlock code={usingCode} language="tsx" />
     </div>
   );
 };

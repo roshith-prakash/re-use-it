@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { CopyBlock, xt256 } from "react-code-blocks";
+import { CodeBlock } from "../components";
 
 // v3
 const TailwindConfigCode = `module.exports = {
@@ -196,13 +196,7 @@ const TailwindConfigComponent = () => {
           CSS variables and the dark mode variant.
         </h2>
         <h3 className="py-10 pl-1 italic">index.css</h3>
-        <CopyBlock
-          text={TailwindCssCode}
-          language="css"
-          showLineNumbers={true}
-          theme={xt256}
-          codeBlock
-        />
+        <CodeBlock code={TailwindCssCode} language="css" />
       </>
 
       {/* Divider */}
@@ -220,29 +214,11 @@ const TailwindConfigComponent = () => {
           configuration for Tailwind, including the custom colors and fonts.
         </h2>
         <h3 className="py-10 pl-1 italic">tailwind.config.js</h3>
-        <CopyBlock
-          text={TailwindConfigCode}
-          language="json"
-          showLineNumbers={true}
-          theme={xt256}
-          codeBlock
-        />
+        <CodeBlock code={TailwindConfigCode} language="json" />
         <h3 className="py-10 pl-1 italic">postcss.config.js</h3>
-        <CopyBlock
-          text={postCSS}
-          language="json"
-          showLineNumbers={true}
-          theme={xt256}
-          codeBlock
-        />
+        <CodeBlock code={postCSS} language="json" />
         <h3 className="py-10 pl-1 italic">index.css</h3>
-        <CopyBlock
-          text={v3Index}
-          language="css"
-          showLineNumbers={true}
-          theme={xt256}
-          codeBlock
-        />
+        <CodeBlock code={v3Index} language="css" />
       </>
     </div>
   );

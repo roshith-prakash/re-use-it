@@ -18,6 +18,7 @@ import FooterComponent from "./Components/FooterComponent";
 import TableComponent from "./Components/TableComponent";
 import TimelineCodeComponent from "./Components/TimelineCodeComponent";
 import ModalComponent from "./Components/ModalComponent";
+import AvatarComponent from "./Components/AvatarComponent";
 // --------------------------------------------------------------------------------
 import MinutesToRead from "./Snippets/MinutesToRead";
 import UseDebounceHook from "./Snippets/UseDebounceHook";
@@ -56,6 +57,7 @@ export {
   FooterComponent,
   TableComponent,
   ModalComponent,
+  AvatarComponent,
   //-----------------------------------------------
   MinutesToRead,
   UseDebounceHook,

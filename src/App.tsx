@@ -29,6 +29,7 @@ import {
   Multer,
   Cloudinary,
   ShuffleArray,
+  AvatarComponent,
   // SelectComponent,
 } from "./pages";
 import { Footer, Navbar } from "./components";
@@ -115,6 +116,9 @@ function App() {
 
             <Route path="/components/modal" element={<ModalComponent />} />
 
+            <Route path="/components/avatar" element={<AvatarComponent />} />
+
+            {/* Need to improve component */}
             {/* <Route path="/components/select" element={<SelectComponent />} /> */}
 
             {/* ----------------------------------------------------------------------------------------------------------------------------- */}

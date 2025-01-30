@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { CopyBlock, xt256 } from "react-code-blocks";
+import { CodeBlock } from "../components";
 
 const packageJSONv4 = `{
   "name": "component-library",
@@ -137,22 +137,10 @@ const PackageFile = () => {
       <h3 className="py-10 pl-1 italic">
         Package installation Command for Vite.
       </h3>
-      <CopyBlock
-        text={installCommandsv4}
-        language=""
-        showLineNumbers={true}
-        theme={xt256}
-        codeBlock
-      />
+      <CodeBlock code={installCommandsv4} language="" />
 
       <h3 className="py-10 pl-1 italic">package.json (Tailwind V4 + Vite)</h3>
-      <CopyBlock
-        text={packageJSONv4}
-        language="css"
-        showLineNumbers={true}
-        theme={xt256}
-        codeBlock
-      />
+      <CodeBlock code={packageJSONv4} language="css" />
 
       {/* Divider */}
       {/* --------------------------------------------------------------------------------------------- */}
@@ -163,24 +151,12 @@ const PackageFile = () => {
       <h3 className="py-10 pl-1 italic">
         Package installation Command for Tailwind v3.
       </h3>
-      <CopyBlock
-        text={installCommandsv3}
-        language=""
-        showLineNumbers={true}
-        theme={xt256}
-        codeBlock
-      />
+      <CodeBlock code={installCommandsv3} language="" />
       <h3 className="py-10 pl-1 italic">
         package.json (Tailwind V3) - Can be used with other React
         Libraries/Frameworks{" "}
       </h3>
-      <CopyBlock
-        text={packageJSONv3}
-        language="css"
-        showLineNumbers={true}
-        theme={xt256}
-        codeBlock
-      />
+      <CodeBlock code={packageJSONv3} language="css" />
     </div>
   );
 };

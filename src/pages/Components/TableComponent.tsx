@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { CopyBlock, xt256 } from "react-code-blocks";
 import Table, {
   TableBody,
   TableCell,
@@ -7,6 +6,7 @@ import Table, {
   TableHeader,
   TableRow,
 } from "../../components/Table";
+import { CodeBlock } from "../../components";
 
 const TableCode = `import { ReactNode } from "react";
 
@@ -208,22 +208,10 @@ const TableComponent = () => {
       </div>
 
       <h3 className="py-2 pl-1 italic">Table.tsx</h3>
-      <CopyBlock
-        text={TableCode}
-        language="tsx"
-        showLineNumbers={true}
-        theme={xt256}
-        codeBlock
-      />
+      <CodeBlock code={TableCode} language="tsx" />
 
       <h3 className="mt-8 py-2 pl-1 italic">App.tsx</h3>
-      <CopyBlock
-        text={usingCode}
-        language="tsx"
-        showLineNumbers={true}
-        theme={xt256}
-        codeBlock
-      />
+      <CodeBlock code={usingCode} language="tsx" />
     </div>
   );
 };

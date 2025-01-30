@@ -11,6 +11,8 @@ import Select from "./Select";
 import { Option } from "./Select";
 import Footer from "./Footer";
 import Modal from "./Modal";
+import CodeBlock from "./CodeBlock";
+import Avatar from "./Avatar";
 
 export {
   PrimaryButton,
@@ -26,4 +28,6 @@ export {
   Option,
   Footer,
   Modal,
+  CodeBlock,
+  Avatar,
 };

@@ -3,6 +3,10 @@ import { Typewriter } from "react-simple-typewriter";
 import home from "../assets/home.svg";
 import { Link } from "react-router-dom";
 import { PrimaryButton } from "../components";
+import { SiTailwindcss, SiTypescript } from "react-icons/si";
+import { BiSolidComponent } from "react-icons/bi";
+import { FaCode } from "react-icons/fa6";
+import { TbSettings } from "react-icons/tb";
 
 const Home = () => {
   useEffect(() => {
@@ -50,10 +54,17 @@ const Home = () => {
         <p className="mt-6 md:text-lg md:leading-8 lg:max-w-6xl">
           Build faster, smarter, and better with our collection of reusable and
           customizable React components, code snippets, and utilities. Designed
-          with <strong>TypeScript</strong> for type safety and powered by{" "}
-          <strong>TailwindCSS</strong> for seamless styling,{" "}
-          <span className="font-pacifico text-lg md:text-xl"> Re-use-it </span>{" "}
-          &nbsp;makes development efficient and enjoyable.
+          with{" "}
+          <strong className="inline-flex items-center gap-2">
+            TypeScript <SiTypescript className="text-[#3178C6]" />
+          </strong>{" "}
+          for type safety and powered by{" "}
+          <strong className="inline-flex items-center gap-1">
+            TailwindCSS <SiTailwindcss className="text-teal-400" />
+          </strong>{" "}
+          for seamless styling,{" "}
+          <span className="font-pacifico text-lg md:text-xl">Re-use-it</span>{" "}
+          &nbsp; makes development efficient and enjoyable.
         </p>
         <p className="mt-4 md:text-lg md:leading-8 lg:max-w-6xl">
           Whether you're starting from scratch or refining an existing project,
@@ -79,26 +90,35 @@ const Home = () => {
           <span className="font-pacifico text-nowrap">Re-use-it?</span>
         </h2>
         <div className="mt-20 grid grid-cols-1 gap-10 px-6 md:grid-cols-3">
-          <div className="dark:bg-darkbg rounded-2xl border-white bg-white p-6 shadow-xl transition-all hover:scale-105 dark:border-t-[1px] dark:shadow-md dark:shadow-white">
-            <h3 className="mb-4 text-xl font-bold">Reusable Components</h3>
-            <p>
+          <div className="dark:bg-darkbg flex flex-col rounded-2xl border-white bg-white p-6 shadow-xl transition-all hover:scale-105 dark:border-t-[1px] dark:shadow-md dark:shadow-white">
+            <h3 className="mb-4 flex items-center justify-center gap-2 text-xl font-bold">
+              Reusable Components <BiSolidComponent className="text-2xl" />
+            </h3>
+            <p className="flex flex-1 items-center">
               Save time with pre-built React components that fit seamlessly into
               your projects. Designed to be efficient, clean, and ready for
               reuse.
             </p>
           </div>
-          <div className="dark:bg-darkbg rounded-2xl border-white bg-white p-6 shadow-xl transition-all hover:scale-105 dark:border-t-[1px] dark:shadow-md dark:shadow-white">
-            <h3 className="mb-4 text-xl font-bold">Customizable Designs</h3>
-            <p>
-              Tailor every component to match your unique design needs with full
-              support for customization using TailwindCSS.
+          <div className="dark:bg-darkbg flex flex-col rounded-2xl border-white bg-white p-6 shadow-xl transition-all hover:scale-105 dark:border-t-[1px] dark:shadow-md dark:shadow-white">
+            <h3 className="mb-4 flex items-center justify-center gap-2 text-xl font-bold">
+              Code Snippets <FaCode className="translate-y-0.5 text-2xl" />
+            </h3>
+            <p className="flex flex-1 items-center">
+              Leverage handy utilities and reusable code snippets to handle
+              common tasks and logic effortlessly in your projects.
             </p>
           </div>
           <div className="dark:bg-darkbg rounded-2xl border-white bg-white p-6 shadow-xl transition-all hover:scale-105 dark:border-t-[1px] dark:shadow-md dark:shadow-white">
-            <h3 className="mb-4 text-xl font-bold">Code Snippets</h3>
+            <h3 className="mb-4 flex items-center justify-center gap-2 text-xl font-bold">
+              Minimal Overhead
+              <TbSettings className="text-2xl" />
+            </h3>
             <p>
-              Leverage handy utilities and reusable code snippets to handle
-              common tasks and logic effortlessly in your projects.
+              Re-Use-It components are designed with low dependency overhead,
+              using only essential, replaceable packages like{" "}
+              <strong>react-icons</strong> —keeping your project lightweight and
+              flexible.
             </p>
           </div>
         </div>

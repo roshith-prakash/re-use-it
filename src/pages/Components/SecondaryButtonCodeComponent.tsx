@@ -1,6 +1,5 @@
 import { useEffect } from "react";
-import { CopyBlock, xt256 } from "react-code-blocks";
-import { SecondaryButton } from "../../components";
+import { CodeBlock, SecondaryButton } from "../../components";
 
 const SecondaryButtonCode = `import { MouseEventHandler, ReactNode } from "react";
 
@@ -93,22 +92,10 @@ const SecondaryButtonCodeComponent = () => {
       </div>
 
       <h3>SecondaryButton.tsx</h3>
-      <CopyBlock
-        text={SecondaryButtonCode}
-        language="tsx"
-        showLineNumbers={true}
-        theme={xt256}
-        codeBlock
-      />
+      <CodeBlock code={SecondaryButtonCode} language="tsx" />
 
       <h3 className="mt-8 py-2 pl-1 italic">App.tsx</h3>
-      <CopyBlock
-        text={usingCode}
-        language="tsx"
-        showLineNumbers={true}
-        theme={xt256}
-        codeBlock
-      />
+      <CodeBlock code={usingCode} language="tsx" />
     </div>
   );
 };

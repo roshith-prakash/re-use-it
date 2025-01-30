@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { CopyBlock, xt256 } from "react-code-blocks";
+import { CodeBlock } from "../../components";
 
 const shuffleCode = `// Function to swap position of elements inside the array
 export function shuffleArray(array: any[]) {
@@ -39,22 +39,10 @@ const ShuffleArray = () => {
       </h2>
 
       <h3 className="py-10 pl-1 italic">shuffleArray.ts</h3>
-      <CopyBlock
-        text={shuffleCode}
-        language="typescript"
-        showLineNumbers={true}
-        theme={xt256}
-        codeBlock
-      />
+      <CodeBlock code={shuffleCode} language="typescript" />
 
       <h3 className="mt-8 pl-1 italic">route.ts</h3>
-      <CopyBlock
-        text={usingCode}
-        language="tsx"
-        showLineNumbers={true}
-        theme={xt256}
-        codeBlock
-      />
+      <CodeBlock code={usingCode} language="tsx" />
     </div>
   );
 };

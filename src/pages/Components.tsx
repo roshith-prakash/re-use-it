@@ -9,6 +9,7 @@ import {
   Timeline,
   Card,
   Modal,
+  Avatar,
 } from "../components";
 import { toast, Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
@@ -165,7 +166,7 @@ const Components = () => {
 
           {/* Timeline */}
           <ComponentCard path="/components/timeline" title="Timeline">
-            <div>
+            <div className="flex flex-col items-center">
               {["Event A", "Event B", "Event C"].map((item, index) => {
                 return (
                   <Timeline
@@ -249,6 +250,17 @@ const Components = () => {
               className="mx-auto"
               onClick={() => setIsModalOpen(true)}
             />
+          </ComponentCard>
+
+          {/* Avatar */}
+          <ComponentCard path="/components/avatar" title="Avatar">
+            <div className="flex justify-center">
+              <Avatar
+                imageSrc="https://avatars.githubusercontent.com/u/86643111?v=4"
+                fallBackText="Roshith Prakash"
+                border
+              />
+            </div>
           </ComponentCard>
         </div>
       </div>

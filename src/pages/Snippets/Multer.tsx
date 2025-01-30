@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { CopyBlock, xt256 } from "react-code-blocks";
+import { CodeBlock } from "../../components";
 
 const MulterCode = `import multer from "multer"
 
@@ -37,22 +37,10 @@ const Multer = () => {
       </h2>
 
       <h3 className="py-10 pl-1 italic">multer.ts</h3>
-      <CopyBlock
-        text={MulterCode}
-        language="typescript"
-        showLineNumbers={true}
-        theme={xt256}
-        codeBlock
-      />
+      <CodeBlock code={MulterCode} language="typescript" />
 
       <h3 className="mt-8 pl-1 italic">route.ts</h3>
-      <CopyBlock
-        text={usingCode}
-        language="tsx"
-        showLineNumbers={true}
-        theme={xt256}
-        codeBlock
-      />
+      <CodeBlock code={usingCode} language="tsx" />
     </div>
   );
 };

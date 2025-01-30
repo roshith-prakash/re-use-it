@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { CopyBlock, xt256 } from "react-code-blocks";
+import { CodeBlock } from "../../components";
 
 const UseDebounceCode = `import { useEffect, useState } from "react";
 
@@ -64,22 +64,10 @@ const UseDebounceHook = () => {
       </h2>
 
       <h3 className="py-10 pl-1 italic">useDebounce.tsx</h3>
-      <CopyBlock
-        text={UseDebounceCode}
-        language="tsx"
-        showLineNumbers={true}
-        theme={xt256}
-        codeBlock
-      />
+      <CodeBlock code={UseDebounceCode} language="tsx" />
 
       <h3 className="py-10 pl-1 italic">App.tsx</h3>
-      <CopyBlock
-        text={usingCode}
-        language="tsx"
-        showLineNumbers={true}
-        theme={xt256}
-        codeBlock
-      />
+      <CodeBlock code={usingCode} language="tsx" />
     </div>
   );
 };

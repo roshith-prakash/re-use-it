@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { CopyBlock, xt256 } from "react-code-blocks";
+import { CodeBlock } from "../components";
 
 const DarkModeContextCode = `import { createContext, useContext, useEffect, useState } from "react";
 
@@ -93,31 +93,13 @@ const DarkModeFile = () => {
       </h2>
 
       <h3 className="py-10 pl-1 italic">DarkModeContext.tsx</h3>
-      <CopyBlock
-        text={DarkModeContextCode}
-        language="tsx"
-        showLineNumbers={true}
-        theme={xt256}
-        codeBlock
-      />
+      <CodeBlock code={DarkModeContextCode} language="tsx" />
 
       <h3 className="py-10 pl-1 italic">App.tsx</h3>
-      <CopyBlock
-        text={usingCode}
-        language="tsx"
-        showLineNumbers={true}
-        theme={xt256}
-        codeBlock
-      />
+      <CodeBlock code={usingCode} language="tsx" />
 
       <h3 className="py-10 pl-1 italic">Home.tsx</h3>
-      <CopyBlock
-        text={usingDarkMode}
-        language="tsx"
-        showLineNumbers={true}
-        theme={xt256}
-        codeBlock
-      />
+      <CodeBlock code={usingDarkMode} language="tsx" />
     </div>
   );
 };

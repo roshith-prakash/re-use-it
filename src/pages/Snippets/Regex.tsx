@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { CopyBlock, xt256 } from "react-code-blocks";
+import { CodeBlock } from "../../components";
 
 const isValidEmailRegex = `// Check if input is a valid email
 export const isValidEmail = (email:string) => {
@@ -51,13 +51,7 @@ const Regex = () => {
       <h3 className="py-5">
         Check if the string entered is in a valid email format.
       </h3>
-      <CopyBlock
-        text={isValidEmailRegex}
-        language="typescript"
-        showLineNumbers={true}
-        theme={xt256}
-        codeBlock
-      />
+      <CodeBlock code={isValidEmailRegex} language="typescript" />
 
       <h2 className="pt-10 pl-1 italic">isValidPassword.ts</h2>
       <h3 className="py-5">
@@ -65,13 +59,7 @@ const Regex = () => {
         contain atleast 8 character, and must contain an uppercase, lowercase,
         special character and a number.
       </h3>
-      <CopyBlock
-        text={isValidPasswordRegex}
-        language="typescript"
-        showLineNumbers={true}
-        theme={xt256}
-        codeBlock
-      />
+      <CodeBlock code={isValidPasswordRegex} language="typescript" />
 
       <h2 className="pt-10 pl-1 italic">isValidUsername.ts</h2>
       <h3 className="py-5">
@@ -79,22 +67,10 @@ const Regex = () => {
         only contain lowercase characters, numbers, and underscores (_) and
         periods (.).
       </h3>
-      <CopyBlock
-        text={isValidUsernameRegex}
-        language="typescript"
-        showLineNumbers={true}
-        theme={xt256}
-        codeBlock
-      />
+      <CodeBlock code={isValidUsernameRegex} language="typescript" />
 
       <h3 className="py-10 pl-1 italic">test.js</h3>
-      <CopyBlock
-        text={usingCode}
-        language="tsx"
-        showLineNumbers={true}
-        theme={xt256}
-        codeBlock
-      />
+      <CodeBlock code={usingCode} language="tsx" />
     </div>
   );
 };
