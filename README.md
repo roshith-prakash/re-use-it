@@ -17,6 +17,7 @@ This repository contains a collection of reusable and customizable React compone
    - Footer
    - Table
    - Modal
+   - Avatar
 
 ## Code Snippets
 
