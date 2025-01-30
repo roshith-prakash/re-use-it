@@ -16,6 +16,7 @@ import Avatar from "./Avatar";
 import Checkbox from "./Checkbox";
 import RadioButton from "./RadioButton";
 import Switch from "./Switch";
+import ProgressBar from "./ProgressBar";
 
 export {
   PrimaryButton,
@@ -36,4 +37,5 @@ export {
   Checkbox,
   RadioButton,
   Switch,
+  ProgressBar,
 };

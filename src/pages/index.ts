@@ -22,6 +22,7 @@ import AvatarComponent from "./Components/AvatarComponent";
 import CheckboxComponent from "./Components/CheckboxComponent";
 import RadioButtonComponent from "./Components/RadioButtonComponent";
 import SwitchComponent from "./Components/SwitchComponent";
+import ProgressComponent from "./Components/ProgressComponent";
 // --------------------------------------------------------------------------------
 import MinutesToRead from "./Snippets/MinutesToRead";
 import UseDebounceHook from "./Snippets/UseDebounceHook";
@@ -64,6 +65,7 @@ export {
   CheckboxComponent,
   RadioButtonComponent,
   SwitchComponent,
+  ProgressComponent,
   //-----------------------------------------------
   MinutesToRead,
   UseDebounceHook,

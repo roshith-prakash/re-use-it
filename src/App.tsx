@@ -36,6 +36,7 @@ import {
   Multer,
   Cloudinary,
   ShuffleArray,
+  ProgressComponent,
 } from "./pages";
 import { Footer, Navbar } from "./components";
 import SecurityHeaders from "./components/SecurityHeaders";
@@ -134,6 +135,11 @@ function App() {
             />
 
             <Route path="/components/switch" element={<SwitchComponent />} />
+
+            <Route
+              path="/components/progress"
+              element={<ProgressComponent />}
+            />
 
             {/* Need to improve component */}
             {/* <Route path="/components/select" element={<SelectComponent />} /> */}

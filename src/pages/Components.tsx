@@ -13,6 +13,7 @@ import {
   Checkbox,
   RadioButton,
   Switch,
+  ProgressBar,
 } from "../components";
 import { toast, Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
@@ -124,19 +125,6 @@ const Components = () => {
             </div>
           </ComponentCard>
 
-          {/* Error Accordion */}
-          <ComponentCard path="/components/error-accordion" title="Error">
-            <button
-              onClick={() => {
-                setIsOpen((prev) => !prev);
-              }}
-              className="w-full cursor-pointer rounded border-2 p-2 dark:text-white"
-            >
-              {isOpen ? "Hide" : "Show"} Error
-            </button>
-            <ErrorAccordion text="This is an error message." isOpen={isOpen} />
-          </ComponentCard>
-
           {/* Input */}
           <ComponentCard path="/components/input" title="Text Input">
             <Input
@@ -160,6 +148,78 @@ const Components = () => {
                 setPassword(e.target.value);
               }}
             />
+          </ComponentCard>
+
+          {/* Checkbox */}
+          <ComponentCard path="/components/checkbox" title="Checkbox">
+            <div className="flex items-center justify-center">
+              <Checkbox
+                onChange={(e) => {
+                  console.log(e.target.checked);
+                }}
+              />
+              <label>Check this</label>
+            </div>
+          </ComponentCard>
+
+          {/* Radio Button */}
+          <ComponentCard path="/components/radio" title="Radio Button">
+            <div className="flex items-center justify-center">
+              <RadioButton
+                value="option1"
+                checked={selectedOption == "option1"}
+                onChange={(e) => {
+                  setSelectedOption(e.target.value);
+                }}
+              />
+              <label>Option 1</label>
+            </div>
+            <div className="flex items-center justify-center">
+              <RadioButton
+                value="option2"
+                checked={selectedOption == "option2"}
+                onChange={(e) => {
+                  setSelectedOption(e.target.value);
+                }}
+              />
+              <label>Option 2</label>
+            </div>
+            <div className="flex items-center justify-center">
+              <RadioButton
+                value="option3"
+                checked={selectedOption == "option3"}
+                onChange={(e) => {
+                  setSelectedOption(e.target.value);
+                }}
+              />
+              <label>Option 3</label>
+            </div>
+          </ComponentCard>
+
+          {/* Switch */}
+          <ComponentCard path="/components/switch" title="Switch">
+            <div className="flex items-center justify-center">
+              <Switch
+                checked={switchState}
+                onChange={() => {
+                  setSwitchState((prev) => !prev);
+                }}
+              />
+              <label>Switch state</label>
+            </div>
+          </ComponentCard>
+
+          {/* Error Accordion */}
+          <ComponentCard path="/components/error-accordion" title="Error">
+            <button
+              onClick={() => {
+                setIsOpen((prev) => !prev);
+              }}
+              className="w-full cursor-pointer rounded border-2 p-2 dark:text-white"
+            >
+              {isOpen ? "Hide" : "Show"} Error
+            </button>
+            <ErrorAccordion text="This is an error message." isOpen={isOpen} />
           </ComponentCard>
 
           {/* Loading Placeholder */}
@@ -268,63 +328,9 @@ const Components = () => {
             </div>
           </ComponentCard>
 
-          {/* Checkbox */}
-          <ComponentCard path="/components/checkbox" title="Checkbox">
-            <div className="flex items-center justify-center">
-              <Checkbox
-                onChange={(e) => {
-                  console.log(e.target.checked);
-                }}
-              />
-              <label>Check this</label>
-            </div>
-          </ComponentCard>
-
-          {/* Radio Button */}
-          <ComponentCard path="/components/radio" title="Radio Button">
-            <div className="flex items-center justify-center">
-              <RadioButton
-                value="option1"
-                checked={selectedOption == "option1"}
-                onChange={(e) => {
-                  setSelectedOption(e.target.value);
-                }}
-              />
-              <label>Option 1</label>
-            </div>
-            <div className="flex items-center justify-center">
-              <RadioButton
-                value="option2"
-                checked={selectedOption == "option2"}
-                onChange={(e) => {
-                  setSelectedOption(e.target.value);
-                }}
-              />
-              <label>Option 2</label>
-            </div>
-            <div className="flex items-center justify-center">
-              <RadioButton
-                value="option3"
-                checked={selectedOption == "option3"}
-                onChange={(e) => {
-                  setSelectedOption(e.target.value);
-                }}
-              />
-              <label>Option 3</label>
-            </div>
-          </ComponentCard>
-
-          {/* Switch */}
-          <ComponentCard path="/components/switch" title="Switch">
-            <div className="flex items-center justify-center">
-              <Switch
-                checked={switchState}
-                onChange={() => {
-                  setSwitchState((prev) => !prev);
-                }}
-              />
-              <label>Switch state</label>
-            </div>
+          {/* ProgressBar */}
+          <ComponentCard path="/components/progress" title="Progress Bar">
+            <ProgressBar currentProgress={35} />
           </ComponentCard>
         </div>
       </div>
