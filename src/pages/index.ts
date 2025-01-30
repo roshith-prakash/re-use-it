@@ -23,6 +23,7 @@ import CheckboxComponent from "./Components/CheckboxComponent";
 import RadioButtonComponent from "./Components/RadioButtonComponent";
 import SwitchComponent from "./Components/SwitchComponent";
 import ProgressComponent from "./Components/ProgressComponent";
+import SliderComponent from "./Components/SliderComponent";
 // --------------------------------------------------------------------------------
 import MinutesToRead from "./Snippets/MinutesToRead";
 import UseDebounceHook from "./Snippets/UseDebounceHook";
@@ -66,6 +67,7 @@ export {
   RadioButtonComponent,
   SwitchComponent,
   ProgressComponent,
+  SliderComponent,
   //-----------------------------------------------
   MinutesToRead,
   UseDebounceHook,

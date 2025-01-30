@@ -14,6 +14,7 @@ import {
   RadioButton,
   Switch,
   ProgressBar,
+  Slider,
 } from "../components";
 import { toast, Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
@@ -37,6 +38,7 @@ const Components = () => {
   const [password, setPassword] = useState<string>("");
   const [selectedOption, setSelectedOption] = useState<string>("option1");
   const [switchState, setSwitchState] = useState<boolean>(false);
+  const [sliderValue, setSliderValue] = useState<number>(0);
 
   useEffect(() => {
     document.title = "Components | Re-Use-it!";
@@ -331,6 +333,18 @@ const Components = () => {
           {/* ProgressBar */}
           <ComponentCard path="/components/progress" title="Progress Bar">
             <ProgressBar currentProgress={35} />
+          </ComponentCard>
+
+          {/* Slider */}
+          <ComponentCard path="/components/slider" title="Slider">
+            <Slider
+              min={0}
+              max={100}
+              value={sliderValue}
+              changeValueBySlider={(e) => {
+                setSliderValue(Number(e.target.value));
+              }}
+            />
           </ComponentCard>
         </div>
       </div>

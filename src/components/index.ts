@@ -17,6 +17,7 @@ import Checkbox from "./Checkbox";
 import RadioButton from "./RadioButton";
 import Switch from "./Switch";
 import ProgressBar from "./ProgressBar";
+import Slider from "./Slider";
 
 export {
   PrimaryButton,
@@ -38,4 +39,5 @@ export {
   RadioButton,
   Switch,
   ProgressBar,
+  Slider,
 };

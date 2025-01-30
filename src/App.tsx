@@ -26,6 +26,8 @@ import {
   ModalComponent,
   RadioButtonComponent,
   SwitchComponent,
+  ProgressComponent,
+  SliderComponent,
   // SelectComponent,
   // -------------------------------------
   MinutesToRead,
@@ -36,7 +38,6 @@ import {
   Multer,
   Cloudinary,
   ShuffleArray,
-  ProgressComponent,
 } from "./pages";
 import { Footer, Navbar } from "./components";
 import SecurityHeaders from "./components/SecurityHeaders";
@@ -140,6 +141,8 @@ function App() {
               path="/components/progress"
               element={<ProgressComponent />}
             />
+
+            <Route path="/components/slider" element={<SliderComponent />} />
 
             {/* Need to improve component */}
             {/* <Route path="/components/select" element={<SelectComponent />} /> */}
