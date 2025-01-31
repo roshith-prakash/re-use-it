@@ -11,7 +11,7 @@ import {
   // -----------------------------------
   PrimaryButtonCodeComponent,
   SecondaryButtonCodeComponent,
-  ErrorAccordionCodeComponent,
+  AccordionCodeComponent,
   SecurityHeadersCodeComponent,
   LoaderCodeComponent,
   InputCodeComponent,
@@ -74,8 +74,8 @@ function App() {
             <Route path="/components" element={<Components />} />
 
             <Route
-              path="/components/error-accordion"
-              element={<ErrorAccordionCodeComponent />}
+              path="/components/accordion"
+              element={<AccordionCodeComponent />}
             />
 
             <Route

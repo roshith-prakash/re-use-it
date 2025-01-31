@@ -1,6 +1,6 @@
 import PrimaryButton from "./PrimaryButton";
 import SecondaryButton from "./SecondaryButton";
-import ErrorAccordion from "./ErrorAccordion";
+import Accordion from "./Accordion";
 import Input from "./Input";
 import PasswordInput from "./PasswordInput";
 import Loader from "./Loader";
@@ -21,7 +21,7 @@ import Slider from "./Slider";
 export {
   PrimaryButton,
   SecondaryButton,
-  ErrorAccordion,
+  Accordion,
   Input,
   PasswordInput,
   Loader,

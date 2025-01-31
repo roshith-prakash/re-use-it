@@ -4,7 +4,7 @@ import GettingStarted from "./GettingStarted";
 import CodeSnippets from "./CodeSnippets";
 import NotFound from "./NotFound";
 // -------------------------------------------------------------------------------
-import ErrorAccordionCodeComponent from "./Components/ErrorAccordionCodeComponent";
+import AccordionCodeComponent from "./Components/AccordionCodeComponent";
 import PrimaryButtonCodeComponent from "./Components/PrimaryButtonCodeComponent";
 import SecondaryButtonCodeComponent from "./Components/SecondaryButtonCodeComponent";
 import SecurityHeadersCodeComponent from "./Components/SecurityHeadersComponent";
@@ -50,7 +50,7 @@ export {
   // -------------------------------------------
   PrimaryButtonCodeComponent,
   SecondaryButtonCodeComponent,
-  ErrorAccordionCodeComponent,
+  AccordionCodeComponent,
   InputCodeComponent,
   PasswordInputCodeComponent,
   LoaderCodeComponent,

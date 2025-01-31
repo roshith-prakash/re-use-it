@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import {
-  ErrorAccordion,
+  Accordion,
   PrimaryButton,
   SecondaryButton,
   Input,
@@ -33,7 +33,6 @@ const Components = () => {
   const navigate = useNavigate();
 
   // For interactivity
-  const [isOpen, setIsOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [inputValue, setInputValue] = useState<string>("");
   const [password, setPassword] = useState<string>("");
@@ -226,17 +225,14 @@ const Components = () => {
             </div>
           </ComponentCard>
 
-          {/* Error Accordion */}
-          <ComponentCard path="/components/error-accordion" title="Error">
-            <button
-              onClick={() => {
-                setIsOpen((prev) => !prev);
-              }}
-              className="w-full cursor-pointer rounded border-2 p-2 dark:text-white"
-            >
-              {isOpen ? "Hide" : "Show"} Error
-            </button>
-            <ErrorAccordion text="This is an error message." isOpen={isOpen} />
+          {/* Accordion */}
+          <ComponentCard path="/components/accordion" title="Accordion">
+            <Accordion text="Who is Fernando Alonso?">
+              <p className="py-5">
+                Fernando Alonso Díaz is a Spanish racing driver, who competes in
+                Formula One for Aston Martin.
+              </p>
+            </Accordion>
           </ComponentCard>
 
           {/* Loading Placeholder */}
