@@ -29,6 +29,7 @@ import {
   ProgressComponent,
   SliderComponent,
   SelectComponent,
+  AccordionGroupComponent,
   // -------------------------------------
   MinutesToRead,
   UseDebounceHook,
@@ -144,8 +145,12 @@ function App() {
 
             <Route path="/components/slider" element={<SliderComponent />} />
 
-            {/* Need to improve component */}
             <Route path="/components/select" element={<SelectComponent />} />
+
+            <Route
+              path="/components/accordion-group"
+              element={<AccordionGroupComponent />}
+            />
 
             {/* ----------------------------------------------------------------------------------------------------------------------------- */}
 

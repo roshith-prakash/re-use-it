@@ -24,6 +24,7 @@ import RadioButtonComponent from "./Components/RadioButtonComponent";
 import SwitchComponent from "./Components/SwitchComponent";
 import ProgressComponent from "./Components/ProgressComponent";
 import SliderComponent from "./Components/SliderComponent";
+import AccordionGroupComponent from "./Components/AccordionGroupComponent";
 // --------------------------------------------------------------------------------
 import MinutesToRead from "./Snippets/MinutesToRead";
 import UseDebounceHook from "./Snippets/UseDebounceHook";
@@ -68,6 +69,7 @@ export {
   SwitchComponent,
   ProgressComponent,
   SliderComponent,
+  AccordionGroupComponent,
   //-----------------------------------------------
   MinutesToRead,
   UseDebounceHook,

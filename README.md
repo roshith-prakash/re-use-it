@@ -7,6 +7,7 @@ This repository contains a collection of reusable and customizable React compone
    - Primary Button
    - Secondary Button
    - Accordion
+   - Accordion Group
    - Text Input
    - Password Input
    - Loading Placeholder

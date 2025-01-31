@@ -17,6 +17,7 @@ import RadioButton from "./RadioButton";
 import Switch from "./Switch";
 import ProgressBar from "./ProgressBar";
 import Slider from "./Slider";
+import AccordionGroup from "./AccordionGroup";
 
 export {
   PrimaryButton,
@@ -38,4 +39,5 @@ export {
   Switch,
   ProgressBar,
   Slider,
+  AccordionGroup,
 };

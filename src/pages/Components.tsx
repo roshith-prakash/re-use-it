@@ -15,6 +15,7 @@ import {
   Switch,
   ProgressBar,
   Slider,
+  AccordionGroup,
   Select,
 } from "../components";
 import { toast, Toaster } from "react-hot-toast";
@@ -28,6 +29,7 @@ import Table, {
 } from "../components/Table";
 import ComponentCard from "../components/ComponentCard";
 import { Typewriter } from "react-simple-typewriter";
+import { accordionData } from "../data/accordionGroupData";
 
 const Components = () => {
   const navigate = useNavigate();
@@ -233,6 +235,14 @@ const Components = () => {
                 Formula One for Aston Martin.
               </p>
             </Accordion>
+          </ComponentCard>
+
+          {/* Accordion Group */}
+          <ComponentCard
+            path="/components/accordion-group"
+            title="Accordion Group"
+          >
+            <AccordionGroup items={accordionData} />
           </ComponentCard>
 
           {/* Loading Placeholder */}

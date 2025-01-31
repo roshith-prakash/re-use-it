@@ -10,7 +10,7 @@ const Accordion = ({
   children: ReactNode;
   className?: string;
 }) => {
-  const contentRef = useRef(null);
+  const contentRef = useRef<HTMLDivElement | null>(null);
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
@@ -25,14 +25,17 @@ const Accordion = ({
       >
         {text}
         <IoIosArrowDown
-          className={`${isOpen && "rotate-180"} transition-all duration-700`}
+          className={`${isOpen && "rotate-180"} transition-all duration-300`}
         />
       </button>
       <div
         ref={contentRef}
-        className={`overflow-hidden transition-[max-height] duration-700 ease-in-out ${
+        className={`overflow-hidden transition-[max-height] duration-300 ease-in-out ${
           isOpen ? "max-h-[1000px]" : "max-h-0"
         }`}
+        style={{
+          maxHeight: isOpen ? `${contentRef.current?.scrollHeight}px` : "0px",
+        }}
       >
         {children}
       </div>
