@@ -21,6 +21,9 @@ This repository contains a collection of reusable and customizable React compone
    - Checkbox
    - Radio Button
    - Switch
+   - Progress Bar
+   - Slider
+   - Select
 
 ## Code Snippets
 

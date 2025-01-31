@@ -15,6 +15,7 @@ import {
   Switch,
   ProgressBar,
   Slider,
+  Select,
 } from "../components";
 import { toast, Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
@@ -49,13 +50,14 @@ const Components = () => {
       {/* Modal */}
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
         <p className="text-center">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum
+          The quick brown fox jumps over the lazy dog, showcasing a sense of
+          adventure and agility in the midst of its daily escapades. Beyond the
+          rolling hills and through the dense forest, it finds a quiet stream
+          where it pauses to drink from the cool, refreshing waters. Little does
+          it know, nearby, a wise old owl watches, perched high on an ancient
+          tree, silently observing this fleeting moment of nature's beauty. Amid
+          the tranquility, a distant thunder echoes, signaling an approaching
+          storm that will bring renewal and growth to the land.
         </p>
       </Modal>
 
@@ -149,6 +151,19 @@ const Components = () => {
               onChange={(e) => {
                 setPassword(e.target.value);
               }}
+            />
+          </ComponentCard>
+
+          {/* Select */}
+          <ComponentCard path="/components/select" title="Select">
+            <Select
+              options={[
+                { text: "Option A", value: "A" },
+                { text: "Option B", value: "B" },
+                { text: "Option C", value: "C" },
+              ]}
+              placeholder="Select your option!"
+              onChange={(value) => setSelectedOption(value)}
             />
           </ComponentCard>
 

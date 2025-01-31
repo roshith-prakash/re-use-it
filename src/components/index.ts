@@ -8,7 +8,6 @@ import Timeline from "./Timeline";
 import Navbar from "./Navbar";
 import Card from "./Card";
 import Select from "./Select";
-import { Option } from "./Select";
 import Footer from "./Footer";
 import Modal from "./Modal";
 import CodeBlock from "./CodeBlock";
@@ -30,7 +29,6 @@ export {
   Navbar,
   Card,
   Select,
-  Option,
   Footer,
   Modal,
   CodeBlock,

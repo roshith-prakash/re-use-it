@@ -1,29 +1,63 @@
-import { ChangeEventHandler, ReactNode } from "react";
+import { useState } from "react";
+import { IoIosArrowDown } from "react-icons/io";
 
 const Select = ({
-  children,
+  options,
   onChange,
   className,
+  optionClassName,
+  placeholder = "Select an option",
 }: {
-  children: ReactNode;
-  onChange: ChangeEventHandler<HTMLSelectElement>;
+  options: { value: string; text?: string }[];
+  onChange: (value: string) => void;
   className?: string;
+  optionClassName?: string;
+  placeholder?: string;
 }) => {
-  return (
-    <select
-      onChange={onChange}
-      className={`flex-1 rounded-xl border-2 px-5 py-2 md:flex-none ${className}`}
-    >
-      {children}
-    </select>
-  );
-};
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [selected, setSelected] = useState<string | null>(null);
 
-export const Option = ({ value, text }: { value: string; text?: string }) => {
+  const handleSelect = (value: string) => {
+    setSelected(value);
+    onChange(value);
+    setIsOpen(false); // Close the dropdown after selecting an option
+  };
+
   return (
-    <option value={value} className="dark:bg-secondarydarkbg py-2">
-      {String(text) ? String(text) : String(value)}
-    </option>
+    <div
+      role="select"
+      className={`bg-grey relative min-w-3xs cursor-pointer rounded-xl border-2 px-5 py-2 dark:bg-transparent ${className}`}
+      onClick={() => setIsOpen((prev) => !prev)}
+    >
+      <div className="flex items-center justify-between gap-x-5">
+        <p>
+          {selected
+            ? options.find((opt) => opt.value === selected)?.text || selected
+            : placeholder}
+        </p>
+        <IoIosArrowDown
+          className={`${isOpen ? "rotate-180" : "rotate-0"} transition-transform`}
+        />
+      </div>
+
+      {isOpen && (
+        <div
+          className="dark:bg-secondarydarkbg bg-grey absolute top-full left-0 mt-2 w-full overflow-hidden rounded-xl border-2 shadow-lg"
+          onClick={(e) => e.stopPropagation()} // Prevent toggling when clicking inside the dropdown
+        >
+          {options.map((option) => (
+            <div
+              role="option"
+              key={option.value}
+              className={`dark:hover:bg-darkbg px-4 py-2 hover:bg-gray-200 ${optionClassName}`}
+              onClick={() => handleSelect(option.value)}
+            >
+              {option.text || option.value}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
   );
 };
 
