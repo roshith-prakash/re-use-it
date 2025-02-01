@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CodeBlock, ProgressBar } from "../../components";
+import { CodeBlock, Slider } from "../../components";
 
 const SliderCode = `import { ChangeEventHandler } from "react";
 
@@ -55,34 +55,34 @@ const App = () => {
 `;
 
 const SliderComponent = () => {
-  const [currentValue, setCurrentValue] = useState(0);
-
-  useEffect(() => {
-    if (currentValue < 100) {
-      setTimeout(() => setCurrentValue((prev) => prev + 5), 1000);
-    } else {
-      setCurrentValue(0);
-    }
-  }, [currentValue]);
+  const [currentValue, setSliderValue] = useState(0);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
   useEffect(() => {
-    document.title = "Progress Bar | Re-Use-it!";
+    document.title = "Slider | Re-Use-it!";
   }, []);
 
   return (
     <div className="dark:bg-darkbg min-h-screen p-10 dark:text-white">
-      <h1 className="text-center text-2xl font-medium">Progress Bar</h1>
+      <h1 className="text-center text-2xl font-medium">Slider</h1>
       <h2 className="mt-8 py-5 text-center">
-        A sleek, customizable progress bar with smooth animations and modern
-        styling.
+        A sleek, customizable slider/range component with smooth transitions,
+        responsive design, and modern styling for precise value selection.
       </h2>
 
-      <div className="mx-auto max-w-2xl py-10">
-        <ProgressBar currentProgress={currentValue} />
+      <div className="mx-auto max-w-lg py-10">
+        <Slider
+          min={0}
+          max={100}
+          value={currentValue}
+          className="w-full"
+          changeValueBySlider={(e) => {
+            setSliderValue(Number(e.target.value));
+          }}
+        />
       </div>
 
       <div className="py-8">

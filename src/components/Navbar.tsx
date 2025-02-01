@@ -4,6 +4,7 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import { ContextValue, useDarkMode } from "../context/DarkModeContext";
 import { IoMoon } from "react-icons/io5";
 import { IoSunnySharp } from "react-icons/io5";
+import Accordion from "./Accordion";
 
 const Navbar = () => {
   const { isDarkMode, toggleDarkMode } = useDarkMode() as ContextValue;
@@ -115,7 +116,7 @@ const Navbar = () => {
 
         {/* Drawer Menu - XS - MD screen */}
         <div
-          className={`dark:bg-darkbg fixed top-0 right-0 z-50 h-screen w-full bg-white pb-6 text-center text-xl shadow-md md:text-lg ${
+          className={`dark:bg-darkbg fixed top-0 right-0 z-50 flex h-screen w-full flex-col bg-white pb-6 text-center text-xl shadow-md md:text-lg ${
             open ? "translate-x-0" : "translate-x-[100%]"
           } transition-all duration-500`}
           role="dialog"
@@ -123,7 +124,7 @@ const Navbar = () => {
           aria-label="Drawer Menu"
         >
           {/* Top Section - Title + X button */}
-          <div className="mb-14 flex items-center justify-between px-10 pt-4 lg:px-10">
+          <div className="mb-5 flex items-center justify-between px-10 pt-4 lg:px-10">
             <button
               onClick={() => handleSearch("/")}
               className="font-pacifico hover:text-cta dark:hover:text-darkmodeCTA cursor-pointer text-2xl transition-all"
@@ -138,7 +139,7 @@ const Navbar = () => {
             />
           </div>
 
-          <div className="mt-14 flex flex-col items-center justify-between gap-y-10 px-8 text-lg font-medium">
+          <div className="scroller mt-14 flex flex-1 flex-col items-center gap-y-10 overflow-y-auto px-8 pb-20 text-lg font-medium">
             {/* Home */}
             <button
               onClick={() => handleSearch("/")}
@@ -148,22 +149,13 @@ const Navbar = () => {
               Home
             </button>
 
-            {/* Components */}
+            {/* Getting Started */}
             <button
-              onClick={() => handleSearch("/components")}
+              onClick={() => handleSearch("/getting-started")}
               className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
-              aria-label="Go to Components"
+              aria-label="Getting Started"
             >
-              Components
-            </button>
-
-            {/* Code Snippets */}
-            <button
-              onClick={() => handleSearch("/code-snippets")}
-              className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
-              aria-label="Go to Code Snippets"
-            >
-              Code Snippets
+              Getting Started
             </button>
 
             {/* Package JSON */}
@@ -193,10 +185,280 @@ const Navbar = () => {
               Dark Mode Context
             </button>
 
+            <Accordion text="Components" className="w-full border-none">
+              <div className="flex flex-col items-center gap-y-8 py-10">
+                {/* Accordion */}
+                <button
+                  onClick={() => handleSearch("/components/accordion")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Single Accordion"
+                >
+                  Accordion
+                </button>
+
+                {/* Accordion Group */}
+                <button
+                  onClick={() => handleSearch("/components/accordion-group")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Accordion Group"
+                >
+                  Accordion Group
+                </button>
+
+                {/* Primary Button */}
+                <button
+                  onClick={() => handleSearch("/components/primary-button")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Primary Button"
+                >
+                  Primary Button
+                </button>
+
+                {/* Secondary Button */}
+                <button
+                  onClick={() => handleSearch("/components/secondary-button")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Secondary Button"
+                >
+                  Secondary Button
+                </button>
+
+                {/* Text Input */}
+                <button
+                  onClick={() => handleSearch("/components/input")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Text Input"
+                >
+                  Text Input
+                </button>
+
+                {/* Password Input */}
+                <button
+                  onClick={() => handleSearch("/components/password-input")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Password Input"
+                >
+                  Password Input
+                </button>
+
+                {/* Select */}
+                <button
+                  onClick={() => handleSearch("/components/select")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Select Input"
+                >
+                  Select
+                </button>
+
+                {/* Checkbox */}
+                <button
+                  onClick={() => handleSearch("/components/checkbox")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Checkbox Input"
+                >
+                  Checkbox
+                </button>
+
+                {/* Radio Button */}
+                <button
+                  onClick={() => handleSearch("/components/radio")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Radio Button"
+                >
+                  Radio Button
+                </button>
+
+                {/* Switch */}
+                <button
+                  onClick={() => handleSearch("/components/switch")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Switch"
+                >
+                  Switch (Toggle)
+                </button>
+
+                {/* Loader */}
+                <button
+                  onClick={() => handleSearch("/components/loader")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Skeleton Loader"
+                >
+                  Loading Placeholder
+                </button>
+
+                {/* Timeline */}
+                <button
+                  onClick={() => handleSearch("/components/timeline")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Timeline"
+                >
+                  Timeline
+                </button>
+
+                {/* Security Headers */}
+                <button
+                  onClick={() => handleSearch("/components/security-headers")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Security Headers"
+                >
+                  Security Headers
+                </button>
+
+                {/* Card */}
+                <button
+                  onClick={() => handleSearch("/components/security-headers")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Card Component"
+                >
+                  Card
+                </button>
+
+                {/* Navbar */}
+                <button
+                  onClick={() => handleSearch("/components/navbar")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Navigation Bar"
+                >
+                  Navbar
+                </button>
+
+                {/* Footer */}
+                <button
+                  onClick={() => handleSearch("/components/footer")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Footer"
+                >
+                  Footer
+                </button>
+
+                {/* Table */}
+                <button
+                  onClick={() => handleSearch("/components/table")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Table"
+                >
+                  Table
+                </button>
+
+                {/* Modal */}
+                <button
+                  onClick={() => handleSearch("/components/modal")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Modal"
+                >
+                  Modal
+                </button>
+
+                {/* Avatar */}
+                <button
+                  onClick={() => handleSearch("/components/avatar")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Avatar"
+                >
+                  Avatar
+                </button>
+
+                {/* Progress Bar */}
+                <button
+                  onClick={() => handleSearch("/components/progress")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Progress Bar"
+                >
+                  Progress Bar
+                </button>
+
+                {/* Slider  */}
+                <button
+                  onClick={() => handleSearch("/components/slider")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Slider"
+                >
+                  Slider
+                </button>
+              </div>
+            </Accordion>
+
+            {/* Code Snippets */}
+            <Accordion text="Code Snippets" className="w-full border-none">
+              <div className="flex flex-col items-center gap-y-8 py-10">
+                {/* Use Debounce */}
+                <button
+                  onClick={() => handleSearch("/code-snippets/use-debounce")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Use Debounce"
+                >
+                  Use Debounce Hook
+                </button>
+
+                {/* Regex Functions */}
+                <button
+                  onClick={() => handleSearch("/code-snippets/regex")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Regex Functions"
+                >
+                  Regex Functions
+                </button>
+
+                {/* Shuffle Array */}
+                <button
+                  onClick={() => handleSearch("/code-snippets/shuffle-array")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Shuffle Array"
+                >
+                  Shuffle Array
+                </button>
+
+                {/* Minutes to Read */}
+                <button
+                  onClick={() => handleSearch("/code-snippets/minutes-to-read")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Minutes to Read"
+                >
+                  Minutes to Read
+                </button>
+
+                {/* Format Number */}
+                <button
+                  onClick={() => handleSearch("/code-snippets/format-number")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Format Number"
+                >
+                  Format Number
+                </button>
+
+                {/* Axios */}
+                <button
+                  onClick={() => handleSearch("/code-snippets/axios")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Custom Axios Instance"
+                >
+                  Axios Instance
+                </button>
+
+                {/* Multer */}
+                <button
+                  onClick={() => handleSearch("/code-snippets/multer")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Multer Configuration"
+                >
+                  Multer Configuration
+                </button>
+
+                {/* Cloudinary */}
+                <button
+                  onClick={() => handleSearch("/code-snippets/cloudinary")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Multer Configuration"
+                >
+                  Cloudinary SDK Configuration
+                </button>
+              </div>
+            </Accordion>
+
             {/* Narcissism */}
-            <p className="absolute bottom-10 text-xs">
+            {/* <p className="absolute bottom-10 text-xs">
               Developed by Roshith Prakash.
-            </p>
+            </p> */}
           </div>
         </div>
       </nav>
