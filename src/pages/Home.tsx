@@ -71,14 +71,14 @@ const Home = () => {
           we've got you covered with components that are easy to integrate and
           endlessly customizable.
         </p>
-        <div className="mt-10">
+        {/* <div className="mt-10">
           <Link
-            to="/components"
+            to="/getting-started"
             className="bg-cta hover:bg-hovercta origin-bottom rounded-2xl px-6 py-3 text-white shadow-md transition-all hover:scale-105 md:text-lg"
           >
             Get Started!
           </Link>
-        </div>
+        </div> */}
       </section>
 
       {/* ------------------------------------------------------------------- */}

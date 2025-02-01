@@ -4,10 +4,10 @@ This repository contains a collection of reusable and customizable React compone
 
 ## Components
 
-   - Primary Button
-   - Secondary Button
    - Accordion
    - Accordion Group
+   - Primary Button
+   - Secondary Button
    - Text Input
    - Password Input
    - Loading Placeholder

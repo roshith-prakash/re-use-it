@@ -21,7 +21,7 @@ const AccordionItem = ({
     <div className="overflow-hidden border-b-2">
       <button
         onClick={() => toggle(id)}
-        className="flex w-full items-center justify-between py-3 text-left text-white"
+        className="flex w-full items-center justify-between py-3 text-left"
       >
         {title}
         <IoIosArrowDown

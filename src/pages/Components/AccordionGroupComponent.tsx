@@ -2,8 +2,7 @@ import { useEffect } from "react";
 import { CodeBlock, AccordionGroup } from "../../components";
 import { accordionData } from "../../data/accordionGroupData";
 
-const AccordionGroupCode = `
-import { useState, useRef, ReactNode } from "react";
+const AccordionGroupCode = `import { useState, useRef, ReactNode } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 
 // Single Accordion Item Component
@@ -26,7 +25,7 @@ const AccordionItem = ({
     <div className="overflow-hidden border-b-2">
       <button
         onClick={() => toggle(id)}
-        className="flex w-full items-center justify-between py-3 text-left text-white"
+        className="flex w-full items-center justify-between py-3 text-left"
       >
         {title}
         <IoIosArrowDown
@@ -79,7 +78,8 @@ const AccordionGroup = ({
   );
 };
 
-export default AccordionGroup;`;
+export default AccordionGroup;
+`;
 
 const usingCode = `import  AccordionGroup  from "./AccordionGroup";
 

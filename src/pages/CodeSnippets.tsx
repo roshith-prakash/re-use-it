@@ -1,89 +1,72 @@
-import ComponentCard from "../components/ComponentCard";
-import { Typewriter } from "react-simple-typewriter";
+import { NavLink, Outlet } from "react-router-dom";
+
+// Sidebar Component
+const SnippetsSidebar = () => {
+  return (
+    <div className="dark:bg-darkbg bg-grey dark:border-darkmodetext border-r-2 border-white">
+      <h2 className="mb-4 pt-5 text-center text-2xl font-bold">
+        Code Snippets
+      </h2>
+      <div className="scroller h-screen overflow-y-auto p-4 px-10">
+        <ul className="space-y-4">
+          <li>
+            <NavLink to="use-debounce" className="hover:text-cta block">
+              useDebounce Hook
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="regex" className="hover:text-cta block">
+              Regex Functions
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="shuffle-array" className="hover:text-cta block">
+              Shuffle Array
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="minutes-to-read" className="hover:text-cta block">
+              Minutes to Read
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="format-number" className="hover:text-cta block">
+              Format Number
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="axios" className="hover:text-cta block">
+              Axios Instance
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="multer" className="hover:text-cta block">
+              Multer
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="cloudinary" className="hover:text-cta block">
+              Cloudinary Config
+            </NavLink>
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
+};
 
 const CodeSnippets = () => {
   return (
-    <div className={`dark:text-darkmodetext min-h-screen`}>
-      {/* Title */}
-      <h1 className="font-pacifico px-4 pt-20 text-center text-3xl leading-16 italic md:text-5xl">
-        Re-Use-it! Functions & Code Snippets
-      </h1>
-
-      <h2 className="font-title px-4 py-10 text-center text-lg font-medium italic">
-        It's{" "}
-        <span className="text-cta dark:text-darkmodeCTA">
-          <Typewriter
-            typeSpeed={75}
-            deleteSpeed={75}
-            loop
-            words={["Reusable.", "Adaptable.", "Yours."]}
-          />
-        </span>
-      </h2>
-
-      <div className="flex flex-wrap justify-center gap-x-8 gap-y-12 p-10">
-        {/* Use Debounce */}
-        <ComponentCard
-          path="/code-snippets/use-debounce"
-          title="useDebounce Hook"
-        >
-          <p className="text-center">
-            To debounce a user's input by a specified delay.
-          </p>
-        </ComponentCard>
-
-        {/* Regex */}
-        <ComponentCard path="/code-snippets/regex" title="Regex Functions">
-          <p className="text-center">
-            Useful Regex functions - username, password, email.
-          </p>
-        </ComponentCard>
-
-        {/* Axios */}
-        <ComponentCard
-          path="/code-snippets/shuffle-array"
-          title="Shuffle Array"
-        >
-          <p className="text-center">Shuffle elements inside an array.</p>
-        </ComponentCard>
-
-        {/* Minutes to Read */}
-        <ComponentCard
-          path="/code-snippets/minutes-to-read"
-          title="Minutes to read"
-        >
-          <p className="text-center">
-            To calculate the time required to read something based on content
-            length.
-          </p>
-        </ComponentCard>
-
-        {/* Format Number */}
-        <ComponentCard
-          path="/code-snippets/format-number"
-          title="Format Number"
-        >
-          <p className="text-center">
-            Format numbers into a human readable format.
-          </p>
-        </ComponentCard>
-
-        {/* Axios */}
-        <ComponentCard path="/code-snippets/axios" title="Axios Instance">
-          <p className="text-center">Creates a custom Axios Instance.</p>
-        </ComponentCard>
-
-        {/* Multer */}
-        <ComponentCard path="/code-snippets/multer" title="Multer">
-          <p className="text-center">Configures Multer for file upload.</p>
-        </ComponentCard>
-
-        {/* Cloudinary */}
-        <ComponentCard path="/code-snippets/cloudinary" title="Cloudinary">
-          <p className="text-center">Configures Cloudinary SDK.</p>
-        </ComponentCard>
+    <>
+      <div className="flex h-screen">
+        <div className="hidden lg:block">
+          <SnippetsSidebar />
+        </div>
+        <div className="scroller dark:bg-darkbg bg-grey flex-1 overflow-y-auto pb-20">
+          <Outlet />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

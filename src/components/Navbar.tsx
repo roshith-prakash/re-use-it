@@ -19,9 +19,9 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`bg-grey dark:bg-darkbg relative z-2 flex items-center justify-between px-10 py-4 font-sans shadow-xl dark:text-white dark:shadow-md dark:shadow-white/30`}
+        className={`bg-grey dark:bg-darkbg sticky top-0 z-2 flex w-full items-center justify-between px-10 py-4 font-sans shadow-xl dark:text-white dark:shadow-md dark:shadow-white/30`}
       >
-        {/* Home */}
+        {/* Logo */}
         <Link
           to="/"
           className={`font-pacifico hover:text-cta dark:hover:text-darkmodeCTA text-2xl transition-all`}
@@ -185,8 +185,11 @@ const Navbar = () => {
               Dark Mode Context
             </button>
 
-            <Accordion text="Components" className="w-full border-none">
-              <div className="flex flex-col items-center gap-y-8 py-10">
+            <Accordion
+              text="Components"
+              className="w-full border-none text-xl font-bold"
+            >
+              <div className="flex flex-col items-center gap-y-8 py-10 text-lg font-medium">
                 {/* Accordion */}
                 <button
                   onClick={() => handleSearch("/components/accordion")}
@@ -379,8 +382,11 @@ const Navbar = () => {
             </Accordion>
 
             {/* Code Snippets */}
-            <Accordion text="Code Snippets" className="w-full border-none">
-              <div className="flex flex-col items-center gap-y-8 py-10">
+            <Accordion
+              text="Code Snippets"
+              className="w-full border-none text-xl font-bold"
+            >
+              <div className="flex flex-col items-center gap-y-8 py-10 text-lg font-medium">
                 {/* Use Debounce */}
                 <button
                   onClick={() => handleSearch("/code-snippets/use-debounce")}

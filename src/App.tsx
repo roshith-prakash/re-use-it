@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import {
   Home,
   GettingStarted,
@@ -72,126 +72,76 @@ function App() {
 
             {/* COMPONENTS */}
 
-            <Route path="/components" element={<Components />} />
-
-            <Route
-              path="/components/accordion"
-              element={<AccordionCodeComponent />}
-            />
-
-            <Route
-              path="/components/primary-button"
-              element={<PrimaryButtonCodeComponent />}
-            />
-
-            <Route
-              path="/components/secondary-button"
-              element={<SecondaryButtonCodeComponent />}
-            />
-
-            <Route
-              path="/components/security-headers"
-              element={<SecurityHeadersCodeComponent />}
-            />
-
-            <Route
-              path="/components/loader"
-              element={<LoaderCodeComponent />}
-            />
-
-            <Route path="/components/input" element={<InputCodeComponent />} />
-
-            <Route
-              path="/components/password-input"
-              element={<PasswordInputCodeComponent />}
-            />
-
-            <Route
-              path="/components/timeline"
-              element={<TimelineCodeComponent />}
-            />
-
-            <Route
-              path="/components/navbar"
-              element={<NavbarCodeComponent />}
-            />
-
-            <Route path="/components/footer" element={<FooterComponent />} />
-
-            <Route path="/components/card" element={<CardComponent />} />
-
-            <Route path="/components/table" element={<TableComponent />} />
-
-            <Route path="/components/modal" element={<ModalComponent />} />
-
-            <Route path="/components/avatar" element={<AvatarComponent />} />
-
-            <Route
-              path="/components/checkbox"
-              element={<CheckboxComponent />}
-            />
-
-            <Route
-              path="/components/radio"
-              element={<RadioButtonComponent />}
-            />
-
-            <Route path="/components/switch" element={<SwitchComponent />} />
-
-            <Route
-              path="/components/progress"
-              element={<ProgressComponent />}
-            />
-
-            <Route path="/components/slider" element={<SliderComponent />} />
-
-            <Route path="/components/select" element={<SelectComponent />} />
-
-            <Route
-              path="/components/accordion-group"
-              element={<AccordionGroupComponent />}
-            />
-
+            <Route path="/components" element={<Components />}>
+              <Route index element={<Navigate to="accordion" replace />} />
+              <Route path="accordion" element={<AccordionCodeComponent />} />
+              <Route
+                path="primary-button"
+                element={<PrimaryButtonCodeComponent />}
+              />
+              <Route
+                path="secondary-button"
+                element={<SecondaryButtonCodeComponent />}
+              />
+              <Route
+                path="security-headers"
+                element={<SecurityHeadersCodeComponent />}
+              />
+              <Route path="loader" element={<LoaderCodeComponent />} />
+              <Route path="input" element={<InputCodeComponent />} />
+              <Route
+                path="password-input"
+                element={<PasswordInputCodeComponent />}
+              />
+              <Route path="timeline" element={<TimelineCodeComponent />} />
+              <Route path="navbar" element={<NavbarCodeComponent />} />
+              <Route path="footer" element={<FooterComponent />} />
+              <Route path="card" element={<CardComponent />} />
+              <Route path="table" element={<TableComponent />} />
+              <Route path="modal" element={<ModalComponent />} />
+              <Route path="avatar" element={<AvatarComponent />} />
+              <Route path="checkbox" element={<CheckboxComponent />} />
+              <Route path="radio" element={<RadioButtonComponent />} />
+              <Route path="switch" element={<SwitchComponent />} />
+              <Route path="progress" element={<ProgressComponent />} />
+              <Route path="slider" element={<SliderComponent />} />
+              <Route path="select" element={<SelectComponent />} />
+              <Route
+                path="accordion-group"
+                element={<AccordionGroupComponent />}
+              />
+            </Route>
             {/* ----------------------------------------------------------------------------------------------------------------------------- */}
 
             {/* CODE SNIPPETS */}
 
-            <Route path="/code-snippets" element={<CodeSnippets />} />
+            <Route path="/code-snippets" element={<CodeSnippets />}>
+              <Route index element={<Navigate to="use-debounce" replace />} />
+              <Route path="minutes-to-read" element={<MinutesToRead />} />
 
-            <Route
-              path="/code-snippets/minutes-to-read"
-              element={<MinutesToRead />}
-            />
+              <Route path="use-debounce" element={<UseDebounceHook />} />
 
-            <Route
-              path="/code-snippets/use-debounce"
-              element={<UseDebounceHook />}
-            />
+              <Route path="format-number" element={<FormatNumber />} />
 
-            <Route
-              path="/code-snippets/format-number"
-              element={<FormatNumber />}
-            />
+              <Route path="regex" element={<Regex />} />
 
-            <Route path="/code-snippets/regex" element={<Regex />} />
+              <Route path="axios" element={<AxiosInstance />} />
 
-            <Route path="/code-snippets/axios" element={<AxiosInstance />} />
+              <Route path="multer" element={<Multer />} />
 
-            <Route path="/code-snippets/multer" element={<Multer />} />
+              <Route path="cloudinary" element={<Cloudinary />} />
 
-            <Route path="/code-snippets/cloudinary" element={<Cloudinary />} />
-
-            <Route
-              path="/code-snippets/shuffle-array"
-              element={<ShuffleArray />}
-            />
+              <Route path="shuffle-array" element={<ShuffleArray />} />
+            </Route>
 
             {/* ----------------------------------------------------------------------------------------------------------------------------- */}
 
             <Route path="*" element={<NotFound />} />
           </Routes>
 
-          <Footer />
+          <div className="pt-16">
+            <Footer />
+          </div>
         </main>
       </BrowserRouter>
     </div>
