@@ -51,9 +51,7 @@ function App() {
       <SecurityHeaders />
       <BrowserRouter>
         <Navbar />
-        <main
-          className={`${isDarkMode ? "bg-[url('/src/assets/animatedWaveDark.svg')]" : "bg-[url('/src/assets/animatedWave.svg')]"} bg-cover`}
-        >
+        <main className={`${isDarkMode ? "bg-secondarydarkbg" : "bg-grey"}`}>
           <Routes>
             <Route path="/" element={<Home />} />
 
