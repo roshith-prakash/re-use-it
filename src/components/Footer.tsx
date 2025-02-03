@@ -11,7 +11,7 @@ const Footer = () => {
       className={` ${
         isDarkMode
           ? "bg-secondarydarkbg border-darkmodetext border-t-2"
-          : "from-cta to-hovercta bg-gradient-to-b"
+          : "from-cta/95 to-hovercta/95 bg-gradient-to-b"
       } font-inter min-h-50vh px-010 relative mt-20 pt-36 pb-20 text-white`}
     >
       <div className="dark:border-darkmodetext absolute -top-16 left-1/2 flex h-32 w-[90vw] -translate-x-1/2 flex-col items-center justify-around rounded-lg bg-[#1f1e1e] py-3 text-white md:flex-row lg:w-[80vw] dark:border-2">

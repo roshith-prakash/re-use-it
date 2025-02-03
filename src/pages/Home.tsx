@@ -18,10 +18,10 @@ const Home = () => {
       {/* Hero */}
       <section className="flex min-h-[90vh] flex-col lg:flex-row">
         <div className="flex flex-1 flex-col items-center justify-center gap-16 py-20 lg:gap-10 lg:py-0">
-          <h1 className="font-pacifico px-4 text-center text-5xl md:text-6xl">
+          <h1 className="font-pacifico px-4 text-center text-5xl md:text-7xl">
             Re-Use-it!
           </h1>
-          <h2 className="font-title px-5 text-center text-[1.7rem] leading-14 md:text-2xl">
+          <h2 className="font-title px-5 text-center text-[1.7rem] leading-14 md:text-3xl">
             React Components that are
             <span className="text-cta dark:text-darkmodeCTA">
               {" "}
@@ -35,7 +35,7 @@ const Home = () => {
           </h2>
         </div>
 
-        <div className="flex flex-1 items-center justify-center lg:pr-10">
+        {/* <div className="flex flex-1 items-center justify-center lg:pr-10">
           <img
             src={
               "https://res.cloudinary.com/do8rpl9l4/image/upload/v1738563645/home_ntiwv2.svg"
@@ -43,7 +43,7 @@ const Home = () => {
             alt="Re-use-it : Components Made for you"
             className="h-auto lg:max-w-[80%]"
           />
-        </div>
+        </div> */}
       </section>
 
       {/* ------------------------------------------------------------------- */}

@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`bg-grey dark:bg-darkbg sticky top-0 z-2 flex w-full items-center justify-between px-10 py-4 font-sans shadow-xl dark:text-white dark:shadow-md dark:shadow-white/30`}
+        className={`dark:bg-darkbg dark:border-grey/25 border-grey/50 sticky top-0 z-2 flex w-full items-center justify-between border-b-3 bg-white px-10 py-4 font-sans dark:text-white`}
       >
         {/* Logo */}
         <Link

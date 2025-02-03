@@ -138,7 +138,7 @@ const TableComponent = () => {
       <h1 className="text-center text-2xl font-medium">Table</h1>
       <h2 className="mt-8 py-5 text-center">A styled table component.</h2>
       <div className="flex flex-col items-center gap-8 py-10">
-        <Table className="max-w-lg">
+        <Table className="w-lg max-w-lg">
           <TableHead>
             <TableRow>
               <TableHeader>Sr No</TableHeader>

@@ -42,16 +42,14 @@ import {
 } from "./pages";
 import { Footer, Navbar } from "./components";
 import SecurityHeaders from "./components/SecurityHeaders";
-import { ContextValue, useDarkMode } from "./context/DarkModeContext";
 
 function App() {
-  const { isDarkMode } = useDarkMode() as ContextValue;
   return (
     <div className="dark:bg-darkbg dark:text-darkmodetext font-sans">
       <SecurityHeaders />
       <BrowserRouter>
         <Navbar />
-        <main className={`${isDarkMode ? "bg-secondarydarkbg" : "bg-grey"}`}>
+        <main>
           <Routes>
             <Route path="/" element={<Home />} />
 
