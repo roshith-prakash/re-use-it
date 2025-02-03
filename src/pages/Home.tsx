@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { Typewriter } from "react-simple-typewriter";
-import home from "../assets/home.svg";
 import { Link } from "react-router-dom";
 import { PrimaryButton } from "../components";
 import { SiTailwindcss, SiTypescript } from "react-icons/si";
@@ -37,7 +36,13 @@ const Home = () => {
         </div>
 
         <div className="flex flex-1 items-center justify-center lg:pr-10">
-          <img src={home} className="h-auto lg:max-w-[80%]" />
+          <img
+            src={
+              "https://res.cloudinary.com/do8rpl9l4/image/upload/v1738563645/home_ntiwv2.svg"
+            }
+            alt="Re-use-it : Components Made for you"
+            className="h-auto lg:max-w-[80%]"
+          />
         </div>
       </section>
 

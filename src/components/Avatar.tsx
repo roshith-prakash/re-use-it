@@ -42,6 +42,7 @@ const Avatar = ({
       {isValid ? (
         <img
           src={imageSrc}
+          alt={fallBackText}
           className={` ${border && `dark:border-secondarydarkbg border-2 border-white ${borderClassName} `} h-12 w-12 rounded-full ${className}`}
         />
       ) : fallBackText ? (
