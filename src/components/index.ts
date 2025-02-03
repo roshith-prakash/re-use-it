@@ -18,6 +18,8 @@ import Switch from "./Switch";
 import ProgressBar from "./ProgressBar";
 import Slider from "./Slider";
 import AccordionGroup from "./AccordionGroup";
+import Badge from "./Badge";
+import Carousel from "./Carousel";
 
 export {
   PrimaryButton,
@@ -40,4 +42,6 @@ export {
   ProgressBar,
   Slider,
   AccordionGroup,
+  Badge,
+  Carousel,
 };

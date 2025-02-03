@@ -30,6 +30,7 @@ import {
   SliderComponent,
   SelectComponent,
   AccordionGroupComponent,
+  BadgeComponent,
   // -------------------------------------
   MinutesToRead,
   UseDebounceHook,
@@ -39,6 +40,7 @@ import {
   Multer,
   Cloudinary,
   ShuffleArray,
+  CarouselComponent,
 } from "./pages";
 import { Footer, Navbar } from "./components";
 import SecurityHeaders from "./components/SecurityHeaders";
@@ -106,6 +108,10 @@ function App() {
                 path="accordion-group"
                 element={<AccordionGroupComponent />}
               />
+              <Route path="badge" element={<BadgeComponent />} />
+
+              {/* Needs Work */}
+              <Route path="carousel" element={<CarouselComponent />} />
             </Route>
             {/* ----------------------------------------------------------------------------------------------------------------------------- */}
 

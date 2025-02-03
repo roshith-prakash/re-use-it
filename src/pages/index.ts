@@ -25,6 +25,8 @@ import SwitchComponent from "./Components/SwitchComponent";
 import ProgressComponent from "./Components/ProgressComponent";
 import SliderComponent from "./Components/SliderComponent";
 import AccordionGroupComponent from "./Components/AccordionGroupComponent";
+import BadgeComponent from "./Components/BadgeComponent";
+import CarouselComponent from "./Components/CarouselComponent";
 // --------------------------------------------------------------------------------
 import MinutesToRead from "./Snippets/MinutesToRead";
 import UseDebounceHook from "./Snippets/UseDebounceHook";
@@ -70,6 +72,8 @@ export {
   ProgressComponent,
   SliderComponent,
   AccordionGroupComponent,
+  BadgeComponent,
+  CarouselComponent,
   //-----------------------------------------------
   MinutesToRead,
   UseDebounceHook,

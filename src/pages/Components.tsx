@@ -29,52 +29,32 @@ const ComponentsSidebar = () => {
           </li>
           <li>
             <NavLink
-              to="primary-button"
+              to="avatar"
               className={({ isActive }) =>
                 `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
-              Primary Button
+              Avatar
             </NavLink>
           </li>
           <li>
             <NavLink
-              to="secondary-button"
+              to="badge"
               className={({ isActive }) =>
                 `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
-              Secondary Button
+              Badge
             </NavLink>
           </li>
           <li>
             <NavLink
-              to="input"
+              to="card"
               className={({ isActive }) =>
                 `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
-              Text Input
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="password-input"
-              className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
-              }
-            >
-              Password Input
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="select"
-              className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
-              }
-            >
-              Select
+              Card
             </NavLink>
           </li>
           <li>
@@ -89,22 +69,22 @@ const ComponentsSidebar = () => {
           </li>
           <li>
             <NavLink
-              to="radio"
+              to="footer"
               className={({ isActive }) =>
                 `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
-              Radio Button
+              Footer
             </NavLink>
           </li>
           <li>
             <NavLink
-              to="switch"
+              to="input"
               className={({ isActive }) =>
                 `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
-              Switch (Toggle)
+              Text Input
             </NavLink>
           </li>
           <li>
@@ -119,33 +99,12 @@ const ComponentsSidebar = () => {
           </li>
           <li>
             <NavLink
-              to="timeline"
+              to="modal"
               className={({ isActive }) =>
                 `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
-              Timeline
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="security-headers"
-              className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
-              }
-            >
-              Security Headers
-            </NavLink>
-          </li>
-
-          <li>
-            <NavLink
-              to="card"
-              className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
-              }
-            >
-              Card
+              Modal
             </NavLink>
           </li>
           <li>
@@ -160,12 +119,92 @@ const ComponentsSidebar = () => {
           </li>
           <li>
             <NavLink
-              to="footer"
+              to="password-input"
               className={({ isActive }) =>
                 `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
-              Footer
+              Password Input
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="primary-button"
+              className={({ isActive }) =>
+                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+              }
+            >
+              Primary Button
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="progress"
+              className={({ isActive }) =>
+                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+              }
+            >
+              Progress
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="radio"
+              className={({ isActive }) =>
+                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+              }
+            >
+              Radio Button
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="secondary-button"
+              className={({ isActive }) =>
+                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+              }
+            >
+              Secondary Button
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="security-headers"
+              className={({ isActive }) =>
+                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+              }
+            >
+              Security Headers
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="select"
+              className={({ isActive }) =>
+                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+              }
+            >
+              Select
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="slider"
+              className={({ isActive }) =>
+                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+              }
+            >
+              Slider
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="switch"
+              className={({ isActive }) =>
+                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+              }
+            >
+              Switch (Toggle)
             </NavLink>
           </li>
           <li>
@@ -180,43 +219,12 @@ const ComponentsSidebar = () => {
           </li>
           <li>
             <NavLink
-              to="modal"
+              to="timeline"
               className={({ isActive }) =>
                 `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
-              Modal
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="avatar"
-              className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
-              }
-            >
-              Avatar
-            </NavLink>
-          </li>
-
-          <li>
-            <NavLink
-              to="progress"
-              className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
-              }
-            >
-              Progress
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="slider"
-              className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
-              }
-            >
-              Slider
+              Timeline
             </NavLink>
           </li>
         </ul>

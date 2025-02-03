@@ -185,9 +185,10 @@ const Navbar = () => {
               Dark Mode Context
             </button>
 
+            {/* Components */}
             <Accordion
               text="Components"
-              className="w-full border-none text-xl font-bold"
+              className="w-full border-none text-xl font-semibold"
             >
               <div className="flex flex-col items-center gap-y-8 py-10 text-lg font-medium">
                 {/* Accordion */}
@@ -208,103 +209,22 @@ const Navbar = () => {
                   Accordion Group
                 </button>
 
-                {/* Primary Button */}
+                {/* Avatar */}
                 <button
-                  onClick={() => handleSearch("/components/primary-button")}
+                  onClick={() => handleSearch("/components/avatar")}
                   className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
-                  aria-label="Primary Button"
+                  aria-label="Avatar"
                 >
-                  Primary Button
+                  Avatar
                 </button>
 
-                {/* Secondary Button */}
+                {/* Accordion */}
                 <button
-                  onClick={() => handleSearch("/components/secondary-button")}
+                  onClick={() => handleSearch("/components/badge")}
                   className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
-                  aria-label="Secondary Button"
+                  aria-label="Badge"
                 >
-                  Secondary Button
-                </button>
-
-                {/* Text Input */}
-                <button
-                  onClick={() => handleSearch("/components/input")}
-                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
-                  aria-label="Text Input"
-                >
-                  Text Input
-                </button>
-
-                {/* Password Input */}
-                <button
-                  onClick={() => handleSearch("/components/password-input")}
-                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
-                  aria-label="Password Input"
-                >
-                  Password Input
-                </button>
-
-                {/* Select */}
-                <button
-                  onClick={() => handleSearch("/components/select")}
-                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
-                  aria-label="Select Input"
-                >
-                  Select
-                </button>
-
-                {/* Checkbox */}
-                <button
-                  onClick={() => handleSearch("/components/checkbox")}
-                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
-                  aria-label="Checkbox Input"
-                >
-                  Checkbox
-                </button>
-
-                {/* Radio Button */}
-                <button
-                  onClick={() => handleSearch("/components/radio")}
-                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
-                  aria-label="Radio Button"
-                >
-                  Radio Button
-                </button>
-
-                {/* Switch */}
-                <button
-                  onClick={() => handleSearch("/components/switch")}
-                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
-                  aria-label="Switch"
-                >
-                  Switch (Toggle)
-                </button>
-
-                {/* Loader */}
-                <button
-                  onClick={() => handleSearch("/components/loader")}
-                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
-                  aria-label="Skeleton Loader"
-                >
-                  Loading Placeholder
-                </button>
-
-                {/* Timeline */}
-                <button
-                  onClick={() => handleSearch("/components/timeline")}
-                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
-                  aria-label="Timeline"
-                >
-                  Timeline
-                </button>
-
-                {/* Security Headers */}
-                <button
-                  onClick={() => handleSearch("/components/security-headers")}
-                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
-                  aria-label="Security Headers"
-                >
-                  Security Headers
+                  Badge
                 </button>
 
                 {/* Card */}
@@ -316,13 +236,13 @@ const Navbar = () => {
                   Card
                 </button>
 
-                {/* Navbar */}
+                {/* Checkbox */}
                 <button
-                  onClick={() => handleSearch("/components/navbar")}
+                  onClick={() => handleSearch("/components/checkbox")}
                   className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
-                  aria-label="Navigation Bar"
+                  aria-label="Checkbox Input"
                 >
-                  Navbar
+                  Checkbox
                 </button>
 
                 {/* Footer */}
@@ -334,13 +254,13 @@ const Navbar = () => {
                   Footer
                 </button>
 
-                {/* Table */}
+                {/* Loader */}
                 <button
-                  onClick={() => handleSearch("/components/table")}
+                  onClick={() => handleSearch("/components/loader")}
                   className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
-                  aria-label="Table"
+                  aria-label="Skeleton Loader"
                 >
-                  Table
+                  Loading Placeholder
                 </button>
 
                 {/* Modal */}
@@ -352,13 +272,31 @@ const Navbar = () => {
                   Modal
                 </button>
 
-                {/* Avatar */}
+                {/* Navbar */}
                 <button
-                  onClick={() => handleSearch("/components/avatar")}
+                  onClick={() => handleSearch("/components/navbar")}
                   className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
-                  aria-label="Avatar"
+                  aria-label="Navigation Bar"
                 >
-                  Avatar
+                  Navbar
+                </button>
+
+                {/* Password Input */}
+                <button
+                  onClick={() => handleSearch("/components/password-input")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Password Input"
+                >
+                  Password Input
+                </button>
+
+                {/* Primary Button */}
+                <button
+                  onClick={() => handleSearch("/components/primary-button")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Primary Button"
+                >
+                  Primary Button
                 </button>
 
                 {/* Progress Bar */}
@@ -370,7 +308,43 @@ const Navbar = () => {
                   Progress Bar
                 </button>
 
-                {/* Slider  */}
+                {/* Radio Button */}
+                <button
+                  onClick={() => handleSearch("/components/radio")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Radio Button"
+                >
+                  Radio Button
+                </button>
+
+                {/* Secondary Button */}
+                <button
+                  onClick={() => handleSearch("/components/secondary-button")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Secondary Button"
+                >
+                  Secondary Button
+                </button>
+
+                {/* Security Headers */}
+                <button
+                  onClick={() => handleSearch("/components/security-headers")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Security Headers"
+                >
+                  Security Headers
+                </button>
+
+                {/* Select */}
+                <button
+                  onClick={() => handleSearch("/components/select")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Select Input"
+                >
+                  Select
+                </button>
+
+                {/* Slider */}
                 <button
                   onClick={() => handleSearch("/components/slider")}
                   className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
@@ -378,13 +352,49 @@ const Navbar = () => {
                 >
                   Slider
                 </button>
+
+                {/* Switch */}
+                <button
+                  onClick={() => handleSearch("/components/switch")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Switch"
+                >
+                  Switch (Toggle)
+                </button>
+
+                {/* Table */}
+                <button
+                  onClick={() => handleSearch("/components/table")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Table"
+                >
+                  Table
+                </button>
+
+                {/* Text Input */}
+                <button
+                  onClick={() => handleSearch("/components/input")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Text Input"
+                >
+                  Text Input
+                </button>
+
+                {/* Timeline */}
+                <button
+                  onClick={() => handleSearch("/components/timeline")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Timeline"
+                >
+                  Timeline
+                </button>
               </div>
             </Accordion>
 
             {/* Code Snippets */}
             <Accordion
               text="Code Snippets"
-              className="w-full border-none text-xl font-bold"
+              className="w-full border-none text-xl font-semibold"
             >
               <div className="flex flex-col items-center gap-y-8 py-10 text-lg font-medium">
                 {/* Use Debounce */}
