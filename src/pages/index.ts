@@ -29,6 +29,7 @@ import BadgeComponent from "./Components/BadgeComponent";
 import CarouselComponent from "./Components/CarouselComponent";
 import TextAreaComponent from "./Components/TextAreaComponent";
 import TooltipComponent from "./Components/TooltipComponent";
+import ToggleComponent from "./Components/ToggleComponent";
 // --------------------------------------------------------------------------------
 import MinutesToRead from "./Snippets/MinutesToRead";
 import UseDebounceHook from "./Snippets/UseDebounceHook";
@@ -78,6 +79,7 @@ export {
   CarouselComponent,
   TextAreaComponent,
   TooltipComponent,
+  ToggleComponent,
   //-----------------------------------------------
   MinutesToRead,
   UseDebounceHook,

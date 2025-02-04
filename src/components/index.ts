@@ -22,6 +22,7 @@ import Badge from "./Badge";
 import Carousel from "./Carousel";
 import TextArea from "./TextArea";
 import Tooltip from "./Tooltip";
+import Toggle from "./Toggle";
 
 export {
   PrimaryButton,
@@ -48,4 +49,5 @@ export {
   Carousel,
   TextArea,
   Tooltip,
+  Toggle,
 };

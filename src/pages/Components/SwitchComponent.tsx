@@ -81,8 +81,8 @@ const SwitchComponent = () => {
         <ul className="list-disc pt-4 pl-8 leading-8">
           <li>
             {" "}
-            <b>checked (boolean, required):</b> To specify if the checkbox is
-            already checked.
+            <b>checked (boolean, required):</b> To specify if the switch is
+            already toggled.
           </li>
           <li>
             {" "}

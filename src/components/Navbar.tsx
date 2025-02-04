@@ -377,7 +377,7 @@ const Navbar = () => {
                   className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
                   aria-label="Switch"
                 >
-                  Switch (Toggle)
+                  Switch
                 </button>
 
                 {/* Table */}
@@ -405,6 +405,15 @@ const Navbar = () => {
                   aria-label="Timeline"
                 >
                   Timeline
+                </button>
+
+                {/* Toggle */}
+                <button
+                  onClick={() => handleSearch("/components/toggle")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Toggle"
+                >
+                  Toggle
                 </button>
 
                 {/* Tooltip */}
