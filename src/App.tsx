@@ -109,8 +109,6 @@ function App() {
                 element={<AccordionGroupComponent />}
               />
               <Route path="badge" element={<BadgeComponent />} />
-
-              {/* Needs Work */}
               <Route path="carousel" element={<CarouselComponent />} />
             </Route>
             {/* ----------------------------------------------------------------------------------------------------------------------------- */}

@@ -2,29 +2,31 @@
 
 This repository contains a collection of reusable and customizable React components styled with Tailwind CSS. These components are designed to provide a consistent look and feel across your applications while being flexible enough to adapt to different use cases.
 
-## Components
+## Components  
 
-   - Accordion
-   - Accordion Group
-   - Primary Button
-   - Secondary Button
-   - Text Input
-   - Password Input
-   - Loading Placeholder
-   - Timeline
-   - Security Headers
-   - Card
-   - Navbar
-   - Footer
-   - Table
-   - Modal
-   - Avatar
-   - Checkbox
-   - Radio Button
-   - Switch
-   - Progress Bar
-   - Slider
-   - Select
+   - Accordion  
+   - Accordion Group  
+   - Avatar  
+   - Badge  
+   - Card  
+   - Carousel  
+   - Checkbox  
+   - Footer  
+   - Loading Placeholder  
+   - Modal  
+   - Navbar  
+   - Password Input  
+   - Primary Button  
+   - Progress Bar  
+   - Radio Button  
+   - Secondary Button  
+   - Security Headers  
+   - Select  
+   - Slider  
+   - Switch  
+   - Table  
+   - Text Input  
+   - Timeline  
 
 ## Code Snippets
 
@@ -48,9 +50,9 @@ We love contributions and welcome your creative ideas to enhance **Re-use-it!**.
    - Create your new component in the `components` folder in the src directory. (Do not need to add code for Snippets.)
    - Make sure your component/snippet is reusable, customizable, and follows the existing coding standards (TypeScript + TailwindCSS).  
 
-2. **Add a Component Card**  
-   - Navigate to the `Components` Page OR `Snippets` Page and add a new card showcasing your component/snippet.  
-   - The card should include the component’s/snippets' name, a short description, and a link to the detailed page for the component.  
+2. **Add a Component Link in Sidebar + Navbar**  
+   - Navigate to the `Components` Page OR `Snippets` Page and add a new link showcasing your component/snippet.  
+   - Also include the link in the Navbar's Drawer section.  
 
 3. **Create a Component Page**  
    - Create a new page dedicated to your component/snippet.  

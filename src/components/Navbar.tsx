@@ -218,7 +218,7 @@ const Navbar = () => {
                   Avatar
                 </button>
 
-                {/* Accordion */}
+                {/* Badge */}
                 <button
                   onClick={() => handleSearch("/components/badge")}
                   className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
@@ -234,6 +234,15 @@ const Navbar = () => {
                   aria-label="Card Component"
                 >
                   Card
+                </button>
+
+                {/* Carousel */}
+                <button
+                  onClick={() => handleSearch("/components/carousel")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Carousel"
+                >
+                  Carousel
                 </button>
 
                 {/* Checkbox */}
