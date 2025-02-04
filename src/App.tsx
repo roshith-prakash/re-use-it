@@ -33,6 +33,7 @@ import {
   BadgeComponent,
   CarouselComponent,
   TextAreaComponent,
+  TooltipComponent,
   // -------------------------------------
   MinutesToRead,
   UseDebounceHook,
@@ -112,6 +113,7 @@ function App() {
               <Route path="badge" element={<BadgeComponent />} />
               <Route path="carousel" element={<CarouselComponent />} />
               <Route path="textarea" element={<TextAreaComponent />} />
+              <Route path="tooltip" element={<TooltipComponent />} />
             </Route>
             {/* ----------------------------------------------------------------------------------------------------------------------------- */}
 

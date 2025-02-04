@@ -248,6 +248,16 @@ const ComponentsSidebar = () => {
               Timeline
             </NavLink>
           </li>
+          <li>
+            <NavLink
+              to="tooltip"
+              className={({ isActive }) =>
+                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+              }
+            >
+              Tooltip
+            </NavLink>
+          </li>
         </ul>
       </div>
     </div>

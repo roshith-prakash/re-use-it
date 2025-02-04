@@ -21,6 +21,7 @@ import AccordionGroup from "./AccordionGroup";
 import Badge from "./Badge";
 import Carousel from "./Carousel";
 import TextArea from "./TextArea";
+import Tooltip from "./Tooltip";
 
 export {
   PrimaryButton,
@@ -46,4 +47,5 @@ export {
   Badge,
   Carousel,
   TextArea,
+  Tooltip,
 };

@@ -28,6 +28,7 @@ import AccordionGroupComponent from "./Components/AccordionGroupComponent";
 import BadgeComponent from "./Components/BadgeComponent";
 import CarouselComponent from "./Components/CarouselComponent";
 import TextAreaComponent from "./Components/TextAreaComponent";
+import TooltipComponent from "./Components/TooltipComponent";
 // --------------------------------------------------------------------------------
 import MinutesToRead from "./Snippets/MinutesToRead";
 import UseDebounceHook from "./Snippets/UseDebounceHook";
@@ -76,6 +77,7 @@ export {
   BadgeComponent,
   CarouselComponent,
   TextAreaComponent,
+  TooltipComponent,
   //-----------------------------------------------
   MinutesToRead,
   UseDebounceHook,

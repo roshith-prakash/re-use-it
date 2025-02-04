@@ -406,6 +406,15 @@ const Navbar = () => {
                 >
                   Timeline
                 </button>
+
+                {/* Tooltip */}
+                <button
+                  onClick={() => handleSearch("/components/tooltip")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Tooltip"
+                >
+                  Tooltip
+                </button>
               </div>
             </Accordion>
 

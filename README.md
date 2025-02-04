@@ -28,6 +28,7 @@ This repository contains a collection of reusable and customizable React compone
    - Text Input
    - Text Area  
    - Timeline  
+   - Tooltip
 
 ## Code Snippets
 
