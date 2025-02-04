@@ -47,10 +47,12 @@ import {
 } from "./pages";
 import { Footer, Navbar } from "./components";
 import SecurityHeaders from "./components/SecurityHeaders";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   return (
     <div className="dark:bg-darkbg dark:text-darkmodetext font-sans">
+      <Analytics />
       <SecurityHeaders />
       <BrowserRouter>
         <Navbar />
