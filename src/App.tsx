@@ -31,6 +31,8 @@ import {
   SelectComponent,
   AccordionGroupComponent,
   BadgeComponent,
+  CarouselComponent,
+  TextAreaComponent,
   // -------------------------------------
   MinutesToRead,
   UseDebounceHook,
@@ -40,7 +42,6 @@ import {
   Multer,
   Cloudinary,
   ShuffleArray,
-  CarouselComponent,
 } from "./pages";
 import { Footer, Navbar } from "./components";
 import SecurityHeaders from "./components/SecurityHeaders";
@@ -110,6 +111,7 @@ function App() {
               />
               <Route path="badge" element={<BadgeComponent />} />
               <Route path="carousel" element={<CarouselComponent />} />
+              <Route path="textarea" element={<TextAreaComponent />} />
             </Route>
             {/* ----------------------------------------------------------------------------------------------------------------------------- */}
 

@@ -1,4 +1,5 @@
 import { NavLink, Outlet } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 // Sidebar Component
 const ComponentsSidebar = () => {
@@ -229,6 +230,16 @@ const ComponentsSidebar = () => {
           </li>
           <li>
             <NavLink
+              to="textarea"
+              className={({ isActive }) =>
+                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+              }
+            >
+              TextArea
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
               to="timeline"
               className={({ isActive }) =>
                 `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
@@ -244,6 +255,9 @@ const ComponentsSidebar = () => {
 };
 
 const Components = () => {
+  const location = useLocation();
+
+  console.log(location.pathname);
   return (
     <>
       <div className="flex h-screen">

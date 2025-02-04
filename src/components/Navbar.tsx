@@ -263,6 +263,15 @@ const Navbar = () => {
                   Footer
                 </button>
 
+                {/* Text Input */}
+                <button
+                  onClick={() => handleSearch("/components/input")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Text Input"
+                >
+                  Text Input
+                </button>
+
                 {/* Loader */}
                 <button
                   onClick={() => handleSearch("/components/loader")}
@@ -380,13 +389,13 @@ const Navbar = () => {
                   Table
                 </button>
 
-                {/* Text Input */}
+                {/* TextArea */}
                 <button
-                  onClick={() => handleSearch("/components/input")}
+                  onClick={() => handleSearch("/components/textarea")}
                   className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
-                  aria-label="Text Input"
+                  aria-label="TextArea"
                 >
-                  Text Input
+                  TextArea
                 </button>
 
                 {/* Timeline */}

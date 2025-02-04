@@ -20,6 +20,7 @@ import Slider from "./Slider";
 import AccordionGroup from "./AccordionGroup";
 import Badge from "./Badge";
 import Carousel from "./Carousel";
+import TextArea from "./TextArea";
 
 export {
   PrimaryButton,
@@ -44,4 +45,5 @@ export {
   AccordionGroup,
   Badge,
   Carousel,
+  TextArea,
 };

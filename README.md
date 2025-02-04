@@ -25,7 +25,8 @@ This repository contains a collection of reusable and customizable React compone
    - Slider  
    - Switch  
    - Table  
-   - Text Input  
+   - Text Input
+   - Text Area  
    - Timeline  
 
 ## Code Snippets
