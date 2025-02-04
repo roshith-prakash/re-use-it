@@ -8,8 +8,8 @@ import { capitalizeFirstLetters } from "../utils/capitalizeFirstLetters";
 const ComponentsSidebar = () => {
   return (
     <div className="dark:bg-darkbg dark:border-grey/25 border-grey/50 border-r-3">
-      <h2 className="mb-4 pt-5 text-center text-2xl font-bold">Components</h2>
-      <div className="h-screen w-2xs overflow-y-auto p-4 pb-20 [&::-webkit-scrollbar]:w-0">
+      <h2 className="mb-4 px-8 pt-5 text-2xl font-bold">Components</h2>
+      <div className="h-[80vh] w-2xs overflow-y-auto p-4 pb-20 [&::-webkit-scrollbar]:w-0">
         <ul className="space-y-4 font-medium">
           <li>
             <NavLink
