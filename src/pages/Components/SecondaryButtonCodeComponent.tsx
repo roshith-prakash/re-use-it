@@ -49,11 +49,11 @@ const SecondaryButtonCodeComponent = () => {
 
   return (
     <div className="dark:bg-darkbg min-h-screen p-10 dark:text-white">
-      <h1 className="text-center text-2xl font-medium">Secondary Button</h1>
-      <h2 className="mt-8 py-5 text-center">
+      <h1 className="text-4xl font-medium">Secondary Button</h1>
+      <h2 className="py-5">
         A button styled for secondary actions or less prominent use cases.
       </h2>
-      <div className="flex flex-wrap justify-center gap-8 py-10">
+      <div className="mx-auto my-20 flex flex-wrap items-center justify-center gap-8 rounded-xl px-5 py-10 shadow-lg md:w-fit md:min-w-lg md:px-20 dark:shadow dark:shadow-white">
         <SecondaryButton text="Secondary Button" />
         <SecondaryButton
           text="Secondary Button"

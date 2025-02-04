@@ -43,9 +43,9 @@ const Cloudinary = () => {
 
   return (
     <div className="dark:bg-darkbg min-h-screen p-10 dark:text-white">
-      <h1 className="text-center text-2xl font-medium">Cloudinary SDK</h1>
-      <h2 className="py-5 text-center">
-        Configures Cloudinary's SDK to upload assets to its CDN.
+      <h1 className="text-4xl font-medium">Cloudinary SDK Configuration</h1>
+      <h2 className="py-5">
+        Configures Cloudinary's SDK to upload assets to the Cloudinary CDN.
       </h2>
 
       <h3 className="py-10 pl-1 italic">cloudinary.ts</h3>

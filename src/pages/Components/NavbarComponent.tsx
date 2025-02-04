@@ -149,12 +149,10 @@ const NavbarCodeComponent = () => {
 
   return (
     <div className="dark:bg-darkbg min-h-screen p-10 dark:text-white">
-      <h1 className="text-center text-2xl font-medium">Navbar</h1>
-      <h2 className="mt-8 py-5 text-center">
-        A Navigation Bar with a Drawer Menu.
-      </h2>
+      <h1 className="text-4xl font-medium">Footer</h1>
+      <h2 className="py-5">A Navigation bar with a drawer.</h2>
 
-      <h3 className="py-2 pl-1 italic">Navbar.tsx</h3>
+      <h3 className="py-10 pl-1 italic">Navbar.tsx</h3>
       <CodeBlock code={NavbarCode} language="tsx" />
 
       <h3 className="mt-8 py-2 pl-1 italic">App.tsx</h3>

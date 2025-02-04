@@ -18,7 +18,7 @@ const Accordion = ({
       className={`border-secondarydarkbg/50 dark:border-grey/50 max-w-xl border-b-2 ${className}`}
     >
       <button
-        className="flex w-full items-center justify-between py-3"
+        className="flex w-full cursor-pointer items-center justify-between py-3"
         onClick={() => {
           setIsOpen((prev) => !prev);
         }}

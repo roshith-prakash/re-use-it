@@ -21,7 +21,7 @@ const AccordionItem = ({
     <div className="overflow-hidden border-b-2">
       <button
         onClick={() => toggle(id)}
-        className="flex w-full items-center justify-between py-3 text-left"
+        className="flex w-full cursor-pointer items-center justify-between py-3 text-left"
       >
         {title}
         <IoIosArrowDown
@@ -58,7 +58,7 @@ const AccordionGroup = ({
   };
 
   return (
-    <div className="space-y-4">
+    <div className="w-full space-y-4">
       {items.map((item) => (
         <AccordionItem
           key={item.id}

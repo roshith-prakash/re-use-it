@@ -58,10 +58,8 @@ const UseDebounceHook = () => {
 
   return (
     <div className="dark:bg-darkbg min-h-screen p-10 dark:text-white">
-      <h1 className="text-center text-2xl font-medium">useDebounce</h1>
-      <h2 className="py-5 text-center">
-        Debounces input with the delay provided.
-      </h2>
+      <h1 className="text-4xl font-medium">useDebounce Hook</h1>
+      <h2 className="py-5">Debounces user input with a specified delay.</h2>
 
       <h3 className="py-10 pl-1 italic">useDebounce.tsx</h3>
       <CodeBlock code={UseDebounceCode} language="tsx" />

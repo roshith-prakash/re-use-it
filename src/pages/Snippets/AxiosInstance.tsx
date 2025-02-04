@@ -37,11 +37,9 @@ const AxiosInstance = () => {
 
   return (
     <div className="dark:bg-darkbg min-h-screen p-10 dark:text-white">
-      <h1 className="text-center text-2xl font-medium">
-        Custom Axios Instance
-      </h1>
-      <h2 className="py-5 text-center">
-        Creates a custom axios instance to add a baseURL. Can add other required
+      <h1 className="text-4xl font-medium">Custom Axios Instance</h1>
+      <h2 className="py-5">
+        Creates a custom axios instance with a baseURL. Can add other required
         props/attributes here.
       </h2>
 

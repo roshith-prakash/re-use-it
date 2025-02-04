@@ -21,7 +21,7 @@ const Accordion = ({
       className={\`border-secondarydarkbg/50 dark:border-grey/50 max-w-xl border-b-2 \${className}\`}
     >
       <button
-        className="flex w-full items-center justify-between py-3"
+        className="flex w-full cursor-pointer items-center justify-between py-3"
         onClick={() => {
           setIsOpen((prev) => !prev);
         }}
@@ -80,12 +80,12 @@ const AccordionCodeComponent = () => {
 
   return (
     <div className="dark:bg-darkbg min-h-screen p-10 dark:text-white">
-      <h1 className="text-center text-2xl font-medium">Accordion</h1>
-      <h2 className="mt-8 py-5 text-center">
+      <h1 className="text-4xl font-medium">Accordion</h1>
+      <h2 className="py-5">
         An accordion component that collapses and expands to show data.
       </h2>
-      <div className="flex flex-col items-center gap-8 py-10">
-        <Accordion text="What is Formula 1?">
+      <div className="mx-auto my-20 flex flex-col items-center gap-8 rounded-xl px-5 py-10 shadow-lg md:w-fit md:px-20 dark:shadow dark:shadow-white">
+        <Accordion text="What is Formula 1?" className="w-full">
           <p className="py-4">
             Formula One, commonly abbreviated as F1, is the highest class of
             international racing for open-wheel single-seater formula racing

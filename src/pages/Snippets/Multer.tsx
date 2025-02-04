@@ -31,8 +31,8 @@ const Multer = () => {
 
   return (
     <div className="dark:bg-darkbg min-h-screen p-10 dark:text-white">
-      <h1 className="text-center text-2xl font-medium">Multer</h1>
-      <h2 className="py-5 text-center">
+      <h1 className="text-4xl font-medium">Multer Configuration</h1>
+      <h2 className="py-5">
         Configures Multer for Uploading assets to a CDN like S3 or cloudinary.
       </h2>
 

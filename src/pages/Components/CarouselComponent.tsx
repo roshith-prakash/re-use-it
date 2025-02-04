@@ -61,7 +61,7 @@ const Carousel = ({
       <button
         onClick={prevSlide}
         disabled={currentIndex == 0}
-        className="absolute top-1/2 left-0 hidden h-full -translate-y-1/2 bg-black/25 p-2 text-white transition-all duration-300 hover:bg-black/50 md:block"
+        className="cursor-pointer absolute top-1/2 left-0 hidden h-full -translate-y-1/2 bg-black/25 p-2 text-white transition-all duration-300 hover:bg-black/50 md:block"
       >
         <IoIosArrowBack className="text-xl" />
       </button>
@@ -70,7 +70,7 @@ const Carousel = ({
       <button
         onClick={nextSlide}
         disabled={currentIndex == images?.length - 1}
-        className="absolute top-1/2 right-0 hidden h-full -translate-y-1/2 bg-black/25 p-2 text-white transition-all duration-300 hover:bg-black/50 md:block"
+        className="cursor-pointer absolute top-1/2 right-0 hidden h-full -translate-y-1/2 bg-black/25 p-2 text-white transition-all duration-300 hover:bg-black/50 md:block"
       >
         <IoIosArrowForward className="text-xl" />
       </button>
@@ -133,10 +133,8 @@ const CarouselComponent = () => {
 
   return (
     <div className="dark:bg-darkbg min-h-screen p-10 dark:text-white">
-      <h1 className="text-center text-2xl font-medium">Image Carousel</h1>
-      <h2 className="mt-8 py-5 text-center">
-        A Carousel component to display images.
-      </h2>
+      <h1 className="text-4xl font-medium">Carousel</h1>
+      <h2 className="py-5">Carousel component to display images.</h2>
       <div className="flex flex-col items-center gap-8 py-10">
         <Carousel
           className="max-w-3xl"

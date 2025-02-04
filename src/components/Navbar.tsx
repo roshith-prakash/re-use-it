@@ -229,7 +229,7 @@ const Navbar = () => {
 
                 {/* Card */}
                 <button
-                  onClick={() => handleSearch("/components/security-headers")}
+                  onClick={() => handleSearch("/components/card")}
                   className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
                   aria-label="Card Component"
                 >

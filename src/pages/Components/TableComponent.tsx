@@ -135,10 +135,10 @@ const TableComponent = () => {
 
   return (
     <div className="dark:bg-darkbg min-h-screen p-10 dark:text-white">
-      <h1 className="text-center text-2xl font-medium">Table</h1>
-      <h2 className="mt-8 py-5 text-center">A styled table component.</h2>
-      <div className="flex flex-col items-center gap-8 py-10">
-        <Table className="w-lg max-w-lg">
+      <h1 className="text-4xl font-medium">Table</h1>
+      <h2 className="py-5">A styled Table component.</h2>
+      <div className="mx-auto my-20 flex flex-wrap items-center justify-center rounded-xl px-5 py-10 shadow-lg md:w-fit md:min-w-lg md:px-20 dark:shadow dark:shadow-white">
+        <Table className="w-md max-w-lg">
           <TableHead>
             <TableRow>
               <TableHeader>Sr No</TableHeader>

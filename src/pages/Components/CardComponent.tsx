@@ -86,9 +86,9 @@ const CardComponent = () => {
 
   return (
     <div className="dark:bg-darkbg min-h-screen p-10 dark:text-white">
-      <h1 className="text-center text-2xl font-medium">Card</h1>
-      <h2 className="mt-8 py-5 text-center">
-        A card component with an image, title, subtitle and two buttons.
+      <h1 className="text-4xl font-medium">Card</h1>
+      <h2 className="py-5">
+        Card component with an image, title, subtitle and two buttons.
       </h2>
       <div className="flex flex-wrap justify-center gap-8 py-10">
         <Card

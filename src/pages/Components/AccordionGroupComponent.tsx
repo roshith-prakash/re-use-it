@@ -62,7 +62,7 @@ const AccordionGroup = ({
   };
 
   return (
-    <div className="space-y-4">
+    <div className="w-full space-y-4">
       {items.map((item) => (
         <AccordionItem
           key={item.id}
@@ -121,11 +121,11 @@ const AccordionGroupComponent = () => {
 
   return (
     <div className="dark:bg-darkbg min-h-screen p-10 dark:text-white">
-      <h1 className="text-center text-2xl font-medium">Accordion Group</h1>
-      <h2 className="mt-8 py-5 text-center">
+      <h1 className="text-4xl font-medium">Accordion Group</h1>
+      <h2 className="py-5">
         An accordion group component that houses multiple accordions.
       </h2>
-      <div className="flex flex-col items-center gap-8 py-10">
+      <div className="mx-auto my-20 flex flex-col items-center gap-8 rounded-xl px-5 py-10 shadow-lg md:w-fit md:min-w-lg md:px-20 dark:shadow dark:shadow-white">
         <AccordionGroup items={accordionData} />
       </div>
 

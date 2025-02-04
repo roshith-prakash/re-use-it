@@ -69,11 +69,9 @@ const PasswordInputCodeComponent = () => {
 
   return (
     <div className="dark:bg-darkbg min-h-screen p-10 dark:text-white">
-      <h1 className="text-center text-2xl font-medium">Password Input</h1>
-      <h2 className="mt-8 py-5 text-center">
-        A styled password input component.
-      </h2>
-      <div className="flex flex-col items-center gap-8 py-10">
+      <h1 className="text-4xl font-medium">Password Input</h1>
+      <h2 className="py-5">A styled Password Input component.</h2>
+      <div className="mx-auto my-20 flex flex-col items-center gap-8 rounded-xl px-5 py-10 shadow-lg md:w-fit md:min-w-lg md:px-20 dark:shadow dark:shadow-white">
         <div className="w-72">
           <PasswordInput
             value={inputValue}

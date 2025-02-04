@@ -118,12 +118,11 @@ const RadioButtonComponent = () => {
 
   return (
     <div className="dark:bg-darkbg min-h-screen p-10 dark:text-white">
-      <h1 className="text-center text-2xl font-medium">Radio Button</h1>
-      <h2 className="mt-8 py-5 text-center">
+      <h1 className="text-4xl font-medium">Radio Button</h1>
+      <h2 className="py-5">
         A customizable, styled Radio Button component with Tailwind CSS.
       </h2>
-
-      <div className="flex flex-col items-center justify-center gap-5 py-8">
+      <div className="mx-auto my-20 flex flex-col items-center justify-center gap-8 rounded-xl px-5 py-10 shadow-lg md:w-fit md:min-w-lg md:px-20 dark:shadow dark:shadow-white">
         <div className="flex items-center justify-center">
           <RadioButton
             value="option1"

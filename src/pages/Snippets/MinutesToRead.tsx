@@ -31,9 +31,9 @@ const MinutesToRead = () => {
 
   return (
     <div className="dark:bg-darkbg min-h-screen p-10 dark:text-white">
-      <h1 className="text-center text-2xl font-medium">Minutes To Read</h1>
-      <h2 className="py-5 text-center">
-        Gets the number of minutes required to read something.
+      <h1 className="text-4xl font-medium">Minutes to Read</h1>
+      <h2 className="py-5">
+        Gets the number of minutes required to read the content.
       </h2>
 
       <h3 className="py-10 pl-1 italic">getMinsToRead.tsx</h3>

@@ -1,5 +1,8 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { IoIosArrowForward } from "react-icons/io";
+import { Link, NavLink, Outlet } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import { breakUrlIntoPaths } from "../utils/breakURLintoPaths";
+import { capitalizeFirstLetters } from "../utils/capitalizeFirstLetters";
 
 // Sidebar Component
 const ComponentsSidebar = () => {
@@ -267,7 +270,6 @@ const ComponentsSidebar = () => {
 const Components = () => {
   const location = useLocation();
 
-  console.log(location.pathname);
   return (
     <>
       <div className="flex h-screen">
@@ -275,6 +277,23 @@ const Components = () => {
           <ComponentsSidebar />
         </div>
         <div className="scroller dark:bg-darkbg flex-1 overflow-y-auto bg-white pb-20">
+          <div className="flex flex-wrap items-center gap-x-2 gap-y-4 px-10 py-5">
+            <Link to="/" className="hover:underline">
+              Home
+            </Link>
+            {breakUrlIntoPaths(location.pathname).map((item) => {
+              return (
+                <>
+                  <IoIosArrowForward />
+                  <Link key={item} to={item} className="hover:underline">
+                    {capitalizeFirstLetters(
+                      item.split("/").pop()?.replaceAll("-", " ") as string,
+                    )}
+                  </Link>
+                </>
+              );
+            })}
+          </div>
           <Outlet />
         </div>
       </div>

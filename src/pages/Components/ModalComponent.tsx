@@ -124,10 +124,9 @@ const ModalComponent = () => {
         </p>
       </Modal>
 
-      <h1 className="text-center text-2xl font-medium">Modal</h1>
-      <h2 className="mt-8 py-5 text-center">
-        A Modal component that automatically displays when a specified condition
-        is true.
+      <h1 className="text-4xl font-medium">Modal</h1>
+      <h2 className="py-5">
+        A modal component which is displayed when a condition is met.
       </h2>
 
       <div className="flex justify-center py-8">

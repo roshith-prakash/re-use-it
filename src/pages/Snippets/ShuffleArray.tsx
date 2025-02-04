@@ -33,10 +33,8 @@ const ShuffleArray = () => {
 
   return (
     <div className="dark:bg-darkbg min-h-screen p-10 dark:text-white">
-      <h1 className="text-center text-2xl font-medium">Shuffle Array</h1>
-      <h2 className="py-5 text-center">
-        Shuffles elements inside of an array.
-      </h2>
+      <h1 className="text-4xl font-medium">Shuffle Array</h1>
+      <h2 className="py-5">Shuffles elements inside an array.</h2>
 
       <h3 className="py-10 pl-1 italic">shuffleArray.ts</h3>
       <CodeBlock code={shuffleCode} language="typescript" />

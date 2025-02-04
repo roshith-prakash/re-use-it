@@ -109,14 +109,11 @@ const AvatarComponent = () => {
 
   return (
     <div className="dark:bg-darkbg min-h-screen p-10 dark:text-white">
-      <h1 className="text-center text-2xl font-medium">Avatar</h1>
-      <h2 className="mt-8 py-5 text-center">
-        Display user profiles effortlessly. Fully customizable; supports
-        initials & images, ensuring a sleek and responsive design for every
-        application.
+      <h1 className="text-4xl font-medium">Avatar</h1>
+      <h2 className="py-5">
+        Avatar component to display user's profile image.
       </h2>
-
-      <div className="flex flex-wrap justify-center gap-8 py-8">
+      <div className="mx-auto my-20 flex flex-wrap items-center justify-center gap-8 rounded-xl px-5 py-10 shadow-lg md:w-fit md:px-20 dark:shadow dark:shadow-white">
         <Avatar
           imageSrc="https://avatars.githubusercontent.com/u/86643111?v=4"
           fallBackText="Roshith Prakash"

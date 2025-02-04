@@ -49,11 +49,11 @@ const PrimaryButtonCodeComponent = () => {
 
   return (
     <div className="dark:bg-darkbg min-h-screen p-10 dark:text-white">
-      <h1 className="text-center text-2xl font-medium">Primary Button</h1>
-      <h2 className="mt-8 py-5 text-center">
-        A button styled for primary actions, meant to grab the user's attention.
+      <h1 className="text-4xl font-medium">Primary Button</h1>
+      <h2 className="py-5">
+        A styled button for primary actions, meant to grab the user's attention.
       </h2>
-      <div className="flex flex-wrap justify-center gap-8 py-10">
+      <div className="mx-auto my-20 flex flex-wrap items-center justify-center gap-8 rounded-xl px-5 py-10 shadow-lg md:w-fit md:min-w-lg md:px-20 dark:shadow dark:shadow-white">
         <PrimaryButton text="Primary Button" />
         <PrimaryButton
           text="Primary Button"

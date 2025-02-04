@@ -45,9 +45,9 @@ const Regex = () => {
 
   return (
     <div className="dark:bg-darkbg min-h-screen p-10 dark:text-white">
-      <h1 className="text-center text-2xl font-medium">Regex Functions</h1>
+      <h1 className="text-4xl font-medium">Regex Functions</h1>
 
-      <h2 className="pt-10 pl-1 italic">isValidEmail.ts</h2>
+      <h2 className="pt-14 pl-1 italic">isValidEmail.ts</h2>
       <h3 className="py-5">
         Check if the string entered is in a valid email format.
       </h3>
