@@ -34,16 +34,6 @@ const Home = () => {
             </span>
           </h2>
         </div>
-
-        {/* <div className="flex flex-1 items-center justify-center lg:pr-10">
-          <img
-            src={
-              "https://res.cloudinary.com/do8rpl9l4/image/upload/v1738563645/home_ntiwv2.svg"
-            }
-            alt="Re-use-it : Components Made for you"
-            className="h-auto lg:max-w-[80%]"
-          />
-        </div> */}
       </section>
 
       {/* ------------------------------------------------------------------- */}
@@ -76,14 +66,6 @@ const Home = () => {
           we've got you covered with components that are easy to integrate and
           endlessly customizable.
         </p>
-        {/* <div className="mt-10">
-          <Link
-            to="/getting-started"
-            className="bg-cta hover:bg-hovercta origin-bottom rounded-2xl px-6 py-3 text-white shadow-md transition-all hover:scale-105 md:text-lg"
-          >
-            Get Started!
-          </Link>
-        </div> */}
       </section>
 
       {/* ------------------------------------------------------------------- */}
@@ -143,7 +125,7 @@ const Home = () => {
         </p>
         <div className="mt-10">
           <Link
-            to="/getting-started"
+            to="/components/getting-started"
             className="bg-cta hover:bg-hovercta origin-bottom rounded-2xl px-6 py-3 text-white shadow-md transition-all hover:scale-105 md:text-lg"
           >
             Learn More

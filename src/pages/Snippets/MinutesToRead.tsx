@@ -36,10 +36,10 @@ const MinutesToRead = () => {
         Gets the number of minutes required to read the content.
       </h2>
 
-      <h3 className="py-10 pl-1 italic">getMinsToRead.tsx</h3>
+      <h3 className="mt-10 py-5 pl-1 italic">getMinsToRead.tsx</h3>
       <CodeBlock code={minutesToReadCode} language="typescript" />
 
-      <h3 className="mt-8 pl-1 italic">App.tsx</h3>
+      <h3 className="mt-10 py-5 pl-1 italic">App.tsx</h3>
       <CodeBlock code={usingCode} language="tsx" />
     </div>
   );

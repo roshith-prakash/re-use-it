@@ -61,23 +61,26 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
 
-            <Route path="/getting-started" element={<GettingStarted />} />
-
-            <Route path="/package-json" element={<PackageFile />} />
-
-            <Route
-              path="/tailwindconfig"
-              element={<TailwindConfigComponent />}
-            />
-
-            <Route path="/darkmode" element={<DarkModeFile />} />
-
             {/* ----------------------------------------------------------------------------------------------------------------------------- */}
 
             {/* COMPONENTS */}
 
             <Route path="/components" element={<Components />}>
-              <Route index element={<Navigate to="accordion" replace />} />
+              <Route
+                index
+                element={<Navigate to="getting-started" replace />}
+              />
+              <Route path="getting-started" element={<GettingStarted />} />
+
+              <Route path="package-json" element={<PackageFile />} />
+
+              <Route
+                path="tailwind-configuration"
+                element={<TailwindConfigComponent />}
+              />
+
+              <Route path="darkmode" element={<DarkModeFile />} />
+
               <Route path="accordion" element={<AccordionCodeComponent />} />
               <Route
                 path="primary-button"

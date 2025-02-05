@@ -43,10 +43,13 @@ const AxiosInstance = () => {
         props/attributes here.
       </h2>
 
-      <h3 className="py-10 pl-1 italic">axiosInstance.ts</h3>
+      <h3 className="py-5 pl-1">Install Axios</h3>
+      <CodeBlock code={`npm i axios`} language="bash" />
+
+      <h3 className="mt-10 py-5 pl-1 italic">axiosInstance.ts</h3>
       <CodeBlock code={axiosCode} language="typescript" />
 
-      <h3 className="py-10 pl-1 italic">App.tsx</h3>
+      <h3 className="mt-10 py-5 pl-1 italic">App.tsx</h3>
       <CodeBlock code={usingCode} language="tsx" />
     </div>
   );

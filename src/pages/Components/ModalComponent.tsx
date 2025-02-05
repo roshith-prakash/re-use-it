@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { CodeBlock, Modal, SecondaryButton } from "../../components";
 
-const ModalCode = `=import { useEffect, useState, MouseEvent, ReactNode } from "react";
+const ModalCode = `import { useEffect, useState, MouseEvent, ReactNode } from "react";
 
 const Modal = ({
   isOpen,

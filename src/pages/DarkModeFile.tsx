@@ -87,8 +87,8 @@ const DarkModeFile = () => {
 
   return (
     <div className="dark:bg-darkbg min-h-screen p-10 dark:text-white">
-      <h1 className="text-center text-2xl font-medium">Dark Mode Context</h1>
-      <h2 className="py-5 text-center">
+      <h1 className="text-4xl font-medium">Dark Mode Context</h1>
+      <h2 className="py-5">
         Context to manage the dark mode state of the application.
       </h2>
 

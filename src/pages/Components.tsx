@@ -8,8 +8,55 @@ import { capitalizeFirstLetters } from "../utils/capitalizeFirstLetters";
 const ComponentsSidebar = () => {
   return (
     <div className="dark:bg-darkbg dark:border-grey/25 border-grey/50 border-r-3">
-      <h2 className="mb-4 px-8 pt-5 text-2xl font-bold">Components</h2>
-      <div className="h-[80vh] w-2xs overflow-y-auto p-4 pb-20 [&::-webkit-scrollbar]:w-0">
+      <div className="h-[90vh] w-2xs overflow-y-auto p-4 pb-20 [&::-webkit-scrollbar]:w-0">
+        <h2 className="mb-4 px-4 pb-5 text-2xl font-bold">Getting Started</h2>
+        <ul className="space-y-4 font-medium">
+          <li>
+            <NavLink
+              to="getting-started"
+              className={({ isActive }) =>
+                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+              }
+            >
+              Introduction
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink
+              to="package-json"
+              className={({ isActive }) =>
+                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+              }
+            >
+              Package.json
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink
+              to="tailwind-configuration"
+              className={({ isActive }) =>
+                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+              }
+            >
+              Tailwind Configuration
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink
+              to="darkmode"
+              className={({ isActive }) =>
+                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+              }
+            >
+              DarkMode Context
+            </NavLink>
+          </li>
+        </ul>
+
+        <h2 className="mb-4 px-4 pt-10 pb-5 text-2xl font-bold">Components</h2>
         <ul className="space-y-4 font-medium">
           <li>
             <NavLink

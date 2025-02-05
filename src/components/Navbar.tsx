@@ -30,7 +30,7 @@ const Navbar = () => {
         </Link>
 
         {/* LG screen Links */}
-        <div className="hidden items-center gap-x-8 text-sm font-medium lg:flex">
+        <div className="hidden items-center gap-x-14 text-sm font-medium lg:flex">
           {/* Components */}
           <NavLink
             to="/components"
@@ -49,36 +49,6 @@ const Navbar = () => {
             }
           >
             Code Snippets
-          </NavLink>
-
-          {/* Package JSON */}
-          <NavLink
-            to="/package-json"
-            className={({ isActive }) =>
-              `hover:text-cta dark:hover:text-darkmodeCTA transition-all ${isActive && "text-cta dark:text-darkmodeCTA"}`
-            }
-          >
-            Package.json
-          </NavLink>
-
-          {/* Tailwind Config */}
-          <NavLink
-            to="/tailwindconfig"
-            className={({ isActive }) =>
-              `hover:text-cta dark:hover:text-darkmodeCTA transition-all ${isActive && "text-cta dark:text-darkmodeCTA"}`
-            }
-          >
-            Tailwind Configuration (v3 & v4)
-          </NavLink>
-
-          {/* Dark Mode Context */}
-          <NavLink
-            to="/darkmode"
-            className={({ isActive }) =>
-              `hover:text-cta dark:hover:text-darkmodeCTA transition-all ${isActive && "text-cta dark:text-darkmodeCTA"}`
-            }
-          >
-            Dark Mode Context
           </NavLink>
         </div>
 
@@ -149,41 +119,51 @@ const Navbar = () => {
               Home
             </button>
 
-            {/* Getting Started */}
-            <button
-              onClick={() => handleSearch("/getting-started")}
-              className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
-              aria-label="Getting Started"
+            {/* Getting Stated */}
+            <Accordion
+              text="Getting Started"
+              className="w-full border-none text-xl font-semibold"
             >
-              Getting Started
-            </button>
+              <div className="flex flex-col items-center gap-y-8 py-10 text-lg font-medium">
+                {/* Getting Started */}
+                <button
+                  onClick={() => handleSearch("/components/getting-started")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Getting Started"
+                >
+                  Introduction
+                </button>
 
-            {/* Package JSON */}
-            <button
-              onClick={() => handleSearch("/package-json")}
-              className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
-              aria-label="Go to Home"
-            >
-              Package JSON
-            </button>
+                {/* Package JSON */}
+                <button
+                  onClick={() => handleSearch("/components/package-json")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Go to Home"
+                >
+                  Package JSON
+                </button>
 
-            {/* Tailwind Config */}
-            <button
-              onClick={() => handleSearch("/tailwindconfig")}
-              className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
-              aria-label="View Tailwind CSS file"
-            >
-              Tailwind Configuration (v3 & v4)
-            </button>
+                {/* Tailwind Config */}
+                <button
+                  onClick={() =>
+                    handleSearch("/components/tailwind-configuration")
+                  }
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="View Tailwind CSS file"
+                >
+                  Tailwind Configuration (v3 & v4)
+                </button>
 
-            {/* Dark Mode */}
-            <button
-              onClick={() => handleSearch("/darkmode")}
-              className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
-              aria-label="View Dark mode Context"
-            >
-              Dark Mode Context
-            </button>
+                {/* Dark Mode */}
+                <button
+                  onClick={() => handleSearch("/components/darkmode")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="View Dark mode Context"
+                >
+                  Dark Mode Context
+                </button>
+              </div>
+            </Accordion>
 
             {/* Components */}
             <Accordion

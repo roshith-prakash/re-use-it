@@ -61,10 +61,10 @@ const UseDebounceHook = () => {
       <h1 className="text-4xl font-medium">useDebounce Hook</h1>
       <h2 className="py-5">Debounces user input with a specified delay.</h2>
 
-      <h3 className="py-10 pl-1 italic">useDebounce.tsx</h3>
+      <h3 className="mt-10 py-5 pl-1 italic">useDebounce.tsx</h3>
       <CodeBlock code={UseDebounceCode} language="tsx" />
 
-      <h3 className="py-10 pl-1 italic">App.tsx</h3>
+      <h3 className="mt-10 py-5 pl-1 italic">App.tsx</h3>
       <CodeBlock code={usingCode} language="tsx" />
     </div>
   );

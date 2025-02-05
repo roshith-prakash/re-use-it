@@ -53,7 +53,7 @@ const TailwindConfigCode = `module.exports = {
 // v3 index.css
 const v3Index = `@tailwind base;
 @tailwind components;
-@tailwind utilities
+@tailwind utilities;
 
 input::placeholder {
   transition: color 0.2s;
@@ -80,15 +80,6 @@ input::placeholder {
 .scroller::-webkit-scrollbar-thumb:hover {
   background: #555; /* Darker color on hover */
 };`;
-
-// PostCSS config
-const postCSS = `module.exports = {
-    plugins: {
-        tailwindcss: {},
-        autoprefixer: {},
-    }
-}
-`;
 
 // v4
 const TailwindCssCode = `@import "tailwindcss";
@@ -187,37 +178,44 @@ const TailwindConfigComponent = () => {
   return (
     <div className="dark:bg-darkbg min-h-screen p-10 dark:text-white">
       <>
+        <h1 className="text-4xl font-medium">Tailwind Configuration</h1>
+        <h2 className="py-5">
+          Custom colors, animations, fonts used for the components.
+        </h2>
+
+        <hr className="border-darkbg/50 my-10 mb-10 border-t-2 dark:border-white/50" />
+
         {/* Tailwind CSS - v4 */}
-        <h1 className="text-center text-2xl font-medium">
+        <h3 className="mt-14 text-2xl font-semibold">
           Tailwind v4 CSS file (index.css)
-        </h1>
-        <h2 className="py-5 text-center">
+        </h3>
+        <h4 className="py-5 text-sm">
           Tailwind configuration for Tailwind v4. This file contains the custom
           CSS variables and the dark mode variant.
-        </h2>
-        <h3 className="py-10 pl-1 italic">index.css</h3>
+        </h4>
+        <h3 className="mt-10 py-5 pl-1 italic">index.css</h3>
         <CodeBlock code={TailwindCssCode} language="css" />
       </>
 
       {/* Divider */}
       {/* --------------------------------------------------------------------------------------------- */}
-      <hr className="border-b-2 pt-20" />
+      <hr className="border-darkbg/50 border-b-2 pt-20 dark:border-white/50" />
       {/* --------------------------------------------------------------------------------------------- */}
 
       <>
-        {/* Tailwind Config - v3 */}
-        <h1 className="pt-20 text-center text-2xl font-medium">
-          Tailwind v3 Config file (tailwind.config.js)
-        </h1>
-        <h2 className="py-5 text-center">
+        {/* Tailwind CSS - v3 */}
+        <h3 className="mt-14 text-2xl font-semibold">
+          Tailwind v3 Configuration file (tailwind.config.js)
+        </h3>
+        <h4 className="py-5 text-sm">
           Tailwind configuration for Tailwind v3. This file contains the
           configuration for Tailwind, including the custom colors and fonts.
-        </h2>
-        <h3 className="py-10 pl-1 italic">tailwind.config.js</h3>
+        </h4>
+        <h3 className="mt-10 py-5 pl-1 italic">tailwind.config.js</h3>
         <CodeBlock code={TailwindConfigCode} language="json" />
-        <h3 className="py-10 pl-1 italic">postcss.config.js</h3>
-        <CodeBlock code={postCSS} language="json" />
-        <h3 className="py-10 pl-1 italic">index.css</h3>
+        {/* <h3 className="mt-10 py-5 pl-1 italic">postcss.config.js</h3>
+        <CodeBlock code={postCSS} language="json" /> */}
+        <h3 className="mt-10 py-5 pl-1 italic">index.css</h3>
         <CodeBlock code={v3Index} language="css" />
       </>
     </div>

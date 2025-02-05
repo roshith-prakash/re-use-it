@@ -42,16 +42,19 @@ const Cloudinary = () => {
   }, []);
 
   return (
-    <div className="dark:bg-darkbg min-h-screen p-10 dark:text-white">
+    <div className="dark:bg-darkbg min-h-screen p-5 dark:text-white">
       <h1 className="text-4xl font-medium">Cloudinary SDK Configuration</h1>
       <h2 className="py-5">
         Configures Cloudinary's SDK to upload assets to the Cloudinary CDN.
       </h2>
 
-      <h3 className="py-10 pl-1 italic">cloudinary.ts</h3>
+      <h3 className="mt-10 py-5 pl-1">Install Cloudinary SDK & Dotenv</h3>
+      <CodeBlock code={`npm i cloudinary dotenv`} language="bash" />
+
+      <h3 className="mt-10 py-5 pl-1 italic">cloudinary.ts</h3>
       <CodeBlock code={CloudinaryCode} language="typescript" />
 
-      <h3 className="mt-8 pl-1 italic">test.ts</h3>
+      <h3 className="mt-10 py-5 pl-1 italic">test.ts</h3>
       <CodeBlock code={usingCode} language="tsx" />
     </div>
   );

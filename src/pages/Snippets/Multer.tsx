@@ -36,10 +36,13 @@ const Multer = () => {
         Configures Multer for Uploading assets to a CDN like S3 or cloudinary.
       </h2>
 
-      <h3 className="py-10 pl-1 italic">multer.ts</h3>
+      <h3 className="mt-10 py-5 pl-1">Install Multer</h3>
+      <CodeBlock code={`npm i multer`} language="bash" />
+
+      <h3 className="mt-10 py-5 pl-1 italic">multer.ts</h3>
       <CodeBlock code={MulterCode} language="typescript" />
 
-      <h3 className="mt-8 pl-1 italic">route.ts</h3>
+      <h3 className="mt-10 py-5 pl-1 italic">route.ts</h3>
       <CodeBlock code={usingCode} language="tsx" />
     </div>
   );

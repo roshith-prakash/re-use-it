@@ -69,7 +69,7 @@ const Regex = () => {
       </h3>
       <CodeBlock code={isValidUsernameRegex} language="typescript" />
 
-      <h3 className="py-10 pl-1 italic">test.js</h3>
+      <h3 className="mt-10 py-5 pl-1 italic">test.js</h3>
       <CodeBlock code={usingCode} language="tsx" />
     </div>
   );

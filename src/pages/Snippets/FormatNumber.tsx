@@ -29,10 +29,10 @@ const FormatNumber = () => {
         format.
       </h2>
 
-      <h3 className="py-10 pl-1 italic">formatNumber.ts</h3>
+      <h3 className="mt-10 py-5 pl-1 italic">formatNumber.ts</h3>
       <CodeBlock code={formatNumberCode} language="typescript" />
 
-      <h3 className="mt-8 pl-1 italic">App.tsx</h3>
+      <h3 className="mt-10 py-5 pl-1 italic">App.tsx</h3>
       <CodeBlock code={usingCode} language="tsx" />
     </div>
   );
