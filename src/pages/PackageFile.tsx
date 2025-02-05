@@ -47,7 +47,7 @@ const PackageFile = () => {
 
   return (
     <div className="dark:bg-darkbg min-h-screen p-10 dark:text-white">
-      <h1 className="text-4xl font-medium">Package file (package.json)</h1>
+      <h1 className="text-4xl font-medium">Packages</h1>
       <h2 className="py-5">
         The dependencies & packages used for all components.
       </h2>
