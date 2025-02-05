@@ -503,6 +503,17 @@ const Navbar = () => {
                 >
                   Cloudinary SDK Configuration
                 </button>
+
+                {/* Image Compression */}
+                <button
+                  onClick={() =>
+                    handleSearch("/code-snippets/image-compression")
+                  }
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Image Compression"
+                >
+                  Image compression
+                </button>
               </div>
             </Accordion>
 

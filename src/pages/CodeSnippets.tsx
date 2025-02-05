@@ -90,6 +90,16 @@ const SnippetsSidebar = () => {
               Cloudinary SDK Config
             </NavLink>
           </li>
+          <li>
+            <NavLink
+              to="image-compression"
+              className={({ isActive }) =>
+                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+              }
+            >
+              Image Compression
+            </NavLink>
+          </li>
         </ul>
       </div>
     </div>

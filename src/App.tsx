@@ -45,6 +45,7 @@ import {
   Cloudinary,
   ShuffleArray,
   ToggleComponent,
+  ImageCompression,
 } from "./pages";
 import { Footer, Navbar } from "./components";
 import SecurityHeaders from "./components/SecurityHeaders";
@@ -71,16 +72,12 @@ function App() {
                 element={<Navigate to="getting-started" replace />}
               />
               <Route path="getting-started" element={<GettingStarted />} />
-
               <Route path="packages" element={<PackageFile />} />
-
               <Route
                 path="tailwind-configuration"
                 element={<TailwindConfigComponent />}
               />
-
               <Route path="darkmode" element={<DarkModeFile />} />
-
               <Route path="accordion" element={<AccordionCodeComponent />} />
               <Route
                 path="primary-button"
@@ -138,6 +135,7 @@ function App() {
               <Route path="multer" element={<Multer />} />
               <Route path="cloudinary" element={<Cloudinary />} />
               <Route path="shuffle-array" element={<ShuffleArray />} />
+              <Route path="image-compression" element={<ImageCompression />} />
             </Route>
 
             {/* ----------------------------------------------------------------------------------------------------------------------------- */}

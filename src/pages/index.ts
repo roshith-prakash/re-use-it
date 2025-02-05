@@ -40,6 +40,7 @@ import AxiosInstance from "./Snippets/AxiosInstance";
 import Multer from "./Snippets/Multer";
 import Cloudinary from "./Snippets/Cloudinary";
 import ShuffleArray from "./Snippets/ShuffleArray";
+import ImageCompression from "./Snippets/ImageCompression";
 // --------------------------------------------------------------------------------
 import TailwindConfigComponent from "./TailwindConfigComponent";
 import DarkModeFile from "./DarkModeFile";
@@ -91,4 +92,5 @@ export {
   Multer,
   Cloudinary,
   ShuffleArray,
+  ImageCompression,
 };
