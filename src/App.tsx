@@ -72,7 +72,7 @@ function App() {
               />
               <Route path="getting-started" element={<GettingStarted />} />
 
-              <Route path="package-json" element={<PackageFile />} />
+              <Route path="packages" element={<PackageFile />} />
 
               <Route
                 path="tailwind-configuration"

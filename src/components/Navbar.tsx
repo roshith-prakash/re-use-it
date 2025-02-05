@@ -129,7 +129,7 @@ const Navbar = () => {
               Home
             </button>
 
-            {/* Getting Stated */}
+            {/* Getting Started */}
             <Accordion
               text="Getting Started"
               className="w-full border-none text-xl font-semibold"
@@ -146,11 +146,11 @@ const Navbar = () => {
 
                 {/* Package JSON */}
                 <button
-                  onClick={() => handleSearch("/components/package-json")}
+                  onClick={() => handleSearch("/components/packages")}
                   className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
                   aria-label="Go to Home"
                 >
-                  Package JSON
+                  Packages
                 </button>
 
                 {/* Tailwind Config */}
