@@ -16,7 +16,7 @@ const Home = () => {
       {/* ------------------------------------------------------------------- */}
 
       {/* Hero */}
-      <section className="flex min-h-[90vh] flex-col lg:flex-row">
+      <section className="flex min-h-[85vh] flex-col lg:flex-row">
         <div className="flex flex-1 flex-col items-center justify-center gap-16 py-20 lg:gap-10 lg:py-0">
           <h1 className="font-pacifico px-4 text-center text-5xl md:text-7xl">
             Re-Use-it!

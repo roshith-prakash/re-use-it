@@ -31,6 +31,16 @@ const Navbar = () => {
 
         {/* LG screen Links */}
         <div className="hidden items-center gap-x-14 text-sm font-medium lg:flex">
+          {/* Home */}
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              `hover:text-cta dark:hover:text-darkmodeCTA transition-all ${isActive && "text-cta dark:text-darkmodeCTA"}`
+            }
+          >
+            Home
+          </NavLink>
+
           {/* Components */}
           <NavLink
             to="/components"
