@@ -103,7 +103,7 @@ const TooltipComponent = () => {
         </ul>
       </div>
 
-      <h3 className="py-2 pl-1 italic">Input.tsx</h3>
+      <h3 className="py-2 pl-1 italic">Tooltip.tsx</h3>
       <CodeBlock code={TooltipCode} language="tsx" />
 
       <h3 className="mt-8 py-2 pl-1 italic">App.tsx</h3>

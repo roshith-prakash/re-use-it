@@ -23,6 +23,7 @@ import Carousel from "./Carousel";
 import TextArea from "./TextArea";
 import Tooltip from "./Tooltip";
 import Toggle from "./Toggle";
+import Drawer from "./Drawer";
 
 export {
   PrimaryButton,
@@ -50,4 +51,5 @@ export {
   TextArea,
   Tooltip,
   Toggle,
+  Drawer,
 };

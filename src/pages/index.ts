@@ -30,6 +30,7 @@ import CarouselComponent from "./Components/CarouselComponent";
 import TextAreaComponent from "./Components/TextAreaComponent";
 import TooltipComponent from "./Components/TooltipComponent";
 import ToggleComponent from "./Components/ToggleComponent";
+import DrawerComponent from "./Components/DrawerComponent";
 // --------------------------------------------------------------------------------
 import MinutesToRead from "./Snippets/MinutesToRead";
 import UseDebounceHook from "./Snippets/UseDebounceHook";
@@ -80,6 +81,7 @@ export {
   TextAreaComponent,
   TooltipComponent,
   ToggleComponent,
+  DrawerComponent,
   //-----------------------------------------------
   MinutesToRead,
   UseDebounceHook,

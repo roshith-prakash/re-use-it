@@ -34,6 +34,7 @@ import {
   CarouselComponent,
   TextAreaComponent,
   TooltipComponent,
+  DrawerComponent,
   // -------------------------------------
   MinutesToRead,
   UseDebounceHook,
@@ -118,6 +119,7 @@ function App() {
               <Route path="textarea" element={<TextAreaComponent />} />
               <Route path="tooltip" element={<TooltipComponent />} />
               <Route path="toggle" element={<ToggleComponent />} />
+              <Route path="drawer" element={<DrawerComponent />} />
             </Route>
             {/* ----------------------------------------------------------------------------------------------------------------------------- */}
 
@@ -126,19 +128,12 @@ function App() {
             <Route path="/code-snippets" element={<CodeSnippets />}>
               <Route index element={<Navigate to="use-debounce" replace />} />
               <Route path="minutes-to-read" element={<MinutesToRead />} />
-
               <Route path="use-debounce" element={<UseDebounceHook />} />
-
               <Route path="format-number" element={<FormatNumber />} />
-
               <Route path="regex" element={<Regex />} />
-
               <Route path="axios" element={<AxiosInstance />} />
-
               <Route path="multer" element={<Multer />} />
-
               <Route path="cloudinary" element={<Cloudinary />} />
-
               <Route path="shuffle-array" element={<ShuffleArray />} />
             </Route>
 

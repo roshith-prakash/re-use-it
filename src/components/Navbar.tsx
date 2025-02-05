@@ -254,6 +254,15 @@ const Navbar = () => {
                   Checkbox
                 </button>
 
+                {/* Drawer */}
+                <button
+                  onClick={() => handleSearch("/components/drawer")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Drawer"
+                >
+                  Drawer
+                </button>
+
                 {/* Footer */}
                 <button
                   onClick={() => handleSearch("/components/footer")}
@@ -508,9 +517,7 @@ const Navbar = () => {
             </Accordion>
 
             {/* Narcissism */}
-            {/* <p className="absolute bottom-10 text-xs">
-              Developed by Roshith Prakash.
-            </p> */}
+            {/* <p className="text-center text-sm">Developed by Roshith Prakash.</p> */}
           </div>
         </div>
       </nav>

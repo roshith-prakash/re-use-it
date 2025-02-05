@@ -124,7 +124,7 @@ const ToggleComponent = () => {
         </ul>
       </div>
 
-      <h3>Switch.tsx</h3>
+      <h3>Toggle.tsx</h3>
       <CodeBlock code={SwitchCode} language="tsx" />
 
       <h3 className="mt-8 py-2 pl-1 italic">App.tsx</h3>

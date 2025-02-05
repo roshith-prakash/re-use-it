@@ -11,6 +11,7 @@ This repository contains a collection of reusable and customizable React compone
    - Card  
    - Carousel  
    - Checkbox  
+   - Drawer
    - Footer  
    - Loading Placeholder  
    - Modal  
