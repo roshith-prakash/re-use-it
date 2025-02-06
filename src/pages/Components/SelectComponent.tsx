@@ -95,6 +95,10 @@ const SelectComponent = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
+  useEffect(() => {
+    document.title = "Select | Re-Use-it!";
+  }, []);
+
   return (
     <div className="dark:bg-darkbg min-h-screen p-10 dark:text-white">
       <h1 className="text-4xl font-medium">Select</h1>

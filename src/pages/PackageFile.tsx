@@ -42,7 +42,7 @@ const PackageFile = () => {
   }, []);
 
   useEffect(() => {
-    document.title = "Package.json | Re-Use-it!";
+    document.title = "Packages | Re-Use-it!";
   }, []);
 
   return (
@@ -58,6 +58,12 @@ const PackageFile = () => {
         <ul className="list-disc pt-4 pl-8 leading-10">
           <li>
             {" "}
+            <Checkbox
+              checked={true}
+              className="translate-y-0.5"
+              onChange={() => {}}
+              disabled
+            />
             <b>tailwind (required):</b> Every component is styled using Tailwind
             CSS—no exceptions here! The v4 package.json is tailored for Vite
             projects, while the v3 package.json works seamlessly with other
@@ -76,6 +82,7 @@ const PackageFile = () => {
             {" "}
             <Checkbox
               checked={reactIcons}
+              className="translate-y-0.5"
               onChange={(e) => {
                 setReactIcons(e.target.checked);
               }}
@@ -87,12 +94,13 @@ const PackageFile = () => {
             {" "}
             <Checkbox
               checked={reactHelmet}
+              className="translate-y-0.5"
               onChange={(e) => {
                 setReactHelmet(e.target.checked);
               }}
             />
-            <b>react-helmet-async (optional):</b> Required only for the Security
-            Headers Component.
+            <b>react-helmet-async (optional):</b> Required for the{" "}
+            <strong>Security Headers Component</strong>.
           </li>
         </ul>
       </div>

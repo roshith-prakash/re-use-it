@@ -22,6 +22,9 @@
   /* Lighter variation of Primary color for viewability in Dark mode */
   --color-darkmodeCTA: #b458ff;
 
+  /* For sidebar active link */
+  --color-sidebargrey: #ededed;
+
   /* Custom Fonts */
   --font-title: "Playwrite IN", sans-serif;
   --font-sans: "Open Sans", serif;

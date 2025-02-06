@@ -77,7 +77,7 @@ const Home = () => {
           <span className="font-pacifico text-nowrap">Re-use-it?</span>
         </h2>
         <div className="mt-20 grid grid-cols-1 gap-10 px-6 md:grid-cols-3">
-          <div className="dark:bg-darkbg flex flex-col rounded-2xl border-white bg-white p-6 shadow-xl transition-all hover:scale-105 dark:border-t-[1px] dark:shadow-md dark:shadow-white">
+          <div className="dark:bg-darkbg border-grey flex flex-col rounded-2xl border-1 bg-white p-6 shadow-2xl transition-all hover:scale-105 dark:border-t-[1px] dark:shadow-md dark:shadow-white">
             <h3 className="mb-4 flex items-center justify-center gap-2 text-xl font-bold">
               Reusable Components <BiSolidComponent className="text-2xl" />
             </h3>
@@ -87,7 +87,7 @@ const Home = () => {
               reuse.
             </p>
           </div>
-          <div className="dark:bg-darkbg flex flex-col rounded-2xl border-white bg-white p-6 shadow-xl transition-all hover:scale-105 dark:border-t-[1px] dark:shadow-md dark:shadow-white">
+          <div className="dark:bg-darkbg border-grey flex flex-col rounded-2xl border-1 bg-white p-6 shadow-2xl transition-all hover:scale-105 dark:border-t-[1px] dark:shadow-md dark:shadow-white">
             <h3 className="mb-4 flex items-center justify-center gap-2 text-xl font-bold">
               Code Snippets <FaCode className="translate-y-0.5 text-2xl" />
             </h3>
@@ -96,7 +96,7 @@ const Home = () => {
               common tasks and logic effortlessly in your projects.
             </p>
           </div>
-          <div className="dark:bg-darkbg rounded-2xl border-white bg-white p-6 shadow-xl transition-all hover:scale-105 dark:border-t-[1px] dark:shadow-md dark:shadow-white">
+          <div className="dark:bg-darkbg border-grey flex flex-col rounded-2xl border-1 bg-white p-6 shadow-2xl transition-all hover:scale-105 dark:border-t-[1px] dark:shadow-md dark:shadow-white">
             <h3 className="mb-4 flex items-center justify-center gap-2 text-xl font-bold">
               Minimal Overhead
               <TbSettings className="text-2xl" />
@@ -141,7 +141,7 @@ const Home = () => {
           Featured Components & Snippets
         </h2>
         <div className="mt-20 grid grid-cols-1 gap-10 px-6 md:grid-cols-3">
-          <div className="dark:bg-darkbg flex flex-col items-center gap-10 rounded-2xl border-white bg-white p-6 shadow-xl transition-all hover:scale-105 dark:border-t-[1px] dark:shadow-md dark:shadow-white">
+          <div className="dark:bg-darkbg border-grey flex flex-col items-center gap-10 rounded-2xl border-1 bg-white p-6 shadow-2xl transition-all hover:scale-105 dark:border-t-[1px] dark:shadow-md dark:shadow-white">
             <h3 className="mb-4 text-xl font-bold">Modal</h3>
             <p>A Modal component which pops up when a condition is met.</p>
 
@@ -149,7 +149,7 @@ const Home = () => {
               <PrimaryButton text="View Component"></PrimaryButton>
             </Link>
           </div>
-          <div className="dark:bg-darkbg flex flex-col items-center gap-10 rounded-2xl border-white bg-white p-6 shadow-xl transition-all hover:scale-105 dark:border-t-[1px] dark:shadow-md dark:shadow-white">
+          <div className="dark:bg-darkbg border-grey flex flex-col items-center gap-10 rounded-2xl border-1 bg-white p-6 shadow-2xl transition-all hover:scale-105 dark:border-t-[1px] dark:shadow-md dark:shadow-white">
             <h3 className="mb-4 text-xl font-bold">Timeline</h3>
             <p>Timeline Component to show the chronlogical order of events.</p>
 
@@ -157,7 +157,7 @@ const Home = () => {
               <PrimaryButton text="View Component"></PrimaryButton>
             </Link>
           </div>
-          <div className="dark:bg-darkbg flex flex-col items-center gap-10 rounded-2xl border-white bg-white p-6 shadow-xl transition-all hover:scale-105 dark:border-t-[1px] dark:shadow-md dark:shadow-white">
+          <div className="dark:bg-darkbg border-grey flex flex-col items-center gap-10 rounded-2xl border-1 bg-white p-6 shadow-2xl transition-all hover:scale-105 dark:border-t-[1px] dark:shadow-md dark:shadow-white">
             <h3 className="mb-4 text-xl font-bold">useDebounce</h3>
             <p className="flex-1">
               A Hook to debounce user input with a delay.

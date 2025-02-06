@@ -22,10 +22,10 @@ const AccordionItem = ({
   const contentRef = useRef<HTMLDivElement | null>(null);
 
   return (
-    <div className="overflow-hidden border-b-2">
+    <div className="border-secondarydarkbg/50 dark:border-grey/50 overflow-hidden border-b-2">
       <button
         onClick={() => toggle(id)}
-        className="flex w-full items-center justify-between py-3 text-left"
+        className="flex w-full cursor-pointer items-center justify-between py-3 text-left"
       >
         {title}
         <IoIosArrowDown
@@ -78,8 +78,7 @@ const AccordionGroup = ({
   );
 };
 
-export default AccordionGroup;
-`;
+export default AccordionGroup;`;
 
 const usingCode = `import  AccordionGroup  from "./AccordionGroup";
 
@@ -116,7 +115,7 @@ const AccordionGroupComponent = () => {
   }, []);
 
   useEffect(() => {
-    document.title = "Accordion | Re-Use-it!";
+    document.title = "Accordion Group | Re-Use-it!";
   }, []);
 
   return (

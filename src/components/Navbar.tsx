@@ -161,7 +161,7 @@ const Navbar = () => {
                   className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
                   aria-label="View Tailwind CSS file"
                 >
-                  Tailwind Configuration (v3 & v4)
+                  Tailwind Configuration
                 </button>
 
                 {/* Dark Mode */}

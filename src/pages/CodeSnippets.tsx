@@ -14,7 +14,7 @@ const SnippetsSidebar = () => {
             <NavLink
               to="use-debounce"
               className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+                `${isActive && "bg-sidebargrey dark:bg-white/10"} hover:bg-sidebargrey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
               useDebounce Hook
@@ -24,7 +24,7 @@ const SnippetsSidebar = () => {
             <NavLink
               to="regex"
               className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+                `${isActive && "bg-sidebargrey dark:bg-white/10"} hover:bg-sidebargrey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
               Regex Functions
@@ -34,7 +34,7 @@ const SnippetsSidebar = () => {
             <NavLink
               to="shuffle-array"
               className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+                `${isActive && "bg-sidebargrey dark:bg-white/10"} hover:bg-sidebargrey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
               Shuffle Array
@@ -44,7 +44,7 @@ const SnippetsSidebar = () => {
             <NavLink
               to="minutes-to-read"
               className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+                `${isActive && "bg-sidebargrey dark:bg-white/10"} hover:bg-sidebargrey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
               Minutes to Read
@@ -54,7 +54,7 @@ const SnippetsSidebar = () => {
             <NavLink
               to="format-number"
               className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+                `${isActive && "bg-sidebargrey dark:bg-white/10"} hover:bg-sidebargrey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
               Format Number
@@ -64,7 +64,7 @@ const SnippetsSidebar = () => {
             <NavLink
               to="axios"
               className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+                `${isActive && "bg-sidebargrey dark:bg-white/10"} hover:bg-sidebargrey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
               Axios Instance
@@ -74,7 +74,7 @@ const SnippetsSidebar = () => {
             <NavLink
               to="multer"
               className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+                `${isActive && "bg-sidebargrey dark:bg-white/10"} hover:bg-sidebargrey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
               Multer Config
@@ -84,7 +84,7 @@ const SnippetsSidebar = () => {
             <NavLink
               to="cloudinary"
               className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+                `${isActive && "bg-sidebargrey dark:bg-white/10"} hover:bg-sidebargrey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
               Cloudinary SDK Config
@@ -94,7 +94,7 @@ const SnippetsSidebar = () => {
             <NavLink
               to="image-compression"
               className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+                `${isActive && "bg-sidebargrey dark:bg-white/10"} hover:bg-sidebargrey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
               Image Compression

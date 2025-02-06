@@ -62,7 +62,7 @@ const ToggleComponent = () => {
   }, []);
 
   useEffect(() => {
-    document.title = "Switch | Re-Use-it!";
+    document.title = "Toggle | Re-Use-it!";
   }, []);
 
   return (

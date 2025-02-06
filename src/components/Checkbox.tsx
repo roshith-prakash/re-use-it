@@ -8,6 +8,7 @@ const Checkbox = ({
   onChange,
   checked: controlledChecked = false,
   className = "",
+  disabled,
 }: {
   value?: string;
   name?: string;
@@ -15,6 +16,7 @@ const Checkbox = ({
   onChange: ChangeEventHandler<HTMLInputElement>;
   checked?: boolean;
   className?: string;
+  disabled?: boolean;
 }) => {
   const [checked, setChecked] = useState<boolean>(controlledChecked);
 
@@ -36,6 +38,7 @@ const Checkbox = ({
     <div className="inline-block">
       <input
         id={id}
+        disabled={disabled}
         type="checkbox"
         className="hidden"
         value={value}
@@ -44,9 +47,10 @@ const Checkbox = ({
         onChange={onChange}
       />
       <button
+        disabled={disabled}
         role="checkbox"
         onClick={handleChange}
-        className={`border-darkbg dark:border-darkmodetext mx-2 h-5 w-5 cursor-pointer rounded border-2 ${checked ? "bg-cta text-white" : "bg-transparent"} ${className}`}
+        className={`border-darkbg disabled:text-darkbg disabled:bg-grey dark:border-darkmodetext mx-2 h-5 w-5 cursor-pointer rounded border-2 disabled:cursor-default ${checked ? "bg-cta text-white" : "bg-transparent"} ${className}`}
       >
         {checked && <TiTick />}
       </button>

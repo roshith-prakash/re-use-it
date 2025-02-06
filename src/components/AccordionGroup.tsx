@@ -18,7 +18,7 @@ const AccordionItem = ({
   const contentRef = useRef<HTMLDivElement | null>(null);
 
   return (
-    <div className="overflow-hidden border-b-2">
+    <div className="border-secondarydarkbg/50 dark:border-grey/50 overflow-hidden border-b-2">
       <button
         onClick={() => toggle(id)}
         className="flex w-full cursor-pointer items-center justify-between py-3 text-left"

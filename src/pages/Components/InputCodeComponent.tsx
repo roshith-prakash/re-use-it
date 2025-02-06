@@ -9,16 +9,19 @@ const Input = ({
   placeholder,
   onChange,
   className = "",
+  disabled,
 }: {
   value: string;
   placeholder: string;
   onChange: ChangeEventHandler<HTMLInputElement>;
   className?: string;
+  disabled?: boolean;
 }) => {
   return (
     <input
       type="text"
-      className={\`dark:placeholder:text-grey mt-3 min-h-8 w-full border-b-2 bg-transparent py-1.5 focus:outline-none dark:placeholder:text-white/40 \${className}\`}
+      disabled={disabled}
+      className={\`dark:placeholder:text-grey/50 placeholder:text-darkbg/50 text-md border-darkbg/50 mt-3 min-h-8 w-full rounded-lg border-2 bg-transparent px-4 py-2 placeholder:text-sm focus:outline-none dark:border-white/50 \${className}\`}
       value={value}
       placeholder={placeholder}
       onChange={onChange}
@@ -26,7 +29,8 @@ const Input = ({
   );
 };
 
-export default Input;`;
+export default Input;
+`;
 
 const usingCode = `import  Input  from "./Input";
 import { useState } from "react"
@@ -80,6 +84,11 @@ const InputCodeComponent = () => {
             {" "}
             <b>placeholder (function, optional):</b> The placeholder value shown
             when no value is present.
+          </li>
+          <li>
+            {" "}
+            <b>disabled (boolean, optional):</b> To specify if the input is
+            disabled.
           </li>
           <li>
             {" "}

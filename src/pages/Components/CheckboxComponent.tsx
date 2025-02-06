@@ -1,8 +1,7 @@
 import { useEffect } from "react";
 import { Checkbox, CodeBlock } from "../../components";
 
-const CheckboxCode = `
-import { ChangeEventHandler, useState, useEffect } from "react";
+const CheckboxCode = `import { ChangeEventHandler, useState, useEffect } from "react";
 import { TiTick } from "react-icons/ti";
 
 const Checkbox = ({
@@ -12,6 +11,7 @@ const Checkbox = ({
   onChange,
   checked: controlledChecked = false,
   className = "",
+  disabled,
 }: {
   value?: string;
   name?: string;
@@ -19,6 +19,7 @@ const Checkbox = ({
   onChange: ChangeEventHandler<HTMLInputElement>;
   checked?: boolean;
   className?: string;
+  disabled?: boolean;
 }) => {
   const [checked, setChecked] = useState<boolean>(controlledChecked);
 
@@ -40,6 +41,7 @@ const Checkbox = ({
     <div className="inline-block">
       <input
         id={id}
+        disabled={disabled}
         type="checkbox"
         className="hidden"
         value={value}
@@ -48,9 +50,10 @@ const Checkbox = ({
         onChange={onChange}
       />
       <button
+        disabled={disabled}
         role="checkbox"
         onClick={handleChange}
-        className={\`border-darkbg dark:border-darkmodetext mx-2 h-5 w-5 cursor-pointer rounded border-2 \${checked ? "bg-cta text-white" : "bg-transparent"} \${className}\`}
+        className={\`border-darkbg disabled:text-darkbg disabled:bg-grey dark:border-darkmodetext mx-2 h-5 w-5 cursor-pointer rounded border-2 disabled:cursor-default \${checked ? "bg-cta text-white" : "bg-transparent"} \${className}\`}
       >
         {checked && <TiTick />}
       </button>
@@ -58,8 +61,7 @@ const Checkbox = ({
   );
 };
 
-export default Checkbox;
-`;
+export default Checkbox;`;
 
 const usingCode = `import Checkbox from './Checkbox';
 
@@ -129,6 +131,11 @@ const CheckboxComponent = () => {
             {" "}
             <b>checked (boolean, optional):</b> To specify if the checkbox is
             already checked.
+          </li>
+          <li>
+            {" "}
+            <b>disabled (boolean, optional):</b> To specify if the checkbox is
+            disabled.
           </li>
           <li>
             {" "}

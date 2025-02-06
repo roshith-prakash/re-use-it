@@ -9,10 +9,14 @@ const PasswordInput = ({
   value,
   placeholder,
   onChange,
+  disabled,
+  className,
 }: {
   value: string;
   placeholder: string;
   onChange: ChangeEventHandler<HTMLInputElement>;
+  disabled?: boolean;
+  className?: string;
 }) => {
   // State to convert field to text or password field
   const [display, setDisplay] = useState(false);
@@ -21,8 +25,9 @@ const PasswordInput = ({
     <div className="relative w-full">
       {/* Input field - can be text or password field depending on state */}
       <input
+        disabled={disabled}
         type={display ? "text" : "password"}
-        className="dark:placeholder:text-grey border-darkbg/70 mt-3 min-h-8 w-full rounded-b-xs border-b-2 bg-transparent py-2 focus:outline-none dark:border-white/70 "
+        className={\`dark:placeholder:text-grey/50 placeholder:text-darkbg/50 text-md border-darkbg/50 mt-3 min-h-8 w-full rounded-lg border-2 bg-transparent px-4 py-2 pr-10 placeholder:text-sm focus:outline-none dark:border-white/50 \${className}\`}
         value={value}
         placeholder={placeholder}
         onChange={onChange}
@@ -30,20 +35,25 @@ const PasswordInput = ({
       {/* Absolutely positioned icon - acts as buttons to change field type */}
       {display ? (
         <FaEye
-          className="absolute top-6 right-2 cursor-pointer"
-          onClick={() => setDisplay((prev) => !prev)}
+          className="absolute top-6.5 right-4 cursor-pointer"
+          onClick={() => {
+            if (!disabled) setDisplay((prev) => !prev);
+          }}
         />
       ) : (
         <FaEyeSlash
-          className="absolute top-6 right-2 cursor-pointer"
-          onClick={() => setDisplay((prev) => !prev)}
+          className="absolute top-6.5 right-4 cursor-pointer"
+          onClick={() => {
+            if (!disabled) setDisplay((prev) => !prev);
+          }}
         />
       )}
     </div>
   );
 };
 
-export default PasswordInput;`;
+export default PasswordInput;
+`;
 
 const usingCode = `import  PasswordInput  from "./PasswordInput";
 import { useState } from "react"
@@ -99,6 +109,15 @@ const PasswordInputCodeComponent = () => {
             {" "}
             <b>placeholder (function, optional):</b> The placeholder value shown
             when no value is present.
+          </li>
+          <li>
+            {" "}
+            <b>disabled (boolean, optional):</b> To specify if the input is
+            disabled.
+          </li>
+          <li>
+            {" "}
+            <b>className (string, optional):</b> To override default styles.
           </li>
         </ul>
       </div>

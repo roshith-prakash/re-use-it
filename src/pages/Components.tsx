@@ -15,7 +15,7 @@ const ComponentsSidebar = () => {
             <NavLink
               to="getting-started"
               className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+                `${isActive && "bg-sidebargrey dark:bg-white/10"} hover:bg-sidebargrey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
               Introduction
@@ -26,7 +26,7 @@ const ComponentsSidebar = () => {
             <NavLink
               to="packages"
               className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+                `${isActive && "bg-sidebargrey dark:bg-white/10"} hover:bg-sidebargrey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
               Packages
@@ -37,7 +37,7 @@ const ComponentsSidebar = () => {
             <NavLink
               to="tailwind-configuration"
               className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+                `${isActive && "bg-sidebargrey dark:bg-white/10"} hover:bg-sidebargrey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
               Tailwind Configuration
@@ -48,7 +48,7 @@ const ComponentsSidebar = () => {
             <NavLink
               to="darkmode"
               className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+                `${isActive && "bg-sidebargrey dark:bg-white/10"} hover:bg-sidebargrey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
               DarkMode Context
@@ -62,7 +62,7 @@ const ComponentsSidebar = () => {
             <NavLink
               to="accordion"
               className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+                `${isActive && "bg-sidebargrey dark:bg-white/10"} hover:bg-sidebargrey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
               Accordion
@@ -72,7 +72,7 @@ const ComponentsSidebar = () => {
             <NavLink
               to="accordion-group"
               className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+                `${isActive && "bg-sidebargrey dark:bg-white/10"} hover:bg-sidebargrey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
               Accordion Group
@@ -82,7 +82,7 @@ const ComponentsSidebar = () => {
             <NavLink
               to="avatar"
               className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+                `${isActive && "bg-sidebargrey dark:bg-white/10"} hover:bg-sidebargrey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
               Avatar
@@ -92,7 +92,7 @@ const ComponentsSidebar = () => {
             <NavLink
               to="badge"
               className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+                `${isActive && "bg-sidebargrey dark:bg-white/10"} hover:bg-sidebargrey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
               Badge
@@ -102,7 +102,7 @@ const ComponentsSidebar = () => {
             <NavLink
               to="card"
               className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+                `${isActive && "bg-sidebargrey dark:bg-white/10"} hover:bg-sidebargrey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
               Card
@@ -112,7 +112,7 @@ const ComponentsSidebar = () => {
             <NavLink
               to="carousel"
               className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+                `${isActive && "bg-sidebargrey dark:bg-white/10"} hover:bg-sidebargrey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
               Carousel
@@ -122,7 +122,7 @@ const ComponentsSidebar = () => {
             <NavLink
               to="checkbox"
               className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+                `${isActive && "bg-sidebargrey dark:bg-white/10"} hover:bg-sidebargrey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
               Checkbox
@@ -132,7 +132,7 @@ const ComponentsSidebar = () => {
             <NavLink
               to="drawer"
               className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+                `${isActive && "bg-sidebargrey dark:bg-white/10"} hover:bg-sidebargrey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
               Drawer
@@ -142,7 +142,7 @@ const ComponentsSidebar = () => {
             <NavLink
               to="footer"
               className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+                `${isActive && "bg-sidebargrey dark:bg-white/10"} hover:bg-sidebargrey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
               Footer
@@ -152,7 +152,7 @@ const ComponentsSidebar = () => {
             <NavLink
               to="input"
               className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+                `${isActive && "bg-sidebargrey dark:bg-white/10"} hover:bg-sidebargrey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
               Text Input
@@ -162,7 +162,7 @@ const ComponentsSidebar = () => {
             <NavLink
               to="loader"
               className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+                `${isActive && "bg-sidebargrey dark:bg-white/10"} hover:bg-sidebargrey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
               Loading Placeholder
@@ -172,7 +172,7 @@ const ComponentsSidebar = () => {
             <NavLink
               to="modal"
               className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+                `${isActive && "bg-sidebargrey dark:bg-white/10"} hover:bg-sidebargrey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
               Modal
@@ -182,7 +182,7 @@ const ComponentsSidebar = () => {
             <NavLink
               to="navbar"
               className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+                `${isActive && "bg-sidebargrey dark:bg-white/10"} hover:bg-sidebargrey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
               Navbar
@@ -192,7 +192,7 @@ const ComponentsSidebar = () => {
             <NavLink
               to="password-input"
               className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+                `${isActive && "bg-sidebargrey dark:bg-white/10"} hover:bg-sidebargrey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
               Password Input
@@ -202,7 +202,7 @@ const ComponentsSidebar = () => {
             <NavLink
               to="primary-button"
               className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+                `${isActive && "bg-sidebargrey dark:bg-white/10"} hover:bg-sidebargrey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
               Primary Button
@@ -212,7 +212,7 @@ const ComponentsSidebar = () => {
             <NavLink
               to="progress"
               className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+                `${isActive && "bg-sidebargrey dark:bg-white/10"} hover:bg-sidebargrey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
               Progress
@@ -222,7 +222,7 @@ const ComponentsSidebar = () => {
             <NavLink
               to="radio"
               className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+                `${isActive && "bg-sidebargrey dark:bg-white/10"} hover:bg-sidebargrey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
               Radio Button
@@ -232,7 +232,7 @@ const ComponentsSidebar = () => {
             <NavLink
               to="secondary-button"
               className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+                `${isActive && "bg-sidebargrey dark:bg-white/10"} hover:bg-sidebargrey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
               Secondary Button
@@ -242,7 +242,7 @@ const ComponentsSidebar = () => {
             <NavLink
               to="security-headers"
               className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+                `${isActive && "bg-sidebargrey dark:bg-white/10"} hover:bg-sidebargrey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
               Security Headers
@@ -252,7 +252,7 @@ const ComponentsSidebar = () => {
             <NavLink
               to="select"
               className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+                `${isActive && "bg-sidebargrey dark:bg-white/10"} hover:bg-sidebargrey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
               Select
@@ -262,7 +262,7 @@ const ComponentsSidebar = () => {
             <NavLink
               to="slider"
               className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+                `${isActive && "bg-sidebargrey dark:bg-white/10"} hover:bg-sidebargrey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
               Slider
@@ -272,7 +272,7 @@ const ComponentsSidebar = () => {
             <NavLink
               to="switch"
               className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+                `${isActive && "bg-sidebargrey dark:bg-white/10"} hover:bg-sidebargrey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
               Switch (Toggle)
@@ -282,7 +282,7 @@ const ComponentsSidebar = () => {
             <NavLink
               to="table"
               className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+                `${isActive && "bg-sidebargrey dark:bg-white/10"} hover:bg-sidebargrey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
               Table
@@ -292,7 +292,7 @@ const ComponentsSidebar = () => {
             <NavLink
               to="textarea"
               className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+                `${isActive && "bg-sidebargrey dark:bg-white/10"} hover:bg-sidebargrey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
               TextArea
@@ -302,7 +302,7 @@ const ComponentsSidebar = () => {
             <NavLink
               to="timeline"
               className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+                `${isActive && "bg-sidebargrey dark:bg-white/10"} hover:bg-sidebargrey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
               Timeline
@@ -312,7 +312,7 @@ const ComponentsSidebar = () => {
             <NavLink
               to="toggle"
               className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+                `${isActive && "bg-sidebargrey dark:bg-white/10"} hover:bg-sidebargrey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
               Toggle
@@ -322,7 +322,7 @@ const ComponentsSidebar = () => {
             <NavLink
               to="tooltip"
               className={({ isActive }) =>
-                `${isActive && "bg-grey dark:bg-white/10"} hover:bg-grey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+                `${isActive && "bg-sidebargrey dark:bg-white/10"} hover:bg-sidebargrey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
               }
             >
               Tooltip
