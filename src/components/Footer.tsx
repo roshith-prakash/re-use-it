@@ -1,7 +1,8 @@
-import { FaMediumM } from "react-icons/fa";
 import { ContextValue, useDarkMode } from "../context/DarkModeContext";
-import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa6";
-import { useNavigate } from "react-router-dom";
+import { FaGithub } from "react-icons/fa6";
+import { Link, useNavigate } from "react-router-dom";
+import { LuCodeXml } from "react-icons/lu";
+import { IoLogoWebComponent } from "react-icons/io5";
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -45,7 +46,7 @@ const Footer = () => {
 
           <div className="flex flex-wrap justify-center gap-8">
             <a
-              href="https://github.com/roshith-prakash"
+              href="https://github.com/roshith-prakash/re-use-it"
               target="_blank"
               rel="noreferrer"
               className="hover:text-cta cursor-pointer rounded-full border-2 border-white p-3 text-white transition-all hover:bg-white"
@@ -53,31 +54,19 @@ const Footer = () => {
             >
               <FaGithub className="text-2xl" />
             </a>
-            <a
-              href="https://www.linkedin.com/in/roshith-prakash/"
-              target="_blank"
-              rel="noreferrer"
+            <Link
               className="hover:text-cta cursor-pointer rounded-full border-2 border-white p-3 text-white transition-all hover:bg-white"
-              aria-label="Visit LinkedIn Profile"
+              to="/components"
             >
-              <FaLinkedin className="text-2xl" />
-            </a>
-            <a
-              href="mailto:roshithprakash07@gmail.com"
+              <IoLogoWebComponent className="text-2xl" />
+            </Link>
+
+            <Link
               className="hover:text-cta cursor-pointer rounded-full border-2 border-white p-3 text-white transition-all hover:bg-white"
-              aria-label="Email Roshith Prakash"
+              to="/code-snippets"
             >
-              <FaEnvelope className="text-2xl" />
-            </a>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://medium.com/@roshithprakash7"
-              className="hover:text-cta cursor-pointer rounded-full border-2 border-white p-3 text-white transition-all hover:bg-white"
-              aria-label="Medium Profile"
-            >
-              <FaMediumM className="text-2xl" />
-            </a>
+              <LuCodeXml className="text-2xl" />
+            </Link>
           </div>
         </div>
 

@@ -30,7 +30,7 @@ const Navbar = () => {
         </Link>
 
         {/* LG screen Links */}
-        <div className="hidden items-center gap-x-14 text-sm font-medium lg:flex">
+        <div className="hidden -translate-x-10 items-center gap-x-14 text-sm font-medium lg:flex">
           {/* Home */}
           <NavLink
             to="/"
