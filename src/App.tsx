@@ -46,6 +46,7 @@ import {
   ShuffleArray,
   ToggleComponent,
   ImageCompression,
+  AlertModalComponent,
 } from "./pages";
 import { Footer, Navbar } from "./components";
 import SecurityHeaders from "./components/SecurityHeaders";
@@ -120,6 +121,7 @@ function App() {
               <Route path="tooltip" element={<TooltipComponent />} />
               <Route path="toggle" element={<ToggleComponent />} />
               <Route path="drawer" element={<DrawerComponent />} />
+              <Route path="alert-modal" element={<AlertModalComponent />} />
             </Route>
             {/* ----------------------------------------------------------------------------------------------------------------------------- */}
 

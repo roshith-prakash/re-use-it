@@ -5,6 +5,7 @@ import { ContextValue, useDarkMode } from "../context/DarkModeContext";
 import { IoMoon } from "react-icons/io5";
 import { IoSunnySharp } from "react-icons/io5";
 import Accordion from "./Accordion";
+import { FaGithub } from "react-icons/fa6";
 
 const Navbar = () => {
   const { isDarkMode, toggleDarkMode } = useDarkMode() as ContextValue;
@@ -30,7 +31,7 @@ const Navbar = () => {
         </Link>
 
         {/* LG screen Links */}
-        <div className="hidden -translate-x-10 items-center gap-x-14 text-sm font-medium lg:flex">
+        <div className="hidden -translate-x-2 items-center gap-x-14 text-sm font-medium lg:flex">
           {/* Home */}
           <NavLink
             to="/"
@@ -63,17 +64,28 @@ const Navbar = () => {
         </div>
 
         {/* Dark Mode Toggle */}
-        <button
-          aria-label="Change Theme"
-          className="hidden cursor-pointer lg:flex"
-          onClick={toggleDarkMode}
-        >
-          {isDarkMode ? (
-            <IoSunnySharp className="hover:text-darkmodeCTA text-2xl transition-all" />
-          ) : (
-            <IoMoon className="hover:text-cta text-2xl transition-all" />
-          )}
-        </button>
+        <div className="hidden gap-6 lg:flex">
+          <a
+            href="https://github.com/roshith-prakash/re-use-it"
+            target="_blank"
+            rel="noreferrer"
+            className=""
+            aria-label="Contribute on GitHub"
+          >
+            <FaGithub className="hover:text-cta dark:hover:text-darkmodeCTA text-2xl" />
+          </a>
+          <button
+            aria-label="Change Theme"
+            className="cursor-pointer lg:flex"
+            onClick={toggleDarkMode}
+          >
+            {isDarkMode ? (
+              <IoSunnySharp className="hover:text-darkmodeCTA text-2xl transition-all" />
+            ) : (
+              <IoMoon className="hover:text-cta text-2xl transition-all" />
+            )}
+          </button>
+        </div>
 
         {/* Dark Mode Toggle +  Hamburger Button to open the drawer */}
         <div className="flex items-center gap-x-10 font-medium lg:hidden">
@@ -197,6 +209,15 @@ const Navbar = () => {
                   aria-label="Accordion Group"
                 >
                   Accordion Group
+                </button>
+
+                {/* Alert Modal */}
+                <button
+                  onClick={() => handleSearch("/components/alert-modal")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Alert Modal"
+                >
+                  Alert Modal
                 </button>
 
                 {/* Avatar */}

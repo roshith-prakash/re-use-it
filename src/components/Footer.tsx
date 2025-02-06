@@ -50,7 +50,7 @@ const Footer = () => {
               target="_blank"
               rel="noreferrer"
               className="hover:text-cta cursor-pointer rounded-full border-2 border-white p-3 text-white transition-all hover:bg-white"
-              aria-label="Visit GitHub Profile"
+              aria-label="Contribute on GitHub"
             >
               <FaGithub className="text-2xl" />
             </a>

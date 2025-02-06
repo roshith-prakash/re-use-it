@@ -24,6 +24,7 @@ import TextArea from "./TextArea";
 import Tooltip from "./Tooltip";
 import Toggle from "./Toggle";
 import Drawer from "./Drawer";
+import AlertModal from "./AlertModal";
 
 export {
   PrimaryButton,
@@ -52,4 +53,5 @@ export {
   Tooltip,
   Toggle,
   Drawer,
+  AlertModal,
 };
