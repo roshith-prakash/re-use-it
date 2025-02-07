@@ -45,6 +45,7 @@ import Multer from "./Snippets/Multer";
 import Cloudinary from "./Snippets/Cloudinary";
 import ShuffleArray from "./Snippets/ShuffleArray";
 import ImageCompression from "./Snippets/ImageCompression";
+import ExpressTemplate from "./Snippets/ExpressTemplate";
 // --------------------------------------------------------------------------------
 import TailwindConfigComponent from "./TailwindConfigComponent";
 import DarkModeFile from "./DarkModeFile";
@@ -101,4 +102,5 @@ export {
   Cloudinary,
   ShuffleArray,
   ImageCompression,
+  ExpressTemplate,
 };

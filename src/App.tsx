@@ -50,6 +50,7 @@ import {
   ShuffleArray,
   ToggleComponent,
   ImageCompression,
+  ExpressTemplate,
 } from "./pages";
 import { Footer, Navbar } from "./components";
 import SecurityHeaders from "./components/SecurityHeaders";
@@ -144,6 +145,7 @@ function App() {
               <Route path="cloudinary" element={<Cloudinary />} />
               <Route path="shuffle-array" element={<ShuffleArray />} />
               <Route path="image-compression" element={<ImageCompression />} />
+              <Route path="express-template" element={<ExpressTemplate />} />
             </Route>
 
             {/* ----------------------------------------------------------------------------------------------------------------------------- */}

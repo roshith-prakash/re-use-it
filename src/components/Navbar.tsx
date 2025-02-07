@@ -489,6 +489,17 @@ const Navbar = () => {
                   Use Debounce Hook
                 </button>
 
+                {/* Express Template */}
+                <button
+                  onClick={() =>
+                    handleSearch("/code-snippets/express-template")
+                  }
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Express Template"
+                >
+                  Express Template
+                </button>
+
                 {/* Regex Functions */}
                 <button
                   onClick={() => handleSearch("/code-snippets/regex")}
