@@ -6,6 +6,7 @@ This repository contains a collection of reusable and customizable React compone
 
    - Accordion  
    - Accordion Group  
+   - Alert
    - Alert Modal
    - Avatar  
    - Badge  

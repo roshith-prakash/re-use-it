@@ -211,6 +211,15 @@ const Navbar = () => {
                   Accordion Group
                 </button>
 
+                {/* Alert  */}
+                <button
+                  onClick={() => handleSearch("/components/alert")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Alert "
+                >
+                  Alert
+                </button>
+
                 {/* Alert Modal */}
                 <button
                   onClick={() => handleSearch("/components/alert-modal")}

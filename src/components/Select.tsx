@@ -26,7 +26,7 @@ const Select = ({
   return (
     <div
       role="select"
-      className={`bg-grey relative min-w-3xs cursor-pointer rounded-xl border-2 px-5 py-2 dark:bg-transparent ${className}`}
+      className={`relative min-w-3xs cursor-pointer rounded-xl border-2 bg-white px-5 py-2 dark:bg-transparent ${className}`}
       onClick={() => setIsOpen((prev) => !prev)}
     >
       <div className="flex items-center justify-between gap-x-5">
@@ -42,14 +42,14 @@ const Select = ({
 
       {isOpen && (
         <div
-          className="dark:bg-secondarydarkbg bg-grey absolute top-full left-0 mt-2 w-full overflow-hidden rounded-xl border-2 shadow-lg"
+          className="dark:bg-secondarydarkbg absolute top-full left-0 mt-2 w-full overflow-hidden rounded-xl border-2 bg-white shadow-lg"
           onClick={(e) => e.stopPropagation()} // Prevent toggling when clicking inside the dropdown
         >
           {options.map((option) => (
             <div
               role="option"
               key={option.value}
-              className={`dark:hover:bg-darkbg px-4 py-2 hover:bg-gray-200 ${optionClassName}`}
+              className={`dark:hover:bg-darkbg px-4 py-2 hover:bg-gray-100 ${optionClassName}`}
               onClick={() => handleSelect(option.value)}
             >
               {option.text || option.value}

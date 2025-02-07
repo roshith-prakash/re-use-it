@@ -32,6 +32,7 @@ import TooltipComponent from "./Components/TooltipComponent";
 import ToggleComponent from "./Components/ToggleComponent";
 import DrawerComponent from "./Components/DrawerComponent";
 import AlertModalComponent from "./Components/AlertModalComponent";
+import AlertComponent from "./Components/AlertComponent";
 // --------------------------------------------------------------------------------
 import MinutesToRead from "./Snippets/MinutesToRead";
 import UseDebounceHook from "./Snippets/UseDebounceHook";
@@ -85,6 +86,7 @@ export {
   ToggleComponent,
   DrawerComponent,
   AlertModalComponent,
+  AlertComponent,
   //-----------------------------------------------
   MinutesToRead,
   UseDebounceHook,

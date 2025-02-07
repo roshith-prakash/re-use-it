@@ -25,6 +25,7 @@ import Tooltip from "./Tooltip";
 import Toggle from "./Toggle";
 import Drawer from "./Drawer";
 import AlertModal from "./AlertModal";
+import Alert from "./Alert";
 
 export {
   PrimaryButton,
@@ -54,4 +55,5 @@ export {
   Toggle,
   Drawer,
   AlertModal,
+  Alert,
 };
