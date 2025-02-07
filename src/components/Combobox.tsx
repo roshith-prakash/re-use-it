@@ -1,7 +1,8 @@
-import { useEffect, useRef, useState } from "react";
-import { IoIosArrowDown } from "react-icons/io";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { IoIosArrowDown, IoIosSearch } from "react-icons/io";
+import useDebounce from "../utils/useDebounce";
 
-const Select = ({
+const Combobox = ({
   options,
   onChange,
   className,
@@ -14,14 +15,35 @@ const Select = ({
   optionClassName?: string;
   placeholder?: string;
 }) => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [search, setSearch] = useState("");
+  const debouncedSearch = useDebounce(search, 300);
   const [selected, setSelected] = useState<string | null>(null);
+
   const ref = useRef<HTMLDivElement>(null); // To detect clicks outside the component
 
+  // Memoize the filtered options for better performance
+  const displayOptions = useMemo(() => {
+    return options.filter((item) =>
+      item?.text?.toLowerCase()?.includes(debouncedSearch.toLowerCase()),
+    );
+  }, [debouncedSearch, options]);
+
   const handleSelect = (value: string) => {
-    setSelected(value);
-    onChange(value);
+    if (value !== selected) {
+      setSelected(value);
+      onChange(value);
+    }
+    setSearch("");
     setIsOpen(false); // Close the dropdown after selecting an option
+  };
+
+  const toggleDropdown = () => {
+    setIsOpen((prev) => !prev);
+  };
+
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearch(e.target.value);
   };
 
   // Close the dropdown if clicked outside the component
@@ -41,9 +63,9 @@ const Select = ({
   return (
     <div
       ref={ref} // Attach ref to the wrapper div
-      role="select"
+      role="combobox"
       className={`relative min-w-3xs cursor-pointer rounded-xl border-2 bg-white px-5 py-2 dark:bg-transparent ${className}`}
-      onClick={() => setIsOpen((prev) => !prev)}
+      onClick={toggleDropdown}
     >
       <div className="flex items-center justify-between gap-x-5">
         <p>
@@ -61,7 +83,16 @@ const Select = ({
           className="dark:bg-secondarydarkbg absolute top-full left-0 mt-2 w-full overflow-hidden rounded-xl border-2 bg-white shadow-lg"
           onClick={(e) => e.stopPropagation()} // Prevent toggling when clicking inside the dropdown
         >
-          {options.map((option) => (
+          <div className="border-darkbg/25 relative flex rounded-t-xl border-b-2 py-1">
+            <IoIosSearch className="absolute top-1/2 left-2 -translate-y-1/2 text-xl" />
+            <input
+              value={search}
+              onChange={handleSearchChange}
+              placeholder="Search..."
+              className="w-full py-1 pl-10 outline-none"
+            />
+          </div>
+          {displayOptions.map((option) => (
             <div
               role="option"
               key={option.value}
@@ -77,4 +108,4 @@ const Select = ({
   );
 };
 
-export default Select;
+export default Combobox;

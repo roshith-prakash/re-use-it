@@ -26,6 +26,7 @@ import Toggle from "./Toggle";
 import Drawer from "./Drawer";
 import AlertModal from "./AlertModal";
 import Alert from "./Alert";
+import Combobox from "./Combobox";
 
 export {
   PrimaryButton,
@@ -56,4 +57,5 @@ export {
   Drawer,
   AlertModal,
   Alert,
+  Combobox,
 };

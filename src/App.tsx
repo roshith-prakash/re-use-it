@@ -48,6 +48,7 @@ import {
   ImageCompression,
   AlertModalComponent,
   AlertComponent,
+  ComboboxComponent,
 } from "./pages";
 import { Footer, Navbar } from "./components";
 import SecurityHeaders from "./components/SecurityHeaders";
@@ -124,6 +125,7 @@ function App() {
               <Route path="drawer" element={<DrawerComponent />} />
               <Route path="alert" element={<AlertComponent />} />
               <Route path="alert-modal" element={<AlertModalComponent />} />
+              <Route path="combobox" element={<ComboboxComponent />} />
             </Route>
             {/* ----------------------------------------------------------------------------------------------------------------------------- */}
 

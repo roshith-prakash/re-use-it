@@ -33,6 +33,7 @@ import ToggleComponent from "./Components/ToggleComponent";
 import DrawerComponent from "./Components/DrawerComponent";
 import AlertModalComponent from "./Components/AlertModalComponent";
 import AlertComponent from "./Components/AlertComponent";
+import ComboboxComponent from "./Components/ComboboxComponent";
 // --------------------------------------------------------------------------------
 import MinutesToRead from "./Snippets/MinutesToRead";
 import UseDebounceHook from "./Snippets/UseDebounceHook";
@@ -87,6 +88,7 @@ export {
   DrawerComponent,
   AlertModalComponent,
   AlertComponent,
+  ComboboxComponent,
   //-----------------------------------------------
   MinutesToRead,
   UseDebounceHook,

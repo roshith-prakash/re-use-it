@@ -274,6 +274,15 @@ const Navbar = () => {
                   Checkbox
                 </button>
 
+                {/* Checkbox */}
+                <button
+                  onClick={() => handleSearch("/components/combobox")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Checkbox Input"
+                >
+                  Combobox
+                </button>
+
                 {/* Drawer */}
                 <button
                   onClick={() => handleSearch("/components/drawer")}

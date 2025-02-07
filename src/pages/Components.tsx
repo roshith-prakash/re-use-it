@@ -150,6 +150,16 @@ const ComponentsSidebar = () => {
           </li>
           <li>
             <NavLink
+              to="combobox"
+              className={({ isActive }) =>
+                `${isActive && "bg-sidebargrey dark:bg-white/10"} hover:bg-sidebargrey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+              }
+            >
+              Combobox
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
               to="drawer"
               className={({ isActive }) =>
                 `${isActive && "bg-sidebargrey dark:bg-white/10"} hover:bg-sidebargrey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
