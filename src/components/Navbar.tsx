@@ -274,11 +274,11 @@ const Navbar = () => {
                   Checkbox
                 </button>
 
-                {/* Checkbox */}
+                {/* Combobox */}
                 <button
                   onClick={() => handleSearch("/components/combobox")}
                   className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
-                  aria-label="Checkbox Input"
+                  aria-label="Combobox Input"
                 >
                   Combobox
                 </button>
@@ -335,6 +335,15 @@ const Navbar = () => {
                   aria-label="Navigation Bar"
                 >
                   Navbar
+                </button>
+
+                {/* OTP Input */}
+                <button
+                  onClick={() => handleSearch("/components/otp-input")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="OTP Input"
+                >
+                  OTP Input
                 </button>
 
                 {/* Password Input */}

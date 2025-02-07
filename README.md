@@ -19,6 +19,7 @@ This repository contains a collection of reusable and customizable React compone
    - Loading Placeholder  
    - Modal  
    - Navbar  
+   - OTP Input
    - Password Input  
    - Primary Button  
    - Progress Bar  
@@ -45,6 +46,7 @@ This repository contains a collection of reusable and customizable React compone
    - Axios Instance
    - Multer Configuration
    - Cloudinary SDK Configuration
+   - Image Compression
 
 
 ## Contributing to Re-use-it!  

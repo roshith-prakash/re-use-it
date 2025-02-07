@@ -35,6 +35,10 @@ import {
   TextAreaComponent,
   TooltipComponent,
   DrawerComponent,
+  AlertModalComponent,
+  AlertComponent,
+  ComboboxComponent,
+  OTPInputComponent,
   // -------------------------------------
   MinutesToRead,
   UseDebounceHook,
@@ -46,9 +50,6 @@ import {
   ShuffleArray,
   ToggleComponent,
   ImageCompression,
-  AlertModalComponent,
-  AlertComponent,
-  ComboboxComponent,
 } from "./pages";
 import { Footer, Navbar } from "./components";
 import SecurityHeaders from "./components/SecurityHeaders";
@@ -126,6 +127,7 @@ function App() {
               <Route path="alert" element={<AlertComponent />} />
               <Route path="alert-modal" element={<AlertModalComponent />} />
               <Route path="combobox" element={<ComboboxComponent />} />
+              <Route path="otp-input" element={<OTPInputComponent />} />
             </Route>
             {/* ----------------------------------------------------------------------------------------------------------------------------- */}
 

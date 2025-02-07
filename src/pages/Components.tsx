@@ -220,6 +220,16 @@ const ComponentsSidebar = () => {
           </li>
           <li>
             <NavLink
+              to="otp-input"
+              className={({ isActive }) =>
+                `${isActive && "bg-sidebargrey dark:bg-white/10"} hover:bg-sidebargrey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+              }
+            >
+              OTP Input
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
               to="password-input"
               className={({ isActive }) =>
                 `${isActive && "bg-sidebargrey dark:bg-white/10"} hover:bg-sidebargrey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`

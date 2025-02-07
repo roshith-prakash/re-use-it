@@ -27,6 +27,7 @@ import Drawer from "./Drawer";
 import AlertModal from "./AlertModal";
 import Alert from "./Alert";
 import Combobox from "./Combobox";
+import OTPInput from "./OTPInput";
 
 export {
   PrimaryButton,
@@ -58,4 +59,5 @@ export {
   AlertModal,
   Alert,
   Combobox,
+  OTPInput,
 };
