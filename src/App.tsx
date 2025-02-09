@@ -52,7 +52,7 @@ import {
   ImageCompression,
   ExpressTemplate,
 } from "./pages";
-import { Footer, Navbar } from "./components";
+import { Footer, Navbar } from "./usedComponents";
 import SecurityHeaders from "./components/SecurityHeaders";
 import { Analytics } from "@vercel/analytics/react";
 
