@@ -151,7 +151,7 @@ const Home = () => {
           </div>
           <div className="dark:bg-darkbg border-grey flex flex-col items-center gap-10 rounded-2xl border-1 bg-white p-6 shadow-2xl transition-all hover:scale-105 dark:border-t-[1px] dark:shadow-md dark:shadow-white">
             <h3 className="mb-4 text-xl font-bold">Timeline</h3>
-            <p>Timeline Component to show the chronlogical order of events.</p>
+            <p>Timeline Component to show the chronological order of events.</p>
 
             <Link to="/components/timeline">
               <PrimaryButton text="View Component"></PrimaryButton>
@@ -166,6 +166,31 @@ const Home = () => {
             <Link to="/code-snippets/use-debounce">
               <PrimaryButton text="View Code Snippet"></PrimaryButton>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ------------------------------------------------------------------- */}
+
+      {/* CLI Package Section */}
+      <section className="flex flex-col items-center gap-8 py-20 text-center">
+        <h2 className="px-4 text-4xl font-semibold">Re-use-it! CLI</h2>
+        <div className="mt-10 px-6">
+          <p className="px-6 md:text-lg md:leading-8 lg:max-w-6xl">
+            Want to speed up your development even more? Try the{" "}
+            <strong>Re-use-it CLI</strong>! The CLI package allows you to
+            quickly integrate components directly into your project. With a few
+            simple commands, you can bootstrap your components and start
+            building faster than ever before.
+          </p>
+          <div className="mt-14">
+            <a
+              href="https://www.npmjs.com/package/reuseit"
+              target="_blank"
+              className="bg-cta hover:bg-hovercta origin-bottom rounded-2xl px-6 py-3 text-white shadow-md transition-all hover:scale-105 md:text-lg"
+            >
+              Check it out on npm!
+            </a>
           </div>
         </div>
       </section>
