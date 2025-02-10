@@ -80,6 +80,7 @@ const App = () => {
 
 const DrawerComponent = () => {
   const [drawerOpen, setDrawerOpen] = useState<boolean>(false);
+  const [codeWindow, setCodeWindow] = useState<boolean>(false);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -109,10 +110,44 @@ const DrawerComponent = () => {
         />
       </div>
 
+      {/* Installation */}
+      <div>
+        <p className="text-2xl font-semibold">Installation</p>
+        <div className="my-10 flex gap-5">
+          <button
+            onClick={() => setCodeWindow(false)}
+            className={`${!codeWindow ? "bg-grey dark:bg-white/14" : "bg-transparent"} cursor-pointer rounded px-4 py-2 transition-all`}
+          >
+            CLI
+          </button>
+          <button
+            onClick={() => setCodeWindow(true)}
+            className={`${codeWindow ? "bg-grey dark:bg-white/14" : "bg-transparent"} cursor-pointer rounded px-4 py-2 transition-all`}
+          >
+            Manual
+          </button>
+        </div>
+        {codeWindow ? (
+          <div>
+            <h3 className="py-2 pl-1 italic">
+              Copy and save the component as Drawer.tsx
+            </h3>
+            <CodeBlock code={DrawerCode} language="tsx" />
+          </div>
+        ) : (
+          <div>
+            <h3 className="py-2 pl-1 italic">
+              Add the component using the Re-use-it! CLI.
+            </h3>
+            <CodeBlock code={`npx reuseit add Drawer`} language="bash" />
+          </div>
+        )}
+      </div>
+
       {/* Props */}
-      <div className="py-8">
-        <p className="text-lg font-medium underline">Props</p>
-        <ul className="list-disc pt-4 pl-8 leading-8">
+      <div className="py-14">
+        <p className="text-2xl font-semibold">Props</p>
+        <ul className="mt-8 list-disc py-2 pl-8 leading-8">
           <li>
             {" "}
             <b>isOpen ( boolean , required):</b> Boolean state which specifies
@@ -141,9 +176,8 @@ const DrawerComponent = () => {
         </ul>
       </div>
 
-      <h3>Drawer.tsx</h3>
-      <CodeBlock code={DrawerCode} language="tsx" />
-
+      {/* Usage */}
+      <p className="text-2xl font-semibold">Usage</p>
       <h3 className="mt-8 py-2 pl-1 italic">App.tsx</h3>
       <CodeBlock code={usingCode} language="tsx" />
     </div>

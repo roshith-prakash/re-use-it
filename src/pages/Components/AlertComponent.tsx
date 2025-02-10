@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { CodeBlock, Alert } from "../../components";
 import { RxDoubleArrowRight } from "react-icons/rx";
 
@@ -100,12 +100,14 @@ const App = () => {
 export default App;`;
 
 const AlertComponent = () => {
+  const [codeWindow, setCodeWindow] = useState<boolean>(false);
+
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
   useEffect(() => {
-    document.title = "Styled Alert Component | Re-Use-it!";
+    document.title = "Alert | Re-Use-it!";
   }, []);
 
   return (
@@ -142,10 +144,44 @@ const AlertComponent = () => {
         </Alert>
       </div>
 
+      {/* Installation */}
+      <div>
+        <p className="text-2xl font-semibold">Installation</p>
+        <div className="my-10 flex gap-5">
+          <button
+            onClick={() => setCodeWindow(false)}
+            className={`${!codeWindow ? "bg-grey dark:bg-white/14" : "bg-transparent"} cursor-pointer rounded px-4 py-2 transition-all`}
+          >
+            CLI
+          </button>
+          <button
+            onClick={() => setCodeWindow(true)}
+            className={`${codeWindow ? "bg-grey dark:bg-white/14" : "bg-transparent"} cursor-pointer rounded px-4 py-2 transition-all`}
+          >
+            Manual
+          </button>
+        </div>
+        {codeWindow ? (
+          <div>
+            <h3 className="py-2 pl-1 italic">
+              Copy and save the component as Alert.tsx
+            </h3>
+            <CodeBlock code={AlertCode} language="tsx" />
+          </div>
+        ) : (
+          <div>
+            <h3 className="py-2 pl-1 italic">
+              Add the component using the Re-use-it! CLI.
+            </h3>
+            <CodeBlock code={`npx reuseit add Alert`} language="bash" />
+          </div>
+        )}
+      </div>
+
       {/* Props */}
-      <div className="py-8">
-        <p className="text-lg font-medium underline">Props</p>
-        <ul className="list-disc pt-4 pl-8 leading-8">
+      <div className="py-14">
+        <p className="text-2xl font-semibold">Props</p>
+        <ul className="mt-8 list-disc py-2 pl-8 leading-8">
           <li>
             <b>type (string, required):</b> The type of alert to display.
             Options are <code>info</code>, <code>success</code>,{" "}
@@ -173,61 +209,8 @@ const AlertComponent = () => {
         </ul>
       </div>
 
-      {/* Instructions */}
-      {/* <div className="py-8">
-        <p className="text-lg font-medium underline">Instructions</p>
-        <ol className="list-decimal space-y-2 pt-4 pl-6">
-          <li>
-            Copy the <code>Alert</code> component code and paste it into a file
-            named <code>Alert.tsx</code> in your project.
-          </li>
-          <li>
-            Ensure you have the required dependency <code>react-icons</code>{" "}
-            installed in your project. You can install it using:
-            <code className="rounded bg-gray-100 px-1 py-0.5">
-              npm install react-icons
-            </code>
-            .
-          </li>
-          <li>
-            Use the <code>Alert</code> component in your project by passing the
-            following props:
-            <ul className="list-disc space-y-1 pl-6">
-              <li>
-                <code>type</code>: Specify the type of alert (<code>info</code>,{" "}
-                <code>success</code>, <code>warning</code>, <code>error</code>,
-                or <code>custom</code>).
-              </li>
-              <li>
-                <code>title</code>: Provide an optional title for the alert.
-              </li>
-              <li>
-                <code>message</code>: Add an optional message to notify users.
-              </li>
-              <li>
-                <code>children</code>: If <code>type</code> is set to{" "}
-                <code>custom</code>, pass custom content via this prop.
-              </li>
-              <li>
-                <code>className</code>: Add custom styles using additional class
-                names.
-              </li>
-            </ul>
-          </li>
-          <li>
-            Customize the component by modifying the <code>alertTypes</code>{" "}
-            object to adjust colors or icons as per your project requirements.
-          </li>
-          <li>
-            To maintain consistency, ensure any additional CSS classes or
-            styling aligns with your project's design system.
-          </li>
-        </ol>
-      </div> */}
-
-      <h3 className="mt-8 py-2 pl-1 italic">Alert.tsx</h3>
-      <CodeBlock code={AlertCode} language="tsx" />
-
+      {/* Usage */}
+      <p className="text-2xl font-semibold">Usage</p>
       <h3 className="mt-8 py-2 pl-1 italic">App.tsx</h3>
       <CodeBlock code={usingCode} language="tsx" />
     </div>

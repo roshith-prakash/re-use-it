@@ -1,6 +1,7 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { CodeBlock } from "../../components";
 import { Card } from "../../components";
+import { Link } from "react-router-dom";
 
 const CardCode = `import { MouseEventHandler, ReactNode } from "react";
 import PrimaryButton from "./PrimaryButton";
@@ -76,6 +77,8 @@ const App = () => {
 `;
 
 const CardComponent = () => {
+  const [codeWindow, setCodeWindow] = useState<boolean>(false);
+
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
@@ -103,9 +106,64 @@ const CardComponent = () => {
         Note : Card uses Primary & Secondary Button Components.
       </p>
 
-      <div className="py-8">
-        <p className="text-lg font-medium underline">Props</p>
-        <ul className="list-disc pt-4 pl-8 leading-8">
+      {/* Installation */}
+      <div>
+        <p className="text-2xl font-semibold">Installation</p>
+        <div className="my-10 flex gap-5">
+          <button
+            onClick={() => setCodeWindow(false)}
+            className={`${!codeWindow ? "bg-grey dark:bg-white/14" : "bg-transparent"} cursor-pointer rounded px-4 py-2 transition-all`}
+          >
+            CLI
+          </button>
+          <button
+            onClick={() => setCodeWindow(true)}
+            className={`${codeWindow ? "bg-grey dark:bg-white/14" : "bg-transparent"} cursor-pointer rounded px-4 py-2 transition-all`}
+          >
+            Manual
+          </button>
+        </div>
+        {codeWindow ? (
+          <div>
+            <p>
+              Please add the following components as well :{" "}
+              <Link
+                className="mx-2 text-blue-600 dark:text-blue-400"
+                to="/components/primary-button"
+              >
+                Primary Button
+              </Link>
+              <Link
+                className="text-blue-600 dark:text-blue-400"
+                to="/components/secondary-button"
+              >
+                Secondary Button
+              </Link>
+            </p>
+            <h3 className="py-2 pl-1 italic">
+              Copy and save the component as Card.tsx
+            </h3>
+            <CodeBlock code={CardCode} language="tsx" />
+          </div>
+        ) : (
+          <div>
+            <h3 className="py-2 pl-1 italic">
+              Add the components using the Re-use-it! CLI.
+            </h3>
+            <CodeBlock
+              code={`npx reuseit add PrimaryButton
+npx reuseit add SecondaryButton
+npx reuseit add Card`}
+              language="bash"
+            />
+          </div>
+        )}
+      </div>
+
+      {/* Props */}
+      <div className="py-14">
+        <p className="text-2xl font-semibold">Props</p>
+        <ul className="mt-8 list-disc py-2 pl-8 leading-8">
           <li>
             {" "}
             <b>primaryButtonText (string or element, required):</b> Text to be
@@ -159,9 +217,8 @@ const CardComponent = () => {
         </ul>
       </div>
 
-      <h3>Card.tsx</h3>
-      <CodeBlock code={CardCode} language="tsx" />
-
+      {/* Usage */}
+      <p className="text-2xl font-semibold">Usage</p>
       <h3 className="mt-8 py-2 pl-1 italic">App.tsx</h3>
       <CodeBlock code={usingCode} language="tsx" />
     </div>

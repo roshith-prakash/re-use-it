@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { CodeBlock, SecondaryButton } from "../../components";
 
 const SecondaryButtonCode = `import { MouseEventHandler, ReactNode } from "react";
@@ -39,6 +39,8 @@ const App = () => {
 }`;
 
 const SecondaryButtonCodeComponent = () => {
+  const [codeWindow, setCodeWindow] = useState<boolean>(false);
+
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
@@ -62,9 +64,47 @@ const SecondaryButtonCodeComponent = () => {
         />
       </div>
 
-      <div className="py-8">
-        <p className="text-lg font-medium underline">Props</p>
-        <ul className="list-disc pt-4 pl-8 leading-8">
+      {/* Installation */}
+      <div>
+        <p className="mt-10 text-2xl font-semibold">Installation</p>
+        <div className="my-10 flex gap-5">
+          <button
+            onClick={() => setCodeWindow(false)}
+            className={`${!codeWindow ? "bg-grey dark:bg-white/14" : "bg-transparent"} cursor-pointer rounded px-4 py-2 transition-all`}
+          >
+            CLI
+          </button>
+          <button
+            onClick={() => setCodeWindow(true)}
+            className={`${codeWindow ? "bg-grey dark:bg-white/14" : "bg-transparent"} cursor-pointer rounded px-4 py-2 transition-all`}
+          >
+            Manual
+          </button>
+        </div>
+        {codeWindow ? (
+          <div>
+            <h3 className="py-2 pl-1 italic">
+              Copy and save the component as SecondaryButton.tsx
+            </h3>
+            <CodeBlock code={SecondaryButtonCode} language="tsx" />
+          </div>
+        ) : (
+          <div>
+            <h3 className="py-2 pl-1 italic">
+              Add the component using the Re-use-it! CLI.
+            </h3>
+            <CodeBlock
+              code={`npx reuseit add SecondaryButton`}
+              language="bash"
+            />
+          </div>
+        )}
+      </div>
+
+      {/* Props */}
+      <div className="py-14">
+        <p className="text-2xl font-semibold">Props</p>
+        <ul className="mt-8 list-disc py-2 pl-8 leading-8">
           <li>
             {" "}
             <b>text (string or element, required):</b> The text displayed on the

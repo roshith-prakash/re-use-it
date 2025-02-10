@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { IoIosArrowDown, IoIosSearch } from "react-icons/io";
-import useDebounce from "../utils/useDebounce";
+import useDebounce from "./useDebounce";
 
 const Combobox = ({
   options,

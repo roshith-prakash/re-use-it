@@ -40,10 +40,10 @@ const GettingStarted = () => {
           <li>
             Install the required packages. Check{" "}
             <Link
-              to="/components/package-json"
+              to="/components/packages"
               className="text-blue-600 dark:text-blue-400"
             >
-              Package.json
+              Packages
             </Link>{" "}
             for detailed instructions.
           </li>
@@ -68,6 +68,10 @@ const GettingStarted = () => {
             </Link>
             .
           </li>
+
+          <li>Use the re-use-it CLI to download the required component.</li>
+
+          <p className="font-semibold text-lg py-5">OR</p>
 
           <li>Choose the component you need and copy its code.</li>
           <li>

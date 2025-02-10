@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { CodeBlock } from "../../components";
 
 const SecurityHeaderCode = `import { Helmet } from "react-helmet-async";
@@ -55,6 +55,8 @@ const App = () => {
 }`;
 
 const SecurityHeadersCodeComponent = () => {
+  const [codeWindow, setCodeWindow] = useState<boolean>(false);
+
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
@@ -71,10 +73,46 @@ const SecurityHeadersCodeComponent = () => {
         Note : Must wrap App with HelmetProvider Component of React Helmet.
       </h3>
 
-      <h3 className="py-10 pl-1 italic">SecurityHeaders.tsx</h3>
-      <CodeBlock code={SecurityHeaderCode} language="tsx" />
+      {/* Installation */}
+      <div>
+        <p className="mt-10 text-2xl font-semibold">Installation</p>
+        <div className="my-10 flex gap-5">
+          <button
+            onClick={() => setCodeWindow(false)}
+            className={`${!codeWindow ? "bg-grey dark:bg-white/14" : "bg-transparent"} cursor-pointer rounded px-4 py-2 transition-all`}
+          >
+            CLI
+          </button>
+          <button
+            onClick={() => setCodeWindow(true)}
+            className={`${codeWindow ? "bg-grey dark:bg-white/14" : "bg-transparent"} cursor-pointer rounded px-4 py-2 transition-all`}
+          >
+            Manual
+          </button>
+        </div>
+        {codeWindow ? (
+          <div>
+            <h3 className="py-2 pl-1 italic">
+              Copy and save the component as Input.tsx
+            </h3>
+            <CodeBlock code={SecurityHeaderCode} language="tsx" />
+          </div>
+        ) : (
+          <div>
+            <h3 className="py-2 pl-1 italic">
+              Add the component using the Re-use-it! CLI.
+            </h3>
+            <CodeBlock
+              code={`npx reuseit add SecurityHeaders`}
+              language="bash"
+            />
+          </div>
+        )}
+      </div>
 
-      <h3 className="mt-8 pl-1 italic">App.tsx</h3>
+      {/* Usage */}
+      <p className="mt-14 text-2xl font-semibold">Usage</p>
+      <h3 className="mt-8 py-2 pl-1 italic">App.tsx</h3>
       <CodeBlock code={usingCode} language="tsx" />
     </div>
   );

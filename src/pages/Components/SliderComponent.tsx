@@ -51,7 +51,6 @@ const App = () => {
         </>
   )
 }
-
 `;
 
 const SliderComponent = () => {
@@ -64,6 +63,8 @@ const SliderComponent = () => {
   useEffect(() => {
     document.title = "Slider | Re-Use-it!";
   }, []);
+
+  const [codeWindow, setCodeWindow] = useState<boolean>(false);
 
   return (
     <div className="dark:bg-darkbg min-h-screen p-10 dark:text-white">
@@ -84,37 +85,66 @@ const SliderComponent = () => {
         />
       </div>
 
-      <div className="py-8">
-        <p className="text-lg font-medium underline">Props</p>
-        <ul className="list-disc pt-4 pl-8 leading-8">
+      {/* Installation Section */}
+      <div>
+        <p className="mt-10 text-2xl font-semibold">Installation</p>
+        <div className="my-10 flex gap-5">
+          <button
+            onClick={() => setCodeWindow(false)}
+            className={`${!codeWindow ? "bg-grey dark:bg-white/14" : "bg-transparent"} cursor-pointer rounded px-4 py-2 transition-all`}
+          >
+            CLI
+          </button>
+          <button
+            onClick={() => setCodeWindow(true)}
+            className={`${codeWindow ? "bg-grey dark:bg-white/14" : "bg-transparent"} cursor-pointer rounded px-4 py-2 transition-all`}
+          >
+            Manual
+          </button>
+        </div>
+        {codeWindow ? (
+          <div>
+            <h3 className="py-2 pl-1 italic">
+              Copy and save the component as Slider.tsx
+            </h3>
+            <CodeBlock code={SliderCode} language="tsx" />
+          </div>
+        ) : (
+          <div>
+            <h3 className="py-2 pl-1 italic">
+              Add the component using the Re-use-it! CLI.
+            </h3>
+            <CodeBlock code={`npx reuseit add Slider`} language="bash" />
+          </div>
+        )}
+      </div>
+
+      {/* Props Documentation */}
+      <div className="py-14">
+        <p className="text-2xl font-semibold">Props</p>
+        <ul className="mt-8 list-disc py-2 pl-8 leading-8">
           <li>
-            {" "}
-            <b>value ( number , required ):</b> The current value of the slider.{" "}
+            <b>value (number, required):</b> The current value of the slider.
           </li>
           <li>
-            {" "}
-            <b>min ( number , required ):</b> The minimum value of the slider.{" "}
+            <b>min (number, required):</b> The minimum value of the slider.
           </li>
           <li>
-            {" "}
-            <b>max ( number , required ):</b> The maximum value of the slider.{" "}
+            <b>max (number, required):</b> The maximum value of the slider.
           </li>
           <li>
-            {" "}
-            <b>changeValueBySlider ( function , required ):</b> The function to
-            be executed when the slider is interacted with.{" "}
+            <b>changeValueBySlider (function, required):</b> The function to be
+            executed when the slider is interacted with.
           </li>
           <li>
-            {" "}
             <b>className (string, optional):</b> To override the styles for the
             slider.
           </li>
         </ul>
       </div>
 
-      <h3>Slider.tsx</h3>
-      <CodeBlock code={SliderCode} language="tsx" />
-
+      {/* Usage Section */}
+      <p className="text-2xl font-semibold">Usage</p>
       <h3 className="mt-8 py-2 pl-1 italic">App.tsx</h3>
       <CodeBlock code={usingCode} language="tsx" />
     </div>
