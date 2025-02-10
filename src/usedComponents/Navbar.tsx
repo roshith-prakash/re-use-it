@@ -2,10 +2,11 @@ import { useState } from "react";
 import { RxCross2, RxHamburgerMenu } from "react-icons/rx";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { ContextValue, useDarkMode } from "../context/DarkModeContext";
-import { IoMoon } from "react-icons/io5";
+import { IoGlobeOutline, IoMoon } from "react-icons/io5";
 import { IoSunnySharp } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa6";
 import { Accordion } from "../components";
+import { RiNpmjsLine } from "react-icons/ri";
 
 const Navbar = () => {
   const { isDarkMode, toggleDarkMode } = useDarkMode() as ContextValue;
@@ -65,6 +66,15 @@ const Navbar = () => {
 
         {/* Dark Mode Toggle */}
         <div className="hidden gap-6 lg:flex">
+          <a
+            href="https://www.npmjs.com/package/reuseit"
+            target="_blank"
+            rel="noreferrer"
+            className=""
+            aria-label="Contribute on GitHub"
+          >
+            <RiNpmjsLine className="hover:text-cta dark:hover:text-darkmodeCTA text-2xl" />
+          </a>
           <a
             href="https://github.com/roshith-prakash/re-use-it"
             target="_blank"
@@ -575,6 +585,36 @@ const Navbar = () => {
                 </button>
               </div>
             </Accordion>
+
+            <div className="flex justify-center gap-5 py-10 text-4xl">
+              <a
+                href="https://www.npmjs.com/package/reuseit"
+                target="_blank"
+                rel="noreferrer"
+                className=""
+                aria-label="Contribute on GitHub"
+              >
+                <RiNpmjsLine className="hover:text-cta dark:hover:text-darkmodeCTA" />
+              </a>
+              <a
+                href="https://github.com/roshith-prakash/re-use-it"
+                target="_blank"
+                rel="noreferrer"
+                className=""
+                aria-label="Contribute on GitHub"
+              >
+                <FaGithub className="hover:text-cta dark:hover:text-darkmodeCTA" />
+              </a>
+              <a
+                href="https://roshithprakash.vercel.app"
+                target="_blank"
+                rel="noreferrer"
+                className=""
+                aria-label="Contribute on GitHub"
+              >
+                <IoGlobeOutline className="hover:text-cta dark:hover:text-darkmodeCTA" />
+              </a>
+            </div>
 
             {/* Narcissism */}
             {/* <p className="text-center text-sm">Developed by Roshith Prakash.</p> */}
