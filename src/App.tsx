@@ -51,6 +51,8 @@ import {
   ToggleComponent,
   ImageCompression,
   ExpressTemplate,
+  CapitalizeFirstLetters,
+  BreakURLIntoPaths,
 } from "./pages";
 import { Footer, Navbar } from "./usedComponents";
 import SecurityHeaders from "./components/SecurityHeaders";
@@ -146,6 +148,14 @@ function App() {
               <Route path="shuffle-array" element={<ShuffleArray />} />
               <Route path="image-compression" element={<ImageCompression />} />
               <Route path="express-template" element={<ExpressTemplate />} />
+              <Route
+                path="capitalize-first-letters"
+                element={<CapitalizeFirstLetters />}
+              />
+              <Route
+                path="break-url-into-paths"
+                element={<BreakURLIntoPaths />}
+              />
             </Route>
 
             {/* ----------------------------------------------------------------------------------------------------------------------------- */}

@@ -46,6 +46,8 @@ import Cloudinary from "./Snippets/Cloudinary";
 import ShuffleArray from "./Snippets/ShuffleArray";
 import ImageCompression from "./Snippets/ImageCompression";
 import ExpressTemplate from "./Snippets/ExpressTemplate";
+import CapitalizeFirstLetters from "./Snippets/CapitalizeFirstLetters";
+import BreakURLIntoPaths from "./Snippets/BreakUrlIntoPaths";
 // --------------------------------------------------------------------------------
 import TailwindConfigComponent from "./TailwindConfigComponent";
 import DarkModeFile from "./DarkModeFile";
@@ -103,4 +105,6 @@ export {
   ShuffleArray,
   ImageCompression,
   ExpressTemplate,
+  CapitalizeFirstLetters,
+  BreakURLIntoPaths
 };

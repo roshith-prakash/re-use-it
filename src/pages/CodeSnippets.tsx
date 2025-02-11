@@ -110,6 +110,28 @@ const SnippetsSidebar = () => {
               Image Compression
             </NavLink>
           </li>
+
+          <li>
+            <NavLink
+              to="capitalize-first-letters"
+              className={({ isActive }) =>
+                `${isActive && "bg-sidebargrey dark:bg-white/10"} hover:bg-sidebargrey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+              }
+            >
+              Capitalize First Letters
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink
+              to="break-url-into-paths"
+              className={({ isActive }) =>
+                `${isActive && "bg-sidebargrey dark:bg-white/10"} hover:bg-sidebargrey/75 block rounded-lg px-4 py-2 dark:hover:bg-white/5`
+              }
+            >
+              Break URL Into Paths
+            </NavLink>
+          </li>
         </ul>
       </div>
     </div>

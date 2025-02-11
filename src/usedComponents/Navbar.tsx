@@ -583,6 +583,28 @@ const Navbar = () => {
                 >
                   Image compression
                 </button>
+
+                {/* Capitalize First Letters */}
+                <button
+                  onClick={() =>
+                    handleSearch("/code-snippets/capitalize-first-letters")
+                  }
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Capitalize First Letters"
+                >
+                  Capitalize First Letters
+                </button>
+
+                {/* Break URL Into Paths */}
+                <button
+                  onClick={() =>
+                    handleSearch("/code-snippets/break-url-into-paths")
+                  }
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Break URL Into Paths"
+                >
+                  Break URL Into Paths
+                </button>
               </div>
             </Accordion>
 
