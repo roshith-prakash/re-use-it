@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { CodeBlock } from "../../components";
 
-const FooterCode = `import { ContextValue, useDarkMode } from "../context/DarkModeContext";
+const FooterCode = `//Please check import paths
+import { ContextValue, useDarkMode } from "../context/DarkModeContext";
 
 const Footer = () => {
   const { isDarkMode } = useDarkMode() as ContextValue;

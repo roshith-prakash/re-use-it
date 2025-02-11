@@ -64,7 +64,7 @@ const UseDebounceHook = () => {
       <h3 className="mt-5 py-2 pl-1 italic">
         Add the snippet using the Re-use-it! CLI.
       </h3>
-      <CodeBlock code={`npx reuseit add Tooltip`} language="bash" />
+      <CodeBlock code={`npx reuseit add-snippet useDebounce`} language="bash" />
 
       <p className="py-10 text-lg font-semibold">OR</p>
 

@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { RxCross2, RxHamburgerMenu } from "react-icons/rx";
 import { Link, useNavigate } from "react-router-dom";
-import { ContextValue, useDarkMode } from "../context/DarkModeContext";
 import { IoMoon } from "react-icons/io5";
 import { IoSunnySharp } from "react-icons/io5";
+// Please check import paths
+import { ContextValue, useDarkMode } from "../context/DarkModeContext";
 
 const Navbar = () => {
   const { isDarkMode, toggleDarkMode } = useDarkMode() as ContextValue;
@@ -21,13 +22,13 @@ const Navbar = () => {
         className={`dark:bg-darkbg relative z-2 flex items-center justify-between bg-white px-10 py-3 font-sans shadow-xl dark:text-white dark:shadow-md dark:shadow-white/30`}
       >
         <Link to="/" aria-label="Home">
-            <img
-              src={
-                "https://res.cloudinary.com/do8rpl9l4/image/upload/v1736843158/logodark_gs3pnp.png"
-              }
-              alt="Logo"
-              className="h-12 cursor-pointer"
-            />        
+          <img
+            src={
+              "https://res.cloudinary.com/do8rpl9l4/image/upload/v1736843158/logodark_gs3pnp.png"
+            }
+            alt="Logo"
+            className="h-12 cursor-pointer"
+          />
         </Link>
 
         {/* LG screen links */}
@@ -39,7 +40,6 @@ const Navbar = () => {
             Home
           </Link>
         </div>
-
 
         {/* Theme change button */}
         <button
@@ -54,11 +54,9 @@ const Navbar = () => {
           )}
         </button>
 
-
-       {/* Open Drawer */}
+        {/* Open Drawer */}
         <div className="flex items-center gap-x-10 font-medium lg:hidden">
-          
-         {/* Toggle Light & Dark Mode */}
+          {/* Toggle Light & Dark Mode */}
           <button
             className="cursor-pointer"
             aria-label="Change Theme"
@@ -79,7 +77,7 @@ const Navbar = () => {
 
         {/* Drawer Menu */}
         <div
-          className={`dark:bg-darkbg fixed top-0 right-0 z-50 h-screen overflow-y-auto scroller w-full bg-white pb-6 text-center text-xl shadow-md md:text-lg ${
+          className={`dark:bg-darkbg scroller fixed top-0 right-0 z-50 h-screen w-full overflow-y-auto bg-white pb-6 text-center text-xl shadow-md md:text-lg ${
             open ? "translate-x-0" : "translate-x-[100%]"
           } transition-all duration-500`}
           role="dialog"
@@ -88,11 +86,7 @@ const Navbar = () => {
         >
           <div className="mb-14 flex items-center justify-between px-10 pt-3.5 lg:px-10">
             <button onClick={() => handleSearch("/")} aria-label="Home">
-                <img
-                  src="Your Logo"
-                  alt="Logo"
-                  className="h-12 cursor-pointer"
-                />  
+              <img src="Your Logo" alt="Logo" className="h-12 cursor-pointer" />
             </button>
             <RxCross2
               onClick={() => setOpen(false)}
@@ -102,7 +96,6 @@ const Navbar = () => {
           </div>
 
           <div className="mt-20 flex flex-col items-center justify-between gap-y-12 px-8 text-xl font-medium">
-            
             {/*  Add your links here */}
             <button
               onClick={() => handleSearch("/")}
@@ -112,13 +105,10 @@ const Navbar = () => {
             >
               Home
             </button>
-
           </div>
 
-         {/* Footer Text   */}
-          <div className="absolute bottom-24 left-1/2 w-full -translate-x-1/2 pl-1 text-sm lg:bottom-10">
-            
-          </div>
+          {/* Footer Text   */}
+          <div className="absolute bottom-24 left-1/2 w-full -translate-x-1/2 pl-1 text-sm lg:bottom-10"></div>
         </div>
       </nav>
     </>

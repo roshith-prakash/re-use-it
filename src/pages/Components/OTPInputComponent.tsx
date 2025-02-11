@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { CodeBlock, OTPInput } from "../../components";
 
-const InputCode = `import React from "react";
+const InputCode = `import { ClipboardEvent, KeyboardEvent } from "react";
 
 const OTPInput = ({
   length = 4,
@@ -27,10 +27,7 @@ const OTPInput = ({
     }
   };
 
-  const handleKeyDown = (
-    e: React.KeyboardEvent<HTMLInputElement>,
-    index: number,
-  ) => {
+  const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>, index: number) => {
     if (e.key === "Backspace") {
       const updatedOtp = value.split("");
       if (value[index]) {
@@ -43,7 +40,7 @@ const OTPInput = ({
     }
   };
 
-  const handlePaste = (e: React.ClipboardEvent<HTMLInputElement>) => {
+  const handlePaste = (e: ClipboardEvent<HTMLInputElement>) => {
     e.preventDefault();
     const pasteData = e.clipboardData
       .getData("text")
@@ -76,7 +73,8 @@ const OTPInput = ({
   );
 };
 
-export default OTPInput;`;
+export default OTPInput;
+`;
 
 const usingCode = `import  OTPInput  from "./OTPInput";
 import { useState } from "react"

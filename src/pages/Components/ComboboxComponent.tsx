@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 const ComboboxCode = `import { useEffect, useMemo, useRef, useState } from "react";
 import { IoIosArrowDown, IoIosSearch } from "react-icons/io";
+// Please check import paths
 import useDebounce from "/useDebounce";
 
 const Combobox = ({
@@ -211,7 +212,7 @@ const ComboboxComponent = () => {
               Add the component using the Re-use-it! CLI.
             </h3>
             <CodeBlock
-              code={`npx reuseit add useDebounce
+              code={`npx reuseit add-snippet useDebounce
 npx reuseit add Combobox`}
               language="bash"
             />
