@@ -29,6 +29,18 @@ const FormatNumber = () => {
         format.
       </h2>
 
+      <div className="mt-10">
+        <h3 className="py-2 pl-1 italic">
+          Add the snippet using the Re-use-it! CLI.
+        </h3>
+        <CodeBlock
+          code={`npx reuseit add-snippet formatNumber`}
+          language="bash"
+        />
+      </div>
+
+      <p className="py-10 text-lg font-semibold">OR</p>
+
       <h3 className="mt-10 py-5 pl-1 italic">formatNumber.ts</h3>
       <CodeBlock code={formatNumberCode} language="typescript" />
 

@@ -133,6 +133,16 @@ npm i -D @types/cors @types/express @types/node ts-node typescript`}
         language="bash"
       />
 
+      <div className="mt-10">
+        <h3 className="py-2 pl-1 italic">
+          Add the index file snippet using the Re-use-it! CLI.
+        </h3>
+        <CodeBlock
+          code={`npx reuseit add-snippet expressTemplate`}
+          language="bash"
+        />
+      </div>
+
       <h3 className="mt-10 py-5 pl-1 italic">index.ts</h3>
       <CodeBlock code={serverFile} language="typescript" />
 

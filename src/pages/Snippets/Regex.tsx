@@ -47,6 +47,18 @@ const Regex = () => {
     <div className="dark:bg-darkbg min-h-screen p-10 dark:text-white">
       <h1 className="text-4xl font-medium">Regex Functions</h1>
 
+      <div className="mt-10">
+        <h3 className="py-2 pl-1 italic">
+          Add the snippet using the Re-use-it! CLI.
+        </h3>
+        <CodeBlock
+          code={`npx reuseit add-snippet regexFunctions`}
+          language="bash"
+        />
+      </div>
+
+      <p className="py-10 text-lg font-semibold">OR</p>
+
       <h2 className="pt-14 pl-1 italic">isValidEmail.ts</h2>
       <h3 className="py-5">
         Check if the string entered is in a valid email format.

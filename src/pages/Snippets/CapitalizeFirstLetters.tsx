@@ -36,6 +36,18 @@ const CapitalizeFirstLetters = () => {
         Capitalizes the first letter of every word in the sentence.
       </h2>
 
+      <div className="mt-10">
+        <h3 className="py-2 pl-1 italic">
+          Add the snippet using the Re-use-it! CLI.
+        </h3>
+        <CodeBlock
+          code={`npx reuseit add-snippet capitalizeFirstLetters`}
+          language="bash"
+        />
+      </div>
+
+      <p className="py-10 text-lg font-semibold">OR</p>
+
       <h3 className="mt-10 py-5 pl-1 italic">capitalizeFirstLetters.ts</h3>
       <CodeBlock code={snippetCode} language="typescript" />
 

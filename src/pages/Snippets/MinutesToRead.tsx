@@ -38,6 +38,18 @@ const MinutesToRead = () => {
       <h3 className="mt-10 py-5 pl-1 italic">getMinsToRead.tsx</h3>
       <CodeBlock code={minutesToReadCode} language="typescript" />
 
+      <div className="mt-10">
+        <h3 className="py-2 pl-1 italic">
+          Add the snippet using the Re-use-it! CLI.
+        </h3>
+        <CodeBlock
+          code={`npx reuseit add-snippet getminstoread`}
+          language="bash"
+        />
+      </div>
+
+      <p className="py-10 text-lg font-semibold">OR</p>
+
       <h3 className="mt-10 py-5 pl-1 italic">App.tsx</h3>
       <CodeBlock code={usingCode} language="tsx" />
     </div>

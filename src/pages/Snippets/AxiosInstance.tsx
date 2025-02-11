@@ -46,6 +46,18 @@ const AxiosInstance = () => {
       <h3 className="py-5 pl-1">Install Axios</h3>
       <CodeBlock code={`npm i axios`} language="bash" />
 
+      <div className="mt-10">
+        <h3 className="py-2 pl-1 italic">
+          Add the snippet using the Re-use-it! CLI.
+        </h3>
+        <CodeBlock
+          code={`npx reuseit add-snippet axiosInstance`}
+          language="bash"
+        />
+      </div>
+
+      <p className="py-10 text-lg font-semibold">OR</p>
+
       <h3 className="mt-10 py-5 pl-1 italic">axiosInstance.ts</h3>
       <CodeBlock code={axiosCode} language="typescript" />
 

@@ -36,6 +36,18 @@ const ShuffleArray = () => {
       <h1 className="text-4xl font-medium">Shuffle Array</h1>
       <h2 className="py-5">Shuffles elements inside an array.</h2>
 
+      <div className="mt-10">
+        <h3 className="py-2 pl-1 italic">
+          Add the snippet using the Re-use-it! CLI.
+        </h3>
+        <CodeBlock
+          code={`npx reuseit add-snippet shuffleArray`}
+          language="bash"
+        />
+      </div>
+
+      <p className="py-10 text-lg font-semibold">OR</p>
+
       <h3 className="mt-10 py-5 pl-1 italic">shuffleArray.ts</h3>
       <CodeBlock code={shuffleCode} language="typescript" />
 
