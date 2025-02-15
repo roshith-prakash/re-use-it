@@ -293,6 +293,15 @@ const Navbar = () => {
                   Combobox
                 </button>
 
+                {/* Date Picker */}
+                <button
+                  onClick={() => handleSearch("/components/date-picker")}
+                  className="hover:text-cta dark:hover:text-darkmodeCTA w-fit cursor-pointer transition-all"
+                  aria-label="Date Picker"
+                >
+                  Date Picker
+                </button>
+
                 {/* Drawer */}
                 <button
                   onClick={() => handleSearch("/components/drawer")}
