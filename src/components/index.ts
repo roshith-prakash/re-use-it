@@ -28,6 +28,7 @@ import AlertModal from "./AlertModal";
 import Alert from "./Alert";
 import Combobox from "./Combobox";
 import OTPInput from "./OTPInput";
+import DatePicker from "./DatePicker";
 
 export {
   PrimaryButton,
@@ -60,4 +61,5 @@ export {
   Alert,
   Combobox,
   OTPInput,
+  DatePicker
 };

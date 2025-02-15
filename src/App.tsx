@@ -53,6 +53,7 @@ import {
   ExpressTemplate,
   CapitalizeFirstLetters,
   BreakURLIntoPaths,
+  DatePickerComponent,
 } from "./pages";
 import { Footer, Navbar } from "./usedComponents";
 import SecurityHeaders from "./components/SecurityHeaders";
@@ -131,6 +132,7 @@ function App() {
               <Route path="alert-modal" element={<AlertModalComponent />} />
               <Route path="combobox" element={<ComboboxComponent />} />
               <Route path="otp-input" element={<OTPInputComponent />} />
+              <Route path="date-picker" element={<DatePickerComponent />} />
             </Route>
             {/* ----------------------------------------------------------------------------------------------------------------------------- */}
 

@@ -35,6 +35,7 @@ import AlertModalComponent from "./Components/AlertModalComponent";
 import AlertComponent from "./Components/AlertComponent";
 import ComboboxComponent from "./Components/ComboboxComponent";
 import OTPInputComponent from "./Components/OTPInputComponent";
+import DatePickerComponent from "./Components/DatePickerComponent";
 // --------------------------------------------------------------------------------
 import MinutesToRead from "./Snippets/MinutesToRead";
 import UseDebounceHook from "./Snippets/UseDebounceHook";
@@ -94,6 +95,7 @@ export {
   AlertComponent,
   ComboboxComponent,
   OTPInputComponent,
+  DatePickerComponent,
   //-----------------------------------------------
   MinutesToRead,
   UseDebounceHook,
