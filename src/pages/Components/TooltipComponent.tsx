@@ -5,6 +5,7 @@ const TooltipCode = `import { useState, ReactNode } from "react";
 
 interface TooltipProps {
   text: string;
+  displayed?: boolean;
   children: ReactNode;
   className?: string;
   position?: "top" | "bottom" | "left" | "right";
@@ -12,6 +13,7 @@ interface TooltipProps {
 
 const Tooltip = ({
   text,
+  displayed = true,
   children,
   className,
   position = "bottom",
@@ -33,11 +35,17 @@ const Tooltip = ({
     >
       {children}
 
-      <div
-        className={\`absolute z-10 rounded-lg px-4 py-2 text-left text-sm \${visible ? "opacity-100" : "opacity-0"} dark:bg-darkbg bg-white shadow-lg transition-all duration-300 \${className} \${positionStyles[position]}\`}
-      >
-        {text}
-      </div>
+      {displayed && (
+        <div
+          className={\`absolute z-10 w-max max-w-3xs rounded-lg px-4 py-2 text-center text-sm \${
+            visible ? "opacity-100" : "opacity-0"
+          } dark:bg-darkbg bg-white shadow-lg transition-all duration-300 \${className} \${
+            positionStyles[position]
+          }\`}
+        >
+          {text}
+        </div>
+      )}
     </div>
   );
 };

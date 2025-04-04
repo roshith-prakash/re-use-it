@@ -5,7 +5,7 @@ const Avatar = ({
   fallBackText,
   className,
   border = false,
-  borderClassName,
+  borderClassName = "border-4 border-cta",
 }: {
   imageSrc?: string;
   fallBackText?: string;
@@ -37,26 +37,27 @@ const Avatar = ({
 
   return (
     <div
-      className={`${border && `to-cta from-darkmodeCTA ${borderClassName} flex items-center justify-center rounded-full bg-gradient-to-br`} w-fit p-1`}
+      className={`${
+        border &&
+        ` ${borderClassName} flex items-center justify-center rounded-full`
+      } w-fit p-1`}
     >
       {isValid ? (
         <img
           src={imageSrc}
           alt={fallBackText}
-          className={` ${border && `dark:border-secondarydarkbg border-2 border-white ${borderClassName} `} h-12 w-12 rounded-full ${className}`}
+          className={`h-10 w-10 rounded-full ${className}`}
         />
       ) : fallBackText ? (
         <p
-          className={`${border && `dark:border-secondarydarkbg ${borderClassName} border-2 border-white`} from-cta to-hovercta flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br text-xl font-semibold text-white ${className}`}
+          className={`from-darkmodeCTA via-cta to-hovercta flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br text-lg font-semibold text-white ${className}`}
         >
           {extractFirstLetters(fallBackText)}
         </p>
       ) : (
         <img
-          src={
-            "https://res.cloudinary.com/do8rpl9l4/image/upload/v1738212915/image_1_jy29je.jpg"
-          }
-          className={` ${border && `dark:border-secondarydarkbg border-2 border-white ${borderClassName} `} h-12 w-12 rounded-full ${className}`}
+          src={"https://randomuser.me/api/portraits/lego/2.jpg"}
+          className={`bg-darkbg h-10 w-10 rounded-full object-contain dark:bg-white ${className}`}
         />
       )}
     </div>

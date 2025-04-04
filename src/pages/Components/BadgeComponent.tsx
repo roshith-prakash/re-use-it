@@ -1,16 +1,25 @@
 import { useEffect, useState } from "react";
 import { CodeBlock, Badge } from "../../components";
 
-const BadgeCode = `const Badge = ({ text, className }: { text: string; className?: string }) => {
+const BadgeCode = `import { CSSProperties } from "react";
+
+const Badge = ({
+  text,
+  className,
+  style,
+}: {
+  text: string;
+  className?: string;
+  style?: CSSProperties;
+}) => {
   return (
-    <p className={\`bg-cta w-fit rounded-lg px-4 py-1 text-white \${className}\`}>
+    <p style={style} className={\`w-fit rounded-lg px-4 py-1 \${className}\`}>
       {text}
     </p>
   );
 };
 
 export default Badge;
-
 `;
 
 const usingCode = `import  Badge  from "./Badge";
@@ -20,7 +29,7 @@ const App = () => {
 
   return (
   <>
-   <Badge text={"ReUseIt"} />
+   <Badge text={"ReUseIt"} className="bg-cta text-white" />
   </> );
 }`;
 
@@ -42,7 +51,7 @@ const BadgeComponent = () => {
 
       {/* Component */}
       <div className="mx-auto my-20 flex flex-wrap items-center justify-center gap-8 rounded-xl px-5 py-10 shadow-lg md:w-fit md:px-20 dark:shadow dark:shadow-white">
-        <Badge text={"ReUseIt"} />
+        <Badge text={"ReUseIt"} className="bg-cta text-white" />
       </div>
 
       {/* Installation */}

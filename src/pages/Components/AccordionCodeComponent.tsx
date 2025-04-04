@@ -9,7 +9,7 @@ const Accordion = ({
   children,
   className,
 }: {
-  text: string;
+  text: string | ReactNode;
   children: ReactNode;
   className?: string;
 }) => {
@@ -18,7 +18,7 @@ const Accordion = ({
 
   return (
     <div
-      className={\`border-secondarydarkbg/50 dark:border-grey/50 max-w-xl border-b-2 \${className}\`}
+      className={\`border-secondarydarkbg/50 dark:border-grey/50 w-full \${className}\`}
     >
       <button
         className="flex w-full cursor-pointer items-center justify-between py-3"
@@ -28,13 +28,15 @@ const Accordion = ({
       >
         {text}
         <IoIosArrowDown
-          className={\`\${isOpen && "rotate-180"} transition-all duration-300\`}
+          className={\`\${
+            isOpen && "rotate-180"
+          } mt-2 mr-6 text-2xl transition-all duration-500\`}
         />
       </button>
       <div
         ref={contentRef}
-        className={\`overflow-hidden transition-[max-height] duration-300 ease-in-out \${
-          isOpen ? "max-h-[1000px]" : "max-h-0"
+        className={\`overflow-hidden transition-[max-height] duration-500 ease-in-out \${
+          isOpen ? "max-h-[99999px]" : "max-h-0"
         }\`}
         style={{
           maxHeight: isOpen ? \`\${contentRef.current?.scrollHeight}px\` : "0px",
@@ -70,8 +72,7 @@ const App = () => {
 }`;
 
 const AccordionCodeComponent = () => {
-  
-  const [codeWindow,setCodeWindow]=useState<boolean>(false)
+  const [codeWindow, setCodeWindow] = useState<boolean>(false);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -104,25 +105,41 @@ const AccordionCodeComponent = () => {
       {/* Installation */}
       <div>
         <p className="text-2xl font-semibold">Installation</p>
-        <div className="flex gap-5 my-10">
-          <button onClick={()=>setCodeWindow(false)} className={`${!codeWindow ? "bg-grey dark:bg-white/14" : "bg-transparent"} px-4 py-2 rounded transition-all cursor-pointer`}>CLI</button>
-          <button onClick={()=>setCodeWindow(true)} className={`${codeWindow ? "bg-grey dark:bg-white/14" : "bg-transparent"} px-4 py-2 rounded transition-all cursor-pointer`}>Manual</button>
+        <div className="my-10 flex gap-5">
+          <button
+            onClick={() => setCodeWindow(false)}
+            className={`${!codeWindow ? "bg-grey dark:bg-white/14" : "bg-transparent"} cursor-pointer rounded px-4 py-2 transition-all`}
+          >
+            CLI
+          </button>
+          <button
+            onClick={() => setCodeWindow(true)}
+            className={`${codeWindow ? "bg-grey dark:bg-white/14" : "bg-transparent"} cursor-pointer rounded px-4 py-2 transition-all`}
+          >
+            Manual
+          </button>
         </div>
-        {
-          codeWindow ?  <div>
-          <h3 className="py-2 pl-1 italic">Copy and save the component as Accordion.tsx</h3>
-          <CodeBlock code={AccordionCode} language="tsx" />
-        </div> : <div>
-          <h3 className="py-2 pl-1 italic">Add the component using the Re-use-it! CLI.</h3>
-          <CodeBlock code={`npx reuseit add Accordion`} language="bash" />
-        </div>
-        }     
+        {codeWindow ? (
+          <div>
+            <h3 className="py-2 pl-1 italic">
+              Copy and save the component as Accordion.tsx
+            </h3>
+            <CodeBlock code={AccordionCode} language="tsx" />
+          </div>
+        ) : (
+          <div>
+            <h3 className="py-2 pl-1 italic">
+              Add the component using the Re-use-it! CLI.
+            </h3>
+            <CodeBlock code={`npx reuseit add Accordion`} language="bash" />
+          </div>
+        )}
       </div>
-      
+
       {/* Props */}
       <div className="py-14">
         <p className="text-2xl font-semibold">Props</p>
-        <ul className="list-disc mt-8 py-2 pl-8 leading-8">
+        <ul className="mt-8 list-disc py-2 pl-8 leading-8">
           <li>
             {" "}
             <b>text (string, required):</b> The text to be displayed on the
@@ -139,7 +156,6 @@ const AccordionCodeComponent = () => {
         </ul>
       </div>
 
-    
       <p className="text-2xl font-semibold">Usage</p>
       <h3 className="mt-8 py-2 pl-1 italic">App.tsx</h3>
       <CodeBlock code={usingCode} language="tsx" />
