@@ -49,7 +49,7 @@ const AccordionItem = ({
 const AccordionGroup = ({
   items,
 }: {
-  items: { id: number; title: string; content: string }[];
+  items: { id: number; title: string; content: ReactNode }[];
 }) => {
   const [openAccordion, setOpenAccordion] = useState<number | null>(null);
 

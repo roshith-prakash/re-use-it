@@ -1,16 +1,7 @@
-// Please check import paths
-import { ContextValue, useDarkMode } from "../context/DarkModeContext";
-
 const Footer = () => {
-  const { isDarkMode } = useDarkMode() as ContextValue;
-
   return (
     <footer
-      className={`${
-        isDarkMode
-          ? "bg-secondarydarkbg border-darkmodetext border-t-2"
-          : "from-cta to-hovercta bg-gradient-to-b"
-      } font-inter min-h-50vh px-010 relative mt-20 pt-36 pb-20 text-white`}
+      className={`bg-secondarydarkbg border-darkmodetext relative mt-20 border-t-2 px-10 pt-36 pb-20 text-white`}
     >
       {/* Floating Div */}
       <div className="dark:border-darkmodetext absolute -top-16 left-1/2 flex h-32 w-[90vw] -translate-x-1/2 items-center justify-around rounded-lg bg-[#1f1e1e] text-white lg:w-[80vw] dark:border-2">

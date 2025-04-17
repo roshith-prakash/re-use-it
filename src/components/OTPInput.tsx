@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import { ClipboardEvent, KeyboardEvent } from "react";
 
 const OTPInput = ({
@@ -63,7 +64,9 @@ const OTPInput = ({
           onChange={(e) => handleChange(e.target.value, index)}
           onKeyDown={(e) => handleKeyDown(e, index)}
           onPaste={handlePaste}
-          className={`h-8 w-8 rounded-md border-2 border-black/50 text-center text-sm md:h-10 md:w-10 md:text-lg dark:border-white/50 ${className}`}
+          className={cn(
+            `h-8 w-8 rounded-md border-2 border-black/50 text-center text-sm md:h-10 md:w-10 md:text-lg dark:border-white/50 ${className}`,
+          )}
         />
       ))}
     </div>

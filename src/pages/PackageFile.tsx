@@ -1,19 +1,25 @@
 import { useEffect, useState } from "react";
-import { Checkbox, CodeBlock } from "../components";
+import { Checkbox, CodeBlock } from "@/components";
 
-const installCommandsv4Vite = `npm install tailwindcss @tailwindcss/vite`;
+const installCommandsv4Vite = `npm install clsx tailwind-merge tailwindcss @tailwindcss/vite`;
 
 const viteConfig = `import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
+import path from "path";
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "src"),
+    },
+  },
 });
 `;
 
-const installCommandsv4 = `npm install tailwindcss @tailwindcss/postcss postcss`;
+const installCommandsv4 = `npm install clsx tailwind-merge tailwindcss @tailwindcss/postcss postcss`;
 
 const postCssv4 = `export default {
   plugins: {
@@ -21,7 +27,7 @@ const postCssv4 = `export default {
   }
 }`;
 
-const installCommandsv3 = `npm install
+const installCommandsv3 = `npm install clsx tailwind-merge
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init`;
 
@@ -57,7 +63,6 @@ const PackageFile = () => {
         <p className="text-lg font-medium">Packages :</p>
         <ul className="list-disc pt-4 pl-8 leading-10">
           <li>
-            {" "}
             <Checkbox
               checked={true}
               className="translate-y-0.5"
@@ -79,7 +84,28 @@ const PackageFile = () => {
             for installation directions based on your project.
           </li>
           <li>
-            {" "}
+            <Checkbox
+              checked={true}
+              className="translate-y-0.5"
+              onChange={() => {}}
+              disabled
+            />
+            <b>clsx (required):</b> Allows conditional `className` composition
+            to make components more dynamic. Perfect for tailoring components to
+            match your own design system or theme logic.
+          </li>
+          <li>
+            <Checkbox
+              checked={true}
+              className="translate-y-0.5"
+              onChange={() => {}}
+              disabled
+            />
+            <b>tailwind-merge (required):</b> Prevents conflicting Tailwind
+            classes by intelligently merging them—especially useful when
+            applying conditional styles based on your design system.
+          </li>
+          <li>
             <Checkbox
               checked={reactIcons}
               className="translate-y-0.5"
@@ -91,7 +117,6 @@ const PackageFile = () => {
             used but can be easily swapped out for any similar package or SVGs.
           </li>
           <li>
-            {" "}
             <Checkbox
               checked={reactHelmet}
               className="translate-y-0.5"
@@ -100,7 +125,10 @@ const PackageFile = () => {
               }}
             />
             <b>react-helmet-async (optional):</b> Required for the{" "}
-            <strong>Security Headers Component</strong>.
+            <strong>Security Headers Component</strong>.{" "}
+            <span className="rounded-lg bg-black/5 px-2 py-1.5 dark:bg-white/15">
+              (Does not work for React 19 and higher.)
+            </span>
           </li>
         </ul>
       </div>

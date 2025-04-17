@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
 
 const Avatar = ({
@@ -37,27 +38,33 @@ const Avatar = ({
 
   return (
     <div
-      className={`${
-        border &&
-        ` ${borderClassName} flex items-center justify-center rounded-full`
-      } w-fit p-1`}
+      className={cn(
+        `${
+          border &&
+          `flex items-center justify-center rounded-full ${borderClassName}`
+        } 5 w-fit p-1`,
+      )}
     >
       {isValid ? (
         <img
           src={imageSrc}
           alt={fallBackText}
-          className={`h-10 w-10 rounded-full ${className}`}
+          className={cn(`h-10 w-10 rounded-full ${className}`)}
         />
       ) : fallBackText ? (
         <p
-          className={`from-darkmodeCTA via-cta to-hovercta flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br text-lg font-semibold text-white ${className}`}
+          className={cn(
+            `from-darkmodeCTA via-cta to-hovercta flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br text-lg font-semibold text-white ${className}`,
+          )}
         >
           {extractFirstLetters(fallBackText)}
         </p>
       ) : (
         <img
           src={"https://randomuser.me/api/portraits/lego/2.jpg"}
-          className={`bg-darkbg h-10 w-10 rounded-full object-contain dark:bg-white ${className}`}
+          className={cn(
+            `bg-darkbg h-10 w-10 rounded-full object-contain dark:bg-white ${className}`,
+          )}
         />
       )}
     </div>

@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import { ChangeEventHandler, useState, useEffect } from "react";
 import { TiTick } from "react-icons/ti";
 
@@ -50,7 +51,9 @@ const Checkbox = ({
         disabled={disabled}
         role="checkbox"
         onClick={handleChange}
-        className={`border-darkbg disabled:text-darkbg disabled:bg-grey dark:border-darkmodetext mx-2 h-5 w-5 cursor-pointer rounded border-2 disabled:cursor-default ${checked ? "bg-cta text-white" : "bg-transparent"} ${className}`}
+        className={cn(
+          `border-darkbg disabled:text-darkbg disabled:bg-grey dark:border-darkmodetext bg-cta mx-2 h-5 w-5 cursor-pointer rounded border-2 text-white disabled:cursor-default ${!checked && "bg-transparent text-transparent"} ${className}`,
+        )}
       >
         {checked && <TiTick />}
       </button>

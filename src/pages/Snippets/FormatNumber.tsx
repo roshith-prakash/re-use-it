@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { CodeBlock } from "../../components";
+import { CodeBlock } from "@/components";
 
 const formatNumberCode = `export const numberFormat = (num: number) => {
   return Intl.NumberFormat("en-us", { notation: "compact" }).format(num);

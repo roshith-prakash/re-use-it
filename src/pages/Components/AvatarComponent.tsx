@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Avatar, CodeBlock } from "../../components";
+import { Avatar, CodeBlock } from "@/components";
 
 const AvatarCode = `import { useEffect, useState } from "react";
 

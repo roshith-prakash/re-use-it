@@ -1,4 +1,4 @@
-import { ContextValue, useDarkMode } from "../context/DarkModeContext";
+import { ContextValue, useDarkMode } from "@/context/DarkModeContext";
 import { FaGithub } from "react-icons/fa6";
 import { Link, useNavigate } from "react-router-dom";
 import { LuCodeXml } from "react-icons/lu";

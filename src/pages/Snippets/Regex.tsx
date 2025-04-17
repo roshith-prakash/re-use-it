@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { CodeBlock } from "../../components";
+import { CodeBlock } from "@/components";
 
 const isValidEmailRegex = `// Check if input is a valid email
 export const isValidEmail = (email:string) => {

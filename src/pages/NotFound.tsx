@@ -1,5 +1,5 @@
-import { ContextValue, useDarkMode } from "../context/DarkModeContext";
-import notfound from "../assets/notfound.svg";
+import { ContextValue, useDarkMode } from "@/context/DarkModeContext";
+import notfound from "@/assets/notfound.svg";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 

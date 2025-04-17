@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CodeBlock, TextArea } from "../../components";
+import { CodeBlock, TextArea } from "@/components";
 
 const InputCode = `import { ChangeEventHandler } from "react";
 

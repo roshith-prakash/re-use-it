@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { CodeBlock } from "../components";
+import { CodeBlock } from "@/components";
 
 // v3
 const TailwindConfigCode = `module.exports = {

@@ -3,8 +3,9 @@ import { RxCross2, RxHamburgerMenu } from "react-icons/rx";
 import { Link, useNavigate } from "react-router-dom";
 import { IoMoon } from "react-icons/io5";
 import { IoSunnySharp } from "react-icons/io5";
+
 // Please check import paths
-import { ContextValue, useDarkMode } from "../context/DarkModeContext";
+import { ContextValue, useDarkMode } from "@/context/DarkModeContext";
 
 const Navbar = () => {
   const { isDarkMode, toggleDarkMode } = useDarkMode() as ContextValue;

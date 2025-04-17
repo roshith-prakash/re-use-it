@@ -11,7 +11,7 @@ const snippetCode = `export const capitalizeFirstLetters = (str: string) => {
 `;
 
 import { useEffect } from "react";
-import { CodeBlock } from "../../components";
+import { CodeBlock } from "@/components";
 
 const usingCode = `import { capitalizeFirstLetters } from "./capitalizeFirstLetters"
 

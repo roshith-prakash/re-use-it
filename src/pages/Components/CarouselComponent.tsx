@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CodeBlock, Carousel } from "../../components";
+import { CodeBlock, Carousel } from "@/components";
 
 const CarouselCode = `import { useState, useRef } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";

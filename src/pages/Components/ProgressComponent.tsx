@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CodeBlock, ProgressBar } from "../../components";
+import { CodeBlock, ProgressBar } from "@/components";
 
 const ProgressCode = `const ProgressBar = ({
   currentProgress,

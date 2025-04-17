@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CodeBlock, Alert } from "../../components";
+import { CodeBlock, Alert } from "@/components";
 import { RxDoubleArrowRight } from "react-icons/rx";
 
 const AlertCode = `import { ReactNode } from "react";

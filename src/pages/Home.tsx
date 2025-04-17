@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import { Link } from "react-router-dom";
-import { PrimaryButton } from "../components";
+import { PrimaryButton } from "@/components";
 import { SiTailwindcss, SiTypescript } from "react-icons/si";
 import { BiSolidComponent } from "react-icons/bi";
 import { FaCode } from "react-icons/fa6";

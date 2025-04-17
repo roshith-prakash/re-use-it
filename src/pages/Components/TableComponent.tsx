@@ -5,8 +5,8 @@ import Table, {
   TableHead,
   TableHeader,
   TableRow,
-} from "../../components/Table";
-import { CodeBlock } from "../../components";
+} from "@/components/Table";
+import { CodeBlock } from "@/components";
 
 const TableCode = `import { ReactNode } from "react";
 

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CodeBlock, DatePicker } from "../../components";
+import { CodeBlock, DatePicker } from "@/components";
 
 const DatePickerCode = `import { useEffect, useRef, useState } from "react";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";

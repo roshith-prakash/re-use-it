@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { CodeBlock } from "../../components";
+import { CodeBlock } from "@/components";
 
 const minutesToReadCode = `// Get the number of words inside the content and divide them to get the number of minutes required to read the post.
 export const getMinsToRead = (value: string | undefined) => {

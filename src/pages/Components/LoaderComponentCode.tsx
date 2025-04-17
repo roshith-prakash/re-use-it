@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CodeBlock, Loader } from "../../components";
+import { CodeBlock, Loader } from "@/components";
 
 const LoaderCode = `const Loader = ({ className }: { className?: string }) => {
   return (

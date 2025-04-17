@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { CodeBlock, AccordionGroup } from "../../components";
-import { accordionData } from "../../data/accordionGroupData";
+import { CodeBlock, AccordionGroup } from "@/components";
+import { accordionData } from "@/data/accordionGroupData";
 
 const AccordionGroupCode = `import { useState, useRef, ReactNode } from "react";
 import { IoIosArrowDown } from "react-icons/io";

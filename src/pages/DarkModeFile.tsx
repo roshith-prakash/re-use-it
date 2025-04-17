@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { CodeBlock } from "../components";
+import { CodeBlock } from "@/components";
 
 const DarkModeContextCode = `import { createContext, useContext, useEffect, useState } from "react";
 

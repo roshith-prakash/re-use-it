@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CodeBlock, Slider } from "../../components";
+import { CodeBlock, Slider } from "@/components";
 
 const SliderCode = `import { ChangeEventHandler } from "react";
 

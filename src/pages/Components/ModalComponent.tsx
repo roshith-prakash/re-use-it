@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CodeBlock, Modal, SecondaryButton } from "../../components";
+import { CodeBlock, Modal, SecondaryButton } from "@/components";
 
 const ModalCode = `import { useEffect, useState, MouseEvent, ReactNode } from "react";
 

@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { RxCross2, RxHamburgerMenu } from "react-icons/rx";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import { ContextValue, useDarkMode } from "../context/DarkModeContext";
+import { ContextValue, useDarkMode } from "@/context/DarkModeContext";
 import { IoGlobeOutline, IoMoon } from "react-icons/io5";
 import { IoSunnySharp } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa6";
-import { Accordion } from "../components";
+import { Accordion } from "@/components";
 import { RiNpmjsLine } from "react-icons/ri";
 
 const Navbar = () => {

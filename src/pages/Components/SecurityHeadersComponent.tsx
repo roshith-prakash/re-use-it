@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CodeBlock } from "../../components";
+import { CodeBlock } from "@/components";
 
 const SecurityHeaderCode = `import { Helmet } from "react-helmet-async";
 

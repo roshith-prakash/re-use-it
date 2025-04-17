@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CodeBlock, RadioButton } from "../../components";
+import { CodeBlock, RadioButton } from "@/components";
 
 const RadioButtonCode = `import { ChangeEventHandler, useState, useEffect } from "react";
 

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Timeline, CodeBlock } from "../../components";
+import { Timeline, CodeBlock } from "@/components";
 
 const TimelineCode = `import { ReactNode } from "react";
 import { FaCaretDown } from "react-icons/fa6";

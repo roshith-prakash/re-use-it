@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CodeBlock, Toggle } from "../../components";
+import { CodeBlock, Toggle } from "@/components";
 
 const SwitchCode = `const Toggle = ({
   isToggled,

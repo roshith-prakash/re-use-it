@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { CodeBlock, Accordion } from "../../components";
+import { CodeBlock, Accordion } from "@/components";
 
-const AccordionCode = `import { ReactNode, useRef, useState } from "react";
+const AccordionCode = `import { cn } from "@/lib/utils";
+import { ReactNode, useRef, useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 
 const Accordion = ({
@@ -18,7 +19,7 @@ const Accordion = ({
 
   return (
     <div
-      className={\`border-secondarydarkbg/50 dark:border-grey/50 w-full \${className}\`}
+      className={cn(\`w-full \${className}\`)}
     >
       <button
         className="flex w-full cursor-pointer items-center justify-between py-3"
@@ -30,7 +31,7 @@ const Accordion = ({
         <IoIosArrowDown
           className={\`\${
             isOpen && "rotate-180"
-          } mt-2 mr-6 text-2xl transition-all duration-500\`}
+          } mt-2 mr-1 text-2xl transition-all duration-500\`}
         />
       </button>
       <div
@@ -90,7 +91,7 @@ const AccordionCodeComponent = () => {
       </h2>
       {/* Component */}
       <div className="mx-auto my-20 flex flex-col items-center gap-8 rounded-xl px-5 py-10 shadow-lg md:w-fit md:px-20 dark:shadow dark:shadow-white">
-        <Accordion text="What is Formula 1?" className="w-full">
+        <Accordion text="What is Formula 1?" className="max-w-3xl">
           <p className="py-4">
             Formula One, commonly abbreviated as F1, is the highest class of
             international racing for open-wheel single-seater formula racing

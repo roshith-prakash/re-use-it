@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { CodeBlock } from "../../components";
-import { Card } from "../../components";
+import { CodeBlock } from "@/components";
+import { Card } from "@/components";
 import { Link } from "react-router-dom";
 
 const CardCode = `import { MouseEventHandler, ReactNode } from "react";

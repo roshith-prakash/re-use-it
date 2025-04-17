@@ -1,8 +1,8 @@
 import { IoIosArrowForward } from "react-icons/io";
 import { Link, NavLink, Outlet } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import { breakUrlIntoPaths } from "../utils/breakURLintoPaths";
-import { capitalizeFirstLetters } from "../utils/capitalizeFirstLetters";
+import { breakUrlIntoPaths } from "@/utils/breakURLintoPaths";
+import { capitalizeFirstLetters } from "@/utils/capitalizeFirstLetters";
 
 // Sidebar Component
 const ComponentsSidebar = () => {

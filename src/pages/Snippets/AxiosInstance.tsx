@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { CodeBlock } from "../../components";
+import { CodeBlock } from "@/components";
 
 const axiosCode = `import axios from "axios";
 

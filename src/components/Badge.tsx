@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import { CSSProperties } from "react";
 
 const Badge = ({
@@ -10,7 +11,7 @@ const Badge = ({
   style?: CSSProperties;
 }) => {
   return (
-    <p style={style} className={`w-fit rounded-lg px-4 py-1 ${className}`}>
+    <p style={style} className={cn(`w-fit rounded-lg px-4 py-1 ${className}`)}>
       {text}
     </p>
   );

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CodeBlock, SecondaryButton } from "../../components";
+import { CodeBlock, SecondaryButton } from "@/components";
 
 const SecondaryButtonCode = `import { MouseEventHandler, ReactNode } from "react";
 

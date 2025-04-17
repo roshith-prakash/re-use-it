@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CodeBlock, Switch } from "../../components";
+import { CodeBlock, Switch } from "@/components";
 
 const SwitchCode = `import { MouseEventHandler } from "react";
 

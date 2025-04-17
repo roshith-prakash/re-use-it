@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import { useEffect, useRef, useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 
@@ -42,7 +43,9 @@ const Select = ({
     <div
       ref={ref} // Attach ref to the wrapper div
       role="select"
-      className={`relative min-w-3xs cursor-pointer rounded-xl border-2 bg-white px-5 py-2 dark:bg-transparent ${className}`}
+      className={cn(
+        `relative min-w-3xs cursor-pointer rounded-xl border-2 bg-white px-5 py-2 dark:bg-transparent ${className}`,
+      )}
       onClick={() => setIsOpen((prev) => !prev)}
     >
       <div className="flex items-center justify-between gap-x-5">
@@ -65,7 +68,9 @@ const Select = ({
             <div
               role="option"
               key={option.value}
-              className={`dark:hover:bg-darkbg px-4 py-2 hover:bg-gray-100 ${optionClassName}`}
+              className={cn(
+                `dark:hover:bg-darkbg px-4 py-2 hover:bg-gray-100 ${optionClassName}`,
+              )}
               onClick={() => handleSelect(option.value)}
             >
               {option.text || option.value}

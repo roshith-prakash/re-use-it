@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { CodeBlock } from "../../components";
+import { CodeBlock } from "@/components";
 
 const shuffleCode = `// Function to swap position of elements inside the array
 export function shuffleArray(array: any[]) {

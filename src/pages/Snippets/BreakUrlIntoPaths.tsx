@@ -20,7 +20,7 @@ const snippetCode = `export const breakUrlIntoPaths = (url: string) => {
 `;
 
 import { useEffect } from "react";
-import { CodeBlock } from "../../components";
+import { CodeBlock } from "@/components";
 
 const usingCode = `import { breakUrlIntoPaths } from "./breakUrlIntoPaths"
   

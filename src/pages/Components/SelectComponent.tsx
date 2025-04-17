@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CodeBlock, Select } from "../../components";
+import { CodeBlock, Select } from "@/components";
 
 const SelectCode = `import { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";

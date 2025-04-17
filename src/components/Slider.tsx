@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import { ChangeEventHandler } from "react";
 
 const Slider = ({
@@ -20,7 +21,7 @@ const Slider = ({
       onChange={changeValueBySlider}
       max={max}
       type="range"
-      className={`accent-cta dark:accent-white ${className}`}
+      className={cn(`accent-cta dark:accent-white ${className}`)}
     />
   );
 };

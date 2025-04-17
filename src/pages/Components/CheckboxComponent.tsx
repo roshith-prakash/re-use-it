@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Checkbox, CodeBlock } from "../../components";
+import { Checkbox, CodeBlock } from "@/components";
 
 const CheckboxCode = `import { ChangeEventHandler, useState, useEffect } from "react";
 import { TiTick } from "react-icons/ti";

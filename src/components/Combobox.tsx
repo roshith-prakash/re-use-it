@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { IoIosArrowDown, IoIosSearch } from "react-icons/io";
 // Please check import paths
-import useDebounce from "../utils/useDebounce";
+import useDebounce from "@/utils/useDebounce";
+import { cn } from "@/lib/utils";
 
 const Combobox = ({
   options,
@@ -65,7 +66,9 @@ const Combobox = ({
     <div
       ref={ref} // Attach ref to the wrapper div
       role="combobox"
-      className={`relative min-w-3xs cursor-pointer rounded-xl border-2 bg-white px-5 py-2 dark:bg-transparent ${className}`}
+      className={cn(
+        `relative min-w-3xs cursor-pointer rounded-xl border-2 bg-white px-5 py-2 dark:bg-transparent ${className}`,
+      )}
       onClick={toggleDropdown}
     >
       <div className="flex items-center justify-between gap-x-5">
@@ -97,7 +100,9 @@ const Combobox = ({
             <div
               role="option"
               key={option.value}
-              className={`dark:hover:bg-darkbg px-4 py-2 hover:bg-gray-100 ${optionClassName}`}
+              className={cn(
+                `dark:hover:bg-darkbg px-4 py-2 hover:bg-gray-100 ${optionClassName}`,
+              )}
               onClick={() => handleSelect(option.value)}
             >
               {option.text || option.value}

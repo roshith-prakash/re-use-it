@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import { useState, useRef } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
@@ -39,7 +40,9 @@ const Carousel = ({
 
   return (
     <div
-      className={`bg-grey/50 dark:bg-secondarydarkbg/50 relative mx-auto w-full overflow-hidden ${className}`}
+      className={cn(
+        `bg-grey/50 dark:bg-secondarydarkbg/50 relative mx-auto w-full overflow-hidden ${className}`,
+      )}
     >
       <div
         ref={carouselRef}

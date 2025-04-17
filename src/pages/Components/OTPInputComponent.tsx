@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CodeBlock, OTPInput } from "../../components";
+import { CodeBlock, OTPInput } from "@/components";
 
 const InputCode = `import { ClipboardEvent, KeyboardEvent } from "react";
 

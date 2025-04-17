@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CodeBlock, PrimaryButton } from "../../components";
+import { CodeBlock, PrimaryButton } from "@/components";
 
 const PrimaryButtonCode = `import { MouseEventHandler, ReactNode } from "react";
 

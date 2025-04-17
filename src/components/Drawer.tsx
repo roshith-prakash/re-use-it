@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import { ReactNode } from "react";
 import { RxCross2 } from "react-icons/rx";
 
@@ -43,7 +44,7 @@ const Drawer = ({
   return (
     <>
       <div className={overlayClasses} />
-      <div className={`${drawerClasses} ${className}`}>
+      <div className={cn(`${drawerClasses} ${className}`)}>
         <button
           className="absolute top-4 right-4 cursor-pointer"
           onClick={onClose}

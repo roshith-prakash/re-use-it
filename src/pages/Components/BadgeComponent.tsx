@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CodeBlock, Badge } from "../../components";
+import { CodeBlock, Badge } from "@/components";
 
 const BadgeCode = `import { CSSProperties } from "react";
 

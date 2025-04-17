@@ -1,5 +1,5 @@
 import { atomOneDark, atomOneLight, CopyBlock } from "react-code-blocks";
-import { useDarkMode, ContextValue } from "../context/DarkModeContext";
+import { useDarkMode, ContextValue } from "@/context/DarkModeContext";
 
 const CodeBlock = ({ code, language }: { code: string; language: string }) => {
   const { isDarkMode } = useDarkMode() as ContextValue;

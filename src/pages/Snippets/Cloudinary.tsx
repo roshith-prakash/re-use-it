@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { CodeBlock } from "../../components";
+import { CodeBlock } from "@/components";
 
 const CloudinaryCode = `import { v2 as cloudinary } from "cloudinary";
 import dotenv from "dotenv";

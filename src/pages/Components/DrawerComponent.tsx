@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CodeBlock, Drawer, SecondaryButton } from "../../components";
+import { CodeBlock, Drawer, SecondaryButton } from "@/components";
 
 const DrawerCode = `import { ReactNode } from "react";
 import { RxCross2 } from "react-icons/rx";

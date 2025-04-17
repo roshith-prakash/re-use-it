@@ -12,7 +12,7 @@ const Switch = ({
   return (
     <button
       onClick={onChange}
-      className={`mx-2 h-7 w-12 cursor-pointer rounded-full border-3 p-1 ${checked ? "bg-cta" : "bg-gray-500"} transition-all ${className}`}
+      className={`bg-cta mx-2 h-7 w-12 cursor-pointer rounded-full border-3 p-1 ${!checked && "bg-gray-500"} transition-all ${className}`}
     >
       <div
         className={`bg-grey h-full w-4 rounded-full transition-all ${checked && "translate-x-[125%]"}`}

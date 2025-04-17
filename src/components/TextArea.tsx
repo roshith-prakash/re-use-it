@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import { ChangeEventHandler } from "react";
 
 const TextArea = ({
@@ -15,7 +16,9 @@ const TextArea = ({
     <textarea
       value={value}
       placeholder={placeholder}
-      className={`h-36 w-full rounded-lg border-2 bg-transparent p-4 focus:outline-none ${className}`}
+      className={cn(
+        `h-36 w-full rounded-lg border-2 bg-transparent p-4 focus:outline-none ${className}`,
+      )}
       onChange={onChange}
     ></textarea>
   );

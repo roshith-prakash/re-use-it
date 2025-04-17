@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import { ReactNode } from "react";
 import {
   AiOutlineInfoCircle,
@@ -38,15 +39,21 @@ const Alert = ({
   children?: ReactNode;
   className?: string;
 }) => {
-  if (type == "custom") return children;
+  if (type === "custom") return <div className={className}>{children}</div>;
 
   const alert = alertTypes[type];
 
   return (
     <div
-      className={`flex w-full items-center gap-4 rounded-lg p-4 shadow-lg ${alert.color} ${className}`}
+      role="alert"
+      aria-live="assertive"
+      className={cn(
+        `flex w-full items-center gap-4 rounded-lg p-4 shadow-lg ${alert.color} ${className}`,
+      )}
     >
-      <span className="text-2xl">{alert.icon}</span>
+      <span className="text-2xl" aria-hidden="true">
+        {alert.icon}
+      </span>
       <div className="space-y-1">
         <p className="text-md font-medium">{title}</p>
         <p className="text-sm">{message}</p>

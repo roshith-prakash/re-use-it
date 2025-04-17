@@ -1,3 +1,4 @@
+import { CodeBlock } from "@/components";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
@@ -48,6 +49,20 @@ const GettingStarted = () => {
             for detailed instructions.
           </li>
           <li>
+            In the <code>src</code> folder, create a <code>lib</code> folder.
+            Inside the <code>lib</code> folder, create a <code>utils.ts</code>{" "}
+            file and add the following code:
+            <CodeBlock
+              code={`import { clsx, type ClassValue } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}`}
+              language="tsx"
+            />
+          </li>
+          <li>
             Set up TailwindCSS with custom styles. Visit{" "}
             <Link
               to="/components/tailwind-configuration"
@@ -68,16 +83,23 @@ const GettingStarted = () => {
             </Link>
             .
           </li>
-
-          <li>Use the re-use-it CLI to download the required component.</li>
-
-          <p className="font-semibold text-lg py-5">OR</p>
-
-          <li>Choose the component you need and copy its code.</li>
           <li>
-            Create a new file and paste the code to include the component.
+            <ol>
+              <li>
+                {" "}
+                Use the re-use-it CLI to download the required component.
+              </li>
+              <p className="py-5 text-lg font-semibold">OR</p>
+
+              <li>Choose the component you need and copy its code.</li>
+              <li>
+                Create a new file and paste the code to include the component.
+              </li>
+              <li>
+                That's it! You're ready to use the component in your project.
+              </li>
+            </ol>
           </li>
-          <li>That's it! You're ready to use the component in your project.</li>
         </div>
       </ol>
     </div>

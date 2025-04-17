@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CodeBlock, Tooltip } from "../../components";
+import { CodeBlock, Tooltip } from "@/components";
 
 const TooltipCode = `import { useState, ReactNode } from "react";
 

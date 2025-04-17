@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CodeBlock, Combobox } from "../../components";
+import { CodeBlock, Combobox } from "@/components";
 import { Link } from "react-router-dom";
 
 const ComboboxCode = `import { useEffect, useMemo, useRef, useState } from "react";

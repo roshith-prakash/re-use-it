@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { CodeBlock } from "../../components";
+import { CodeBlock } from "@/components";
 
 const serverFile = `import http from "http";
 import express from "express";
@@ -81,7 +81,7 @@ export const getName = async (req: Request, res: Response): Promise<void> => {
 };`;
 
 const route = `import { Router } from "express";
-import { getName } from "../controllers/index.js";
+import { getName } from "@/controllers/index.js";
 
 // Create a router.
 const router = Router();
