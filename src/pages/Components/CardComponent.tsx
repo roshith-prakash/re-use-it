@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { CodeBlock } from "@/components";
 import { Card } from "@/components";
-import { Link } from "react-router-dom";
 
 const CardCode = `import { MouseEventHandler, ReactNode } from "react";
 // Please check import paths
@@ -66,12 +65,7 @@ const usingCode = `import Card from './Card';
 
 const App = () => {
   return (
-      <Card
-        primaryButtonText="Read Article"
-        secondaryButtonText="Share"
-        title="Lewis Hamilton Joins Ferrari."
-        subtitle="The seven-time world champion has signed a 3-year contract with Ferrari."
-      />
+      <Card>Lorem Ipsum</Card>
   )
 }
 
@@ -91,21 +85,12 @@ const CardComponent = () => {
   return (
     <div className="dark:bg-darkbg min-h-screen p-10 dark:text-white">
       <h1 className="text-4xl font-medium">Card</h1>
-      <h2 className="py-5">
-        Card component with an image, title, subtitle and two buttons.
-      </h2>
+      <h2 className="py-5">Card component.</h2>
       <div className="flex flex-wrap justify-center gap-8 py-10">
-        <Card
-          primaryButtonText="Read Article"
-          secondaryButtonText="Share"
-          title="Lewis Hamilton Joins Ferrari."
-          subtitle="The seven-time world champion has signed a 3-year contract with Ferrari."
-        />
+        <Card>
+          <div>Lorem Ipsum</div>
+        </Card>
       </div>
-
-      <p className="py-8">
-        Note : Card uses Primary & Secondary Button Components.
-      </p>
 
       {/* Installation */}
       <div>
@@ -126,21 +111,6 @@ const CardComponent = () => {
         </div>
         {codeWindow ? (
           <div>
-            <p>
-              Please add the following components as well :{" "}
-              <Link
-                className="mx-2 text-blue-600 dark:text-blue-400"
-                to="/components/primary-button"
-              >
-                Primary Button
-              </Link>
-              <Link
-                className="text-blue-600 dark:text-blue-400"
-                to="/components/secondary-button"
-              >
-                Secondary Button
-              </Link>
-            </p>
             <h3 className="py-2 pl-1 italic">
               Copy and save the component as Card.tsx
             </h3>
@@ -151,12 +121,7 @@ const CardComponent = () => {
             <h3 className="py-2 pl-1 italic">
               Add the components using the Re-use-it! CLI.
             </h3>
-            <CodeBlock
-              code={`npx reuseit add PrimaryButton
-npx reuseit add SecondaryButton
-npx reuseit add Card`}
-              language="bash"
-            />
+            <CodeBlock code={`npx reuseit add Card`} language="bash" />
           </div>
         )}
       </div>
@@ -167,53 +132,7 @@ npx reuseit add Card`}
         <ul className="mt-8 list-disc py-2 pl-8 leading-8">
           <li>
             {" "}
-            <b>primaryButtonText (string or element, required):</b> Text to be
-            displayed on the Primary Button.{" "}
-          </li>
-          <li>
-            {" "}
-            <b>primaryButtonClickHandler (function, optional):</b> Function to
-            be executed when the Primary button is clicked.
-          </li>
-          <li>
-            {" "}
-            <b>secondaryButtonText (string or element, required):</b> Text to be
-            displayed on the Secondary Button.{" "}
-          </li>
-          <li>
-            {" "}
-            <b>secondaryButtonClickHandler (function, optional):</b> Function to
-            be executed when the Secondary button is clicked.
-          </li>
-          <li>
-            {" "}
-            <b>title (string, required):</b> The title text to be displayed on
-            the Card.
-          </li>
-          <li>
-            {" "}
-            <b>subtitle (string, optional):</b> The subtitle text to be
-            displayed on the Card.
-          </li>
-          <li>
-            {" "}
-            <b>imageSrc (string, optional):</b> The image to be displayed on the
-            card.
-          </li>
-          <li>
-            {" "}
-            <b>imageAlt (string, optional):</b> The alternate text to be
-            displayed if image can't be loaded.{" "}
-          </li>
-          <li>
-            {" "}
             <b>className (string, optional):</b> To override default styles.
-          </li>
-
-          <li>
-            {" "}
-            <b>disabledText (string, optional):</b> The text to be displayed
-            when button is disabled.{" "}
           </li>
         </ul>
       </div>
