@@ -53,7 +53,7 @@ const AccordionItem = ({
 const AccordionGroup = ({
   items,
 }: {
-  items: { id: number; title: string; content: string }[];
+  items: { id: number; title: string; content: ReactNode }[];
 }) => {
   const [openAccordion, setOpenAccordion] = useState<number | null>(null);
 
@@ -78,25 +78,26 @@ const AccordionGroup = ({
   );
 };
 
-export default AccordionGroup;`;
+export default AccordionGroup;
+`;
 
 const usingCode = `import  AccordionGroup  from "./AccordionGroup";
 
-export const accordionData = [
+const accordionData = [
   {
     id: 1,
     title: "Accordion 1",
-    content: "This is the content of Accordion 1.",
+    content: <div>This is the content of Accordion 1.</div>,
   },
   {
     id: 2,
     title: "Accordion 2",
-    content: "This is the content of Accordion 2.",
+    content: <div>This is the content of Accordion 2.</div>,
   },
   {
     id: 3,
     title: "Accordion 3",
-    content: "This is the content of Accordion 3.",
+    content: <div>This is the content of Accordion 3.</div>,
   },
 ];
 

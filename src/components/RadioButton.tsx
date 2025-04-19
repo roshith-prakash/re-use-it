@@ -1,4 +1,5 @@
 import { ChangeEventHandler, useState, useEffect } from "react";
+import { cn } from "@/lib/utils";
 
 const RadioButton = ({
   value,
@@ -42,10 +43,18 @@ const RadioButton = ({
       <button
         role="radio"
         onClick={handleChange}
-        className={`mx-2 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full border-2 transition-all ${checked ? "border-cta dark:border-darkmodeCTA text-white" : "bg-transparent"} ${className}`}
+        className={cn(
+          `border-cta dark:border-darkmodeCTA text-white" mx-2 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full border-2 transition-all ${!checked && "bg-transparent"} ${className}`,
+        )}
       >
         {checked && (
-          <div className="bg-cta dark:bg-darkmodeCTA rounded-xl p-1.5 transition-all" />
+          <div
+            className={cn(
+              `bg-cta dark:bg-darkmodeCTA rounded-xl p-1.5 transition-all ${
+                className
+              }`,
+            )}
+          />
         )}
       </button>
     </div>

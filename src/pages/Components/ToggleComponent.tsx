@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { CodeBlock, Toggle } from "@/components";
 
-const SwitchCode = `const Toggle = ({
+const SwitchCode = `import { cn } from "@/lib/utils";
+
+const Toggle = ({
   isToggled,
   toggle,
   disabled,
@@ -18,7 +20,9 @@ const SwitchCode = `const Toggle = ({
     <button
       onClick={toggle}
       disabled={disabled}
-      className={\`\${isToggled ? "bg-grey dark:bg-white/14" : "bg-transparent"} cursor-pointer rounded px-3 py-2 text-lg transition-colors \${className}\`}
+      className={cn(
+        \`\${isToggled ? "bg-grey dark:bg-white/14" : "bg-transparent"} cursor-pointer rounded px-3 py-2 text-lg transition-colors \${className}\`,
+      )}
     >
       {text}
     </button>

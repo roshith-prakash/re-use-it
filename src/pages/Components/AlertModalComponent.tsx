@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { AlertModal, CodeBlock, SecondaryButton } from "@/components";
 
-const ModalCode = `import { useEffect, useState, ReactNode } from "react";
+const ModalCode = `import { cn } from "@/lib/utils";
+import { useEffect, useState, ReactNode } from "react";
 
 const AlertModal = ({
   isOpen,
@@ -46,9 +47,11 @@ const AlertModal = ({
     >
       {/* When isClosing is true, fadeOut animation is added to AlertModal */}
       <div
-        className={\`dark:bg-secondarydarkbg scroller \${
-          isClosing ? "animate-fadeOut" : "animate-fadeIn"
-        } relative max-h-[90%] w-auto max-w-[95%] min-w-xs overflow-y-auto rounded-xl bg-white p-6 shadow-xl md:min-w-sm dark:border-3 dark:border-white/25 \${className}\`}
+        className={cn(
+          \`dark:bg-secondarydarkbg scroller \${
+            isClosing ? "animate-fadeOut" : "animate-fadeIn"
+          } relative max-h-[90%] w-auto max-w-[95%] min-w-xs overflow-y-auto rounded-xl bg-white p-6 shadow-xl md:min-w-sm dark:border-3 dark:border-white/25 \${className}\`,
+        )}
       >
         {children}
       </div>

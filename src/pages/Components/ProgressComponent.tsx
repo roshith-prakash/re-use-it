@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { CodeBlock, ProgressBar } from "@/components";
 
-const ProgressCode = `const ProgressBar = ({
+const ProgressCode = `import { cn } from "@/lib/utils";
+
+const ProgressBar = ({
   currentProgress,
   className,
 }: {
@@ -9,9 +11,9 @@ const ProgressCode = `const ProgressBar = ({
   className?: string;
 }) => {
   return (
-    <div className="h-2 w-full overflow-hidden rounded-full bg-gray-400">
+    <div className="w-full overflow-hidden rounded-full bg-gray-400">
       <div
-        className={\`bg-cta h-full rounded-full transition-all \${className}\`}
+        className={cn(\`bg-cta h-2 rounded-full transition-all \${className}\`)}
         style={{ width: \`\${currentProgress}%\` }}
       ></div>
     </div>

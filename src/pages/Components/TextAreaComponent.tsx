@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { CodeBlock, TextArea } from "@/components";
 
-const InputCode = `import { ChangeEventHandler } from "react";
+const InputCode = `import { cn } from "@/lib/utils";
+import { ChangeEventHandler } from "react";
 
 const TextArea = ({
   value,
@@ -18,13 +19,16 @@ const TextArea = ({
     <textarea
       value={value}
       placeholder={placeholder}
-      className={\`h-36 w-full rounded-lg border-2 bg-transparent p-4 focus:outline-none \${className}\`}
+      className={cn(
+        \`h-36 w-full rounded-lg border-2 bg-transparent p-4 focus:outline-none \${className}\`,
+      )}
       onChange={onChange}
     ></textarea>
   );
 };
 
-export default TextArea;`;
+export default TextArea;
+`;
 
 const usingCode = `import  TextArea  from "./TextArea";
 import { useState } from "react"

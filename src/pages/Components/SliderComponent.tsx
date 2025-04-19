@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { CodeBlock, Slider } from "@/components";
 
-const SliderCode = `import { ChangeEventHandler } from "react";
+const SliderCode = `import { cn } from "@/lib/utils";
+import { ChangeEventHandler } from "react";
 
 const Slider = ({
   value,
@@ -14,7 +15,7 @@ const Slider = ({
   max: number;
   value: number;
   changeValueBySlider: ChangeEventHandler<HTMLInputElement>;
-  className?:string;
+  className?: string;
 }) => {
   return (
     <input
@@ -23,7 +24,7 @@ const Slider = ({
       onChange={changeValueBySlider}
       max={max}
       type="range"
-      className={\`accent-cta dark:accent-white \${className}\`}
+      className={cn(\`accent-cta dark:accent-white \${className}\`)}
     />
   );
 };

@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { CodeBlock, Carousel } from "@/components";
 
-const CarouselCode = `import { useState, useRef } from "react";
+const CarouselCode = `import { cn } from "@/lib/utils";
+import { useState, useRef } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 const Carousel = ({
@@ -41,7 +42,11 @@ const Carousel = ({
   };
 
   return (
-    <div className={\`relative mx-auto w-full overflow-hidden \${className}\`}>
+    <div
+      className={cn(
+        \`bg-grey/50 dark:bg-secondarydarkbg/50 relative mx-auto w-full overflow-hidden \${className}\`,
+      )}
+    >
       <div
         ref={carouselRef}
         onScroll={handleScroll}
@@ -61,7 +66,7 @@ const Carousel = ({
       <button
         onClick={prevSlide}
         disabled={currentIndex == 0}
-        className="cursor-pointer absolute top-1/2 left-0 hidden h-full -translate-y-1/2 bg-black/25 p-2 text-white transition-all duration-300 hover:bg-black/50 md:block"
+        className="absolute top-1/2 left-0 hidden h-full -translate-y-1/2 cursor-pointer bg-black/25 p-2 text-white transition-all duration-300 hover:bg-black/50 md:block"
       >
         <IoIosArrowBack className="text-xl" />
       </button>
@@ -70,7 +75,7 @@ const Carousel = ({
       <button
         onClick={nextSlide}
         disabled={currentIndex == images?.length - 1}
-        className="cursor-pointer absolute top-1/2 right-0 hidden h-full -translate-y-1/2 bg-black/25 p-2 text-white transition-all duration-300 hover:bg-black/50 md:block"
+        className="absolute top-1/2 right-0 hidden h-full -translate-y-1/2 cursor-pointer bg-black/25 p-2 text-white transition-all duration-300 hover:bg-black/50 md:block"
       >
         <IoIosArrowForward className="text-xl" />
       </button>
@@ -100,7 +105,8 @@ const Carousel = ({
   );
 };
 
-export default Carousel;`;
+export default Carousel;
+`;
 
 const usingCode = `import  Carousel  from "./Carousel";
 

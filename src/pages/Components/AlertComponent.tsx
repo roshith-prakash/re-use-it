@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { CodeBlock, Alert } from "@/components";
 import { RxDoubleArrowRight } from "react-icons/rx";
 
-const AlertCode = `import { ReactNode } from "react";
+const AlertCode = `import { cn } from "@/lib/utils";
+import { ReactNode } from "react";
 import {
   AiOutlineInfoCircle,
   AiOutlineCheckCircle,
@@ -42,15 +43,21 @@ const Alert = ({
   children?: ReactNode;
   className?: string;
 }) => {
-  if (type == "custom") return children;
+  if (type === "custom") return <div className={className}>{children}</div>;
 
   const alert = alertTypes[type];
 
   return (
     <div
-      className={\`flex w-full items-center gap-4 rounded-lg p-4 shadow-lg \${alert.color} \${className}\`}
+      role="alert"
+      aria-live="assertive"
+      className={cn(
+        \`flex w-full items-center gap-4 rounded-lg p-4 shadow-lg \${alert.color} \${className}\`,
+      )}
     >
-      <span className="text-2xl">{alert.icon}</span>
+      <span className="text-2xl" aria-hidden="true">
+        {alert.icon}
+      </span>
       <div className="space-y-1">
         <p className="text-md font-medium">{title}</p>
         <p className="text-sm">{message}</p>
@@ -59,7 +66,8 @@ const Alert = ({
   );
 };
 
-export default Alert;`;
+export default Alert;
+`;
 
 const usingCode = `import React from 'react';
 import Alert from './Alert'

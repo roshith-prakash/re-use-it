@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { CodeBlock, Tooltip } from "@/components";
 
-const TooltipCode = `import { useState, ReactNode } from "react";
+const TooltipCode = `import { cn } from "@/lib/utils";
+import { useState, ReactNode } from "react";
 
 interface TooltipProps {
   text: string;
@@ -37,11 +38,13 @@ const Tooltip = ({
 
       {displayed && (
         <div
-          className={\`absolute z-10 w-max max-w-3xs rounded-lg px-4 py-2 text-center text-sm \${
-            visible ? "opacity-100" : "opacity-0"
-          } dark:bg-darkbg bg-white shadow-lg transition-all duration-300 \${className} \${
-            positionStyles[position]
-          }\`}
+          className={cn(
+            \`absolute z-10 w-max max-w-3xs rounded-lg px-4 py-2 text-center text-sm \${
+              visible ? "opacity-100" : "opacity-0"
+            } dark:bg-darkbg bg-white shadow-lg transition-all duration-300 \${className} \${
+              positionStyles[position]
+            }\`,
+          )}
         >
           {text}
         </div>

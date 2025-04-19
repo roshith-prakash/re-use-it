@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { CodeBlock, PasswordInput } from "@/components";
 
-const PasswordInputCode = `import { ChangeEventHandler, useState } from "react";
+const PasswordInputCode = `import { cn } from "@/lib/utils";
+import { ChangeEventHandler, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
 
 // Styled Password input field.
@@ -27,7 +28,9 @@ const PasswordInput = ({
       <input
         disabled={disabled}
         type={display ? "text" : "password"}
-        className={\`dark:placeholder:text-grey/50 placeholder:text-darkbg/50 text-md border-darkbg/50 mt-3 min-h-8 w-full rounded-lg border-2 bg-transparent px-4 py-2 pr-10 placeholder:text-sm focus:outline-none dark:border-white/50 \${className}\`}
+        className={cn(
+          \`dark:placeholder:text-grey/50 placeholder:text-darkbg/50 text-md border-darkbg/50 mt-3 min-h-8 w-full rounded-lg border-2 bg-transparent px-4 py-2 pr-10 placeholder:text-sm focus:outline-none dark:border-white/50 \${className}\`,
+        )}
         value={value}
         placeholder={placeholder}
         onChange={onChange}

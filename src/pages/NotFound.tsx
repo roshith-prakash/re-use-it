@@ -1,17 +1,14 @@
-import { ContextValue, useDarkMode } from "@/context/DarkModeContext";
 import notfound from "@/assets/notfound.svg";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
 const NotFound = () => {
-  const { isDarkMode } = useDarkMode() as ContextValue;
-
   useEffect(() => {
     document.title = "Not Found | Re-Use-it!";
   }, []);
   return (
     <div
-      className={`min-h-screen ${isDarkMode ? "bg-[url('/src/assets/animatedWaveDark.svg')]" : "bg-[url('/src/assets/animatedWave.svg')]"} flex flex-col items-center justify-center gap-y-10 bg-cover pb-10 dark:text-white`}
+      className={`flex min-h-screen flex-col items-center justify-center gap-y-10 bg-cover pb-10 dark:text-white`}
     >
       <div className="dark:bg-secondarydarkbg flex flex-col items-center gap-10 rounded-xl bg-white p-10 shadow-xl dark:border-[1px] dark:shadow-white/20">
         <img src={notfound} alt="Not Found Page" className="w-96 max-w-[90%]" />

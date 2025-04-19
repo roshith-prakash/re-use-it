@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { CodeBlock, Drawer, SecondaryButton } from "@/components";
 
-const DrawerCode = `import { ReactNode } from "react";
+const DrawerCode = `import { cn } from "@/lib/utils";
+import { ReactNode } from "react";
 import { RxCross2 } from "react-icons/rx";
 
 const Drawer = ({
@@ -46,8 +47,11 @@ const Drawer = ({
   return (
     <>
       <div className={overlayClasses} />
-      <div className={\`\${drawerClasses} \${className}\`}>
-        <button className="absolute cursor-pointer top-4 right-4" onClick={onClose}>
+      <div className={cn(\`\${drawerClasses} \${className}\`)}>
+        <button
+          className="absolute top-4 right-4 cursor-pointer"
+          onClick={onClose}
+        >
           <RxCross2 className="text-lg" />
         </button>
         {children}
@@ -56,7 +60,8 @@ const Drawer = ({
   );
 };
 
-export default Drawer;`;
+export default Drawer;
+`;
 
 const usingCode = `import Drawer from './Drawer';
 import { useState } from "react"
