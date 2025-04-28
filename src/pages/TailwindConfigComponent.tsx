@@ -107,9 +107,7 @@ const TailwindCssCode = `@import "tailwindcss";
   --color-darkmodeCTA: #b458ff;
 
   /* Custom Fonts */
-  --font-title: "Playwrite IN", sans-serif;
   --font-sans: "Open Sans", serif;
-  --font-pacifico: "Pacifico", serif;
 
   /* Custom Animations for the Modal */
 

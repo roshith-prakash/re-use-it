@@ -26,7 +26,7 @@ const Navbar = () => {
         {/* Logo */}
         <Link
           to="/"
-          className={`font-pacifico hover:text-cta dark:hover:text-darkmodeCTA text-2xl transition-all`}
+          className={`font-exo hover:text-cta dark:hover:text-darkmodeCTA text-2xl font-medium italic transition-all`}
         >
           Re-Use-it!
         </Link>
@@ -129,7 +129,7 @@ const Navbar = () => {
           <div className="mb-5 flex items-center justify-between px-10 pt-4 lg:px-10">
             <button
               onClick={() => handleSearch("/")}
-              className="font-pacifico hover:text-cta dark:hover:text-darkmodeCTA cursor-pointer text-2xl transition-all"
+              className="font-exo hover:text-cta dark:hover:text-darkmodeCTA cursor-pointer text-2xl font-medium italic transition-all"
               aria-label="Home"
             >
               Re-Use-it!

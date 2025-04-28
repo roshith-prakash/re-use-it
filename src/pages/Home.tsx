@@ -18,10 +18,10 @@ const Home = () => {
       {/* Hero */}
       <section className="flex min-h-[85vh] flex-col lg:flex-row">
         <div className="flex flex-1 flex-col items-center justify-center gap-16 py-20 lg:gap-10 lg:py-0">
-          <h1 className="font-pacifico px-4 text-center text-5xl md:text-7xl">
+          <h1 className="font-exo px-4 text-center text-5xl font-medium italic md:text-7xl">
             Re-Use-it!
           </h1>
-          <h2 className="font-title px-5 text-center text-[1.7rem] leading-14 md:text-3xl">
+          <h2 className="font-exo px-5 text-center text-[1.7rem] leading-14 font-medium md:text-3xl">
             React Components that are
             <span className="text-cta dark:text-darkmodeCTA">
               {" "}
@@ -42,7 +42,7 @@ const Home = () => {
       <section className="flex flex-col items-center gap-5 px-5 py-20 text-center">
         <h1 className="text-4xl leading-12 font-semibold">
           Welcome to{" "}
-          <span className="font-pacifico text-hovercta dark:text-darkmodeCTA text-nowrap">
+          <span className="font-exo text-hovercta dark:text-darkmodeCTA font-medium text-nowrap italic">
             Re-use-it!
           </span>
         </h1>
@@ -58,7 +58,9 @@ const Home = () => {
             TailwindCSS <SiTailwindcss className="text-teal-400" />
           </strong>{" "}
           for seamless styling,{" "}
-          <span className="font-pacifico text-lg md:text-xl">Re-use-it</span>{" "}
+          <span className="font-exo text-lg font-medium italic md:text-xl">
+            Re-use-it
+          </span>{" "}
           &nbsp; makes development efficient and enjoyable.
         </p>
         <p className="mt-4 md:text-lg md:leading-8 lg:max-w-6xl">
@@ -74,7 +76,9 @@ const Home = () => {
       <section className="py-20 text-center">
         <h2 className="px-4 text-4xl leading-12 font-semibold">
           Why Choose{" "}
-          <span className="font-pacifico text-nowrap">Re-use-it?</span>
+          <span className="font-exo font-semibold text-nowrap italic">
+            Re-use-it?
+          </span>
         </h2>
         <div className="mt-20 grid grid-cols-1 gap-10 px-6 md:grid-cols-3">
           <div className="dark:bg-darkbg border-grey flex flex-col rounded-2xl border-1 bg-white p-6 shadow-2xl transition-all hover:scale-105 dark:border-t-[1px] dark:shadow-md dark:shadow-white">
@@ -117,7 +121,10 @@ const Home = () => {
       <section className="flex flex-col items-center gap-8 py-20 text-center">
         <h2 className="mb-6 px-5 text-4xl font-semibold">How Does It Work?</h2>
         <p className="px-6 md:text-lg md:leading-8 lg:max-w-6xl">
-          <span className="font-pacifico text-lg md:text-xl"> Re-use-it </span>{" "}
+          <span className="font-exo text-lg font-medium italic md:text-xl">
+            {" "}
+            Re-use-it{" "}
+          </span>{" "}
           &nbsp; makes it easy for developers to find, customize, and implement
           pre-built components and utilities. Simply follow our documentation,
           copy the code, and integrate it into your projects with minimal
@@ -201,7 +208,10 @@ const Home = () => {
       <section className="flex flex-col items-center gap-8 py-20 text-center">
         <h2 className="mb-6 px-5 text-4xl font-semibold">Join the Community</h2>
         <p className="px-6 md:text-lg md:leading-8 lg:max-w-6xl">
-          <span className="font-pacifico text-lg md:text-xl"> Re-use-it </span>
+          <span className="font-exo text-lg font-medium italic md:text-xl">
+            {" "}
+            Re-use-it{" "}
+          </span>
           &nbsp; is not just a library; it's a growing community of developers
           like you. Share your feedback, contribute your own components, and be
           part of a platform that thrives on collaboration.

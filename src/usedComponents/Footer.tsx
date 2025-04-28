@@ -1,4 +1,3 @@
-import { ContextValue, useDarkMode } from "@/context/DarkModeContext";
 import { FaGithub } from "react-icons/fa6";
 import { Link, useNavigate } from "react-router-dom";
 import { LuCodeXml } from "react-icons/lu";
@@ -6,16 +5,11 @@ import { IoLogoWebComponent } from "react-icons/io5";
 
 const Footer = () => {
   const navigate = useNavigate();
-  const { isDarkMode } = useDarkMode() as ContextValue;
   return (
     <footer
-      className={` ${
-        isDarkMode
-          ? "bg-secondarydarkbg border-darkmodetext border-t-2"
-          : "from-cta/95 to-hovercta/95 bg-gradient-to-b"
-      } font-inter min-h-50vh px-010 relative mt-20 pt-36 pb-20 text-white`}
+      className={`bg-secondarydarkbg border-darkmodetext font-inter min-h-50vh px-010 relative mt-20 border-t-2 pt-36 pb-20 text-white`}
     >
-      <div className="dark:border-darkmodetext absolute -top-16 left-1/2 flex h-32 w-[90vw] -translate-x-1/2 flex-col items-center justify-around rounded-lg bg-[#1f1e1e] py-3 text-white md:flex-row lg:w-[80vw] dark:border-2">
+      <div className="dark:border-darkmodetext absolute -top-16 left-1/2 flex h-32 w-[90vw] -translate-x-1/2 flex-col items-center justify-around rounded-lg border-2 bg-[#1f1e1e] py-3 text-white md:flex-row lg:w-[80vw] dark:border-2">
         <p className="font-medium md:text-xl">Reusable. Customizable. Yours.</p>
         <button
           onClick={() => {
@@ -25,7 +19,7 @@ const Footer = () => {
               window.scrollTo({ top: 0, behavior: "smooth" });
             }, 100);
           }}
-          className="font-pacifico flex cursor-pointer items-center gap-x-2 rounded-full border-2 border-white px-5 py-2 text-xl font-medium text-white transition-all hover:bg-white hover:text-black"
+          className="font-exo flex cursor-pointer items-center gap-x-2 rounded-full border-2 border-white px-5 py-2 text-xl font-medium text-white italic transition-all hover:bg-white hover:text-black"
         >
           Re-Use-it!
         </button>
@@ -33,11 +27,11 @@ const Footer = () => {
 
       <div className="flex flex-col pt-3 lg:flex-row">
         <div className="flex flex-1 flex-col items-center justify-center gap-y-10">
-          <p className="font-pacifico text-center text-6xl font-medium">
+          <p className="font-exo text-center text-6xl font-medium italic">
             Re-Use-it!
           </p>
 
-          <p className="font-title px-4 text-center">
+          <p className="px-4 text-center">
             Build once, customize infinitely —{" "}
             <span className="text-nowrap">
               reusable components made for you.

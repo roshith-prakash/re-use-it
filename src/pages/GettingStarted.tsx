@@ -14,12 +14,15 @@ const GettingStarted = () => {
     <div className="min-h-screen">
       {/* Title */}
       <h1 className="px-8 pt-10 text-4xl font-medium">
-        Welcome to <span className="font-pacifico text-nowrap">Re-use-it!</span>
+        Welcome to{" "}
+        <span className="font-exo font-semibold text-nowrap italic">
+          Re-use-it!
+        </span>
       </h1>
 
       <p className="px-8 pt-14 leading-8">
         Welcome to{" "}
-        <span className="font-pacifico mr-1 text-justify text-lg">
+        <span className="font-exo mr-1 text-justify text-lg font-medium italic">
           Re-use-it!
         </span>{" "}
         Your one-stop destination for reusable and customizable React
@@ -31,7 +34,8 @@ const GettingStarted = () => {
       </p>
 
       <h2 className="mt-20 px-8 text-2xl">
-        Get Started with <span className="font-pacifico">Re-use-it!</span> in a
+        Get Started with{" "}
+        <span className="font-exo font-semibold italic">Re-use-it!</span> in a
         few simple steps!
       </h2>
 
